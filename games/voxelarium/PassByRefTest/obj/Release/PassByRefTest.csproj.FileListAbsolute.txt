@@ -1,0 +1,5 @@
+M:\xperdex\games\voxelarium\PassByRefTest\obj\Release\PassByRefTest.csprojResolveAssemblyReference.cache
+M:\xperdex\games\voxelarium\PassByRefTest\bin\Release\PassByRefTest.exe
+M:\xperdex\games\voxelarium\PassByRefTest\bin\Release\PassByRefTest.pdb
+M:\xperdex\games\voxelarium\PassByRefTest\obj\Release\PassByRefTest.exe
+M:\xperdex\games\voxelarium\PassByRefTest\obj\Release\PassByRefTest.pdb

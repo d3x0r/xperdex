@@ -1,0 +1,13 @@
+#!/bin/bash
+
+SRCS=$(find . -name \*.cs)
+OUT=../../out
+
+MORELIBS="$OUT/xperdex.classes.dll 
+$OUT/xperdex.tasks.dll
+System.Data.dll 
+System.Windows.Forms.dll System.Drawing.dll"
+
+
+gmcs -out:$OUT/monosh.exe $SRCS $(for i in $MORELIBS; do echo -r:$i; done )
+

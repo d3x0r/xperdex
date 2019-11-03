@@ -1,0 +1,40 @@
+
+
+Starting Application
+Initializing ini file at: C:\ProgramData/xperdex/xperdex.ini
+Detecting Audio Renderer Devices
+Detected Device: Speakers (Realtek High Definiti
+Detected Device: Default DirectSound Device
+Detected Device: Default WaveOut Device
+Detected Device: DirectSound: Realtek Digital Output (Realtek High Definition Audio)
+Detected Device: DirectSound: Realtek Digital Output(Optical) (Realtek High Definition Audio)
+Detected Device: DirectSound: S27A750D-4 (NVIDIA High Definition Audio)
+Detected Device: DirectSound: Speakers (Plantronics .Audio 476 DSP)
+Detected Device: DirectSound: Speakers (Realtek High Definition Audio)
+Detected Device: Realtek Digital Output (Realtek
+Detected Device: Realtek Digital Output(Optical)
+Detected Device: S27A750D-4 (NVIDIA High Definit
+Detected Device: Speakers (Plantronics .Audio 47
+Detecting Video Tuner Devices
+Detecting Video Capture Devices
+Failed to detect at least 1 tuner device
+
+
+Starting Application
+Initializing ini file at: C:\ProgramData/xperdex/xperdex.ini
+Detecting Audio Renderer Devices
+Detected Device: Speakers (Realtek High Definiti
+Detected Device: Default DirectSound Device
+Detected Device: Default WaveOut Device
+Detected Device: DirectSound: Realtek Digital Output (Realtek High Definition Audio)
+Detected Device: DirectSound: Realtek Digital Output(Optical) (Realtek High Definition Audio)
+Detected Device: DirectSound: S27A750D-4 (NVIDIA High Definition Audio)
+Detected Device: DirectSound: Speakers (Plantronics .Audio 476 DSP)
+Detected Device: DirectSound: Speakers (Realtek High Definition Audio)
+Detected Device: Realtek Digital Output (Realtek
+Detected Device: Realtek Digital Output(Optical)
+Detected Device: S27A750D-4 (NVIDIA High Definit
+Detected Device: Speakers (Plantronics .Audio 47
+Detecting Video Tuner Devices
+Detecting Video Capture Devices
+Failed to detect at least 1 tuner device

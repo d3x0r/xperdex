@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AccrualProcessorDataSet" targetNamespace="http://tempuri.org/AccrualProcessorDataSet.xsd" xmlns:mstns="http://tempuri.org/AccrualProcessorDataSet.xsd" xmlns="http://tempuri.org/AccrualProcessorDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AccrualProcessorDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="AccrualProcessorDataSet" msprop:Generator_UserDSName="AccrualProcessorDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AccrualSourceInputSync" msprop:Generator_TableClassName="AccrualSourceInputSyncDataTable" msprop:Generator_TableVarName="tableAccrualSourceInputSync" msprop:Generator_RowChangedName="AccrualSourceInputSyncRowChanged" msprop:Generator_TablePropName="AccrualSourceInputSync" msprop:Generator_RowDeletingName="AccrualSourceInputSyncRowDeleting" msprop:Generator_RowChangingName="AccrualSourceInputSyncRowChanging" msprop:Generator_RowEvHandlerName="AccrualSourceInputSyncRowChangeEventHandler" msprop:Generator_RowDeletedName="AccrualSourceInputSyncRowDeleted" msprop:Generator_RowClassName="AccrualSourceInputSyncRow" msprop:Generator_UserTableName="AccrualSourceInputSync" msprop:Generator_RowEvArgName="AccrualSourceInputSyncRowChangeEvent">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AccrualSourceName" msprop:Generator_TableClassName="AccrualSourceNameDataTable" msprop:Generator_TableVarName="tableAccrualSourceName" msprop:Generator_RowChangedName="AccrualSourceNameRowChanged" msprop:Generator_TablePropName="AccrualSourceName" msprop:Generator_RowDeletingName="AccrualSourceNameRowDeleting" msprop:Generator_RowChangingName="AccrualSourceNameRowChanging" msprop:Generator_RowEvHandlerName="AccrualSourceNameRowChangeEventHandler" msprop:Generator_RowDeletedName="AccrualSourceNameRowDeleted" msprop:Generator_RowClassName="AccrualSourceNameRow" msprop:Generator_UserTableName="AccrualSourceName" msprop:Generator_RowEvArgName="AccrualSourceNameRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="source_name" msprop:Generator_ColumnVarNameInTable="columnsource_name" msprop:Generator_ColumnPropNameInRow="source_name" msprop:Generator_ColumnPropNameInTable="source_nameColumn" msprop:Generator_UserColumnName="source_name" type="xs:string" />
+              <xs:element name="source_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnsource_id" msprop:Generator_ColumnPropNameInRow="source_id" msprop:Generator_ColumnPropNameInTable="source_idColumn" msprop:Generator_UserColumnName="source_id" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AccrualSource_Data" msprop:Generator_TableClassName="AccrualSource_DataDataTable" msprop:Generator_TableVarName="tableAccrualSource_Data" msprop:Generator_RowChangedName="AccrualSource_DataRowChanged" msprop:Generator_TablePropName="AccrualSource_Data" msprop:Generator_RowDeletingName="AccrualSource_DataRowDeleting" msprop:Generator_RowChangingName="AccrualSource_DataRowChanging" msprop:Generator_RowEvHandlerName="AccrualSource_DataRowChangeEventHandler" msprop:Generator_RowDeletedName="AccrualSource_DataRowDeleted" msprop:Generator_RowClassName="AccrualSource_DataRow" msprop:Generator_UserTableName="AccrualSource_Data" msprop:Generator_RowEvArgName="AccrualSource_DataRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="source_transaction_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnsource_transaction_id" msprop:Generator_ColumnPropNameInRow="source_transaction_id" msprop:Generator_ColumnPropNameInTable="source_transaction_idColumn" msprop:Generator_UserColumnName="source_transaction_id" type="xs:string" minOccurs="0" />
+              <xs:element name="source_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnsource_id" msprop:Generator_ColumnPropNameInRow="source_id" msprop:Generator_ColumnPropNameInTable="source_idColumn" msprop:Generator_UserColumnName="source_id" type="xs:string" minOccurs="0" />
+              <xs:element name="value" msprop:Generator_ColumnVarNameInTable="columnvalue" msprop:Generator_ColumnPropNameInRow="value" msprop:Generator_ColumnPropNameInTable="valueColumn" msprop:Generator_UserColumnName="value" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="AccrualGroup" msprop:Generator_TableClassName="AccrualGroupDataTable" msprop:Generator_TableVarName="tableAccrualGroup" msprop:Generator_RowChangedName="AccrualGroupRowChanged" msprop:Generator_TablePropName="AccrualGroup" msprop:Generator_RowDeletingName="AccrualGroupRowDeleting" msprop:Generator_RowChangingName="AccrualGroupRowChanging" msprop:Generator_RowEvHandlerName="AccrualGroupRowChangeEventHandler" msprop:Generator_RowDeletedName="AccrualGroupRowDeleted" msprop:Generator_RowClassName="AccrualGroupRow" msprop:Generator_UserTableName="AccrualGroup" msprop:Generator_RowEvArgName="AccrualGroupRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="accrual_group_id" msprop:Generator_ColumnVarNameInTable="columnaccrual_group_id" msprop:Generator_ColumnPropNameInRow="accrual_group_id" msprop:Generator_ColumnPropNameInTable="accrual_group_idColumn" msprop:Generator_UserColumnName="accrual_group_id" type="xs:string" minOccurs="0" />
+              <xs:element name="DataColumn1" msprop:Generator_ColumnVarNameInTable="columnDataColumn1" msprop:Generator_ColumnPropNameInRow="DataColumn1" msprop:Generator_ColumnPropNameInTable="DataColumn1Column" msprop:Generator_UserColumnName="DataColumn1" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="accrual_processor_last_session" msprop:Generator_TableClassName="accrual_processor_last_sessionDataTable" msprop:Generator_TableVarName="tableaccrual_processor_last_session" msprop:Generator_TablePropName="accrual_processor_last_session" msprop:Generator_RowDeletingName="accrual_processor_last_sessionRowDeleting" msprop:Generator_RowChangingName="accrual_processor_last_sessionRowChanging" msprop:Generator_RowEvHandlerName="accrual_processor_last_sessionRowChangeEventHandler" msprop:Generator_RowDeletedName="accrual_processor_last_sessionRowDeleted" msprop:Generator_UserTableName="accrual_processor_last_session" msprop:Generator_RowChangedName="accrual_processor_last_sessionRowChanged" msprop:Generator_RowEvArgName="accrual_processor_last_sessionRowChangeEvent" msprop:Generator_RowClassName="accrual_processor_last_sessionRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ses_id" msprop:Generator_ColumnVarNameInTable="columnses_id" msprop:Generator_ColumnPropNameInRow="ses_id" msprop:Generator_ColumnPropNameInTable="ses_idColumn" msprop:Generator_UserColumnName="ses_id" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="accrual_processor_computed_sessions" msprop:Generator_TableClassName="accrual_processor_computed_sessionsDataTable" msprop:Generator_TableVarName="tableaccrual_processor_computed_sessions" msprop:Generator_TablePropName="accrual_processor_computed_sessions" msprop:Generator_RowDeletingName="accrual_processor_computed_sessionsRowDeleting" msprop:Generator_RowChangingName="accrual_processor_computed_sessionsRowChanging" msprop:Generator_RowEvHandlerName="accrual_processor_computed_sessionsRowChangeEventHandler" msprop:Generator_RowDeletedName="accrual_processor_computed_sessionsRowDeleted" msprop:Generator_UserTableName="accrual_processor_computed_sessions" msprop:Generator_RowChangedName="accrual_processor_computed_sessionsRowChanged" msprop:Generator_RowEvArgName="accrual_processor_computed_sessionsRowChangeEvent" msprop:Generator_RowClassName="accrual_processor_computed_sessionsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="computed_session_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columncomputed_session_id" msprop:Generator_ColumnPropNameInRow="computed_session_id" msprop:Generator_ColumnPropNameInTable="computed_session_idColumn" msprop:Generator_UserColumnName="computed_session_id" type="xs:string" />
+              <xs:element name="ses_id" msprop:Generator_ColumnVarNameInTable="columnses_id" msprop:Generator_ColumnPropNameInRow="ses_id" msprop:Generator_ColumnPropNameInTable="ses_idColumn" msprop:Generator_UserColumnName="ses_id" type="xs:string" minOccurs="0" />
+              <xs:element name="when" msprop:Generator_ColumnVarNameInTable="columnwhen" msprop:Generator_ColumnPropNameInRow="when" msprop:Generator_ColumnPropNameInTable="whenColumn" msprop:Generator_UserColumnName="when" type="xs:string" minOccurs="0" />
+              <xs:element name="Processed" msprop:Generator_ColumnVarNameInTable="columnProcessed" msprop:Generator_ColumnPropNameInRow="Processed" msprop:Generator_ColumnPropNameInTable="ProcessedColumn" msprop:Generator_UserColumnName="Processed" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:AccrualSourceName" />
+      <xs:field xpath="mstns:source_name" />
+    </xs:unique>
+    <xs:unique name="accrual_processor_computed_sessions_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:accrual_processor_computed_sessions" />
+      <xs:field xpath="mstns:computed_session_id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

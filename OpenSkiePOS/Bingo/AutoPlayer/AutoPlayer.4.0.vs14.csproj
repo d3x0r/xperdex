@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E934367C-6D38-4E5F-957D-D064CE979A9A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AutoPlayer</RootNamespace>
+    <AssemblyName>AutoPlayer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <BaseIntermediateOutputPath>$(SolutionDir)/output/</BaseIntermediateOutputPath>
+    <BaseOutputPath>$(SolutionDir)/</BaseOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>M:\clapps\xperdex\Bingo\/output/Debug/x86/v4.0\AutoPlayer.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\vs2010-rtm\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\vs2010-rtm\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>M:\clapps\xperdex\Bingo\/output/Release/x86/v4.0\AutoPlayer.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\vs2010-rtm\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\vs2010-rtm\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SessionPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SessionPlayer.Designer.cs">
+      <DependentUpon>SessionPlayer.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SessionPlayer.resx">
+      <DependentUpon>SessionPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\bingo_odds\BingoGameCore4\BingoGameCore4.vs14.4.0.csproj">
+      <Project>{E65BD921-6931-48FF-BEAC-D89B5B37C741}</Project>
+      <Name>BingoGameCore4.vs10.4.0</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OpenSkieScheduler\CurrentScheduleDataSet2\CurrentScheduleDataSet2.4.0.vs14.csproj">
+      <Project>{BA3487F1-4E30-4FDD-A7E4-3B39DDDEA8B1}</Project>
+      <Name>CurrentScheduleDataSet2.4.0</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OpenSkieScheduler\OpenSkieScheduler3\OpenSkieScheduler3.vs14.4.0.csproj">
+      <Project>{7AA21CBF-336D-4815-A2A6-55AC5694A241}</Project>
+      <Name>OpenSkieScheduler3.vs10.4.0</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\xperdex\xperdex.classes.2\xperdex.classes.vs14.4.0.csproj">
+      <Project>{041E5A37-8678-451E-9500-EE3D7864C092}</Project>
+      <Name>xperdex.classes.vs10.4.0</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OpenSkieScheduler\ScheduleDesigner2\ScheduleDesigner2.vs14.4.0.csproj">
+      <Project>{c74f8ac7-a549-45fd-910a-ea918356d029}</Project>
+      <Name>ScheduleDesigner2.vs14.4.0</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BingoGameInterfaces\BingoGameInterfaces.4.0.vs14.csproj">
+      <Project>{5601A89E-8E2A-461F-98A3-15A7419AD2AF}</Project>
+      <Name>BingoGameInterfaces.4.0</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

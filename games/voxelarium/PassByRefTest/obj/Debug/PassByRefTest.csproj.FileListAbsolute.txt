@@ -1,0 +1,5 @@
+M:\xperdex\games\voxelarium\PassByRefTest\bin\Debug\PassByRefTest.exe
+M:\xperdex\games\voxelarium\PassByRefTest\bin\Debug\PassByRefTest.pdb
+M:\xperdex\games\voxelarium\PassByRefTest\obj\Debug\PassByRefTest.exe
+M:\xperdex\games\voxelarium\PassByRefTest\obj\Debug\PassByRefTest.pdb
+M:\xperdex\games\voxelarium\PassByRefTest\obj\Debug\PassByRefTest.csprojResolveAssemblyReference.cache

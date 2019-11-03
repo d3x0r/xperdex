@@ -1,0 +1,84 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{406ED615-1447-4137-8553-62D0A8AF8EFF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>xperdex.InterShell</RootNamespace>
+    <AssemblyName>xperdex.InterShell</AssemblyName>
+    <BaseIntermediateOutputPath>$(SolutionDir)/output/</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConfigureInterShell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigureInterShell.Designer.cs">
+      <DependentUpon>ConfigureInterShell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterShell.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\altanik\src\fut\flashdrive\flashdriveservice.vcproj">
+      <Project>{721296EB-F67C-4D07-983C-9FD638D3CB09}</Project>
+      <Name>flashdriveservice</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\xperdex.classes\xperdex.classes.csproj">
+      <Project>{041E5A37-8678-451E-9500-EE3D7864C092}</Project>
+      <Name>xperdex.classes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\sack\src\InterShell\Intershell.core.vcproj">
+      <Project>{19892633-6731-45C3-B5D3-06247F3AA650}</Project>
+      <Name>InterShell.core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\sack\src\intershell\widgets\sack.widgets.vcproj">
+      <Project>{9B7549CA-4E6F-4659-9F5A-148A8F90DA60}</Project>
+      <Name>altanik.widgets</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ConfigureInterShell.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ConfigureInterShell.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,5 @@
+M:\xperdex\SetCLR\bin\Debug\SetCLR.exe
+M:\xperdex\SetCLR\bin\Debug\SetCLR.pdb
+M:\xperdex\SetCLR\obj\Debug\SetCLR.csprojResolveAssemblyReference.cache
+M:\xperdex\SetCLR\obj\Debug\SetCLR.exe
+M:\xperdex\SetCLR\obj\Debug\SetCLR.pdb

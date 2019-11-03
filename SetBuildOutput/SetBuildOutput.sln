@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 11
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SetBuildOutput", "SetBuildOutput\SetBuildOutput.csproj", "{5CB3C578-0A26-4842-B4EB-D8564FBF5601}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xperdex.classes", "..\xperdex.classes\xperdex.classes.csproj", "{041E5A37-8678-451E-9500-EE3D7864C092}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{041E5A37-8678-451E-9500-EE3D7864C092}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{041E5A37-8678-451E-9500-EE3D7864C092}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{041E5A37-8678-451E-9500-EE3D7864C092}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{041E5A37-8678-451E-9500-EE3D7864C092}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CB3C578-0A26-4842-B4EB-D8564FBF5601}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CB3C578-0A26-4842-B4EB-D8564FBF5601}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CB3C578-0A26-4842-B4EB-D8564FBF5601}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CB3C578-0A26-4842-B4EB-D8564FBF5601}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

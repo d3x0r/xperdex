@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0E46BCF5-C07C-4CB2-8626-41F5040F11D9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>xperdex.tasks</RootNamespace>
+    <AssemblyName>xperdex.tasks</AssemblyName>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>d3x0r.org.sign.pfx</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <BaseIntermediateOutputPath>$(SolutionDir)/output/</BaseIntermediateOutputPath>
+    <BaseOutputPath>$(SolutionDir)/</BaseOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v2.0</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v2.0</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v2.0</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v2.0</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>M:\trunk\xperdex\/output/Debug/AnyCPU\xperdex.tasks.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\vs2010-rtm\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\vs2010-rtm\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v2.0</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v2.0</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v2.0</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>M:\trunk\xperdex\/output/Release/AnyCPU\xperdex.tasks.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\vs2010-rtm\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\vs2010-rtm\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v2.0</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="InternalTaskProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InternalTaskProperties.Designer.cs">
+      <DependentUpon>InternalTaskProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LaunchCommandPost.cs" />
+    <Compile Include="LaunchPad.cs" />
+    <Compile Include="Local.cs" />
+    <Compile Include="RemoteConnectivity.cs" />
+    <Compile Include="Task.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TaskDropAcceptor.cs" />
+    <Compile Include="TaskItem.cs" />
+    <Compile Include="TaskProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskProperties.Designer.cs">
+      <DependentUpon>TaskProperties.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="InternalTaskProperties.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InternalTaskProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskProperties.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TaskProperties.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="d3x0r.org.sign.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\xperdex.classes\xperdex.classes.vc10.csproj">
+      <Project>{041E5A37-8678-451E-9500-EE3D7864C092}</Project>
+      <Name>xperdex.classes.vc10</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\xperdex.core\xperdex.core.common\xperdex.core.common.csproj">
+      <Project>{865DB13A-FEC4-48E9-825A-449DD9D5A54C}</Project>
+      <Name>xperdex.core.common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\xperdex.core\xperdex.core.interfaces\xperdex.core.interfaces.csproj">
+      <Project>{E5CD1A7B-221E-4B68-A1EA-0A801B35C399}</Project>
+      <Name>xperdex.core.interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\xperdex.gui\xperdex.gui.csproj">
+      <Project>{EF313F61-2DB4-461B-9F89-B6BC53C96BA4}</Project>
+      <Name>xperdex.gui</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,19 @@
+<?xml version="1.0" standalone="yes"?>
+<settings>
+  <settings>
+    <name>GL.Width</name>
+    <value xsi:type="xs:int" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1920</value>
+  </settings>
+  <settings>
+    <name>GL.Height</name>
+    <value xsi:type="xs:int" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">1040</value>
+  </settings>
+  <settings>
+    <name>GL.Display.X</name>
+    <value xsi:type="xs:int" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">0</value>
+  </settings>
+  <settings>
+    <name>GL.Display.Y</name>
+    <value xsi:type="xs:int" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">0</value>
+  </settings>
+</settings>

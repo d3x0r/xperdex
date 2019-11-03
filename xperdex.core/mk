@@ -1,0 +1,22 @@
+#!/bin/bash
+
+SRCS="Canvas.Designer.cs Canvas.cs Font.cs FontEditor.Designer.cs \
+FontEditor.cs Form1.Designer.cs Form1.cs GlareSet.cs Macro.Designer.cs \
+Macro.cs Macro_Properties.Designer.cs Macro_Properties.cs \
+PSI_Button.Designer.cs PSI_Button.cs PSI_ButtonProperties.Designer.cs \
+PSI_ButtonProperties.cs PageProperties.Designer.cs PageProperties.cs \
+Program.cs XmlBookmarkReader.cs loadsave.cs local.cs osalot.cs page.cs \
+TextPlacement.cs TextPlacementEditor.cs TextPlacementEditor.Designer.cs \
+GlareSetEditor.cs GlareSetEditor.Designer.cs \
+../xperdex.classes/PSI_Control.cs \
+../xperdex.classes/PSI_Control.Designer.cs \
+../xperdex.classes/PSI_Frame.cs \
+../xperdex.classes/PSI_Frame.Designer.cs \
+Variables.cs Plugins.cs \
+EditPlugins.cs EditPlugins.Designer.cs"
+
+MORELIBS="../out/xperdex.classes.dll System.Data.dll System.Windows.Forms.dll System.Drawing.dll"
+
+
+gmcs -out:../out/xperdex.core.exe $SRCS $(for i in $MORELIBS; do echo -r:$i; done )
+

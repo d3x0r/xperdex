@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?><!DOCTYPE xperdex.configuration >
+<xperdex>
+<glareset name="default" mask="Images/colorLayer.png" pressed="Images/pressedlens.png" depressed="Images/defaultLens.png" glare="" shade="multi" />
+<glare_set_attributes name="default" text_color="-1" primary="1090453504" secondary="-1015680" highlight_primary="0" highlight_secondary="0" />
+<Font name="Default" face="Lucida Console" size="38" style="Regular" units="Pixel" />
+<Font name="Default Fixed(Fixed)" face="Lucida Console" size="10" style="Regular" units="Pixel" />
+<Font name="Label Place Holder" face="BatangChe" size="21.75" style="Bold" units="Point" />
+<Font name="Default[[FontFamily: Name=Microsoft Sans Serif]]" face="Microsoft Sans Serif" size="8.25" style="Regular" units="Point" />
+<page background="sky.jpg" color="16777215">
+<control X="2" Y="33" width="7" height="5" assembly="M:\xperdex\output\Debug\x86\xperdex.core.dll" type="xperdex.core.Program+Quit" font="Default" interface="xperdex.classes.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Quit" font="Default" />
+</control>
+<control X="10" Y="5" width="20" height="6" assembly="M:\xperdex\output\Debug\x86\xperdex.core.dll" type="xperdex.core.Label" font="Default[[FontFamily: Name=Microsoft Sans Serif]]" interface="xperdex.core.Label">
+<TextLabel Color="-1835024" Font="Default Fixed(Fixed)" Text="User Login?" Align="Center" />
+</control>
+<control X="15" Y="15" width="9" height="5" assembly="M:\xperdex\output\Debug\x86\xperdex.core.dll" type="xperdex.core.Macro" font="Default" interface="xperdex.classes.IReflectorButton">
+<Macro Text="" />
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button page="Page 1" text="A Control" font="Default" />
+</control>
+</page>
+<page background="sky.jpg" color="16777215">
+<control X="9" Y="5" width="24" height="11" assembly="M:\xperdex\output\Debug\x86\xperdex.core.dll" type="xperdex.core.Label" font="Default[[FontFamily: Name=Microsoft Sans Serif]]" interface="xperdex.core.Label">
+<TextLabel Color="-1" Font="Label Place Holder" Text="If you got here, you got logged in_newline?" Align="Center" />
+</control>
+<control X="11" Y="30" width="10" height="6" assembly="M:\xperdex\output\Debug\x86\xperdex.core.dll" type="xperdex.core.Macro" font="Default" interface="xperdex.classes.IReflectorButton">
+<Macro Text="" />
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button page="Page 0" text="A Control" font="Default" />
+</control>
+</page>
+<page background="sky.jpg" color="16777215">
+</page>
+<page background="sky.jpg" color="16777215">
+</page>
+<page background="sky.jpg" color="16777215">
+</page>
+</xperdex>

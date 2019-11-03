@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?><!DOCTYPE xperdex.configuration >
+<xperdex>
+<glareset name="default" mask="Images/colorLayer.png" pressed="Images/pressedlens.png" depressed="Images/defaultLens.png" glare="" shade="multi" />
+<glareset name="Empty" mask="Images/colorLayer.png" pressed="Images/pressedlens.png" depressed="Images/defaultLens.png" glare="" shade="multi" />
+<glare_set_attributes name="default" text_color="-1315090" primary="-16352565" secondary="-16635837" highlight_primary="-16352565" highlight_secondary="-11342336" />
+<glare_set_attributes name="Utility Button" text_color="-1" primary="-65536" secondary="-16777216" highlight_primary="0" highlight_secondary="0" />
+<glare_set_attributes name="Quit Button" text_color="-1" primary="-65536" secondary="-16777216" highlight_primary="0" highlight_secondary="0" />
+<glare_set_attributes name="Empty" text_color="-16777216" primary="0" secondary="0" highlight_primary="0" highlight_secondary="0" />
+<Plugins Location="AccrualProcessor.dll" />
+<Font name="Default" face="Arial" size="25" style="Regular" units="Pixel" />
+<Font name="Default Fixed(Fixed)" face="Lucida Console" size="10" style="Regular" units="Pixel" />
+<Font name="Tiny Font" face="Arial" size="8.25" style="Regular" units="Point" />
+<Font name="Smaller Default" face="Arial" size="14.25" style="Regular" units="Point" />
+<Font name="Session Selector" face="Microsoft Sans Serif" size="12" style="Italic" units="Point" />
+<Font name="Accrual Group Details" face="Arial" size="9.75" style="Regular" units="Point" />
+<Font name="Accrual Group Selector" face="Arial" size="25" style="Regular" units="Pixel" />
+<page background="sky.jpg" title="Page 0" color="-1315090" x="40" y="47">
+<control X="16" Y="10" width="7" height="3" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-16777216" BackColor="-6514998" Font="Default" Text="%Jackpot_Value[Cashball 1]" Align="Right" />
+</control>
+<control X="1" Y="10" width="15" height="3" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-16777216" BackColor="-6514998" Font="Default" Text="Cashball 1 (%Current Percent[Cashball 1]%%)" Align="Left" />
+</control>
+<control X="33" Y="39" width="6" height="5" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro />
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button page="Sales" text="Verify_Sales" />
+</control>
+<control X="33" Y="44" width="6" height="3" assembly="xperdex.core.dll" type="xperdex.core.ImageAcceptor+ImageControl" font="Default" interface="xperdex.core.ImageAcceptor+ImageControl">
+<AcceptedImage location="Logo_eQube.png" />
+</control>
+<control X="0" Y="0" width="40" height="2" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-524300" BackColor="-15783940" Font="Default" Text="Accrual Processor" Align="Left" />
+</control>
+<control X="1" Y="14" width="15" height="3" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-16777216" BackColor="-6513251" Font="Default" Text="Cashball 2 (%Current Percent[Cashball 2]%%)" Align="Left" />
+</control>
+<control X="1" Y="19" width="15" height="3" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-16777216" BackColor="-6514998" Font="Default" Text="BDA 39#" Align="Left" />
+</control>
+<control X="1" Y="35" width="15" height="3" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-16777216" BackColor="-6513251" Font="Default" Text="UPickem Progressive" Align="Left" />
+</control>
+<control X="16" Y="14" width="7" height="3" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-16777216" BackColor="-6513251" Font="Default" Text="%Jackpot_Value[Cashball 2] " Align="Right" />
+</control>
+<control X="16" Y="19" width="7" height="3" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-16777216" BackColor="-6514998" Font="Default" Text="%Jackpot_Value[BDA 39#]" Align="Right" />
+</control>
+<control X="16" Y="35" width="7" height="3" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-16777216" BackColor="-6513251" Font="Default" Text="%Jackpot_Value[Upickem Progressive]" Align="Right" />
+</control>
+<control X="23" Y="10" width="3" height="3" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro><Element Assembly="AccrualProcessor.dll" Type="ECube.AccrualProcessor.ButtonDoPayout"><paybutton group="Cashball 1" percent="100" payval="0" /></Element>
+</Macro>
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Pay" />
+</control>
+<control X="23" Y="14" width="3" height="3" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro><Element Assembly="AccrualProcessor.dll" Type="ECube.AccrualProcessor.ButtonDoPayout"><paybutton group="Cashball 2" percent="100" payval="0" /></Element>
+</Macro>
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Pay" />
+</control>
+<control X="23" Y="19" width="3" height="3" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro><Element Assembly="AccrualProcessor.dll" Type="ECube.AccrualProcessor.ButtonDoPayout"><paybutton percent="100" payval="0" /></Element>
+</Macro>
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Pay" />
+</control>
+<control X="23" Y="35" width="3" height="3" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro />
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button page="Upick Payout" text="Pay" />
+</control>
+<control X="1" Y="31" width="15" height="3" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-16777216" BackColor="-6514998" Font="Default" Text="BDA Grand Prize" Align="Left" />
+</control>
+<control X="16" Y="31" width="7" height="3" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-16777216" BackColor="-6514998" Font="Default" Text="%Jackpot_Value[BDA Grand Prize]" Align="Right" />
+</control>
+<control X="23" Y="31" width="3" height="3" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro />
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button page="BDA Payout" text="Pay" />
+</control>
+<control X="1" Y="39" width="15" height="3" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-16777216" BackColor="-6513251" Font="Default" Text="Upickem Grand Prize" Align="Left" />
+</control>
+<control X="16" Y="39" width="7" height="3" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-16777216" BackColor="-6513251" Font="Default" Text="%Jackpot_Value[Upickem Grand Prize]" Align="Right" />
+</control>
+<control X="23" Y="39" width="3" height="3" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro><Element Assembly="AccrualProcessor.dll" Type="ECube.AccrualProcessor.ButtonDoPayout"><paybutton group="Upickem Grand Prize" percent="100" payval="0" /></Element>
+</Macro>
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Pay" />
+</control>
+<control X="30" Y="4" width="5" height="4" assembly="AccrualProcessor.dll" type="ECube.AccrualProcessor.ButtonCloseSession" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Close_Session" />
+</control>
+<control X="0" Y="2" width="24" height="2" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-524300" BackColor="-16635837" Font="Default" Text="%Current_Session" Align="Left" />
+</control>
+<control X="24" Y="2" width="16" height="2" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-1" BackColor="-16635837" Font="Default" Text="%Current_Date" Align="Right" />
+</control>
+<control X="20" Y="4" width="5" height="4" assembly="AccrualProcessor.dll" type="ECube.AccrualProcessor.ButtonUpdateSession" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Update" />
+</control>
+<control X="26" Y="10" width="7" height="3" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-16777216" BackColor="-6514998" Font="Default" Text="%Jackpot New Value[Cashball 1]" Align="Right" />
+</control>
+<control X="26" Y="14" width="7" height="3" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-16777216" BackColor="-6513251" Font="Default" Text="%Jackpot New Value[Cashball 2]" Align="Right" />
+</control>
+<control X="26" Y="19" width="7" height="3" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-16777216" BackColor="-6514998" Font="Default" Text="%Jackpot New Value[BDA 39#]" Align="Right" />
+</control>
+<control X="26" Y="35" width="7" height="3" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-16777216" BackColor="-6514998" Font="Default" Text="%Jackpot New Value[Upickem Progressive]" Align="Right" />
+</control>
+<control X="1" Y="43" width="6" height="4" assembly="xperdex.core.dll" type="xperdex.core.ButtonQuit+Quit" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>Quit Button</glareset_attributes><PSI_Button text="Quit" />
+</control>
+<control X="1" Y="23" width="15" height="3" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-16777216" BackColor="-6514998" Font="Default" Text="BDA 40#" Align="Left" />
+</control>
+<control X="16" Y="23" width="7" height="3" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-16777216" BackColor="-6514998" Font="Default" Text="%Jackpot_Value[BDA 40#]" Align="Right" />
+</control>
+<control X="23" Y="23" width="3" height="3" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro><Element Assembly="AccrualProcessor.dll" Type="ECube.AccrualProcessor.ButtonDoPayout"><paybutton percent="100" payval="0" /></Element>
+</Macro>
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Pay" />
+</control>
+<control X="26" Y="23" width="7" height="3" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-16777216" BackColor="-6514998" Font="Default" Text="%Jackpot New Value[BDA 40#]" Align="Right" />
+</control>
+<control X="8" Y="43" width="6" height="4" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro />
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button page="Tech" text="Settings" />
+</control>
+<control X="1" Y="27" width="15" height="3" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-16777216" BackColor="-6514998" Font="Default" Text="Dual &quot;N&quot; Dab (35#)" Align="Left" />
+</control>
+<control X="16" Y="27" width="7" height="3" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-16777216" BackColor="-6514998" Font="Default" Text="%Jackpot_Value[Dual &quot;N&quot; Dab]" Align="Right" />
+</control>
+<control X="23" Y="27" width="3" height="3" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro><Element Assembly="AccrualProcessor.dll" Type="ECube.AccrualProcessor.ButtonDoPayout"><paybutton percent="100" payval="0" /></Element>
+</Macro>
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Pay" />
+</control>
+<control X="26" Y="27" width="7" height="3" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-16777216" BackColor="-6514998" Font="Default" Text="%Jackpot New Value[Dual &quot;N&quot; Dab]" Align="Right" />
+</control>
+<control X="25" Y="4" width="5" height="4" assembly="AccrualProcessor.dll" type="ECube.AccrualProcessor.ButtonPostSession" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Post_Session" />
+</control>
+<control X="35" Y="4" width="5" height="4" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro />
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button page="CloseDay" text="Close_Day" />
+</control>
+<control X="16" Y="8" width="7" height="2" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-524300" BackColor="-16635837" Font="Default" Text="Start" Align="Center" />
+</control>
+<control X="26" Y="8" width="7" height="2" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-524300" BackColor="-16635837" Font="Default" Text="End" Align="Center" />
+</control>
+<control X="33" Y="8" width="7" height="2" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-524300" BackColor="-16635837" Font="Default" Text="Posted" Align="Center" />
+</control>
+<control X="33" Y="10" width="7" height="3" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-53404" BackColor="-16635837" Font="Default" Text="%Posted Jackpot Value[Cashball 1]" Align="Right" />
+</control>
+<control X="33" Y="14" width="7" height="3" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-53404" BackColor="-16635837" Font="Default" Text="%Posted Jackpot Value[Cashball 2]" Align="Right" />
+</control>
+<control X="33" Y="19" width="7" height="3" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-53404" BackColor="-16635837" Font="Default" Text="" Align="Right" />
+</control>
+<control X="33" Y="23" width="7" height="3" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-53404" BackColor="-16635837" Font="Default" Text="" Align="Right" />
+</control>
+<control X="33" Y="27" width="7" height="3" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-53404" BackColor="-16635837" Font="Default" Text="" Align="Center" />
+</control>
+<control X="33" Y="35" width="7" height="3" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-53404" BackColor="-16635837" Font="Default" Text="%Posted Jackpot Value[Upickem Progressive]" Align="Right" />
+</control>
+</page>
+<page background="sky.jpg" title="Tech" color="-1315090" x="40" y="40">
+<control X="0" Y="36" width="6" height="4" assembly="xperdex.core.dll" type="xperdex.core.ButtonQuit+Quit" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>Quit Button</glareset_attributes><PSI_Button text="Quit" />
+</control>
+<control X="32" Y="33" width="7" height="4" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro />
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button page="Page 0" text="Status_Page" />
+</control>
+<control X="10" Y="5" width="11" height="7" assembly="AccrualProcessor.dll" type="ECube.AccrualProcessor.ButtonConfigureAccruals" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>Utility Button</glareset_attributes><PSI_Button text="Edit_Jackpots" />
+</control>
+<control X="32" Y="37" width="7" height="3" assembly="xperdex.core.dll" type="xperdex.core.ImageAcceptor+ImageControl" font="Default" interface="xperdex.core.ImageAcceptor+ImageControl">
+<AcceptedImage location="Logo_eQube.png" />
+</control>
+<control X="0" Y="0" width="40" height="2" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-524300" BackColor="-15783940" Font="Default" Text="Accrual Processor" Align="Left" />
+</control>
+</page>
+<page background="sky.jpg" title="Sales" color="-1315090" x="40" y="40">
+<control X="0" Y="0" width="22" height="2" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-524300" BackColor="-15783940" Font="Default" Text="Accrual Processor" Align="Left" />
+</control>
+<control X="33" Y="32" width="6" height="5" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro />
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button page="Page 0" text="Current_Status" />
+</control>
+<control X="33" Y="37" width="6" height="3" assembly="xperdex.core.dll" type="xperdex.core.ImageAcceptor+ImageControl" font="Default" interface="xperdex.core.ImageAcceptor+ImageControl">
+<AcceptedImage location="Logo_eQube.png" />
+</control>
+<control X="1" Y="2" width="16" height="2" assembly="AccrualProcessor.dll" type="ECube.AccrualProcessor.CommboBoxSelectAccrualGroup" font="default" interface="ECube.AccrualProcessor.CommboBoxSelectAccrualGroup">
+</control>
+<control X="1" Y="6" width="38" height="25" assembly="AccrualProcessor.dll" type="ECube.AccrualProcessor.CommboBoxSelectSession" font="default" interface="ECube.AccrualProcessor.CommboBoxSelectSession">
+</control>
+<control X="32" Y="2" width="7" height="4" assembly="AccrualProcessor.dll" type="ECube.AccrualProcessor.ButtonReloadPriorAccruals" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Load Older_Accruals" />
+</control>
+<control X="20" Y="2" width="6" height="4" assembly="AccrualProcessor.dll" type="ECube.AccrualProcessor.ButtonUpdateSession" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Update" />
+</control>
+<control X="14" Y="32" width="5" height="3" assembly="xperdex.core.dll" type="xperdex.core.ButtonQuit+Quit" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Quit(Reload)" />
+</control>
+<control X="22" Y="0" width="18" height="2" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-1315090" BackColor="-15783940" Font="Default" Text="%Current_Date %Current_Session" Align="Right" />
+</control>
+<control X="26" Y="2" width="6" height="4" assembly="AccrualProcessor.dll" type="ECube.AccrualProcessor.ButtonReloadAccruals" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Reload_Accruals" />
+</control>
+</page>
+<page background="sky.jpg" title="Upick Payout" color="-524300" x="40" y="40">
+<control X="3" Y="4" width="11" height="4" assembly="AccrualProcessor.dll" type="ECube.AccrualProcessor.ButtonDoPayout" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<paybutton group="Upickem Progressive" percent="100" payval="0" /><glareset>default</glareset><glareset_attributes>Utility Button</glareset_attributes><PSI_Button text="Pay_18" />
+</control>
+<control X="3" Y="8" width="11" height="4" assembly="AccrualProcessor.dll" type="ECube.AccrualProcessor.ButtonDoPayout" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<paybutton group="Upickem Progressive" percent="40" payval="0" /><glareset>default</glareset><glareset_attributes>Utility Button</glareset_attributes><PSI_Button text="Pay_19-20 (40 Percent)" />
+</control>
+<control X="3" Y="12" width="11" height="4" assembly="AccrualProcessor.dll" type="ECube.AccrualProcessor.ButtonDoPayout" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<paybutton group="Upickem Progressive" percent="30" payval="0" /><glareset>default</glareset><glareset_attributes>Utility Button</glareset_attributes><PSI_Button text="Pay_21-22 (30 Percent)" />
+</control>
+<control X="3" Y="16" width="11" height="4" assembly="AccrualProcessor.dll" type="ECube.AccrualProcessor.ButtonDoPayout" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<paybutton group="Upickem Progressive" percent="20" payval="0" /><glareset>default</glareset><glareset_attributes>Utility Button</glareset_attributes><PSI_Button text="Pay_23-24 (20 Percent)" />
+</control>
+<control X="3" Y="20" width="11" height="4" assembly="AccrualProcessor.dll" type="ECube.AccrualProcessor.ButtonDoPayout" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<paybutton group="Upickem Progressive" percent="10" payval="0" /><glareset>default</glareset><glareset_attributes>Utility Button</glareset_attributes><PSI_Button text="Pay_25-26 (10 Percent)" />
+</control>
+<control X="33" Y="32" width="6" height="5" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro />
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button page="Page 0" text="Accrual_Status" />
+</control>
+<control X="33" Y="37" width="6" height="3" assembly="xperdex.core.dll" type="xperdex.core.ImageAcceptor+ImageControl" font="Default" interface="xperdex.core.ImageAcceptor+ImageControl">
+<AcceptedImage location="Logo_eQube.png" />
+</control>
+</page>
+<page background="sky.jpg" title="BDA Payout" color="-1315090" x="40" y="40">
+<control X="0" Y="0" width="40" height="3" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-1315090" BackColor="-16352565" Font="Default" Text="Accrual Processor" Align="Left" />
+</control>
+<control X="6" Y="9" width="11" height="4" assembly="AccrualProcessor.dll" type="ECube.AccrualProcessor.ButtonDoPayout" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<paybutton group="BDA Grand prize" percent="100" payval="3000" /><glareset>default</glareset><glareset_attributes>Utility Button</glareset_attributes><PSI_Button text="Pay_36" />
+</control>
+<control X="33" Y="33" width="6" height="4" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro />
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button page="Page 0" text="Accrual_Status" />
+</control>
+<control X="33" Y="37" width="6" height="3" assembly="xperdex.core.dll" type="xperdex.core.ImageAcceptor+ImageControl" font="Default" interface="xperdex.core.ImageAcceptor+ImageControl">
+<AcceptedImage location="Logo_eQube.png" />
+</control>
+<control X="6" Y="13" width="11" height="4" assembly="AccrualProcessor.dll" type="ECube.AccrualProcessor.ButtonDoPayout" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<paybutton group="BDA Grand prize" percent="100" payval="1500" /><glareset>default</glareset><glareset_attributes>Utility Button</glareset_attributes><PSI_Button text="Pay_37" />
+</control>
+<control X="6" Y="17" width="11" height="4" assembly="AccrualProcessor.dll" type="ECube.AccrualProcessor.ButtonDoPayout" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<paybutton group="BDA Grand prize" percent="100" payval="250" /><glareset>default</glareset><glareset_attributes>Utility Button</glareset_attributes><PSI_Button text="Pay_38" />
+</control>
+<control X="20" Y="9" width="11" height="4" assembly="AccrualProcessor.dll" type="ECube.AccrualProcessor.ButtonDoPayout" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<paybutton group="BDA Grand prize" percent="100" payval="6000" /><glareset>default</glareset><glareset_attributes>Utility Button</glareset_attributes><PSI_Button text="Pay_36" />
+</control>
+<control X="20" Y="13" width="11" height="4" assembly="AccrualProcessor.dll" type="ECube.AccrualProcessor.ButtonDoPayout" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<paybutton group="BDA Grand prize" percent="100" payval="3000" /><glareset>default</glareset><glareset_attributes>Utility Button</glareset_attributes><PSI_Button text="Pay_37" />
+</control>
+<control X="20" Y="17" width="11" height="4" assembly="AccrualProcessor.dll" type="ECube.AccrualProcessor.ButtonDoPayout" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<paybutton group="BDA Grand prize" percent="100" payval="500" /><glareset>default</glareset><glareset_attributes>Utility Button</glareset_attributes><PSI_Button text="Pay_38" />
+</control>
+<control X="6" Y="5" width="11" height="4" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-16777216" BackColor="16777215" Font="Default" Text="Level 1" Align="Center" />
+</control>
+<control X="20" Y="5" width="11" height="4" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-16777216" BackColor="16777215" Font="Default" Text="Level 2" Align="Center" />
+</control>
+</page>
+<page background="sky.jpg" title="CloseDay" color="-1315090" x="40" y="40">
+<control X="32" Y="31" width="6" height="5" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro />
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button page="Page 0" text="Current_Status" />
+</control>
+<control X="11" Y="7" width="7" height="5" assembly="AccrualProcessor.dll" type="ECube.AccrualProcessor.ButtonPostDaily" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Post_Dailies" />
+</control>
+<control X="21" Y="7" width="7" height="5" assembly="AccrualProcessor.dll" type="ECube.AccrualProcessor.ButtonCloseSession" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Close_Session" />
+</control>
+</page>
+</xperdex>

@@ -1,0 +1,502 @@
+#
+# old_revision [bb01319ba26d79f6a7ebd28ddf9bfb8b9a58baa8]
+#
+# patch "work/xperdex.reflector/games/bingo_odds/BingoGameCore/BingoDealer.cs"
+#  from [3d2aa40a411bc35e03cfd31c614d54e66f4a648c]
+#    to [77f67e33e62ecd86f562777b54b2740f82793906]
+# 
+# patch "work/xperdex.reflector/games/bingo_odds/BingoGameCore/BingoGameCore.cs"
+#  from [9cf17a17796ad37df119be0170d5f60e1c5f0911]
+#    to [820d6d969e9edb50031b886e6c60c43821ae8f6f]
+# 
+# patch "work/xperdex.reflector/games/bingo_odds/RateRankSetup/rate_rank_setup.vdproj"
+#  from [d90c756a193743337cea246be7f0b38be19302bc]
+#    to [a2822cf44b2d52944e143f12a91df35fe8eb1d31]
+# 
+# patch "work/xperdex.reflector/games/bingo_odds/bingo_odds.stripped/bingo_odds.sln"
+#  from [5b8dff94b68340685494968a45b474de5ad0ca5b]
+#    to [a26d19e0c48260c4257da974289635a58fb62134]
+#
+============================================================
+--- work/xperdex.reflector/games/bingo_odds/BingoGameCore/BingoDealer.cs	3d2aa40a411bc35e03cfd31c614d54e66f4a648c
++++ work/xperdex.reflector/games/bingo_odds/BingoGameCore/BingoDealer.cs	77f67e33e62ecd86f562777b54b2740f82793906
+@@ -90,7 +90,7 @@ namespace BingoGameCore
+ 
+ 			xperdex.classes.INIFile mini_ini = new xperdex.classes.INIFile( "mini.ini" );
+ 
+-			xperdex.classes.INIFile ftnsys = new xperdex.classes.INIFile();// "c:/ftn3000/working/ftnsys.ini" );
++			xperdex.classes.INIFile ftnsys = new xperdex.classes.INIFile();//"c:/ftn3000/working/sams/caller/ftnsys.ini" );
+ 			string bingo_ini = ftnsys["DATA FILES"]["Cardset INI"];
+ 			if( bingo_ini == null )
+ 				bingo_ini = "c:/ftn3000/working/bingo.ini";
+============================================================
+--- work/xperdex.reflector/games/bingo_odds/BingoGameCore/BingoGameCore.cs	9cf17a17796ad37df119be0170d5f60e1c5f0911
++++ work/xperdex.reflector/games/bingo_odds/BingoGameCore/BingoGameCore.cs	820d6d969e9edb50031b886e6c60c43821ae8f6f
+@@ -317,6 +317,8 @@ namespace BingoGameCore
+ 								}
+ 								else
+ 								{
++									if( balls == null )
++										return result;
+ 									// part of the game step... except...
+ 									playing_balls = balls.CallBalls( ball_count );
+ 								}
+@@ -1386,9 +1388,12 @@ CREATE TABLE `card_ram` (
+ 				init( db );
+ 				{
+ 					String[] result = db.query( "select count(*) from called_game_balls where bingoday="
+-						+xperdex.classes.MySQLDataTable.MakeDateOnly(s.bingoday)
++						+ "'" + s.bingoday.Year + "-" + s.bingoday.Month + "-" + s.bingoday.Day + " " + s.bingoday.Hour + ":" + s.bingoday.Minute + ":" +s.bingoday.Second + "'"
++						//+xperdex.classes.MySQLDataTable.MakeDateOnly(s.bingoday)
+ 						+" and session="+(s.Session) 
+ 						+" and game="+(s.game.game_number));
++					db.Dispose();
++					db = null;
+ 					if( result.Length == 0 ||
+ 						( result[0].Length == 0 || Convert.ToInt32( result[0] ) == 0 ) )
+ 							return true;
+@@ -1447,7 +1452,7 @@ CREATE TABLE `card_ram` (
+ 						}
+ 
+ 						sb.Append( "'" + s.game.patterns[0].Name + "'," );
+-						sb.Append( xperdex.classes.MySQLDataTable.MakeDateOnly( s.bingoday ) + "," );
++						sb.Append( "'" + s.bingoday.Year + "-" + s.bingoday.Month + "-" + s.bingoday.Day + " " + s.bingoday.Hour + ":" + s.bingoday.Minute + ":" +s.bingoday.Second + "'," );
+ 						sb.Append( s.Year + "," );
+ 						sb.Append( s.Day + "," );
+ 						sb.Append( s.Hall + "," );
+@@ -1826,6 +1831,8 @@ CREATE TABLE `card_ram` (
+ 					db.command( "COMMIT" );
+ 				}
+ 			}
++			db.Dispose();
++			db = null;
+ 				//db.Dispose();
+ 		}
+ #if asdfasdf
+============================================================
+--- work/xperdex.reflector/games/bingo_odds/RateRankSetup/rate_rank_setup.vdproj	d90c756a193743337cea246be7f0b38be19302bc
++++ work/xperdex.reflector/games/bingo_odds/RateRankSetup/rate_rank_setup.vdproj	a2822cf44b2d52944e143f12a91df35fe8eb1d31
+@@ -21,44 +21,44 @@
+         }
+         "Entry"
+         {
+-        "MsmKey" = "8:_14960699E5DB473B8729BDCD5B23683B"
+-        "OwnerKey" = "8:_0CE2625D543B49AC958EA6C833A7E831"
++        "MsmKey" = "8:_1E22E6F6542F4B5C91E37B228E2FE9E8"
++        "OwnerKey" = "8:_UNDEFINED"
+         "MsmSig" = "8:_UNDEFINED"
+         }
+         "Entry"
+         {
+-        "MsmKey" = "8:_1E22E6F6542F4B5C91E37B228E2FE9E8"
+-        "OwnerKey" = "8:_UNDEFINED"
++        "MsmKey" = "8:_2294551CE439457FA71A1CF4C061F348"
++        "OwnerKey" = "8:_C8995733A77A4AF4B8D5D99506E17A99"
+         "MsmSig" = "8:_UNDEFINED"
+         }
+         "Entry"
+         {
+-        "MsmKey" = "8:_413B99334B25EF5CB8957126F39C8682"
+-        "OwnerKey" = "8:_0CE2625D543B49AC958EA6C833A7E831"
++        "MsmKey" = "8:_3A1773A058C8465D4251321AB0A7531C"
++        "OwnerKey" = "8:_5B4AE886F657D583CF2E124401348177"
+         "MsmSig" = "8:_UNDEFINED"
+         }
+         "Entry"
+         {
+-        "MsmKey" = "8:_577EAF532C683E48136F1A7E02FCB5EA"
+-        "OwnerKey" = "8:_0CE2625D543B49AC958EA6C833A7E831"
++        "MsmKey" = "8:_3A1773A058C8465D4251321AB0A7531C"
++        "OwnerKey" = "8:_1E22E6F6542F4B5C91E37B228E2FE9E8"
+         "MsmSig" = "8:_UNDEFINED"
+         }
+         "Entry"
+         {
+-        "MsmKey" = "8:_6E2391A33831DBA312F79BFCD26F4723"
+-        "OwnerKey" = "8:_C75A633D49178024E3AC9B917957C5FC"
++        "MsmKey" = "8:_413B99334B25EF5CB8957126F39C8682"
++        "OwnerKey" = "8:_0CE2625D543B49AC958EA6C833A7E831"
+         "MsmSig" = "8:_UNDEFINED"
+         }
+         "Entry"
+         {
+-        "MsmKey" = "8:_6E2391A33831DBA312F79BFCD26F4723"
+-        "OwnerKey" = "8:_1E22E6F6542F4B5C91E37B228E2FE9E8"
++        "MsmKey" = "8:_577EAF532C683E48136F1A7E02FCB5EA"
++        "OwnerKey" = "8:_0CE2625D543B49AC958EA6C833A7E831"
+         "MsmSig" = "8:_UNDEFINED"
+         }
+         "Entry"
+         {
+-        "MsmKey" = "8:_6E2391A33831DBA312F79BFCD26F4723"
+-        "OwnerKey" = "8:_8328255B96DCD3B5059FEC1AC53B9901"
++        "MsmKey" = "8:_5B4AE886F657D583CF2E124401348177"
++        "OwnerKey" = "8:_1E22E6F6542F4B5C91E37B228E2FE9E8"
+         "MsmSig" = "8:_UNDEFINED"
+         }
+         "Entry"
+@@ -69,56 +69,56 @@
+         }
+         "Entry"
+         {
+-        "MsmKey" = "8:_8278AA7D8D4A4C2AADA9227FDDD2978B"
+-        "OwnerKey" = "8:_14960699E5DB473B8729BDCD5B23683B"
++        "MsmKey" = "8:_811BD8E49527CF8DB34090A6FB1B9DAD"
++        "OwnerKey" = "8:_3A1773A058C8465D4251321AB0A7531C"
+         "MsmSig" = "8:_UNDEFINED"
+         }
+         "Entry"
+         {
+-        "MsmKey" = "8:_8328255B96DCD3B5059FEC1AC53B9901"
++        "MsmKey" = "8:_811BD8E49527CF8DB34090A6FB1B9DAD"
+         "OwnerKey" = "8:_1E22E6F6542F4B5C91E37B228E2FE9E8"
+         "MsmSig" = "8:_UNDEFINED"
+         }
+         "Entry"
+         {
+-        "MsmKey" = "8:_A6C0BC7F3546BF2979F651BCAF300F37"
+-        "OwnerKey" = "8:_6E2391A33831DBA312F79BFCD26F4723"
++        "MsmKey" = "8:_811BD8E49527CF8DB34090A6FB1B9DAD"
++        "OwnerKey" = "8:_5B4AE886F657D583CF2E124401348177"
+         "MsmSig" = "8:_UNDEFINED"
+         }
+         "Entry"
+         {
+-        "MsmKey" = "8:_A6C0BC7F3546BF2979F651BCAF300F37"
+-        "OwnerKey" = "8:_1E22E6F6542F4B5C91E37B228E2FE9E8"
++        "MsmKey" = "8:_86D40DB3D7D2B6BEC2073197489149E7"
++        "OwnerKey" = "8:_811BD8E49527CF8DB34090A6FB1B9DAD"
+         "MsmSig" = "8:_UNDEFINED"
+         }
+         "Entry"
+         {
+-        "MsmKey" = "8:_A6C0BC7F3546BF2979F651BCAF300F37"
+-        "OwnerKey" = "8:_8328255B96DCD3B5059FEC1AC53B9901"
++        "MsmKey" = "8:_86D40DB3D7D2B6BEC2073197489149E7"
++        "OwnerKey" = "8:_1E22E6F6542F4B5C91E37B228E2FE9E8"
+         "MsmSig" = "8:_UNDEFINED"
+         }
+         "Entry"
+         {
+-        "MsmKey" = "8:_B7C80885090048E910ED8EE22457A257"
+-        "OwnerKey" = "8:_1E22E6F6542F4B5C91E37B228E2FE9E8"
++        "MsmKey" = "8:_86D40DB3D7D2B6BEC2073197489149E7"
++        "OwnerKey" = "8:_5B4AE886F657D583CF2E124401348177"
+         "MsmSig" = "8:_UNDEFINED"
+         }
+         "Entry"
+         {
+-        "MsmKey" = "8:_C75A633D49178024E3AC9B917957C5FC"
+-        "OwnerKey" = "8:_8328255B96DCD3B5059FEC1AC53B9901"
++        "MsmKey" = "8:_B7C80885090048E910ED8EE22457A257"
++        "OwnerKey" = "8:_1E22E6F6542F4B5C91E37B228E2FE9E8"
+         "MsmSig" = "8:_UNDEFINED"
+         }
+         "Entry"
+         {
+-        "MsmKey" = "8:_C75A633D49178024E3AC9B917957C5FC"
+-        "OwnerKey" = "8:_1E22E6F6542F4B5C91E37B228E2FE9E8"
++        "MsmKey" = "8:_C8995733A77A4AF4B8D5D99506E17A99"
++        "OwnerKey" = "8:_0CE2625D543B49AC958EA6C833A7E831"
+         "MsmSig" = "8:_UNDEFINED"
+         }
+         "Entry"
+         {
+         "MsmKey" = "8:_E2674D4C369A8BF77E7D6E39466EB190"
+-        "OwnerKey" = "8:_6E2391A33831DBA312F79BFCD26F4723"
++        "OwnerKey" = "8:_811BD8E49527CF8DB34090A6FB1B9DAD"
+         "MsmSig" = "8:_UNDEFINED"
+         }
+         "Entry"
+@@ -142,25 +142,25 @@
+         "Entry"
+         {
+         "MsmKey" = "8:_UNDEFINED"
+-        "OwnerKey" = "8:_8328255B96DCD3B5059FEC1AC53B9901"
++        "OwnerKey" = "8:_5B4AE886F657D583CF2E124401348177"
+         "MsmSig" = "8:_UNDEFINED"
+         }
+         "Entry"
+         {
+         "MsmKey" = "8:_UNDEFINED"
+-        "OwnerKey" = "8:_C75A633D49178024E3AC9B917957C5FC"
++        "OwnerKey" = "8:_3A1773A058C8465D4251321AB0A7531C"
+         "MsmSig" = "8:_UNDEFINED"
+         }
+         "Entry"
+         {
+         "MsmKey" = "8:_UNDEFINED"
+-        "OwnerKey" = "8:_6E2391A33831DBA312F79BFCD26F4723"
++        "OwnerKey" = "8:_811BD8E49527CF8DB34090A6FB1B9DAD"
+         "MsmSig" = "8:_UNDEFINED"
+         }
+         "Entry"
+         {
+         "MsmKey" = "8:_UNDEFINED"
+-        "OwnerKey" = "8:_A6C0BC7F3546BF2979F651BCAF300F37"
++        "OwnerKey" = "8:_86D40DB3D7D2B6BEC2073197489149E7"
+         "MsmSig" = "8:_UNDEFINED"
+         }
+         "Entry"
+@@ -276,6 +276,37 @@
+         }
+         "File"
+         {
++            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_3A1773A058C8465D4251321AB0A7531C"
++            {
++            "AssemblyRegister" = "3:1"
++            "AssemblyIsInGAC" = "11:FALSE"
++            "AssemblyAsmDisplayName" = "8:GDAL.BingoSessions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
++                "ScatterAssemblies"
++                {
++                    "_3A1773A058C8465D4251321AB0A7531C"
++                    {
++                    "Name" = "8:GDAL.BingoSessions.dll"
++                    "Attributes" = "3:512"
++                    }
++                }
++            "SourcePath" = "8:GDAL.BingoSessions.dll"
++            "TargetName" = "8:"
++            "Tag" = "8:"
++            "Folder" = "8:_1371F043D3534FF19727A0FF8D5CC9CB"
++            "Condition" = "8:"
++            "Transitive" = "11:FALSE"
++            "Vital" = "11:TRUE"
++            "ReadOnly" = "11:FALSE"
++            "Hidden" = "11:FALSE"
++            "System" = "11:FALSE"
++            "Permanent" = "11:FALSE"
++            "SharedLegacy" = "11:FALSE"
++            "PackageAs" = "3:1"
++            "Register" = "3:1"
++            "Exclude" = "11:FALSE"
++            "IsDependency" = "11:TRUE"
++            "IsolateTo" = "8:"
++            }
+             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_413B99334B25EF5CB8957126F39C8682"
+             {
+             "SourcePath" = "8:OPENGL32.dll"
+@@ -316,20 +347,20 @@
+             "IsDependency" = "11:TRUE"
+             "IsolateTo" = "8:"
+             }
+-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6E2391A33831DBA312F79BFCD26F4723"
++            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5B4AE886F657D583CF2E124401348177"
+             {
+             "AssemblyRegister" = "3:1"
+             "AssemblyIsInGAC" = "11:FALSE"
+-            "AssemblyAsmDisplayName" = "8:xperdex.classes, Version=1.0.3128.26328, Culture=neutral, processorArchitecture=MSIL"
++            "AssemblyAsmDisplayName" = "8:BingoGameCore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                 "ScatterAssemblies"
+                 {
+-                    "_6E2391A33831DBA312F79BFCD26F4723"
++                    "_5B4AE886F657D583CF2E124401348177"
+                     {
+-                    "Name" = "8:xperdex.classes.dll"
++                    "Name" = "8:BingoGameCore.dll"
+                     "Attributes" = "3:512"
+                     }
+                 }
+-            "SourcePath" = "8:xperdex.classes.dll"
++            "SourcePath" = "8:BingoGameCore.dll"
+             "TargetName" = "8:"
+             "Tag" = "8:"
+             "Folder" = "8:_1371F043D3534FF19727A0FF8D5CC9CB"
+@@ -367,20 +398,20 @@
+             "IsDependency" = "11:TRUE"
+             "IsolateTo" = "8:"
+             }
+-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_8328255B96DCD3B5059FEC1AC53B9901"
++            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_811BD8E49527CF8DB34090A6FB1B9DAD"
+             {
+             "AssemblyRegister" = "3:1"
+             "AssemblyIsInGAC" = "11:FALSE"
+-            "AssemblyAsmDisplayName" = "8:BingoGameCore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
++            "AssemblyAsmDisplayName" = "8:xperdex.classes, Version=1.0.3128.28003, Culture=neutral, processorArchitecture=MSIL"
+                 "ScatterAssemblies"
+                 {
+-                    "_8328255B96DCD3B5059FEC1AC53B9901"
++                    "_811BD8E49527CF8DB34090A6FB1B9DAD"
+                     {
+-                    "Name" = "8:BingoGameCore.dll"
++                    "Name" = "8:xperdex.classes.dll"
+                     "Attributes" = "3:512"
+                     }
+                 }
+-            "SourcePath" = "8:BingoGameCore.dll"
++            "SourcePath" = "8:xperdex.classes.dll"
+             "TargetName" = "8:"
+             "Tag" = "8:"
+             "Folder" = "8:_1371F043D3534FF19727A0FF8D5CC9CB"
+@@ -398,14 +429,14 @@
+             "IsDependency" = "11:TRUE"
+             "IsolateTo" = "8:"
+             }
+-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A6C0BC7F3546BF2979F651BCAF300F37"
++            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_86D40DB3D7D2B6BEC2073197489149E7"
+             {
+             "AssemblyRegister" = "3:1"
+             "AssemblyIsInGAC" = "11:FALSE"
+             "AssemblyAsmDisplayName" = "8:sack_bag, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86"
+                 "ScatterAssemblies"
+                 {
+-                    "_A6C0BC7F3546BF2979F651BCAF300F37"
++                    "_86D40DB3D7D2B6BEC2073197489149E7"
+                     {
+                     "Name" = "8:sack_bag.dll"
+                     "Attributes" = "3:512"
+@@ -460,37 +491,6 @@
+             "IsDependency" = "11:TRUE"
+             "IsolateTo" = "8:"
+             }
+-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C75A633D49178024E3AC9B917957C5FC"
+-            {
+-            "AssemblyRegister" = "3:1"
+-            "AssemblyIsInGAC" = "11:FALSE"
+-            "AssemblyAsmDisplayName" = "8:GDAL.BingoSessions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+-                "ScatterAssemblies"
+-                {
+-                    "_C75A633D49178024E3AC9B917957C5FC"
+-                    {
+-                    "Name" = "8:GDAL.BingoSessions.dll"
+-                    "Attributes" = "3:512"
+-                    }
+-                }
+-            "SourcePath" = "8:GDAL.BingoSessions.dll"
+-            "TargetName" = "8:"
+-            "Tag" = "8:"
+-            "Folder" = "8:_1371F043D3534FF19727A0FF8D5CC9CB"
+-            "Condition" = "8:"
+-            "Transitive" = "11:FALSE"
+-            "Vital" = "11:TRUE"
+-            "ReadOnly" = "11:FALSE"
+-            "Hidden" = "11:FALSE"
+-            "System" = "11:FALSE"
+-            "Permanent" = "11:FALSE"
+-            "SharedLegacy" = "11:FALSE"
+-            "PackageAs" = "3:1"
+-            "Register" = "3:1"
+-            "Exclude" = "11:FALSE"
+-            "IsDependency" = "11:TRUE"
+-            "IsolateTo" = "8:"
+-            }
+             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E2674D4C369A8BF77E7D6E39466EB190"
+             {
+             "AssemblyRegister" = "3:1"
+@@ -597,14 +597,14 @@
+         {
+         "Name" = "8:Microsoft Visual Studio"
+         "ProductName" = "8:Bingo Odds Rater"
+-        "ProductCode" = "8:{8656EFD1-3C53-43A3-8DF6-A37851C3B7AA}"
+-        "PackageCode" = "8:{08975123-E23A-4330-921E-C21929F88123}"
++        "ProductCode" = "8:{4376BC6E-0AB0-4B16-823C-8BF1D5E7E0DD}"
++        "PackageCode" = "8:{847E7EE4-3F22-4049-A531-63E0F5B8AC0C}"
+         "UpgradeCode" = "8:{99E23E62-4F7E-464C-BAB3-879B64C5B472}"
+         "RestartWWWService" = "11:FALSE"
+         "RemovePreviousVersions" = "11:TRUE"
+         "DetectNewerInstalledVersion" = "11:FALSE"
+         "InstallAllUsers" = "11:TRUE"
+-        "ProductVersion" = "8:1.0.1"
++        "ProductVersion" = "8:1.0.5"
+         "Manufacturer" = "8:Freedom Collective"
+         "ARPHELPTELEPHONE" = "8:"
+         "ARPHELPLINK" = "8:"
+@@ -1127,11 +1127,11 @@
+         }
+         "MergeModule"
+         {
+-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_14960699E5DB473B8729BDCD5B23683B"
++            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_2294551CE439457FA71A1CF4C061F348"
+             {
+             "UseDynamicProperties" = "11:TRUE"
+             "IsDependency" = "11:TRUE"
+-            "SourcePath" = "8:Microsoft_VC80_CRT_x86.msm"
++            "SourcePath" = "8:policy_8_0_microsoft_vc80_debugcrt_x86.msm"
+                 "Properties"
+                 {
+                 }
+@@ -1141,11 +1141,11 @@
+             "Feature" = "8:"
+             "IsolateTo" = "8:"
+             }
+-            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_8278AA7D8D4A4C2AADA9227FDDD2978B"
++            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_C8995733A77A4AF4B8D5D99506E17A99"
+             {
+             "UseDynamicProperties" = "11:TRUE"
+             "IsDependency" = "11:TRUE"
+-            "SourcePath" = "8:policy_8_0_microsoft_vc80_crt_x86.msm"
++            "SourcePath" = "8:Microsoft_VC80_DebugCRT_x86.msm"
+                 "Properties"
+                 {
+                 }
+============================================================
+--- work/xperdex.reflector/games/bingo_odds/bingo_odds.stripped/bingo_odds.sln	5b8dff94b68340685494968a45b474de5ad0ca5b
++++ work/xperdex.reflector/games/bingo_odds/bingo_odds.stripped/bingo_odds.sln	a26d19e0c48260c4257da974289635a58fb62134
+@@ -55,6 +55,12 @@ EndProject
+ 		Release.AspNetCompiler.Debug = "False"
+ 	EndProjectSection
+ EndProject
++Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestBurst", "..\TestBurst\TestBurst.csproj", "{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}"
++	ProjectSection(WebsiteProperties) = preProject
++		Debug.AspNetCompiler.Debug = "True"
++		Release.AspNetCompiler.Debug = "False"
++	EndProjectSection
++EndProject
+ Global
+ 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+ 		Debug C++|Any CPU = Debug C++|Any CPU
+@@ -551,6 +557,54 @@ Global
+ 		{35C176F5-FCB8-4311-874C-D2D630DFD5A0}.Release|Pocket PC 2003 (ARMV4).ActiveCfg = Release|Any CPU
+ 		{35C176F5-FCB8-4311-874C-D2D630DFD5A0}.Release|Win32.ActiveCfg = Release|Any CPU
+ 		{35C176F5-FCB8-4311-874C-D2D630DFD5A0}.Release|x64.ActiveCfg = Release|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Debug C++|Any CPU.ActiveCfg = Debug|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Debug C++|Any CPU.Build.0 = Debug|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Debug C++|Itanium.ActiveCfg = Debug|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Debug C++|Mixed Platforms.ActiveCfg = Debug|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Debug C++|Mixed Platforms.Build.0 = Debug|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Debug C++|Pocket PC 2003 (ARMV4).ActiveCfg = Debug|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Debug C++|Win32.ActiveCfg = Debug|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Debug C++|x64.ActiveCfg = Debug|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Debug CLR|Any CPU.ActiveCfg = Debug|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Debug CLR|Any CPU.Build.0 = Debug|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Debug CLR|Itanium.ActiveCfg = Debug|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Debug CLR|Mixed Platforms.ActiveCfg = Debug|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Debug CLR|Mixed Platforms.Build.0 = Debug|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Debug CLR|Pocket PC 2003 (ARMV4).ActiveCfg = Debug|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Debug CLR|Win32.ActiveCfg = Debug|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Debug CLR|x64.ActiveCfg = Debug|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Debug|Itanium.ActiveCfg = Debug|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Debug|Pocket PC 2003 (ARMV4).ActiveCfg = Debug|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Debug|Win32.ActiveCfg = Debug|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Debug|x64.ActiveCfg = Debug|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Release C++|Any CPU.ActiveCfg = Release|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Release C++|Any CPU.Build.0 = Release|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Release C++|Itanium.ActiveCfg = Release|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Release C++|Mixed Platforms.ActiveCfg = Release|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Release C++|Mixed Platforms.Build.0 = Release|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Release C++|Pocket PC 2003 (ARMV4).ActiveCfg = Release|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Release C++|Win32.ActiveCfg = Release|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Release C++|x64.ActiveCfg = Release|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Release CLR|Any CPU.ActiveCfg = Release|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Release CLR|Any CPU.Build.0 = Release|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Release CLR|Itanium.ActiveCfg = Release|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Release CLR|Mixed Platforms.ActiveCfg = Release|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Release CLR|Mixed Platforms.Build.0 = Release|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Release CLR|Pocket PC 2003 (ARMV4).ActiveCfg = Release|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Release CLR|Win32.ActiveCfg = Release|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Release CLR|x64.ActiveCfg = Release|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Release|Any CPU.Build.0 = Release|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Release|Itanium.ActiveCfg = Release|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Release|Mixed Platforms.Build.0 = Release|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Release|Pocket PC 2003 (ARMV4).ActiveCfg = Release|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Release|Win32.ActiveCfg = Release|Any CPU
++		{BC37EEF3-1FF5-4523-9DBA-AAFA406628DB}.Release|x64.ActiveCfg = Release|Any CPU
+ 	EndGlobalSection
+ 	GlobalSection(SolutionProperties) = preSolution
+ 		HideSolutionNode = FALSE

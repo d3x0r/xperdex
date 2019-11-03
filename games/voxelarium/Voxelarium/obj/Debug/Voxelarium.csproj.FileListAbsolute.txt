@@ -1,0 +1,13 @@
+M:\xperdex\games\voxelarium\Voxelarium\bin\Debug\Voxelarium.exe.config
+M:\xperdex\games\voxelarium\Voxelarium\bin\Debug\Voxelarium.exe
+M:\xperdex\games\voxelarium\Voxelarium\bin\Debug\Voxelarium.pdb
+M:\xperdex\games\voxelarium\Voxelarium\bin\Debug\OpenTK.dll
+M:\xperdex\games\voxelarium\Voxelarium\bin\Debug\Voxelarium.Core.dll
+M:\xperdex\games\voxelarium\Voxelarium\bin\Debug\Voxelarium.Core.pdb
+M:\xperdex\games\voxelarium\Voxelarium\bin\Debug\OpenTK.pdb
+M:\xperdex\games\voxelarium\Voxelarium\bin\Debug\OpenTK.xml
+M:\xperdex\games\voxelarium\Voxelarium\obj\Debug\Voxelarium.csprojResolveAssemblyReference.cache
+M:\xperdex\games\voxelarium\Voxelarium\obj\Debug\Voxelarium.Properties.Resources.resources
+M:\xperdex\games\voxelarium\Voxelarium\obj\Debug\Voxelarium.csproj.GenerateResource.Cache
+M:\xperdex\games\voxelarium\Voxelarium\obj\Debug\Voxelarium.exe
+M:\xperdex\games\voxelarium\Voxelarium\obj\Debug\Voxelarium.pdb

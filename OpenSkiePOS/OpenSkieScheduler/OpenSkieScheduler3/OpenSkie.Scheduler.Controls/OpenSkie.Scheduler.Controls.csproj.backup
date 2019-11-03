@@ -1,0 +1,390 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B0AB5111-DDE4-4185-952F-5DF8725C62EB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpenSkie.Scheduler.Controls</RootNamespace>
+    <AssemblyName>OpenSkie.Scheduler.Controls</AssemblyName>
+    <BaseIntermediateOutputPath>$(SolutionDir)/output/</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)//</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)//</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BigPatternBlock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BigPatternBlock.designer.cs">
+      <DependentUpon>BigPatternBlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BlobberDatabaseInterface.cs" />
+    <Compile Include="Controls\Buttons\AddItemButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Buttons\ButtonAddCardswipeCalibrate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Buttons\DeleteScheduleItems.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Buttons\EditScheduleItems.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Buttons\EltaninButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Buttons\EnableEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Buttons\GameOrderMoveDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Buttons\GameOrderMoveUp.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Buttons\MyButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Buttons\NewScheduleItems.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Buttons\SaveLoadButtons.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ControlList.cs" />
+    <Compile Include="Controls\Forms\CardsetEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\CardsetEditor.designer.cs">
+      <DependentUpon>CardsetEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\CardsetRangeEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\CardsetRangeEditor.designer.cs">
+      <DependentUpon>CardsetRangeEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\CardswipeCalibrateAddition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\CardswipeCalibrateAddition.Designer.cs">
+      <DependentUpon>CardswipeCalibrateAddition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\ColorEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\ColorEditor.designer.cs">
+      <DependentUpon>ColorEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\PriceEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\PriceEditor.Designer.cs">
+      <DependentUpon>PriceEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\DealerEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\DealerEditor.designer.cs">
+      <DependentUpon>DealerEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\GameEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\GameEditor.designer.cs">
+      <DependentUpon>GameEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\GameGroupEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\GameGroupEditor.designer.cs">
+      <DependentUpon>GameGroupEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\GameGroupGameEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\GameGroupGameEditor.designer.cs">
+      <DependentUpon>GameGroupGameEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\PackEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\PackEditor.Designer.cs">
+      <DependentUpon>PackEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\PayoutDateSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\PayoutDateSelector.Designer.cs">
+      <DependentUpon>PayoutDateSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\PayoutEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\PayoutEditor.Designer.cs">
+      <DependentUpon>PayoutEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\SessionMacroScheduler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\SessionMacroScheduler.Designer.cs">
+      <DependentUpon>SessionMacroScheduler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\SessionManagerData\Colors.cs" />
+    <Compile Include="Controls\Grids\BundlePacks.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Grids\MyDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Grids\PrizeEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\CardswipeCalibrateList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\CurrentGameGroupGameList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\CurrentGameGroupPrizeList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\CurrentGameList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\CurrentGamePatternList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\CurrentSessionGameGroupList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\CurrentSessionGameOrderList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\CurrrentSessionMacroSessionList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\GameGroupList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\GameList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\MyListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\PackList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\PatternList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\PrizeLevelList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\SessionAndBundleList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\SessionMacroList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Other\CurrentPatternScroller.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PackControl\PackFace.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PackControl\PackFace.designer.cs">
+      <DependentUpon>PackFace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PackControl\PackItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PackControl\PackItem.designer.cs">
+      <DependentUpon>PackItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PackControl\PackItemGen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PackControl\PackItemGen.designer.cs">
+      <DependentUpon>PackItemGen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PackControl\PackProperties.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PackControl\PackProperties.designer.cs">
+      <DependentUpon>PackProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TextBoxes\NameFields.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PatternBlock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PatternBlock.designer.cs">
+      <DependentUpon>PatternBlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatternBlockGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PatternEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatternEditor.designer.cs">
+      <DependentUpon>PatternEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatternListFilterBlock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScollingPattern.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ShowExpandedPattern.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowExpandedPattern.Designer.cs">
+      <DependentUpon>ShowExpandedPattern.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BigPatternBlock.resx">
+      <DependentUpon>BigPatternBlock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\CardsetEditor.resx">
+      <DependentUpon>CardsetEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\CardsetRangeEditor.resx">
+      <DependentUpon>CardsetRangeEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\CardswipeCalibrateAddition.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CardswipeCalibrateAddition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\ColorEditor.resx">
+      <DependentUpon>ColorEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\PriceEditor.resx">
+      <DependentUpon>PriceEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\DealerEditor.resx">
+      <DependentUpon>DealerEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\GameEditor.resx">
+      <DependentUpon>GameEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\GameGroupGameEditor.resx">
+      <DependentUpon>GameGroupGameEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\PackEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PackEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\PayoutDateSelector.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PayoutDateSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\PayoutEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PayoutEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\SessionMacroScheduler.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SessionMacroScheduler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PackControl\PackFace.resx">
+      <DependentUpon>PackFace.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PackControl\PackItem.resx">
+      <DependentUpon>PackItem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PackControl\PackItemGen.resx">
+      <DependentUpon>PackItemGen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PackControl\PackProperties.resx">
+      <DependentUpon>PackProperties.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatternBlock.resx">
+      <DependentUpon>PatternBlock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatternBlockGroup.resx">
+      <DependentUpon>PatternBlockGroup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatternEditor.resx">
+      <DependentUpon>PatternEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowExpandedPattern.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ShowExpandedPattern.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\eltanin\libs\EltaninObject\EltaninObject.csproj">
+      <Project>{3110A37B-9B23-4591-997A-5E5146F1ADE6}</Project>
+      <Name>EltaninObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MonthCalendar\MonthCalendar.csproj">
+      <Project>{E25078AE-E3F3-4BA1-8E7B-FB0FAB0935C9}</Project>
+      <Name>MonthCalendar</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\xperdex.classes\xperdex.classes.csproj">
+      <Project>{041E5A37-8678-451E-9500-EE3D7864C092}</Project>
+      <Name>xperdex.classes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenSkieScheduler.csproj">
+      <Project>{7AA21CBF-336D-4815-A2A6-55AC5694A241}</Project>
+      <Name>OpenSkieScheduler</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

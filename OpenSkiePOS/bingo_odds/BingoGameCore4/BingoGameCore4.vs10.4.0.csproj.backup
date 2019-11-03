@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E65BD921-6931-48FF-BEAC-D89B5B37C741}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BingoGameCore4</RootNamespace>
+    <AssemblyName>BingoGameCore4</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BaseIntermediateOutputPath>$(SolutionDir)/output/</BaseIntermediateOutputPath>
+    <BaseOutputPath>$(SolutionDir)/</BaseOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0/</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0/</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>M:\xperdex\/output/Debug\BingoGameCore2.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisInputAssembly>M:\xperdex\/output/Debug\BingoGameCore2.dll</CodeAnalysisInputAssembly>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0/</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>M:\xperdex\/output/Release\BingoGameCore2.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisInputAssembly>M:\xperdex\/output/Release\BingoGameCore2.dll</CodeAnalysisInputAssembly>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0/</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>M:\xperdex\/output/Debug/AnyCPU\BingoGameCore2.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisInputAssembly>M:\xperdex\/output/Debug/AnyCPU\BingoGameCore2.dll</CodeAnalysisInputAssembly>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>SecurityRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0/</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>M:\xperdex\/output/Release/AnyCPU\BingoGameCore2.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisInputAssembly>M:\xperdex\/output/Release/AnyCPU\BingoGameCore2.dll</CodeAnalysisInputAssembly>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0/</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.SQLite, Version=1.0.80.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BallData\BallData1.cs" />
+    <Compile Include="BallData\BallDataExternal.cs" />
+    <Compile Include="BingoGameGroup.cs" />
+    <Compile Include="BingoGameGroupPrizeLevel.cs" />
+    <Compile Include="BingoHall.cs" />
+    <Compile Include="BingoPlayerTransaction.cs" />
+    <Compile Include="BingoPrize.cs" />
+    <Compile Include="CardMaster\SQLCardsetReader.cs" />
+    <Compile Include="CardMaster\UPickFactory.cs" />
+    <Compile Include="CombinationIterator.cs" />
+    <Compile Include="Controls\BingoPackGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BingoPack1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Networking\BingoGameServer.cs" />
+    <Compile Include="BingoCardState.cs" />
+    <Compile Include="BingoDealer.cs" />
+    <Compile Include="BingoGame.cs" />
+    <Compile Include="BingoGameEvent.cs" />
+    <Compile Include="BingoGameList.cs" />
+    <Compile Include="BingoGameState.cs" />
+    <Compile Include="BingoMatchEngine.cs" />
+    <Compile Include="BingoPack.cs" />
+    <Compile Include="BingoPlayer.cs" />
+    <Compile Include="BingoSession.cs" />
+    <Compile Include="BingoSessionEvent.cs" />
+    <Compile Include="Controls\BallImage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BingoCardGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Database\RankPointsExtended.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\BonusPointConfigurator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BonusPointConfigurator.Designer.cs">
+      <DependentUpon>BonusPointConfigurator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ConfigureGamePackPoints.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ConfigureGamePackPoints.Designer.cs">
+      <DependentUpon>ConfigureGamePackPoints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PackConfigurator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PackConfigurator.Designer.cs">
+      <DependentUpon>PackConfigurator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RatedGameConfigurator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RatedGameConfigurator.Designer.cs">
+      <DependentUpon>RatedGameConfigurator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BingoCard1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\CardBrowsingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CardBrowsingForm.designer.cs">
+      <DependentUpon>CardBrowsingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CardMaster\CardFactory.cs" />
+    <Compile Include="CardMaster\CardReader.cs" />
+    <Compile Include="Local.cs" />
+    <Compile Include="Networking\Protocols\BingoGameServerProtocol.cs" />
+    <Compile Include="Networking\Protocols\Blower.cs" />
+    <Compile Include="Networking\Protocols\FlashdriveSlave.cs" />
+    <Compile Include="Networking\WebSocketPlayerService.cs" />
+    <Compile Include="PackDNA.cs" />
+    <Compile Include="RateRank.cs" />
+    <Compile Include="Forms\SessionBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SessionBrowser.designer.cs">
+      <DependentUpon>SessionBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectPacks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectPacks.Designer.cs">
+      <DependentUpon>SelectPacks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StateReader.cs" />
+    <Compile Include="StateWriter.cs" />
+    <Compile Include="Tables.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\BonusPointConfigurator.resx">
+      <DependentUpon>BonusPointConfigurator.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CardBrowsingForm.resx">
+      <DependentUpon>CardBrowsingForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ConfigureGamePackPoints.resx">
+      <DependentUpon>ConfigureGamePackPoints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PackConfigurator.resx">
+      <DependentUpon>PackConfigurator.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RatedGameConfigurator.resx">
+      <DependentUpon>RatedGameConfigurator.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SessionBrowser.resx">
+      <DependentUpon>SessionBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectPacks.resx">
+      <DependentUpon>SelectPacks.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Forms\CustomControls\" />
+    <Folder Include="NetworkStateInput\" />
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.VisualBasic.PowerPacks.10.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Visual Basic PowerPacks 10.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Bingo\BingoGameInterfaces\BingoGameInterfaces.4.0.csproj">
+      <Project>{5601A89E-8E2A-461F-98A3-15A7419AD2AF}</Project>
+      <Name>BingoGameInterfaces.4.0</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OpenSkieScheduler\CurrentScheduleDataSet2\CurrentScheduleDataSet2.4.0.csproj">
+      <Project>{BA3487F1-4E30-4FDD-A7E4-3B39DDDEA8B1}</Project>
+      <Name>CurrentScheduleDataSet2.4.0</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OpenSkieScheduler\OpenSkieScheduler3\OpenSkie.Scheduler.Controls\OpenSkie.Scheduler3.Controls.vs10.4.0.csproj">
+      <Project>{AD184E84-45AD-4DF6-BB3D-FB56EEDE2F31}</Project>
+      <Name>OpenSkie.Scheduler3.Controls.vs10.4.0</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OpenSkieScheduler\OpenSkieScheduler3\OpenSkieScheduler3.vs10.4.0.csproj">
+      <Project>{7AA21CBF-336D-4815-A2A6-55AC5694A241}</Project>
+      <Name>OpenSkieScheduler3.vs10.4.0</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OpenSkieScheduler\OpenSkieScheduler3\PatternEditor\PatternEditor3.vs10.4.0.csproj">
+      <Project>{C2893772-CC74-4062-8B07-C986973D1DF7}</Project>
+      <Name>PatternEditor3.vs10.4.0</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\xperdex\xperdex.classes.2\xperdex.classes.vs10.4.0.csproj">
+      <Project>{041E5A37-8678-451E-9500-EE3D7864C092}</Project>
+      <Name>xperdex.classes.vs10.4.0</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\xperdex\xperdex.gui\xperdex.gui.4.0.csproj">
+      <Project>{EF313F61-2DB4-461B-9F89-B6BC53C96BA4}</Project>
+      <Name>xperdex.gui.4.0</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BingoSQLTracking\BingoSQLTracking.4.0.csproj">
+      <Project>{4AA1D6CD-7EDD-4828-96DF-884B44518F53}</Project>
+      <Name>BingoSQLTracking.4.0</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

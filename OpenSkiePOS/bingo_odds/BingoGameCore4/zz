@@ -1,0 +1,523 @@
+changeset:   910:ffd8fb161e60
+user:        Jim
+date:        Mon Jun 25 13:15:27 2012 -0700
+files:       xperdex/Bingo/AutoPlayer/AutoPlayer.4.0.csproj xperdex/Bingo/AutoPlayer/AutoPlayer.csproj xperdex/Bingo/AutoPlayer/Form1.Designer.cs xperdex/Bingo/AutoPlayer/Form1.cs xperdex/Bingo/AutoPlayer/Form1.resx xperdex/Bingo/AutoPlayer/Program.cs xperdex/Bingo/AutoPlayer/Properties/AssemblyInfo.cs xperdex/Bingo/AutoPlayer/Properties/Resources.Designer.cs xperdex/Bingo/AutoPlayer/Properties/Resources.resx xperdex/Bingo/AutoPlayer/Properties/Settings.Designer.cs xperdex/Bingo/AutoPlayer/Properties/Settings.settings xperdex/Bingo/AutoPlayer/SessionPlayer.Designer.cs xperdex/Bingo/AutoPlayer/SessionPlayer.cs xperdex/Bingo/AutoPlayer/SessionPlayer.resx xperdex/Bingo/AutoPlayer/app.config xperdex/Bingo/Bingo.sln xperdex/Bingo/BingoGameCoreVerifier/BingoGameCoreVerifier.csproj xperdex/Bingo/BingoGameCoreVerifier/BingoGameVerifier.cs xperdex/Bingo/BingoGameCoreVerifier/Form1.Designer.cs xperdex/Bingo/BingoGameCoreVerifier/Form1.cs xperdex/Bingo/BingoGameCoreVerifier/Form1.resx xperdex/Bingo/BingoGameCoreVerifier/Program.cs xperdex/Bingo/BingoGameCoreVerifier/Properties/AssemblyInfo.cs xperdex/Bingo/BingoGameCoreVerifier/Properties/Resources.Designer.cs xperdex/Bingo/BingoGameCoreVerifier/Properties/Resources.resx xperdex/Bingo/BingoGameCoreVerifier/Properties/Settings.Designer.cs xperdex/Bingo/BingoGameCoreVerifier/Properties/Settings.settings xperdex/Bingo/BingoGameCoreVerifier/app.config xperdex/Bingo/BingoGameCoreVerifierSetup/BingoGameCoreVerifierSetup.vdproj xperdex/Bingo/BingoGameInterfaces/BallDataInterface.cs xperdex/Bingo/BingoGameInterfaces/BingoEventInterface.cs xperdex/Bingo/BingoGameInterfaces/BingoGameInterfaces.4.0.csproj xperdex/Bingo/BingoGameInterfaces/BingoGameInterfaces.csproj xperdex/Bingo/CreateCards/CreateCards.csproj xperdex/Bingo/CreateCards/Form1.Designer.cs xperdex/Bingo/CreateCards/Form1.cs xperdex/Bingo/CreateCards/Form1.resx xperdex/Bingo/CreateCards/Program.cs xperdex/Bingo/CreateCards/Properties/AssemblyInfo.cs xperdex/Bingo/CreateCards/Properties/Resources.Designer.cs xperdex/Bingo/CreateCards/Properties/Resources.resx xperdex/Bingo/CreateCards/Properties/Settings.Designer.cs xperdex/Bingo/CreateCards/Properties/Settings.settings xperdex/Bingo/CreateCards/app.config xperdex/Bingo/GameDatabaseImporter/App.config xperdex/Bingo/GameDatabaseImporter/Form1.Designer.cs xperdex/Bingo/GameDatabaseImporter/Form1.cs xperdex/Bingo/GameDatabaseImporter/Form1.resx xperdex/Bingo/GameDatabaseImporter/GameDatabaseImporter.csproj xperdex/Bingo/GameDatabaseImporter/Program.cs xperdex/Bingo/GameDatabaseImporter/Properties/AssemblyInfo.cs xperdex/Bingo/GameDatabaseImporter/Properties/Resources.Designer.cs xperdex/Bingo/GameDatabaseImporter/Properties/Resources.resx xperdex/Bingo/GameDatabaseImporter/Properties/Settings.Designer.cs xperdex/Bingo/GameDatabaseImporter/Properties/Settings.settings xperdex/Bingo/PatternEditor/Pattern.cs xperdex/Bingo/PatternEditor/PatternEditor.4.0.csproj xperdex/Bingo/PatternEditor/PatternEditor.csproj xperdex/Bingo/PatternEditor/PatternEditor.vs10-3.5.csproj xperdex/Bingo/PatternEditor/PatternEditor.vs10.4.0.csproj xperdex/Bingo/PatternEditor/Patterns/BigPatternBlock.cs xperdex/Bingo/PatternEditor/Patterns/BigPatternBlock.designer.cs xperdex/Bingo/PatternEditor/Patterns/BigPatternBlock.resx xperdex/Bingo/PatternEditor/Patterns/CurrentPatternScroller.cs xperdex/Bingo/PatternEditor/Patterns/PatternBlock.cs xperdex/Bingo/PatternEditor/Patterns/PatternBlock.designer.cs xperdex/Bingo/PatternEditor/Patterns/PatternBlock.resx xperdex/Bingo/PatternEditor/Patterns/PatternBlockGroup.cs xperdex/Bingo/PatternEditor/Patterns/PatternBlockGroup.resx xperdex/Bingo/PatternEditor/Patterns/PatternEditor.cs xperdex/Bingo/PatternEditor/Patterns/PatternEditor.designer.cs xperdex/Bingo/PatternEditor/Patterns/PatternEditor.resx xperdex/Bingo/PatternEditor/Patterns/ScollingPattern.cs xperdex/Bingo/PatternEditor/Patterns/ShowExpandedPattern.Designer.cs xperdex/Bingo/PatternEditor/Patterns/ShowExpandedPattern.cs xperdex/Bingo/PatternEditor/Patterns/ShowExpandedPattern.resx xperdex/Bingo/PatternEditor/Properties/AssemblyInfo.cs xperdex/Bingo/ScheduleBuilder/Form1.Designer.cs xperdex/Bingo/ScheduleBuilder/Form1.cs xperdex/Bingo/ScheduleBuilder/Form1.resx xperdex/Bingo/ScheduleBuilder/GameDesigner/EditGamePatterns.Designer.cs xperdex/Bingo/ScheduleBuilder/GameDesigner/EditGamePatterns.cs xperdex/Bingo/ScheduleBuilder/GameDesigner/EditGamePatterns.resx xperdex/Bingo/ScheduleBuilder/GameDesigner/GameBuilder.Designer.cs xperdex/Bingo/ScheduleBuilder/GameDesigner/GameBuilder.cs xperdex/Bingo/ScheduleBuilder/GameDesigner/GameBuilder.resx xperdex/Bingo/ScheduleBuilder/GameDesigner/GameChooser.Designer.cs xperdex/Bingo/ScheduleBuilder/GameDesigner/GameChooser.cs xperdex/Bingo/ScheduleBuilder/GameDesigner/GameChooser.resx xperdex/Bingo/ScheduleBuilder/GameDesigner/GameData.cs xperdex/Bingo/ScheduleBuilder/GameDesigner/GameEditor.Designer.cs xperdex/Bingo/ScheduleBuilder/GameDesigner/GameEditor.cs xperdex/Bingo/ScheduleBuilder/GameDesigner/GameEditor.resx xperdex/Bingo/ScheduleBuilder/GameDesigner/GameTemplate.Designer.cs xperdex/Bingo/ScheduleBuilder/GameDesigner/GameTemplate.cs xperdex/Bingo/ScheduleBuilder/GameDesigner/GameTemplate.resx xperdex/Bingo/ScheduleBuilder/GameDesigner/PackData.cs xperdex/Bingo/ScheduleBuilder/GameDesigner/SessionGameData.cs xperdex/Bingo/ScheduleBuilder/Local.cs xperdex/Bingo/ScheduleBuilder/Program.cs xperdex/Bingo/ScheduleBuilder/Properties/AssemblyInfo.cs xperdex/Bingo/ScheduleBuilder/Properties/Resources.Designer.cs xperdex/Bingo/ScheduleBuilder/Properties/Resources.resx xperdex/Bingo/ScheduleBuilder/Properties/Settings.Designer.cs xperdex/Bingo/ScheduleBuilder/Properties/Settings.settings xperdex/Bingo/ScheduleBuilder/ScheduleBuilder.csproj xperdex/Bingo/ScheduleBuilder/app.config xperdex/Bingo/SetupDemo/SetupDemo.vdproj xperdex/Bingo/TestBonanza/Form1.Designer.cs xperdex/Bingo/TestBonanza/Form1.cs xperdex/Bingo/TestBonanza/Form1.resx xperdex/Bingo/TestBonanza/Program.cs xperdex/Bingo/TestBonanza/Properties/AssemblyInfo.cs xperdex/Bingo/TestBonanza/Properties/Resources.Designer.cs xperdex/Bingo/TestBonanza/Properties/Resources.resx xperdex/Bingo/TestBonanza/Properties/Settings.Designer.cs xperdex/Bingo/TestBonanza/Properties/Settings.settings xperdex/Bingo/TestBonanza/TestBonanza.4.0.csproj xperdex/Bingo/TestBonanza/TestBonanza.csproj xperdex/Bingo/TestFlashdriveController/Form1.Designer.cs xperdex/Bingo/TestFlashdriveController/Form1.cs xperdex/Bingo/TestFlashdriveController/Form1.resx xperdex/Bingo/TestFlashdriveController/Program.cs xperdex/Bingo/TestFlashdriveController/Properties/AssemblyInfo.cs xperdex/Bingo/TestFlashdriveController/Properties/Resources.Designer.cs xperdex/Bingo/TestFlashdriveController/Properties/Resources.resx xperdex/Bingo/TestFlashdriveController/Properties/Settings.Designer.cs xperdex/Bingo/TestFlashdriveController/Properties/Settings.settings xperdex/Bingo/TestFlashdriveController/TestFlashdriveController.4.0.csproj xperdex/Bingo/TestFlashdriveController/TestFlashdriveController.csproj xperdex/Bingo/TestFlashdriveController/app.config xperdex/Bingo/balls/B.png xperdex/Bingo/balls/BingoBall1.psp xperdex/Bingo/balls/BingoBall2.png xperdex/Bingo/balls/BingoBall2.psp xperdex/Bingo/balls/Bingo_Orange.png xperdex/Bingo/balls/Blah xperdex/Bingo/balls/Daubber.png xperdex/Bingo/balls/G.png xperdex/Bingo/balls/I.png xperdex/Bingo/balls/Image1.png xperdex/Bingo/balls/Image1.psp xperdex/Bingo/balls/Image2.jpg xperdex/Bingo/balls/Image2.png xperdex/Bingo/balls/N.png xperdex/Bingo/balls/NewBalls5502.png xperdex/Bingo/balls/Numbers.png xperdex/Bingo/balls/O.png xperdex/Bingo/balls/Rack1.psp xperdex/Bingo/balls/SavB3B2.TMP xperdex/Bingo/balls/Specular.psp xperdex/Bingo/balls/VictoryBingoWelcomesYou.png xperdex/Bingo/balls/background1/b_bkg.png xperdex/Bingo/balls/background1/g_bkg.png xperdex/Bingo/balls/background1/i_bkg.png xperdex/Bingo/balls/background1/n_bkg.png xperdex/Bingo/balls/background1/o_bkg.png xperdex/Bingo/balls/background2/b_bkg.png xperdex/Bingo/balls/background2/g_bkg.png xperdex/Bingo/balls/background2/i_bkg.png xperdex/Bingo/balls/background2/n_bkg.png xperdex/Bingo/balls/background2/o_bkg.png xperdex/Bingo/balls/background3/b_bkg.png xperdex/Bingo/balls/background3/g_bkg.png xperdex/Bingo/balls/background3/i_bkg.png xperdex/Bingo/balls/background3/n_bkg.png xperdex/Bingo/balls/background3/o_bkg.png xperdex/Bingo/balls/background4/b_bkg.png xperdex/Bingo/balls/background4/g_bkg.png xperdex/Bingo/balls/background4/i_bkg.png xperdex/Bingo/balls/background4/n_bkg.png xperdex/Bingo/balls/background4/o_bkg.png xperdex/Bingo/balls/background5/b_bkg.png xperdex/Bingo/balls/background5/g_bkg.png xperdex/Bingo/balls/background5/i_bkg.png xperdex/Bingo/balls/background5/n_bkg.png xperdex/Bingo/balls/background5/o_bkg.png xperdex/Bingo/balls/ball1.png xperdex/Bingo/balls/ball10.png xperdex/Bingo/balls/ball11.png xperdex/Bingo/balls/ball12.png xperdex/Bingo/balls/ball13.png xperdex/Bingo/balls/ball14.png xperdex/Bingo/balls/ball15.png xperdex/Bingo/balls/ball16.png xperdex/Bingo/balls/ball17.png xperdex/Bingo/balls/ball18.png xperdex/Bingo/balls/ball19.png xperdex/Bingo/balls/ball2.png xperdex/Bingo/balls/ball20.png xperdex/Bingo/balls/ball21.png xperdex/Bingo/balls/ball22.png xperdex/Bingo/balls/ball23.png xperdex/Bingo/balls/ball24.png xperdex/Bingo/balls/ball25.png xperdex/Bingo/balls/ball26.png xperdex/Bingo/balls/ball27.png xperdex/Bingo/balls/ball28.png xperdex/Bingo/balls/ball29.png xperdex/Bingo/balls/ball3.png xperdex/Bingo/balls/ball30.png xperdex/Bingo/balls/ball31.png xperdex/Bingo/balls/ball32.png xperdex/Bingo/balls/ball33.png xperdex/Bingo/balls/ball34.png xperdex/Bingo/balls/ball35.png xperdex/Bingo/balls/ball36.png xperdex/Bingo/balls/ball37.png xperdex/Bingo/balls/ball38.png xperdex/Bingo/balls/ball39.png xperdex/Bingo/balls/ball4.png xperdex/Bingo/balls/ball40.png xperdex/Bingo/balls/ball41.png xperdex/Bingo/balls/ball42.png xperdex/Bingo/balls/ball43.png xperdex/Bingo/balls/ball44.png xperdex/Bingo/balls/ball45.png xperdex/Bingo/balls/ball46.png xperdex/Bingo/balls/ball47.png xperdex/Bingo/balls/ball48.png xperdex/Bingo/balls/ball49.png xperdex/Bingo/balls/ball5.png xperdex/Bingo/balls/ball50.png xperdex/Bingo/balls/ball51.png xperdex/Bingo/balls/ball52.png xperdex/Bingo/balls/ball53.png xperdex/Bingo/balls/ball54.png xperdex/Bingo/balls/ball55.png xperdex/Bingo/balls/ball56.png xperdex/Bingo/balls/ball57.png xperdex/Bingo/balls/ball58.png xperdex/Bingo/balls/ball59.png xperdex/Bingo/balls/ball6.png xperdex/Bingo/balls/ball60.png xperdex/Bingo/balls/ball61.png xperdex/Bingo/balls/ball62.png xperdex/Bingo/balls/ball63.png xperdex/Bingo/balls/ball64.png xperdex/Bingo/balls/ball65.png xperdex/Bingo/balls/ball66.png xperdex/Bingo/balls/ball67.png xperdex/Bingo/balls/ball68.png xperdex/Bingo/balls/ball69.png xperdex/Bingo/balls/ball7.png xperdex/Bingo/balls/ball70.png xperdex/Bingo/balls/ball71.png xperdex/Bingo/balls/ball72.png xperdex/Bingo/balls/ball73.png xperdex/Bingo/balls/ball74.png xperdex/Bingo/balls/ball75.png xperdex/Bingo/balls/ball77.png xperdex/Bingo/balls/ball78.jpg xperdex/Bingo/balls/ball8.png xperdex/Bingo/balls/ball9.png xperdex/Bingo/balls/balltext2.png xperdex/Bingo/balls/balltext3.png xperdex/Bingo/balls/bingoball.png xperdex/Bingo/balls/bingoball.png.no xperdex/Bingo/balls/bingoball3.png xperdex/Bingo/balls/bingoball3.psp xperdex/Bingo/balls/blank.jpg xperdex/Bingo/balls/blue.png xperdex/Bingo/balls/clear_image.png xperdex/Bingo/balls/grid1.jpg xperdex/Bingo/balls/hotballtext.png xperdex/Bingo/balls/mountrack.jpg xperdex/Bingo/balls/mountrack2.jpg xperdex/Bingo/balls/pspbrwse.jbf xperdex/Bingo/balls/rack0.png xperdex/Bingo/balls/rack1.png xperdex/Bingo/balls/redbluegreen.png xperdex/Bingo/balls/sky.jpg xperdex/Bingo/balls/specular2.psp xperdex/Bingo/balls/welcome.png xperdex/Bingo/balls/winner.jpg xperdex/Bingo/balls/zz.bat xperdex/Bingo/bingo-ng.vs10/bingo-ng.vs10.4.0.sln xperdex/Bingo/bingo-ng.vs10/bingo-ng.vs10.sln xperdex/Bingo/bingo-ng.vs10/zz xperdex/Bingo/bingo.vs10.sln xperdex/Bingo/bingo.work.vs10.sln xperdex/bingo_odds/BingoGameControls/BingoGameControls.4.0.csproj xperdex/bingo_odds/BingoGameControls/BingoGameControls.csproj xperdex/bingo_odds/BingoGameControls/Class1.cs xperdex/bingo_odds/BingoGameControls/Flashboard.cs xperdex/bingo_odds/BingoGameControls/Flashboard_Simple.Designer.cs xperdex/bingo_odds/BingoGameControls/Flashboard_Simple.cs xperdex/bingo_odds/BingoGameControls/Flashboard_Simple.resx xperdex/bingo_odds/BingoGameControls/Properties/AssemblyInfo.cs xperdex/bingo_odds/BingoGameCore/BallData/BallData1.cs xperdex/bingo_odds/BingoGameCore/BallData/BallDataInterface.cs xperdex/bingo_odds/BingoGameCore/BingoData.cs xperdex/bingo_odds/BingoGameCore/BingoDealer.cs xperdex/bingo_odds/BingoGameCore/BingoGame.cs xperdex/bingo_odds/BingoGameCore/BingoGameCore.cs xperdex/bingo_odds/BingoGameCore/BingoGameCore.csproj xperdex/bingo_odds/BingoGameCore/BingoGameCore.vc10.csproj xperdex/bingo_odds/BingoGameCore/BingoGameCore.vc9.csproj xperdex/bingo_odds/BingoGameCore/BingoGameList.cs xperdex/bingo_odds/BingoGameCore/BingoGameState.cs xperdex/bingo_odds/BingoGameCore/BingoPack.cs xperdex/bingo_odds/BingoGameCore/BingoPlayer.cs xperdex/bingo_odds/BingoGameCore/CardMaster/CardFactory.cs xperdex/bingo_odds/BingoGameCore/CardMaster/CardReader.cs xperdex/bingo_odds/BingoGameCore/LoadSales.cs xperdex/bingo_odds/BingoGameCore/Local.cs xperdex/bingo_odds/BingoGameCore/PatternEditor/BigPatternBlock.Designer.cs xperdex/bingo_odds/BingoGameCore/PatternEditor/BigPatternBlock.cs xperdex/bingo_odds/BingoGameCore/PatternEditor/BigPatternBlock.resx xperdex/bingo_odds/BingoGameCore/PatternEditor/Pattern.cs xperdex/bingo_odds/BingoGameCore/PatternEditor/PatternBlock.Designer.cs xperdex/bingo_odds/BingoGameCore/PatternEditor/PatternBlock.cs xperdex/bingo_odds/BingoGameCore/PatternEditor/PatternBlock.resx xperdex/bingo_odds/BingoGameCore/PatternEditor/PatternBlockGroup.cs xperdex/bingo_odds/BingoGameCore/PatternEditor/PatternBlockGroup.resx xperdex/bingo_odds/BingoGameCore/PatternEditor/PatternEditor.Designer.cs xperdex/bingo_odds/BingoGameCore/PatternEditor/PatternEditor.cs xperdex/bingo_odds/BingoGameCore/PatternEditor/PatternEditor.resx xperdex/bingo_odds/BingoGameCore/Properties/AssemblyInfo.cs xperdex/bingo_odds/BingoGameCore2/BallData/BallData1.cs xperdex/bingo_odds/BingoGameCore2/BallData/BallDataBlower.cs xperdex/bingo_odds/BingoGameCore2/BallData/BallDataInterface.cs xperdex/bingo_odds/BingoGameCore2/BingoDealer.cs xperdex/bingo_odds/BingoGameCore2/BingoGame.cs xperdex/bingo_odds/BingoGameCore2/BingoGameCore2.csproj xperdex/bingo_odds/BingoGameCore2/BingoGameCore2.vc10.csproj xperdex/bingo_odds/BingoGameCore2/BingoGameCore2.vc9.csproj xperdex/bingo_odds/BingoGameCore2/BingoGameList.cs xperdex/bingo_odds/BingoGameCore2/BingoGameState.cs xperdex/bingo_odds/BingoGameCore2/BingoPack.cs xperdex/bingo_odds/BingoGameCore2/BingoPlayer.cs xperdex/bingo_odds/BingoGameCore2/BingoSession.cs xperdex/bingo_odds/BingoGameCore2/CardMaster/CardFactory.cs xperdex/bingo_odds/BingoGameCore2/CardMaster/CardReader.cs xperdex/bingo_odds/BingoGameCore2/Forms/CardBrowsingForm.Designer.cs xperdex/bingo_odds/BingoGameCore2/Forms/CardBrowsingForm.cs xperdex/bingo_odds/BingoGameCore2/Forms/CardBrowsingForm.resx xperdex/bingo_odds/BingoGameCore2/Forms/SessionBrowser.Designer.cs xperdex/bingo_odds/BingoGameCore2/Forms/SessionBrowser.cs xperdex/bingo_odds/BingoGameCore2/Forms/SessionBrowser.resx xperdex/bingo_odds/BingoGameCore2/Local.cs xperdex/bingo_odds/BingoGameCore2/Networking/EltaninReceiver.cs xperdex/bingo_odds/BingoGameCore2/Networking/FNetBlower.cs xperdex/bingo_odds/BingoGameCore2/Networking/Protocols/Blower.cs xperdex/bingo_odds/BingoGameCore2/PackDNA.cs xperdex/bingo_odds/BingoGameCore2/Properties/AssemblyInfo.cs xperdex/bingo_odds/BingoGameCore2/RateRank.cs xperdex/bingo_odds/BingoGameCore2/StateReader.cs xperdex/bingo_odds/BingoGameCore2/StateWriter.cs xperdex/bingo_odds/BingoGameCore2/Tables.cs xperdex/bingo_odds/BingoGameCore3/BallData/BallData1.cs xperdex/bingo_odds/BingoGameCore3/BallData/BallDataBlower.cs xperdex/bingo_odds/BingoGameCore3/BallData/BallDataExternal.cs xperdex/bingo_odds/BingoGameCore3/BallData/BallDataFlashdrive.cs xperdex/bingo_odds/BingoGameCore3/BallData/BallDataQuickshot.cs xperdex/bingo_odds/BingoGameCore3/BingoCardState.cs xperdex/bingo_odds/BingoGameCore3/BingoDealer.cs xperdex/bingo_odds/BingoGameCore3/BingoGame.cs xperdex/bingo_odds/BingoGameCore3/BingoGameCore3.csproj xperdex/bingo_odds/BingoGameCore3/BingoGameCore3.vc10-3.5.csproj xperdex/bingo_odds/BingoGameCore3/BingoGameCore3.vc10.4.0.csproj xperdex/bingo_odds/BingoGameCore3/BingoGameCore3.vc10.csproj xperdex/bingo_odds/BingoGameCore3/BingoGameCore3.vc9.csproj xperdex/bingo_odds/BingoGameCore3/BingoGameEvent.cs xperdex/bingo_odds/BingoGameCore3/BingoGameGroup.cs xperdex/bingo_odds/BingoGameCore3/BingoGameGroupPrizeLevel.cs xperdex/bingo_odds/BingoGameCore3/BingoGameList.cs xperdex/bingo_odds/BingoGameCore3/BingoGameState.cs xperdex/bingo_odds/BingoGameCore3/BingoHall.cs xperdex/bingo_odds/BingoGameCore3/BingoMatchEngine.cs xperdex/bingo_odds/BingoGameCore3/BingoPack.cs xperdex/bingo_odds/BingoGameCore3/BingoPlayer.cs xperdex/bingo_odds/BingoGameCore3/BingoPlayerTransaction.cs xperdex/bingo_odds/BingoGameCore3/BingoPrize.cs xperdex/bingo_odds/BingoGameCore3/BingoSession.cs xperdex/bingo_odds/BingoGameCore3/BingoSessionEvent.cs xperdex/bingo_odds/BingoGameCore3/CardMaster/CardFactory.cs xperdex/bingo_odds/BingoGameCore3/CardMaster/CardReader.cs xperdex/bingo_odds/BingoGameCore3/Controls/BallImage.cs xperdex/bingo_odds/BingoGameCore3/Controls/BingoCard1.cs xperdex/bingo_odds/BingoGameCore3/Controls/BingoCard1.resx xperdex/bingo_odds/BingoGameCore3/Controls/BingoCardGroup.cs xperdex/bingo_odds/BingoGameCore3/Controls/BingoCardStateControl.cs xperdex/bingo_odds/BingoGameCore3/Database/RankPointsExtended.cs xperdex/bingo_odds/BingoGameCore3/Databasex/RankPointsExtended.cs xperdex/bingo_odds/BingoGameCore3/Forms/BonusPointConfigurator.Designer.cs xperdex/bingo_odds/BingoGameCore3/Forms/BonusPointConfigurator.cs xperdex/bingo_odds/BingoGameCore3/Forms/BonusPointConfigurator.resx xperdex/bingo_odds/BingoGameCore3/Forms/CardBrowsingForm.Designer.cs xperdex/bingo_odds/BingoGameCore3/Forms/CardBrowsingForm.cs xperdex/bingo_odds/BingoGameCore3/Forms/CardBrowsingForm.resx xperdex/bingo_odds/BingoGameCore3/Forms/ConfigureGamePackPoints.Designer.cs xperdex/bingo_odds/BingoGameCore3/Forms/ConfigureGamePackPoints.cs xperdex/bingo_odds/BingoGameCore3/Forms/ConfigureGamePackPoints.resx xperdex/bingo_odds/BingoGameCore3/Forms/PackConfigurator.Designer.cs xperdex/bingo_odds/BingoGameCore3/Forms/PackConfigurator.cs xperdex/bingo_odds/BingoGameCore3/Forms/PackConfigurator.resx xperdex/bingo_odds/BingoGameCore3/Forms/RatedGameConfigurator.Designer.cs xperdex/bingo_odds/BingoGameCore3/Forms/RatedGameConfigurator.cs xperdex/bingo_odds/BingoGameCore3/Forms/RatedGameConfigurator.resx xperdex/bingo_odds/BingoGameCore3/Forms/SessionBrowser.Designer.cs xperdex/bingo_odds/BingoGameCore3/Forms/SessionBrowser.cs xperdex/bingo_odds/BingoGameCore3/Forms/SessionBrowser.resx xperdex/bingo_odds/BingoGameCore3/Local.cs xperdex/bingo_odds/BingoGameCore3/Networking/BingoGameServer.cs xperdex/bingo_odds/BingoGameCore3/Networking/EltaninReceiver.cs xperdex/bingo_odds/BingoGameCore3/Networking/FNetBlower.cs xperdex/bingo_odds/BingoGameCore3/Networking/FlashdriveController.cs xperdex/bingo_odds/BingoGameCore3/Networking/FlashdriveSlaveHost.cs xperdex/bingo_odds/BingoGameCore3/Networking/Protocols/BingoGameServerProtocol.cs xperdex/bingo_odds/BingoGameCore3/Networking/Protocols/Blower.cs xperdex/bingo_odds/BingoGameCore3/Networking/Protocols/FlashdriveSlave.cs xperdex/bingo_odds/BingoGameCore3/Networking/Protocols/SlaveCaller.cs xperdex/bingo_odds/BingoGameCore3/Networking/SlaveCallerReceiver.cs xperdex/bingo_odds/BingoGameCore3/PackDNA.cs xperdex/bingo_odds/BingoGameCore3/Properties/AssemblyInfo.cs xperdex/bingo_odds/BingoGameCore3/RateRank.cs xperdex/bingo_odds/BingoGameCore3/SelectPacks.Designer.cs xperdex/bingo_odds/BingoGameCore3/SelectPacks.cs xperdex/bingo_odds/BingoGameCore3/SelectPacks.resx xperdex/bingo_odds/BingoGameCore3/StateReader.cs xperdex/bingo_odds/BingoGameCore3/StateWriter.cs xperdex/bingo_odds/BingoGameCore3/Tables.cs xperdex/bingo_odds/BingoGameCore4/BallData/BallData1.cs xperdex/bingo_odds/BingoGameCore4/BallData/BallDataBlower.cs xperdex/bingo_odds/BingoGameCore4/BallData/BallDataExternal.cs xperdex/bingo_odds/BingoGameCore4/BallData/BallDataFlashdrive.cs xperdex/bingo_odds/BingoGameCore4/BallData/BallDataQuickshot.cs xperdex/bingo_odds/BingoGameCore4/BingoCardState.cs xperdex/bingo_odds/BingoGameCore4/BingoDealer.cs xperdex/bingo_odds/BingoGameCore4/BingoGame.cs xperdex/bingo_odds/BingoGameCore4/BingoGameCore3.csproj xperdex/bingo_odds/BingoGameCore4/BingoGameCore3.vc10-3.5.csproj xperdex/bingo_odds/BingoGameCore4/BingoGameCore3.vc9.csproj xperdex/bingo_odds/BingoGameCore4/BingoGameCore4.vc10.csproj xperdex/bingo_odds/BingoGameCore4/BingoGameCore4.vs10.4.0.csproj xperdex/bingo_odds/BingoGameCore4/BingoGameEvent.cs xperdex/bingo_odds/BingoGameCore4/BingoGameGroup.cs xperdex/bingo_odds/BingoGameCore4/BingoGameGroupPrizeLevel.cs xperdex/bingo_odds/BingoGameCore4/BingoGameList.cs xperdex/bingo_odds/BingoGameCore4/BingoGameState.cs xperdex/bingo_odds/BingoGameCore4/BingoHall.cs xperdex/bingo_odds/BingoGameCore4/BingoMatchEngine.cs xperdex/bingo_odds/BingoGameCore4/BingoPack.cs xperdex/bingo_odds/BingoGameCore4/BingoPlayer.cs xperdex/bingo_odds/BingoGameCore4/BingoPlayerTransaction.cs xperdex/bingo_odds/BingoGameCore4/BingoPrize.cs xperdex/bingo_odds/BingoGameCore4/BingoSession.cs xperdex/bingo_odds/BingoGameCore4/BingoSessionEvent.cs xperdex/bingo_odds/BingoGameCore4/CardMaster/CardFactory.cs xperdex/bingo_odds/BingoGameCore4/CardMaster/CardReader.cs xperdex/bingo_odds/BingoGameCore4/Controls/BallImage.cs xperdex/bingo_odds/BingoGameCore4/Controls/BingoCard1.cs xperdex/bingo_odds/BingoGameCore4/Controls/BingoCard1.resx xperdex/bingo_odds/BingoGameCore4/Controls/BingoCardGroup.cs xperdex/bingo_odds/BingoGameCore4/Controls/BingoCardStateControl.cs xperdex/bingo_odds/BingoGameCore4/Database/RankPointsExtended.cs xperdex/bingo_odds/BingoGameCore4/Databasex/RankPointsExtended.cs xperdex/bingo_odds/BingoGameCore4/Forms/BonusPointConfigurator.Designer.cs xperdex/bingo_odds/BingoGameCore4/Forms/BonusPointConfigurator.cs xperdex/bingo_odds/BingoGameCore4/Forms/BonusPointConfigurator.resx xperdex/bingo_odds/BingoGameCore4/Forms/CardBrowsingForm.Designer.cs xperdex/bingo_odds/BingoGameCore4/Forms/CardBrowsingForm.cs xperdex/bingo_odds/BingoGameCore4/Forms/CardBrowsingForm.resx xperdex/bingo_odds/BingoGameCore4/Forms/ConfigureGamePackPoints.Designer.cs xperdex/bingo_odds/BingoGameCore4/Forms/ConfigureGamePackPoints.cs xperdex/bingo_odds/BingoGameCore4/Forms/ConfigureGamePackPoints.resx xperdex/bingo_odds/BingoGameCore4/Forms/DataArray.cs xperdex/bingo_odds/BingoGameCore4/Forms/MultiColumnListBox.cs xperdex/bingo_odds/BingoGameCore4/Forms/PackConfigurator.Designer.cs xperdex/bingo_odds/BingoGameCore4/Forms/PackConfigurator.cs xperdex/bingo_odds/BingoGameCore4/Forms/PackConfigurator.resx xperdex/bingo_odds/BingoGameCore4/Forms/RatedGameConfigurator.Designer.cs xperdex/bingo_odds/BingoGameCore4/Forms/RatedGameConfigurator.cs xperdex/bingo_odds/BingoGameCore4/Forms/RatedGameConfigurator.resx xperdex/bingo_odds/BingoGameCore4/Forms/SessionBrowser.Designer.cs xperdex/bingo_odds/BingoGameCore4/Forms/SessionBrowser.cs xperdex/bingo_odds/BingoGameCore4/Forms/SessionBrowser.resx xperdex/bingo_odds/BingoGameCore4/Local.cs xperdex/bingo_odds/BingoGameCore4/Networking/BingoGameServer.cs xperdex/bingo_odds/BingoGameCore4/Networking/EltaninReceiver.cs xperdex/bingo_odds/BingoGameCore4/Networking/FNetBlower.cs xperdex/bingo_odds/BingoGameCore4/Networking/FlashdriveController.cs xperdex/bingo_odds/BingoGameCore4/Networking/FlashdriveSlaveHost.cs xperdex/bingo_odds/BingoGameCore4/Networking/Protocols/BingoGameServerProtocol.cs xperdex/bingo_odds/BingoGameCore4/Networking/Protocols/Blower.cs xperdex/bingo_odds/BingoGameCore4/Networking/Protocols/FlashdriveSlave.cs xperdex/bingo_odds/BingoGameCore4/Networking/Protocols/SlaveCaller.cs xperdex/bingo_odds/BingoGameCore4/Networking/SlaveCallerReceiver.cs xperdex/bingo_odds/BingoGameCore4/PackDNA.cs xperdex/bingo_odds/BingoGameCore4/Properties/AssemblyInfo.cs xperdex/bingo_odds/BingoGameCore4/RateRank.cs xperdex/bingo_odds/BingoGameCore4/SelectPacks.Designer.cs xperdex/bingo_odds/BingoGameCore4/SelectPacks.cs xperdex/bingo_odds/BingoGameCore4/SelectPacks.resx xperdex/bingo_odds/BingoGameCore4/StateReader.cs xperdex/bingo_odds/BingoGameCore4/StateWriter.cs xperdex/bingo_odds/BingoGameCore4/Tables.cs xperdex/bingo_odds/BingoSQLTracking/BingoSQLTracking.4.0.csproj xperdex/bingo_odds/BingoSQLTracking/BingoSQLTracking.csproj xperdex/bingo_odds/BingoSQLTracking/BingoSQLTracking.vs10-3.5.csproj xperdex/bingo_odds/BingoSQLTracking/BingoSales.Designer.cs xperdex/bingo_odds/BingoSQLTracking/BingoSales.cs xperdex/bingo_odds/BingoSQLTracking/BingoSales.xsc xperdex/bingo_odds/BingoSQLTracking/BingoSales.xsd xperdex/bingo_odds/BingoSQLTracking/BingoSales.xss xperdex/bingo_odds/BingoSQLTracking/BingoTracking.Designer.cs xperdex/bingo_odds/BingoSQLTracking/BingoTracking.cs xperdex/bingo_odds/BingoSQLTracking/BingoTracking.xsc xperdex/bingo_odds/BingoSQLTracking/BingoTracking.xsd xperdex/bingo_odds/BingoSQLTracking/BingoTracking.xss xperdex/bingo_odds/BingoSQLTracking/Properties/AssemblyInfo.cs xperdex/bingo_odds/CORE.SwipeCards/CORE.SwipeCards.csproj xperdex/bingo_odds/CORE.SwipeCards/ComPorts.cs xperdex/bingo_odds/CORE.SwipeCards/PlayerCard.cs xperdex/bingo_odds/CORE.SwipeCards/Properties/AssemblyInfo.cs xperdex/bingo_odds/CORE.SwipeCards/format_string_specification.txt xperdex/bingo_odds/CUIC.ReceiptBrowser/CUIC.ReceiptBrowser.csproj xperdex/bingo_odds/CUIC.ReceiptBrowser/Html/Element.cs xperdex/bingo_odds/CUIC.ReceiptBrowser/Html/FontUnit.cs xperdex/bingo_odds/CUIC.ReceiptBrowser/Html/HtmlCommandInfo.cs xperdex/bingo_odds/CUIC.ReceiptBrowser/Html/HtmlControl.cs xperdex/bingo_odds/CUIC.ReceiptBrowser/Html/HtmlDocument.cs xperdex/bingo_odds/CUIC.ReceiptBrowser/Html/HtmlEditor.cs xperdex/bingo_odds/CUIC.ReceiptBrowser/Html/HtmlFontSize.cs xperdex/bingo_odds/CUIC.ReceiptBrowser/Html/HtmlFormat.cs xperdex/bingo_odds/CUIC.ReceiptBrowser/Html/HtmlSelection.cs xperdex/bingo_odds/CUIC.ReceiptBrowser/Html/HtmlSelectionType.cs xperdex/bingo_odds/CUIC.ReceiptBrowser/Html/HtmlTextFormatting.cs xperdex/bingo_odds/CUIC.ReceiptBrowser/Html/Interop.cs xperdex/bingo_odds/CUIC.ReceiptBrowser/Html/MSHTMLSite.cs xperdex/bingo_odds/CUIC.ReceiptBrowser/Program.cs xperdex/bingo_odds/CUIC.ReceiptBrowser/Properties/AssemblyInfo.cs xperdex/bingo_odds/CUIC.ReceiptBrowser/Properties/Resources.Designer.cs xperdex/bingo_odds/CUIC.ReceiptBrowser/Properties/Resources.resx xperdex/bingo_odds/CUIC.ReceiptBrowser/Properties/Settings.Designer.cs xperdex/bingo_odds/CUIC.ReceiptBrowser/Properties/Settings.settings xperdex/bingo_odds/CUIC.ReceiptBrowser/ReceiptBrowserForm.Designer.cs xperdex/bingo_odds/CUIC.ReceiptBrowser/ReceiptBrowserForm.cs xperdex/bingo_odds/CUIC.ReceiptBrowser/ReceiptBrowserForm.resx xperdex/bingo_odds/CUIC.ThermPrints/CUIC.ThermPrints.csproj xperdex/bingo_odds/CUIC.ThermPrints/POSMessages.cs xperdex/bingo_odds/CUIC.ThermPrints/POSThermPrint.cs xperdex/bingo_odds/CUIC.ThermPrints/Properties/AssemblyInfo.cs xperdex/bingo_odds/CUIC.ThermPrints/REGThermPrint.cs xperdex/bingo_odds/CUIC.ThermPrints/ThermPrint.cs xperdex/bingo_odds/C_Core/C_Core.vcproj xperdex/bingo_odds/C_Core/bingo_pattern_evaluator.cpp xperdex/bingo_odds/CheckPOS_Setup/CheckPOS_Setup.vdproj xperdex/bingo_odds/FixupSchedule/FixupSchedule.csproj xperdex/bingo_odds/FixupSchedule/FixupSchedule.sln xperdex/bingo_odds/FixupSchedule/FixupSchedule.vc10.csproj xperdex/bingo_odds/FixupSchedule/Form1.Designer.cs xperdex/bingo_odds/FixupSchedule/Form1.cs xperdex/bingo_odds/FixupSchedule/Form1.resx xperdex/bingo_odds/FixupSchedule/Program.cs xperdex/bingo_odds/FixupSchedule/Properties/AssemblyInfo.cs xperdex/bingo_odds/FixupSchedule/Properties/Resources.Designer.cs xperdex/bingo_odds/FixupSchedule/Properties/Resources.resx xperdex/bingo_odds/FixupSchedule/Properties/Settings.Designer.cs xperdex/bingo_odds/FixupSchedule/Properties/Settings.settings xperdex/bingo_odds/FutBlowerTest/Form1.Designer.cs xperdex/bingo_odds/FutBlowerTest/Form1.cs xperdex/bingo_odds/FutBlowerTest/Form1.resx xperdex/bingo_odds/FutBlowerTest/FutBlowerTest.csproj xperdex/bingo_odds/FutBlowerTest/Program.cs xperdex/bingo_odds/FutBlowerTest/Properties/AssemblyInfo.cs xperdex/bingo_odds/FutBlowerTest/Properties/Resources.Designer.cs xperdex/bingo_odds/FutBlowerTest/Properties/Resources.resx xperdex/bingo_odds/FutBlowerTest/Properties/Settings.Designer.cs xperdex/bingo_odds/FutBlowerTest/Properties/Settings.settings xperdex/bingo_odds/GDAL.Players/GDAL.Players.csproj xperdex/bingo_odds/GDAL.Players/PlayersInfo.cs xperdex/bingo_odds/GDAL.Players/Properties/AssemblyInfo.cs xperdex/bingo_odds/GDAL.Players/TopPlayerPayout.cs xperdex/bingo_odds/GDAL.Players/TopPlayerPrizes.cs xperdex/bingo_odds/GDAL.Players/TopPlayersAux.cs xperdex/bingo_odds/PlayerDrawing/DrawingSetup.Designer.cs xperdex/bingo_odds/PlayerDrawing/DrawingSetup.cs xperdex/bingo_odds/PlayerDrawing/DrawingSetup.resx xperdex/bingo_odds/PlayerDrawing/Form1.Designer.cs xperdex/bingo_odds/PlayerDrawing/Form1.cs xperdex/bingo_odds/PlayerDrawing/Form1.resx xperdex/bingo_odds/PlayerDrawing/PlayerDrawing.4.0.csproj xperdex/bingo_odds/PlayerDrawing/PlayerDrawing.csproj xperdex/bingo_odds/PlayerDrawing/PlayerLoader.Designer.cs xperdex/bingo_odds/PlayerDrawing/PlayerLoader.cs xperdex/bingo_odds/PlayerDrawing/PlayerLoader.resx xperdex/bingo_odds/PlayerDrawing/Program.cs xperdex/bingo_odds/PlayerDrawing/Properties/AssemblyInfo.cs xperdex/bingo_odds/PlayerDrawing/Properties/Resources.Designer.cs xperdex/bingo_odds/PlayerDrawing/Properties/Resources.resx xperdex/bingo_odds/PlayerDrawing/Properties/Settings.Designer.cs xperdex/bingo_odds/PlayerDrawing/Properties/Settings.settings xperdex/bingo_odds/PlayerDrawing/app.config xperdex/bingo_odds/RateBrowser/Form1.Designer.cs xperdex/bingo_odds/RateBrowser/Form1.cs xperdex/bingo_odds/RateBrowser/Program.cs xperdex/bingo_odds/RateBrowser/Properties/AssemblyInfo.cs xperdex/bingo_odds/RateBrowser/Properties/Resources.Designer.cs xperdex/bingo_odds/RateBrowser/Properties/Resources.resx xperdex/bingo_odds/RateBrowser/Properties/Settings.Designer.cs xperdex/bingo_odds/RateBrowser/Properties/Settings.settings xperdex/bingo_odds/RateBrowser/RateBrowser.csproj xperdex/bingo_odds/RateBrowser/RateBrowser.vc10.csproj xperdex/bingo_odds/RateBrowser/RateBrowser.vc9.csproj xperdex/bingo_odds/RateRank/ConfigurePacks.Designer.cs xperdex/bingo_odds/RateRank/ConfigurePacks.cs xperdex/bingo_odds/RateRank/ConfigurePacks.resx xperdex/bingo_odds/RateRank/ConfigurePoints.Designer.cs xperdex/bingo_odds/RateRank/ConfigurePoints.cs xperdex/bingo_odds/RateRank/ConfigurePoints.resx xperdex/bingo_odds/RateRank/Form1.Designer.cs xperdex/bingo_odds/RateRank/Form1.cs xperdex/bingo_odds/RateRank/Form1.resx xperdex/bingo_odds/RateRank/Local.cs xperdex/bingo_odds/RateRank/Program.cs xperdex/bingo_odds/RateRank/Properties/AssemblyInfo.cs xperdex/bingo_odds/RateRank/Properties/Resources.Designer.cs xperdex/bingo_odds/RateRank/Properties/Resources.resx xperdex/bingo_odds/RateRank/Properties/Settings.Designer.cs xperdex/bingo_odds/RateRank/Properties/Settings.settings xperdex/bingo_odds/RateRank/RateRank.csproj xperdex/bingo_odds/RateRank/RateRank.vc10.csproj xperdex/bingo_odds/RateRank/RateRank.vc9.csproj xperdex/bingo_odds/RateRank/SelectPacks.Designer.cs xperdex/bingo_odds/RateRank/SelectPacks.cs xperdex/bingo_odds/RateRank/SelectPacks.resx xperdex/bingo_odds/RateRank/_blank_2003DataSet.Designer.cs xperdex/bingo_odds/RateRank/_blank_2003DataSet.xsc xperdex/bingo_odds/RateRank/_blank_2003DataSet.xsd xperdex/bingo_odds/RateRank/_blank_2003DataSet.xss xperdex/bingo_odds/RateRank/app.config xperdex/bingo_odds/RateRank/blank.2003.mdb xperdex/bingo_odds/RateRank2/ConfigureGames.Designer.cs xperdex/bingo_odds/RateRank2/ConfigureGames.cs xperdex/bingo_odds/RateRank2/ConfigureGames.resx xperdex/bingo_odds/RateRank2/ConfigurePacks.Designer.cs xperdex/bingo_odds/RateRank2/ConfigurePacks.cs xperdex/bingo_odds/RateRank2/ConfigurePacks.resx xperdex/bingo_odds/RateRank2/ConfigurePoints.Designer.cs xperdex/bingo_odds/RateRank2/ConfigurePoints.cs xperdex/bingo_odds/RateRank2/ConfigurePoints.resx xperdex/bingo_odds/RateRank2/DataArray.cs xperdex/bingo_odds/RateRank2/Form1.Designer.cs xperdex/bingo_odds/RateRank2/Form1.cs xperdex/bingo_odds/RateRank2/Form1.resx xperdex/bingo_odds/RateRank2/Local.cs xperdex/bingo_odds/RateRank2/MultiColumnListBox.cs xperdex/bingo_odds/RateRank2/Program.cs xperdex/bingo_odds/RateRank2/Properties/AssemblyInfo.cs xperdex/bingo_odds/RateRank2/Properties/Resources.Designer.cs xperdex/bingo_odds/RateRank2/Properties/Resources.resx xperdex/bingo_odds/RateRank2/Properties/Settings.Designer.cs xperdex/bingo_odds/RateRank2/Properties/Settings.settings xperdex/bingo_odds/RateRank2/RateRank2.csproj xperdex/bingo_odds/RateRank2/RateRank2.vc10.4.0.csproj xperdex/bingo_odds/RateRank2/RateRank2.vc10.csproj xperdex/bingo_odds/RateRank2/RateRank2.vc9.csproj xperdex/bingo_odds/RateRank2/SelectPackSet.Designer.cs xperdex/bingo_odds/RateRank2/SelectPackSet.cs xperdex/bingo_odds/RateRank2/SelectPackSet.resx xperdex/bingo_odds/RateRank2/SelectPacks.Designer.cs xperdex/bingo_odds/RateRank2/SelectPacks.cs xperdex/bingo_odds/RateRank2/SelectPacks.resx xperdex/bingo_odds/RateRank2/_blank_2003DataSet.Designer.cs xperdex/bingo_odds/RateRank2/_blank_2003DataSet.xsc xperdex/bingo_odds/RateRank2/_blank_2003DataSet.xsd xperdex/bingo_odds/RateRank2/_blank_2003DataSet.xss xperdex/bingo_odds/RateRank2/app.config xperdex/bingo_odds/RateRank2/blank.2003.mdb xperdex/bingo_odds/RateRank2/consolidate/Makefile xperdex/bingo_odds/RateRank2/consolidate/consolidate.c xperdex/bingo_odds/RateRank2Setup/rate_rank_setup.vc10.vdproj xperdex/bingo_odds/RateRank2Setup/rate_rank_setup.vc9.vdproj xperdex/bingo_odds/RateRank2Setup/rate_rank_setup.vdproj xperdex/bingo_odds/RateRankSetup/rate_rank_setup.vdproj xperdex/bingo_odds/SessionOddsMaker/Form1.Designer.cs xperdex/bingo_odds/SessionOddsMaker/Form1.cs xperdex/bingo_odds/SessionOddsMaker/Form1.resx xperdex/bingo_odds/SessionOddsMaker/Program.cs xperdex/bingo_odds/SessionOddsMaker/Properties/AssemblyInfo.cs xperdex/bingo_odds/SessionOddsMaker/Properties/Resources.Designer.cs xperdex/bingo_odds/SessionOddsMaker/Properties/Resources.resx xperdex/bingo_odds/SessionOddsMaker/Properties/Settings.Designer.cs xperdex/bingo_odds/SessionOddsMaker/Properties/Settings.settings xperdex/bingo_odds/SessionOddsMaker/SessionOddsMaker.csproj xperdex/bingo_odds/SessionOddsMaker/SessionOddsMaker.vc10.csproj xperdex/bingo_odds/SessionOddsMaker/SessionOddsMaker.vc9.csproj xperdex/bingo_odds/TopPlayers/ChoosenPlayerForm.Designer.cs xperdex/bingo_odds/TopPlayers/ChoosenPlayerForm.cs xperdex/bingo_odds/TopPlayers/ChoosenPlayerForm.resx xperdex/bingo_odds/TopPlayers/Config_OptionTree.cs xperdex/bingo_odds/TopPlayers/Config_Receipts.cs xperdex/bingo_odds/TopPlayers/Config_TopPlayers.cs xperdex/bingo_odds/TopPlayers/CrystalReportPlayerParticipation.cs xperdex/bingo_odds/TopPlayers/CrystalReportPlayerParticipation.rpt xperdex/bingo_odds/TopPlayers/CrystalReportPrizes.cs xperdex/bingo_odds/TopPlayers/CrystalReportPrizes.rpt xperdex/bingo_odds/TopPlayers/CrystalReportUnclaimedPrizes.cs xperdex/bingo_odds/TopPlayers/CrystalReportUnclaimedPrizes.rpt xperdex/bingo_odds/TopPlayers/CrystalReportWeekPlayer.cs xperdex/bingo_odds/TopPlayers/CrystalReportWeekPlayer.rpt xperdex/bingo_odds/TopPlayers/CrystalReportWeekPrizes.cs xperdex/bingo_odds/TopPlayers/CrystalReportWeekPrizes.rpt xperdex/bingo_odds/TopPlayers/DataSetWeekPlayers.Designer.cs xperdex/bingo_odds/TopPlayers/DataSetWeekPlayers.cs xperdex/bingo_odds/TopPlayers/DataSetWeekPlayers.xsc xperdex/bingo_odds/TopPlayers/DataSetWeekPlayers.xsd xperdex/bingo_odds/TopPlayers/DataSetWeekPlayers.xss xperdex/bingo_odds/TopPlayers/Local.cs xperdex/bingo_odds/TopPlayers/PlayerTrak.cs xperdex/bingo_odds/TopPlayers/PlayersParticipationReport.Designer.cs xperdex/bingo_odds/TopPlayers/PlayersParticipationReport.cs xperdex/bingo_odds/TopPlayers/PlayersParticipationReport.resx xperdex/bingo_odds/TopPlayers/PrizesReport.Designer.cs xperdex/bingo_odds/TopPlayers/PrizesReport.cs xperdex/bingo_odds/TopPlayers/PrizesReport.resx xperdex/bingo_odds/TopPlayers/Program.cs xperdex/bingo_odds/TopPlayers/Properties/AssemblyInfo.cs xperdex/bingo_odds/TopPlayers/Properties/Resources.Designer.cs xperdex/bingo_odds/TopPlayers/Properties/Resources.resx xperdex/bingo_odds/TopPlayers/Properties/Settings.Designer.cs xperdex/bingo_odds/TopPlayers/Properties/Settings.settings xperdex/bingo_odds/TopPlayers/RankPlayerPayout.cs xperdex/bingo_odds/TopPlayers/RankPlayerPrizes.cs xperdex/bingo_odds/TopPlayers/RankPrizesForm.Designer.cs xperdex/bingo_odds/TopPlayers/RankPrizesForm.cs xperdex/bingo_odds/TopPlayers/RankPrizesForm.resx xperdex/bingo_odds/TopPlayers/ReceiptPrinterCommands.cs xperdex/bingo_odds/TopPlayers/ReceiptPrinterInfo.cs xperdex/bingo_odds/TopPlayers/ReceiptPrinterType.cs xperdex/bingo_odds/TopPlayers/TopPlayerSetup/TopPlayerSetup.vdproj xperdex/bingo_odds/TopPlayers/TopPlayers.csproj xperdex/bingo_odds/TopPlayers/TopPlayers.sln xperdex/bingo_odds/TopPlayers/TopPlayers.vc10.csproj xperdex/bingo_odds/TopPlayers/TopPlayersForm.Designer.cs xperdex/bingo_odds/TopPlayers/TopPlayersForm.cs xperdex/bingo_odds/TopPlayers/TopPlayersForm.resx xperdex/bingo_odds/TopPlayers/TopPlayersPayout.Designer.cs xperdex/bingo_odds/TopPlayers/WeekPlayerReport.Designer.cs xperdex/bingo_odds/TopPlayers/WeekPlayerReport.cs xperdex/bingo_odds/TopPlayers/WeekPlayerReport.resx xperdex/bingo_odds/bingo_odds.stripped.2/CardBrowser.cs xperdex/bingo_odds/bingo_odds.stripped.2/CardBrowsingForm.Designer.cs xperdex/bingo_odds/bingo_odds.stripped.2/CardBrowsingForm.cs xperdex/bingo_odds/bingo_odds.stripped.2/CardBrowsingForm.resx xperdex/bingo_odds/bingo_odds.stripped.2/Form1.Designer.cs xperdex/bingo_odds/bingo_odds.stripped.2/Form1.cs xperdex/bingo_odds/bingo_odds.stripped.2/Form1.resx xperdex/bingo_odds/bingo_odds.stripped.2/GamePlayDatabase.cs xperdex/bingo_odds/bingo_odds.stripped.2/OddsRunInfo.cs xperdex/bingo_odds/bingo_odds.stripped.2/Program.cs xperdex/bingo_odds/bingo_odds.stripped.2/Properties/AssemblyInfo.cs xperdex/bingo_odds/bingo_odds.stripped.2/Properties/Resources.Designer.cs xperdex/bingo_odds/bingo_odds.stripped.2/Properties/Resources.resx xperdex/bingo_odds/bingo_odds.stripped.2/Properties/Settings.Designer.cs xperdex/bingo_odds/bingo_odds.stripped.2/Properties/Settings.settings xperdex/bingo_odds/bingo_odds.stripped.2/RunDetails.Designer.cs xperdex/bingo_odds/bingo_odds.stripped.2/RunDetails.cs xperdex/bingo_odds/bingo_odds.stripped.2/RunDetails.resx xperdex/bingo_odds/bingo_odds.stripped.2/SessionSelector.Designer.cs xperdex/bingo_odds/bingo_odds.stripped.2/SessionSelector.cs xperdex/bingo_odds/bingo_odds.stripped.2/SessionSelector.resx xperdex/bingo_odds/bingo_odds.stripped.2/app.config xperdex/bingo_odds/bingo_odds.stripped.2/bingo_odds.stripped.csproj xperdex/bingo_odds/bingo_odds.stripped.2/bingo_odds.stripped.sln xperdex/bingo_odds/bingo_odds.stripped.2/bingo_odds.stripped.vc10.csproj xperdex/bingo_odds/bingo_odds.stripped.2/bingo_odds.stripped.vc9.csproj xperdex/bingo_odds/bingo_odds.stripped.2/bingo_odds.stripped2.vc10.csproj xperdex/bingo_odds/bingo_odds.stripped.2/form1.cs.stripped xperdex/bingo_odds/bingo_odds.stripped.3/CardBrowser.cs xperdex/bingo_odds/bingo_odds.stripped.3/CardBrowsingForm.Designer.cs xperdex/bingo_odds/bingo_odds.stripped.3/CardBrowsingForm.cs xperdex/bingo_odds/bingo_odds.stripped.3/CardBrowsingForm.resx xperdex/bingo_odds/bingo_odds.stripped.3/CustomControl1.Designer.cs xperdex/bingo_odds/bingo_odds.stripped.3/CustomControl1.cs xperdex/bingo_odds/bingo_odds.stripped.3/Form1.Designer.cs xperdex/bingo_odds/bingo_odds.stripped.3/Form1.cs xperdex/bingo_odds/bingo_odds.stripped.3/Form1.resx xperdex/bingo_odds/bingo_odds.stripped.3/Form2.Designer.cs xperdex/bingo_odds/bingo_odds.stripped.3/Form2.cs xperdex/bingo_odds/bingo_odds.stripped.3/Form2.resx xperdex/bingo_odds/bingo_odds.stripped.3/GamePlayDatabase.cs xperdex/bingo_odds/bingo_odds.stripped.3/OddsRunInfo.cs xperdex/bingo_odds/bingo_odds.stripped.3/Program.cs xperdex/bingo_odds/bingo_odds.stripped.3/Properties/AssemblyInfo.cs xperdex/bingo_odds/bingo_odds.stripped.3/Properties/Resources.Designer.cs xperdex/bingo_odds/bingo_odds.stripped.3/Properties/Resources.resx xperdex/bingo_odds/bingo_odds.stripped.3/Properties/Settings.Designer.cs xperdex/bingo_odds/bingo_odds.stripped.3/Properties/Settings.settings xperdex/bingo_odds/bingo_odds.stripped.3/RunDetails.Designer.cs xperdex/bingo_odds/bingo_odds.stripped.3/RunDetails.cs xperdex/bingo_odds/bingo_odds.stripped.3/RunDetails.resx xperdex/bingo_odds/bingo_odds.stripped.3/SessionSelector.Designer.cs xperdex/bingo_odds/bingo_odds.stripped.3/SessionSelector.cs xperdex/bingo_odds/bingo_odds.stripped.3/SessionSelector.resx xperdex/bingo_odds/bingo_odds.stripped.3/app.config xperdex/bingo_odds/bingo_odds.stripped.3/bingo_odds.stripped.csproj xperdex/bingo_odds/bingo_odds.stripped.3/bingo_odds.stripped.sln xperdex/bingo_odds/bingo_odds.stripped.3/bingo_odds.stripped.vc9.csproj xperdex/bingo_odds/bingo_odds.stripped.3/bingo_odds.stripped3.vc10.csproj xperdex/bingo_odds/bingo_odds.stripped.3/bingo_odds.stripped3.vs10.4.0.csproj xperdex/bingo_odds/bingo_odds.stripped.3/form1.cs.stripped xperdex/bingo_odds/bingo_odds.stripped/CardBrowser.cs xperdex/bingo_odds/bingo_odds.stripped/CardBrowsingForm.Designer.cs xperdex/bingo_odds/bingo_odds.stripped/CardBrowsingForm.cs xperdex/bingo_odds/bingo_odds.stripped/CardBrowsingForm.resx xperdex/bingo_odds/bingo_odds.stripped/Form1.Designer.cs xperdex/bingo_odds/bingo_odds.stripped/Form1.cs xperdex/bingo_odds/bingo_odds.stripped/Form1.resx xperdex/bingo_odds/bingo_odds.stripped/GamePlayDatabase.cs xperdex/bingo_odds/bingo_odds.stripped/OddsRunInfo.cs xperdex/bingo_odds/bingo_odds.stripped/Program.cs xperdex/bingo_odds/bingo_odds.stripped/Properties/AssemblyInfo.cs xperdex/bingo_odds/bingo_odds.stripped/Properties/Resources.Designer.cs xperdex/bingo_odds/bingo_odds.stripped/Properties/Resources.resx xperdex/bingo_odds/bingo_odds.stripped/Properties/Settings.Designer.cs xperdex/bingo_odds/bingo_odds.stripped/Properties/Settings.settings xperdex/bingo_odds/bingo_odds.stripped/RunDetails.Designer.cs xperdex/bingo_odds/bingo_odds.stripped/RunDetails.cs xperdex/bingo_odds/bingo_odds.stripped/RunDetails.resx xperdex/bingo_odds/bingo_odds.stripped/app.config xperdex/bingo_odds/bingo_odds.stripped/bingo_odds.stripped.csproj xperdex/bingo_odds/bingo_odds.stripped/bingo_odds.stripped.sln xperdex/bingo_odds/bingo_odds.stripped/bingo_odds.stripped.vc10.csproj xperdex/bingo_odds/bingo_odds.stripped/bingo_odds.stripped.vc9.csproj xperdex/bingo_odds/bingo_odds.stripped/form1.cs.stripped xperdex/bingo_odds/bingo_odds/BallData1.cs xperdex/bingo_odds/bingo_odds/BallDataInterface.cs xperdex/bingo_odds/bingo_odds/CardBrowser.cs xperdex/bingo_odds/bingo_odds/CardBrowsingForm.Designer.cs xperdex/bingo_odds/bingo_odds/CardBrowsingForm.cs xperdex/bingo_odds/bingo_odds/CardBrowsingForm.resx xperdex/bingo_odds/bingo_odds/CardMaster/CardFactory.cs xperdex/bingo_odds/bingo_odds/CardMaster/CardReader.cs xperdex/bingo_odds/bingo_odds/Form1.Designer.cs xperdex/bingo_odds/bingo_odds/Form1.cs xperdex/bingo_odds/bingo_odds/Form1.resx xperdex/bingo_odds/bingo_odds/Local.cs xperdex/bingo_odds/bingo_odds/OddsRunInfo.cs xperdex/bingo_odds/bingo_odds/Pattern Editor/BigPatternBlock.Designer.cs xperdex/bingo_odds/bingo_odds/Pattern Editor/BigPatternBlock.cs xperdex/bingo_odds/bingo_odds/Pattern Editor/BigPatternBlock.resx xperdex/bingo_odds/bingo_odds/Pattern Editor/Pattern.cs xperdex/bingo_odds/bingo_odds/Pattern Editor/PatternBlock.Designer.cs xperdex/bingo_odds/bingo_odds/Pattern Editor/PatternBlock.cs xperdex/bingo_odds/bingo_odds/Pattern Editor/PatternBlock.resx xperdex/bingo_odds/bingo_odds/Pattern Editor/PatternBlockGroup.cs xperdex/bingo_odds/bingo_odds/Pattern Editor/PatternBlockGroup.resx xperdex/bingo_odds/bingo_odds/Pattern Editor/PatternEditor.Designer.cs xperdex/bingo_odds/bingo_odds/Pattern Editor/PatternEditor.cs xperdex/bingo_odds/bingo_odds/Pattern Editor/PatternEditor.resx xperdex/bingo_odds/bingo_odds/Program.cs xperdex/bingo_odds/bingo_odds/Properties/AssemblyInfo.cs xperdex/bingo_odds/bingo_odds/Properties/Resources.Designer.cs xperdex/bingo_odds/bingo_odds/Properties/Resources.resx xperdex/bingo_odds/bingo_odds/Properties/Settings.Designer.cs xperdex/bingo_odds/bingo_odds/Properties/Settings.settings xperdex/bingo_odds/bingo_odds/RunDetails.Designer.cs xperdex/bingo_odds/bingo_odds/RunDetails.cs xperdex/bingo_odds/bingo_odds/RunDetails.resx xperdex/bingo_odds/bingo_odds/bingo_odds.csproj xperdex/bingo_odds/bingo_odds/bingo_odds.psess xperdex/bingo_odds/bingo_odds/bingo_odds.sln xperdex/bingo_odds/bingo_odds/bingo_odds.vc10.csproj xperdex/bingo_odds/bingo_odds/bingo_odds.vc9.csproj xperdex/bingo_odds/bingo_odds/bingo_odds.vc9.sln xperdex/bingo_odds/bingo_odds/bingo_odds1.psess xperdex/bingo_odds/bingo_odds/interface.conf xperdex/bingo_odds/bingo_odds/patterns.db xperdex/bingo_odds/bingo_odds_setup/bingo_odds_setup.vdproj xperdex/bingo_odds/mk.bat xperdex/bingo_odds/odds.c xperdex/bingo_odds/patterns.db xperdex/bingo_odds/playedodds.c xperdex/bingo_odds/pokerpalaceballs.txt xperdex/bingo_odds/x xperdex/bingo_odds/xperdex.RateRankStatus/Properties/AssemblyInfo.cs xperdex/bingo_odds/xperdex.RateRankStatus/RateRankStatus.cs xperdex/bingo_odds/xperdex.RateRankStatus/xperdex.Bingo.RateRankStatus.csproj xperdex/bingo_odds/xperdex.bingo_monitor/BingoMonitor.cs xperdex/bingo_odds/xperdex.bingo_monitor/Properties/AssemblyInfo.cs xperdex/bingo_odds/xperdex.bingo_monitor/xperdex.bingo_monitor.csproj xperdex/bingo_odds/xperdex.bingo_monitor/xperdex.bingo_monitor.vc10.csproj xperdex/bingo_odds/xperdex.bingo_monitor/xperdex.bingo_monitor.vc9.csproj xperdex/eltanin/Apps/14OptEdit/14OptEdit.sln xperdex/eltanin/Apps/14OptEdit/14OptEdit/14OptEdit.csproj xperdex/eltanin/Apps/14OptEdit/14OptEdit/14OptEdit.vs10.csproj xperdex/eltanin/Apps/14OptEdit/14OptEdit/14OptEdit_TemporaryKey.pfx xperdex/eltanin/Apps/14OptEdit/14OptEdit/HelpDocs/HelpWhatthehell.html xperdex/eltanin/Apps/14OptEdit/14OptEdit/HelpDocs/HowToDim.html xperdex/eltanin/Apps/14OptEdit/14OptEdit/HelpDocs/HowToRotate.html xperdex/eltanin/Apps/14OptEdit/14OptEdit/HelpDocs/HowToScheduleBootUp.html xperdex/eltanin/Apps/14OptEdit/14OptEdit/HelpDocs/HowToSolitaire.html xperdex/eltanin/Apps/14OptEdit/14OptEdit/HelpDocs/HowtoSound.html xperdex/eltanin/Apps/14OptEdit/14OptEdit/MainOptEdit.Designer.cs xperdex/eltanin/Apps/14OptEdit/14OptEdit/MainOptEdit.cs xperdex/eltanin/Apps/14OptEdit/14OptEdit/MainOptEdit.resx xperdex/eltanin/Apps/14OptEdit/14OptEdit/Program.cs xperdex/eltanin/Apps/14OptEdit/14OptEdit/Properties/AssemblyInfo.cs xperdex/eltanin/Apps/14OptEdit/14OptEdit/Properties/Resources.Designer.cs xperdex/eltanin/Apps/14OptEdit/14OptEdit/Properties/Resources.resx xperdex/eltanin/Apps/14OptEdit/14OptEdit/Properties/Settings.Designer.cs xperdex/eltanin/Apps/14OptEdit/14OptEdit/Properties/Settings.settings xperdex/eltanin/Apps/14OptEdit/14OptEdit/RawEdit.Designer.cs xperdex/eltanin/Apps/14OptEdit/14OptEdit/RawEdit.cs xperdex/eltanin/Apps/14OptEdit/14OptEdit/RawEdit.resx xperdex/eltanin/Apps/14OptEdit/14OptEdit/Templates/SanManEvent.obj xperdex/eltanin/Apps/14OptEdit/14OptEdit/Templates/StationaryArtwork.obj xperdex/eltanin/Apps/17OptEdit/170000.html xperdex/eltanin/Apps/17OptEdit/17OptEdit.csproj xperdex/eltanin/Apps/17OptEdit/17OptEdit.sln xperdex/eltanin/Apps/17OptEdit/17OptEdit.vs10.csproj xperdex/eltanin/Apps/17OptEdit/17OptEdit.vs10.sln xperdex/eltanin/Apps/17OptEdit/17OptEdit_TemporaryKey.pfx xperdex/eltanin/Apps/17OptEdit/BoolChooser.Designer.cs xperdex/eltanin/Apps/17OptEdit/BoolChooser.cs xperdex/eltanin/Apps/17OptEdit/BoolChooser.resx xperdex/eltanin/Apps/17OptEdit/CryptoIni.csproj xperdex/eltanin/Apps/17OptEdit/FontChooser.Designer.cs xperdex/eltanin/Apps/17OptEdit/FontChooser.cs xperdex/eltanin/Apps/17OptEdit/FontChooser.resx xperdex/eltanin/Apps/17OptEdit/FontSizeChooser.Designer.cs xperdex/eltanin/Apps/17OptEdit/FontSizeChooser.cs xperdex/eltanin/Apps/17OptEdit/FontSizeChooser.resx xperdex/eltanin/Apps/17OptEdit/NumChooser.Designer.cs xperdex/eltanin/Apps/17OptEdit/NumChooser.cs xperdex/eltanin/Apps/17OptEdit/NumChooser.resx xperdex/eltanin/Apps/17OptEdit/Program.cs xperdex/eltanin/Apps/17OptEdit/Properties/AssemblyInfo.cs xperdex/eltanin/Apps/17OptEdit/Properties/Resources.Designer.cs xperdex/eltanin/Apps/17OptEdit/Properties/Resources.resx xperdex/eltanin/Apps/17OptEdit/Properties/Settings.Designer.cs xperdex/eltanin/Apps/17OptEdit/Properties/Settings.settings xperdex/eltanin/Apps/17OptEdit/d0cs/170000.html xperdex/eltanin/Apps/17OptEdit/mainEdit.Designer.cs xperdex/eltanin/Apps/17OptEdit/mainEdit.cs xperdex/eltanin/Apps/17OptEdit/mainEdit.resx xperdex/eltanin/Apps/17OptEdit/standard_objs/Alaska17.obj xperdex/eltanin/Apps/17OptEdit/standard_objs/SanMan017.obj xperdex/eltanin/Apps/17OptEdit/standard_objs/canada017.obj xperdex/eltanin/Apps/17OptEdit/standard_objs/england17.obj xperdex/eltanin/Apps/17OptEdit/standard_objs/lemoore17.obj xperdex/eltanin/Apps/17OptEdit/standard_objs/stationary_purty17.obj xperdex/eltanin/Apps/17OptEdit/standard_objs/stationary_samstown17.obj xperdex/eltanin/Apps/17OptEdit/standard_objs/texas017.obj xperdex/eltanin/Apps/17OptEdit/standard_objs/texas_state_stationary_old017.obj xperdex/eltanin/Apps/EltManip/PackEditor/Card.Designer.cs xperdex/eltanin/Apps/EltManip/PackEditor/Card.cs xperdex/eltanin/Apps/EltManip/PackEditor/Card.resx xperdex/eltanin/Apps/EltManip/PackEditor/CardsetMojo.Designer.cs xperdex/eltanin/Apps/EltManip/PackEditor/CardsetMojo.cs xperdex/eltanin/Apps/EltManip/PackEditor/CardsetMojo.resx xperdex/eltanin/Apps/EltManip/PackEditor/CustomAcrossDown.Designer.cs xperdex/eltanin/Apps/EltManip/PackEditor/CustomAcrossDown.cs xperdex/eltanin/Apps/EltManip/PackEditor/CustomAcrossDown.resx xperdex/eltanin/Apps/EltManip/PackEditor/CustomSkipPane.Designer.cs xperdex/eltanin/Apps/EltManip/PackEditor/CustomSkipPane.cs xperdex/eltanin/Apps/EltManip/PackEditor/CustomSkipPane.resx xperdex/eltanin/Apps/EltManip/PackEditor/CustomSkipTable.Designer.cs xperdex/eltanin/Apps/EltManip/PackEditor/CustomSkipTable.cs xperdex/eltanin/Apps/EltManip/PackEditor/CustomSkipTable.resx xperdex/eltanin/Apps/EltManip/PackEditor/DisplayChecks.Designer.cs xperdex/eltanin/Apps/EltManip/PackEditor/DisplayChecks.cs xperdex/eltanin/Apps/EltManip/PackEditor/DisplayChecks.resx xperdex/eltanin/Apps/EltManip/PackEditor/Docs/CardsetsAppliedTo.html xperdex/eltanin/Apps/EltManip/PackEditor/Docs/CustomPackSkips.html xperdex/eltanin/Apps/EltManip/PackEditor/Docs/Exceptions.html xperdex/eltanin/Apps/EltManip/PackEditor/Docs/Gsl.html xperdex/eltanin/Apps/EltManip/PackEditor/Docs/Misc.html xperdex/eltanin/Apps/EltManip/PackEditor/Docs/PacksAppliedTo.html xperdex/eltanin/Apps/EltManip/PackEditor/Docs/PageSkipTable.html xperdex/eltanin/Apps/EltManip/PackEditor/Docs/Ranges.html xperdex/eltanin/Apps/EltManip/PackEditor/EditRawData.Designer.cs xperdex/eltanin/Apps/EltManip/PackEditor/EditRawData.cs xperdex/eltanin/Apps/EltManip/PackEditor/EditRawData.resx xperdex/eltanin/Apps/EltManip/PackEditor/ExceptionContainer.Designer.cs xperdex/eltanin/Apps/EltManip/PackEditor/ExceptionContainer.cs xperdex/eltanin/Apps/EltManip/PackEditor/ExceptionContainer.resx xperdex/eltanin/Apps/EltManip/PackEditor/Exceptions.Designer.cs xperdex/eltanin/Apps/EltManip/PackEditor/Exceptions.cs xperdex/eltanin/Apps/EltManip/PackEditor/Exceptions.resx xperdex/eltanin/Apps/EltManip/PackEditor/GSLPanel.Designer.cs xperdex/eltanin/Apps/EltManip/PackEditor/GSLPanel.cs xperdex/eltanin/Apps/EltManip/PackEditor/GSLPanel.resx xperdex/eltanin/Apps/EltManip/PackEditor/GroupLayoutContainer.Designer.cs xperdex/eltanin/Apps/EltManip/PackEditor/GroupLayoutContainer.cs xperdex/eltanin/Apps/EltManip/PackEditor/GroupLayoutContainer.resx xperdex/eltanin/Apps/EltManip/PackEditor/GroupLayoutPanel.Designer.cs xperdex/eltanin/Apps/EltManip/PackEditor/GroupLayoutPanel.cs xperdex/eltanin/Apps/EltManip/PackEditor/GroupLayoutPanel.resx xperdex/eltanin/Apps/EltManip/PackEditor/GroupSkipTable.Designer.cs xperdex/eltanin/Apps/EltManip/PackEditor/GroupSkipTable.cs xperdex/eltanin/Apps/EltManip/PackEditor/GroupSkipTable.resx xperdex/eltanin/Apps/EltManip/PackEditor/GslEditor.Designer.cs xperdex/eltanin/Apps/EltManip/PackEditor/GslEditor.cs xperdex/eltanin/Apps/EltManip/PackEditor/GslEditor.resx xperdex/eltanin/Apps/EltManip/PackEditor/IniSelector.Designer.cs xperdex/eltanin/Apps/EltManip/PackEditor/IniSelector.cs xperdex/eltanin/Apps/EltManip/PackEditor/IniSelector.resx xperdex/eltanin/Apps/EltManip/PackEditor/Misc.Designer.cs xperdex/eltanin/Apps/EltManip/PackEditor/Misc.cs xperdex/eltanin/Apps/EltManip/PackEditor/Misc.resx xperdex/eltanin/Apps/EltManip/PackEditor/MultiFileSelector.Designer.cs xperdex/eltanin/Apps/EltManip/PackEditor/MultiFileSelector.cs xperdex/eltanin/Apps/EltManip/PackEditor/MultiFileSelector.resx xperdex/eltanin/Apps/EltManip/PackEditor/PackCardOffsets.Designer.cs xperdex/eltanin/Apps/EltManip/PackEditor/PackCardOffsets.cs xperdex/eltanin/Apps/EltManip/PackEditor/PackData.Designer.cs xperdex/eltanin/Apps/EltManip/PackEditor/PackData.cs xperdex/eltanin/Apps/EltManip/PackEditor/PackData.resx xperdex/eltanin/Apps/EltManip/PackEditor/PackEditor.csproj xperdex/eltanin/Apps/EltManip/PackEditor/PackEditor.sln xperdex/eltanin/Apps/EltManip/PackEditor/PacksAppliedTo.Designer.cs xperdex/eltanin/Apps/EltManip/PackEditor/PacksAppliedTo.cs xperdex/eltanin/Apps/EltManip/PackEditor/PacksAppliedTo.resx xperdex/eltanin/Apps/EltManip/PackEditor/Page.Designer.cs xperdex/eltanin/Apps/EltManip/PackEditor/Page.cs xperdex/eltanin/Apps/EltManip/PackEditor/Page.resx xperdex/eltanin/Apps/EltManip/PackEditor/PageSkipTable.Designer.cs xperdex/eltanin/Apps/EltManip/PackEditor/PageSkipTable.cs xperdex/eltanin/Apps/EltManip/PackEditor/PageSkipTable.resx xperdex/eltanin/Apps/EltManip/PackEditor/Program.cs xperdex/eltanin/Apps/EltManip/PackEditor/Properties/AssemblyInfo.cs xperdex/eltanin/Apps/EltManip/PackEditor/Properties/Resources.Designer.cs xperdex/eltanin/Apps/EltManip/PackEditor/Properties/Resources.resx xperdex/eltanin/Apps/EltManip/PackEditor/Properties/Settings.Designer.cs xperdex/eltanin/Apps/EltManip/PackEditor/Properties/Settings.settings xperdex/eltanin/Apps/EltManip/PackEditor/Ranges.Designer.cs xperdex/eltanin/Apps/EltManip/PackEditor/Ranges.cs xperdex/eltanin/Apps/EltManip/PackEditor/Ranges.resx xperdex/eltanin/Apps/EltManip/PackEditor/Readme.txt xperdex/eltanin/Apps/EltManip/PackEditor/TopContainer.Designer.cs xperdex/eltanin/Apps/EltManip/PackEditor/TopContainer.cs xperdex/eltanin/Apps/EltManip/PackEditor/TopContainer.resx xperdex/eltanin/Apps/EltManip/PackEditor/d0cs/CardChooser.html xperdex/eltanin/Apps/EltManip/PackEditor/d0cs/CardsetsAppliedTo.html xperdex/eltanin/Apps/EltManip/PackEditor/d0cs/CustomPackSkips.html xperdex/eltanin/Apps/EltManip/PackEditor/d0cs/Exceptions.html xperdex/eltanin/Apps/EltManip/PackEditor/d0cs/GroupLayout.html xperdex/eltanin/Apps/EltManip/PackEditor/d0cs/Gsl.html xperdex/eltanin/Apps/EltManip/PackEditor/d0cs/Misc.html xperdex/eltanin/Apps/EltManip/PackEditor/d0cs/PacksAppliedTo.html xperdex/eltanin/Apps/EltManip/PackEditor/d0cs/PageSkipTable.html xperdex/eltanin/Apps/EltManip/PackEditor/d0cs/Ranges.html xperdex/eltanin/Apps/EltManip/PackEditor/d0cs/Top.html xperdex/eltanin/Apps/EltManip/PackEditor/packlayout.Designer.cs xperdex/eltanin/Apps/EltManip/PackEditor/packlayout.cs xperdex/eltanin/Apps/EltManip/PackEditor/packlayout.resx xperdex/eltanin/Apps/SchedConglomerateTester/SchedConglomerateTester.sln xperdex/eltanin/Apps/SchedConglomerateTester/SchedConglomerateTester/Form1.Designer.cs xperdex/eltanin/Apps/SchedConglomerateTester/SchedConglomerateTester/Form1.cs xperdex/eltanin/Apps/SchedConglomerateTester/SchedConglomerateTester/Form1.resx xperdex/eltanin/Apps/SchedConglomerateTester/SchedConglomerateTester/Program.cs xperdex/eltanin/Apps/SchedConglomerateTester/SchedConglomerateTester/Properties/AssemblyInfo.cs xperdex/eltanin/Apps/SchedConglomerateTester/SchedConglomerateTester/Properties/Resources.Designer.cs xperdex/eltanin/Apps/SchedConglomerateTester/SchedConglomerateTester/Properties/Resources.resx xperdex/eltanin/Apps/SchedConglomerateTester/SchedConglomerateTester/Properties/Settings.Designer.cs xperdex/eltanin/Apps/SchedConglomerateTester/SchedConglomerateTester/Properties/Settings.settings xperdex/eltanin/Apps/SchedConglomerateTester/SchedConglomerateTester/SchedConglomerateTester.csproj xperdex/eltanin/Apps/SchedConglomerateTester/SchedConglomerateTester/SchedConglomerateTester.vc10.csproj xperdex/eltanin/libs/CryptoIni/CryptoIni.cs xperdex/eltanin/libs/CryptoIni/CryptoIni.csproj xperdex/eltanin/libs/CryptoIni/CryptoIni.sln xperdex/eltanin/libs/CryptoIni/CryptoIni.vc10.csproj xperdex/eltanin/libs/CryptoIni/CryptoIni.vs10.4.0.csproj xperdex/eltanin/libs/CryptoIni/Form1.Designer.cs xperdex/eltanin/libs/CryptoIni/IniException.cs xperdex/eltanin/libs/CryptoIni/IniPrompt.cs xperdex/eltanin/libs/CryptoIni/IniPrompt.resx xperdex/eltanin/libs/CryptoIni/Properties/AssemblyInfo.cs xperdex/eltanin/libs/CryptoIni/Readme.txt xperdex/eltanin/libs/EltaninObject/CardObj.cs xperdex/eltanin/libs/EltaninObject/ClassOutput.Designer.cs xperdex/eltanin/libs/EltaninObject/ClassOutput.cs xperdex/eltanin/libs/EltaninObject/ClassOutput.resx xperdex/eltanin/libs/EltaninObject/ColorsDatConversion.cs xperdex/eltanin/libs/EltaninObject/EltaninObject.csproj xperdex/eltanin/libs/EltaninObject/EltaninObject.sln xperdex/eltanin/libs/EltaninObject/EltaninObject.vc10.4.0.csproj xperdex/eltanin/libs/EltaninObject/EltaninObject.vc10.csproj xperdex/eltanin/libs/EltaninObject/EventObject.cs xperdex/eltanin/libs/EltaninObject/ExceptionObject.cs xperdex/eltanin/libs/EltaninObject/Extras/BlobberDatabaseInterface.cs xperdex/eltanin/libs/EltaninObject/Extras/EltaninButton.cs xperdex/eltanin/libs/EltaninObject/Extras/ValidateScheduleIntegrity.Designer.cs xperdex/eltanin/libs/EltaninObject/Extras/ValidateScheduleIntegrity.cs xperdex/eltanin/libs/EltaninObject/Extras/ValidateScheduleIntegrity.resx xperdex/eltanin/libs/EltaninObject/GSLObject.cs xperdex/eltanin/libs/EltaninObject/GamePattDatConversion.cs xperdex/eltanin/libs/EltaninObject/GenObj2.cs xperdex/eltanin/libs/EltaninObject/GenericObject.cs xperdex/eltanin/libs/EltaninObject/KlugeDatConversion.cs xperdex/eltanin/libs/EltaninObject/OptionObject.cs xperdex/eltanin/libs/EltaninObject/PackDesObject.cs xperdex/eltanin/libs/EltaninObject/PackExtInfo.cs xperdex/eltanin/libs/EltaninObject/PapschDat.cs xperdex/eltanin/libs/EltaninObject/PatternsDatConversion.cs xperdex/eltanin/libs/EltaninObject/PaySchDat.cs xperdex/eltanin/libs/EltaninObject/Properties/AssemblyInfo.cs xperdex/eltanin/libs/EltaninObject/Readme.txt xperdex/eltanin/libs/EltaninObject/ScheduleConglomerate.cs xperdex/eltanin/libs/EltaninObject/ScheduleDataSetLoader.cs xperdex/eltanin/libs/EltaninObject/SessionAccessor.cs xperdex/eltanin/libs/EltaninObject/SessionDatConversion.cs xperdex/eltanin/libs/EltaninObject/SessionObj.cs xperdex/eltanin/libs/EltaninObject/Tester05/ClassOutput.cs xperdex/eltanin/libs/EltaninObject/Tester05/ClassOutput.designer.cs xperdex/eltanin/libs/EltaninObject/Tester05/ClassOutput.resx xperdex/eltanin/libs/EltaninObject/Tester05/Program.cs xperdex/eltanin/libs/EltaninObject/Tester05/Properties/AssemblyInfo.cs xperdex/eltanin/libs/EltaninObject/Tester05/Properties/Resources.Designer.cs xperdex/eltanin/libs/EltaninObject/Tester05/Properties/Resources.resx xperdex/eltanin/libs/EltaninObject/Tester05/Properties/Settings.Designer.cs xperdex/eltanin/libs/EltaninObject/Tester05/Properties/Settings.settings xperdex/eltanin/libs/EltaninObject/Tester05/Tester05.csproj xperdex/eltanin/libs/EltaninObject/ValidationObj.cs xperdex/eltanin/libs/EltaninObject/XMLScheduleUtils.cs xperdex/eltanin/libs/EltaninObject/cslscheddefs.cs xperdex/eltanin/libs/EltaninObject/dotsch.cs xperdex/eltanin/libs/EltaninObject/dsl_blob.cs xperdex/eltanin/libs/EltaninObject/dsl_event.cs xperdex/eltanin/libs/EltaninObject/dsl_msg.cs xperdex/eltanin/libs/EltaninObject/dsl_prms.cs xperdex/eltanin/libs/EltaninObject/ticket0.cs xperdex/eltanin/libs/EltaninObject/ticketn256.cs xperdex/eltanin/libs/EltaninObject2/CardObj.cs xperdex/eltanin/libs/EltaninObject2/ClassOutput.Designer.cs xperdex/eltanin/libs/EltaninObject2/ClassOutput.cs xperdex/eltanin/libs/EltaninObject2/ClassOutput.resx xperdex/eltanin/libs/EltaninObject2/ColorsDatConversion.cs xperdex/eltanin/libs/EltaninObject2/EltaninObject.csproj xperdex/eltanin/libs/EltaninObject2/EltaninObject.sln xperdex/eltanin/libs/EltaninObject2/EltaninObject.vc10.csproj xperdex/eltanin/libs/EltaninObject2/EltaninObject.vs10.4.0.csproj xperdex/eltanin/libs/EltaninObject2/EventObject.cs xperdex/eltanin/libs/EltaninObject2/ExceptionObject.cs xperdex/eltanin/libs/EltaninObject2/Extras/BlobberDatabaseInterface.cs xperdex/eltanin/libs/EltaninObject2/Extras/EltaninButton.cs xperdex/eltanin/libs/EltaninObject2/Extras/ValidateScheduleIntegrity.Designer.cs xperdex/eltanin/libs/EltaninObject2/Extras/ValidateScheduleIntegrity.cs xperdex/eltanin/libs/EltaninObject2/Extras/ValidateScheduleIntegrity.resx xperdex/eltanin/libs/EltaninObject2/GSLObject.cs xperdex/eltanin/libs/EltaninObject2/GamePattDatConversion.cs xperdex/eltanin/libs/EltaninObject2/GenObj2.cs xperdex/eltanin/libs/EltaninObject2/GenericObject.cs xperdex/eltanin/libs/EltaninObject2/KlugeDatConversion.cs xperdex/eltanin/libs/EltaninObject2/OptionObject.cs xperdex/eltanin/libs/EltaninObject2/PackDesObject.cs xperdex/eltanin/libs/EltaninObject2/PackExtInfo.cs xperdex/eltanin/libs/EltaninObject2/PapschDat.cs xperdex/eltanin/libs/EltaninObject2/PatternsDatConversion.cs xperdex/eltanin/libs/EltaninObject2/PaySchDat.cs xperdex/eltanin/libs/EltaninObject2/Properties/AssemblyInfo.cs xperdex/eltanin/libs/EltaninObject2/Readme.txt xperdex/eltanin/libs/EltaninObject2/ScheduleConglomerate.cs xperdex/eltanin/libs/EltaninObject2/ScheduleDataSetLoader.cs xperdex/eltanin/libs/EltaninObject2/SessionAccessor.cs xperdex/eltanin/libs/EltaninObject2/SessionDatConversion.cs xperdex/eltanin/libs/EltaninObject2/SessionObj.cs xperdex/eltanin/libs/EltaninObject2/Tester05/ClassOutput.cs xperdex/eltanin/libs/EltaninObject2/Tester05/ClassOutput.designer.cs xperdex/eltanin/libs/EltaninObject2/Tester05/ClassOutput.resx xperdex/eltanin/libs/EltaninObject2/Tester05/Program.cs xperdex/eltanin/libs/EltaninObject2/Tester05/Properties/AssemblyInfo.cs xperdex/eltanin/libs/EltaninObject2/Tester05/Properties/Resources.Designer.cs xperdex/eltanin/libs/EltaninObject2/Tester05/Properties/Resources.resx xperdex/eltanin/libs/EltaninObject2/Tester05/Properties/Settings.Designer.cs xperdex/eltanin/libs/EltaninObject2/Tester05/Properties/Settings.settings xperdex/eltanin/libs/EltaninObject2/Tester05/Tester05.csproj xperdex/eltanin/libs/EltaninObject2/ValidationObj.cs xperdex/eltanin/libs/EltaninObject2/XMLScheduleUtils.cs xperdex/eltanin/libs/EltaninObject2/cslscheddefs.cs xperdex/eltanin/libs/EltaninObject2/dotsch.cs xperdex/eltanin/libs/EltaninObject2/dsl_blob.cs xperdex/eltanin/libs/EltaninObject2/dsl_event.cs xperdex/eltanin/libs/EltaninObject2/dsl_msg.cs xperdex/eltanin/libs/EltaninObject2/dsl_prms.cs xperdex/eltanin/libs/EltaninObject2/ticket0.cs xperdex/eltanin/libs/EltaninObject2/ticketn256.cs xperdex/eltanin/libs/Utillibs/SpecialCRCLib/SpecialCRCLib.sln xperdex/eltanin/libs/Utillibs/SpecialCRCLib/SpecialCRCLib/Properties/AssemblyInfo.cs xperdex/eltanin/libs/Utillibs/SpecialCRCLib/SpecialCRCLib/SpecialCRC.cs xperdex/eltanin/libs/Utillibs/SpecialCRCLib/SpecialCRCLib/SpecialCRCLib.csproj xperdex/eltanin/libs/Utillibs/SpecialCRCLib/SpecialCRCLib/SpecialCRCLib.vc10.csproj xperdex/eltanin/libs/Utillibs/SpecialCRCLib/SpecialCRCLib/SpecialCRCLib.vs10.4.0.csproj xperdex/eltanin/whatsthis.txt xperdex/xperdex.Bingo.RankViewer/Properties/AssemblyInfo.cs xperdex/xperdex.Bingo.RankViewer/RankViewer.cs xperdex/xperdex.Bingo.RankViewer/RankViewer2.cs xperdex/xperdex.Bingo.RankViewer/RankViewerProperties.Designer.cs xperdex/xperdex.Bingo.RankViewer/RankViewerProperties.cs xperdex/xperdex.Bingo.RankViewer/RankViewerProperties.resx xperdex/xperdex.Bingo.RankViewer/SessionRankViewer.cs xperdex/xperdex.Bingo.RankViewer/xperdex.Bingo.RankViewer.csproj xperdex/xperdex.Bingo.RankViewer/xperdex.Bingo.RankViewer.vc10.csproj xperdex/xperdex.BingoPlugin/BingoSystem.cs xperdex/xperdex.BingoPlugin/Properties/AssemblyInfo.cs xperdex/xperdex.BingoPlugin/WinnersList.cs xperdex/xperdex.BingoPlugin/xperdex.BingoPlugin.csproj xperdex/xperdex.eltanin/Class1.cs xperdex/xperdex.eltanin/Properties/AssemblyInfo.cs xperdex/xperdex.eltanin/protocol.cs xperdex/xperdex.eltanin/xperdex.eltanin.csproj xperdex/xperdex.eltanin/xperdex.eltanin.vc10-3.5.csproj xperdex/xperdex.eltanin/xperdex.eltanin.vc10.csproj xperdex/xperdex.eltanin/xperdex.eltanin.vc9.csproj xperdex/xperdex.eltanin/xperdex.eltanin.vs10.4.0.csproj xperdex/xperdex.eltanin/xperdex.reflector.sln xperdex/xperdex.eltanin/xperdex.reflector.vc9.sln
+description:
+Added immediate fork of xperdex
+
+
+diff -r 7f008e4765c5 -r ffd8fb161e60 xperdex/bingo_odds/BingoGameCore4/RateRank.cs
+--- /dev/null	Thu Jan 01 00:00:00 1970 +0000
++++ b/xperdex/bingo_odds/BingoGameCore4/RateRank.cs	Mon Jun 25 13:15:27 2012 -0700
+@@ -0,0 +1,510 @@
++using System;
++using System.Collections.Generic;
++using System.Data;
++using System.Data.Common;
++using System.Diagnostics;
++using System.Text;
++using OpenSkieScheduler;
++using xperdex.classes;
++
++namespace BingoGameCore4
++{
++    public static class RateRank
++    {
++        //public static int max_rated_cards;
++        //public static int max_rated_packs;
++        static bool use_bonus_points;
++        /// <summary>
++        /// this is set externally by raterank2 ... maybe this module is closer to there than bingocore states...
++        /// </summary>
++        static MySQLDataTable _points;
++        static DsnConnection input_db;
++
++        public static BingoGameCore4.Database.RankPointsExtended game_points;
++
++        private static bool stopUpdate;
++
++        public static void StopUpdate()
++        {
++            stopUpdate = true;
++        }
++
++        public static void UpdateRanks()
++        {
++            stopUpdate = false;
++
++            if( input_db != null )
++            {
++                DbDataReader r = input_db.KindExecuteReader( "SELECT MIN(bingoday), MAX(bingoday) FROM called_game_balls" );
++
++                if( r == null || !r.HasRows)
++                    return;
++
++                DateTime start = new DateTime();
++                DateTime end = new DateTime();
++
++                if( r.Read() == true )
++                {
++                    start = r.GetDateTime( 0 ).Date;
++                    end = r.GetDateTime( 1 ).Date.AddDays( 1 );
++                }
++
++                for( DateTime current = start; current <= end; current = current.AddDays( 7 ) )
++                {
++                    UpdateRanks( current, 1 );
++                }
++
++                input_db.EndReader( r );
++            }
++        }
++
++        public static void UpdateRanks(DateTime day_in_week, int session)
++        {
++            StringBuilder sb = new StringBuilder();
++
++            if ( input_db != null )
++            {
++                long week_id = StateWriter.GetWeekID( day_in_week.Date, session );
++
++                if( stopUpdate )
++                    return;
++
++                sb.Append( "INSERT INTO called_game_player_rank (card, session, bingoday, week_id, pack_set_id, game_count, total_points) " )
++                    .AppendFormat( "SELECT card, session, bingoday, {0} as week_id, ", week_id.ToString() )
++                    .Append( "pack_set_id, COUNT(*) as game_count, SUM( total_points ) as total_points " )
++                    .AppendFormat( "FROM called_game_player_rank2 WHERE card > '' AND {0} ",
++                            String_Utilities.BuildSessionRangeCondition( null, day_in_week.Date, session ) )
++                    .Append( "GROUP BY card, pack_set_id, session, bingoday ORDER BY bingoday, session, card, pack_set_id " )
++                    .Append( "ON DUPLICATE KEY UPDATE card=card, game_count=game_count, pack_set_id=pack_set_id, ")
++                    .Append( "session=session, bingoday=bingoday, week_id=week_id, total_points=total_points" );
++
++                input_db.KindExecuteNonQuery( sb.ToString() );
++
++                if( use_bonus_points )
++                {
++#if null
++                    //-------------------------------------------------------------------
++                    // TABLE 'rate_rank_bonus_points' DOES NOT EXIST
++                    //-------------------------------------------------------------------
++                    MySQLDataTable table = new MySQLDataTable(Local.dsn, "SELECT * FROM rate_rank_bonus_points");
++#endif
++                    if( stopUpdate )
++                        return;
++
++                    sb.Length = 0;
++                    sb.AppendFormat( "SELECT * FROM called_game_player_rank WHERE bingoday >= '{0}' AND bingoday < '{1}' AND session = {2} ORDER BY total_points DESC",
++                        DsnSQLUtil.MakeDateOnly(input_db, day_in_week.Date),
++                        DsnSQLUtil.MakeDateOnly(input_db, day_in_week.Date.AddDays(1)),
++                        session );
++
++                    MySQLDataTable totals = new MySQLDataTable( Local.dsn, sb.ToString() );
++
++                    if (totals != null && (totals.Rows.Count > 0))
++                    {
++                        int place_num = 0;
++                        int strInitialLen = 0;
++
++                        sb.Length = 0;
++                        sb.Append( "INSERT INTO called_game_player_rank_bonus (card, week_id, bonus_points, bingoday, session ) VALUES " );
++                        strInitialLen = sb.Length;
++
++                        foreach( DataRow row in totals.Rows )
++                        {
++                            place_num = Convert.ToInt32( row["session"] );                  //"place_in_session"] );
++                            sb.AppendFormat( "({0},{1},{2},{3},{4}),",
++                                totals.Rows[ place_num - 1 ][ "card" ],                     // {0}  card
++                                week_id,                                                    // {1}  week_id
++                                row[ "total_points" ], //bonus_points"],                    // {2}  bonus_points
++                                DsnSQLUtil.MakeDateOnly( input_db, day_in_week.Date ),      // {3}  bingoday
++                                session );                                                  // {4}  session
++
++                            if( sb.Length > 100000 )
++                            {
++                                sb.Length--;
++                                sb.Append( " ON DUPLICATE KEY UPDATE card=VALUES(card), week_id=VALUES(week_id), " )
++                                    .Append( "bonus_points=VALUES(bonus_points), bingoday=VALUES(bingoday), session=VALUES(session)" );
++
++                                input_db.KindExecuteNonQuery( sb.ToString() );
++                                sb.Length = strInitialLen;
++                            }
++                        }
++
++                        if( sb.Length > strInitialLen )
++                        {
++                            sb.Length--;
++
++                            sb.Append( " ON DUPLICATE KEY UPDATE card=VALUES(card), week_id=VALUES(week_id), " )
++                                .Append( "bonus_points=VALUES(bonus_points), bingoday=VALUES(bingoday), session=VALUES(session)" );
++
++                            input_db.KindExecuteNonQuery( sb.ToString() );
++                        }
++                    }
++                }
++
++                if( stopUpdate )
++                    return;
++
++                if( use_bonus_points )
++                {
++                    sb.Length = 0;
++                    //sb.Append( "REPLACE INTO called_game_player_rank_partial (card, session, bingoday, total_points, week_id) " )
++                    sb.Append( "SELECT a.card, a.session, a.bingoday, (a.total_points + SUM( IF( ISNULL( c.bonus_points ), 0, c.bonus_points ) ) ) AS total_points, " )
++                        .Append( "a.week_id FROM called_game_player_rank AS a " )
++                        .Append( "LEFT JOIN called_game_player_rank AS b ON a.card=b.card AND a.week_id = b.week_id and a.total_points < b.total_points " )
++                        .Append( "LEFT JOIN called_game_player_rank_bonus AS c ON a.card = c.card " )
++                        .AppendFormat( "WHERE b.card IS NULL AND a.week_id = {0} ", week_id.ToString() )
++                        .Append( "GROUP BY a.card, a.session, a.bingoday, a.total_points, a.week_id" );
++
++                    MySQLDataTable rankTable = new MySQLDataTable( Local.dsn, sb.ToString() );
++
++                    sb.Length = 0;
++                    sb.Append( "INSERT INTO called_game_player_rank_partial (card, session, bingoday, total_points, week_id) VALUES " );
++
++                    int strInitialLen = sb.Length;
++
++                    foreach( DataRow row in rankTable.Rows )
++                    {
++                        string s = DsnSQLUtil.MakeDateOnly( input_db, ( DateTime )row[ "bingoday" ] );
++
++
++                        sb.AppendFormat( "({0},{1},{2},{3},{4}),", 
++                            row[ "card" ],
++                            row[ "session" ],
++                            DsnSQLUtil.MakeDateOnly( input_db, (DateTime)row[ "bingoday" ]),
++                            row[ "total_points" ],
++                            row[ "week_id" ] );
++
++                        if( sb.Length > 100000 )
++                        {
++                            sb.Length--;
++
++                            sb.Append( " ON DUPLICATE KEY UPDATE card=VALUES(card), session=VALUES(session), " )
++                                .Append( "bingoday=VALUES(bingoday), total_points=VALUES(total_points), week_id=VALUES(week_id)" );
++
++                            input_db.KindExecuteNonQuery( sb.ToString() );
++
++                            sb.Length = strInitialLen;
++                        }
++                    }
++
++                    if( sb.Length > strInitialLen )
++                    {
++                        sb.Length--;
++
++                        sb.Append( " ON DUPLICATE KEY UPDATE card=VALUES(card), session=VALUES(session), " )
++                            .Append( "bingoday=VALUES(bingoday), total_points=VALUES(total_points), week_id=VALUES(week_id)" );
++
++                        input_db.KindExecuteNonQuery( sb.ToString() );
++                    }
++                }
++                else
++                {
++                    sb.Length = 0;
++                    sb.Append( "REPLACE INTO called_game_player_rank_partial (card, session, bingoday, total_points, week_id)" )
++                        .Append( " SELECT a.card, a.session, a.bingoday, a.total_points, a.week_id FROM called_game_player_rank as a" )
++                        .Append( " LEFT JOIN called_game_player_rank AS b ON a.card = b.card AND a.week_id = b.week_id AND a.total_points < b.total_points" )
++                        .AppendFormat( " WHERE b.card IS NULL AND a.week_id = {0}", week_id.ToString() );
++
++                    input_db.KindExecuteNonQuery( sb.ToString() );
++                }
++#if asdfasdf    
++                    "replace into called_game_player_rank_partial(card,session,bingoday,week_id,total_points)"
++                                + " select card,session,bingoday,week_id,max(total_points) as total_points"
++                                + " from called_game_player_rank"
++                                + " where week_id=" + week_id 
++                                + " group by bingoday,session,card"
++                        );
++#endif
++            }
++            if( stopUpdate )
++                return;
++        }
++
++        [MySQLPersistantTable]
++        public static MySQLDataTable points
++        {
++            get
++            {
++                if( _points == null )
++                {
++                    _points = new MySQLDataTable( input_db );
++                    _points.TableName = "rate_rank_points2";
++                    DataColumn dc = _points.Columns.Add( "rate_rank_point_id", typeof( int ) );
++                    _points.ValueMemberName = "rate_rank_point_id";
++                    dc.AutoIncrement = true;
++                    dc.AutoIncrementSeed = 1;
++                    _points.Columns.Add( "away_count", typeof( int ) );
++                    _points.Columns.Add( "points", typeof( int ) );
++                    _points.PrimaryKey = new DataColumn[] { _points.Columns[0] };
++                }
++                return _points;
++            }
++        }
++
++
++        public static void Setup( DsnConnection dsn )
++        {
++            if( input_db == null )
++                input_db = dsn;
++            use_bonus_points = Options.Default["Rate Rank"]["Use Placment Bonus Points", "1", "Whether to use the external bonus point table definitino (tweaks scores to give some motion"].Integer != 0;
++        }
++
++        internal class PlayerBestPackSet
++        {
++            internal int points;
++            internal List<BingoPack> member_packs;
++
++        }
++        internal class PlayerBestCard
++        {
++            internal int card_number;
++            internal int pack_number;
++            internal BingoPlayer player;
++            internal int away_count;
++            internal PlayerBestCard( int pack, int card, BingoPlayer player, int away )
++            {
++                card_number = card;
++                pack_number = pack;
++                this.player = player;
++                away_count = away;
++            }
++            public override string ToString()
++            {
++                return "card " + card_number.ToString() + " away " + away_count.ToString();
++            }
++        };
++
++        static bool GameCounts( BingoGameState s )
++        {
++            int game_number = s.game.game_number;
++            DataRow drSession = s.session_event.session.dataRowSession;
++
++            StringBuilder sb = new StringBuilder();
++
++            if( drSession != null )
++            {
++#if null
++                DbDataReader r = input_db.KindExecuteReader( "SELECT rate FROM rate_rank_game_config"
++                    + " JOIN elec_sch2_session_game_group_game USING(session_game_group_game_id)"
++                    + " WHERE game_number = " + game_number.ToString() + " AND session_id=" 
++                    + drSession[SessionTable.PrimaryKey].ToString() );
++#endif
++                sb.Append( "SELECT rate FROM rate_rank_game_config " )
++                    .Append( "JOIN elec_sch2_session_game_group_game USING(session_game_group_game_id) " )
++                    .AppendFormat( "WHERE game_number = {0} AND session_id = {1}", 
++                            game_number.ToString(), drSession[SessionTable.PrimaryKey].ToString() );
++
++                DbDataReader r = input_db.KindExecuteReader( sb.ToString() );
++
++                if( r.HasRows )
++                {
++                    while( r.Read() )
++                    {
++                        if( r.GetBoolean( r.GetOrdinal( "rate" ) ) )
++                            return true;
++                    }
++                }
++
++            }
++            else
++            {
++#if null
++                DbDataReader r = input_db.KindExecuteReader( "SELECT rate FROM rate_rank_game_config"
++                    + " JOIN elec_sch2_session_game_group_game USING(session_game_group_game_id)"
++                    + " JOIN elec_sch2_session_macro_session USING(session_id)"
++                    + " JOIN elec_sch2_session_macro_schedule USING(session_macro_id)"
++                    + " WHERE game_number = " + game_number.ToString()
++                    + " AND session_number = " + s.session_event.session.session.ToString()
++                    + " AND starting_date <= " + DsnSQLUtil.MakeDateOnly( input_db, s.session_event.bingoday ).ToString()
++                    + " ORDER BY starting_date DESC"
++                    + " LIMIT 1"
++                    );
++#endif
++                sb.Length = 0;
++                sb.Append( "SELECT rate FROM rate_rank_game_config JOIN elec_sch2_session_game_group_game USING(session_game_group_game_id) " )
++                    .Append( "JOIN elec_sch2_session_macro_session USING(session_id) JOIN elec_sch2_session_macro_schedule USING(session_macro_id) " )
++                    .AppendFormat( "WHERE game_number = {0} ", game_number.ToString() )
++                    .AppendFormat( "AND session_number = {0} ", s.session_event.session.session.ToString() )
++                    .AppendFormat( "AND starting_date <= {0} ", DsnSQLUtil.MakeDateOnly(input_db, s.session_event.bingoday).ToString() )
++                    .Append( " ORDER BY starting_date DESC LIMIT 1" );
++
++                DbDataReader r = input_db.KindExecuteReader( sb.ToString() );
++
++                if (r != null && r.HasRows)
++                {
++                    while( r.Read() )
++                    {
++                        if( r.GetBoolean( r.GetOrdinal( "rate" ) ) )
++                            return true;
++                    }
++                }
++
++            }
++            return false;
++        }
++
++
++        public static bool Calculate( BingoGameState s )
++        {
++            //return false;
++            if( !s.game.rate )
++                return false;
++            //if( !GameCounts( s ) )
++            //   return false;
++            //int electronic_one_away;
++            //int paper_one_away;
++            if( s.session_event.session.schedule != null )
++            {
++                {
++                    //DataRow[] e = game_points.Select( "type=1 and " + OpenSkieScheduler.Relations.SessionGameGroupGameOrder.PrimaryKey + "=" + s.game.session_game_group_game_id );
++                    //electronic_one_away = e.Length > 0 ? Convert.ToInt32( e[0]["points"] ) : 0;
++                    //DataRow[] p = game_points.Select( "type=2 and " + OpenSkieScheduler.Relations.SessionGameGroupGameOrder.PrimaryKey + "=" + s.game.session_game_group_game_id );
++                    //paper_one_away = p.Length > 0 ? Convert.ToInt32( p[0]["points"] ) : 0;
++                }
++            }
++            //if( s.bestwin < max_balls )
++            {
++                int[] totals = new int[26];
++                //int[, ,] player_totals = new int[s.Players, s.Packs, 26];
++                //int[] limited_totals = new int[26];
++                //int[, ,] limited_player_totals = new int[s.Players, s.Packs, 26];
++                List<PlayerBestCard>[] all_bests = new List<PlayerBestCard>[s.Players];
++                //List<PlayerBestPackSet>[] all_pack_bests = new List<PlayerBestPackSet>[s.Packs];
++                if( s.session_event._PlayerList != null )
++                {
++                    int count = 0;
++
++                    int game_index = s.game.game_ID;
++                    Log.log( "calculating for game " + game_index );
++
++                    foreach( PlayerPack pack in s.playing_packs )
++//                    foreach( BingoCardState card in s.playing_cards )
++                    //foreach( BingoPlayer player in s.session_event._PlayerList )
++                    {
++                        BingoPlayer player = pack.player;
++                        //PlayerPack pack = card.pack;
++                        int max_set = 0;
++                        int min_set = s.Packs;
++
++                        while( pack.card_away_count.Count <= game_index )
++                        {
++                            pack.card_away_count.Add( new List<CardPoints>() );
++                            //player.card_away_count.
++                        }
++
++                        {
++                            int set = pack.pack_set;
++                            if( set > 0 )
++                            {
++                                //while( set > best_packs.Count )
++                                //    best_packs.Add( new PlayerBestPackSet() );
++                                //best_packs[set - 1].member_packs.Add( pack.pack_info );
++                                //best_packs[set - 1].points = 0;
++                                if( set > max_set )
++                                    max_set = set;
++                                if( set < min_set )
++                                    min_set = set;
++                            }
++                            int this_count = s.game.GetCardCount( pack.pack_info );
++
++                            //Log.log( "Processing pack " + pack );
++
++                            foreach( BingoCardState card in pack.Cards[game_index] )
++                            //lock( pack.card_away_count )
++                            {
++                                while( pack.card_away_count[game_index].Count <= card.pack_card_index )
++                                {
++                                    // expand for number of cards in this game that this pack is...
++                                    pack.card_away_count[game_index].Add( new CardPoints() );
++                                }
++
++                                //int pack_points = 0;
++                                //for( int card = 0; card < count; card++ )
++
++                                {
++                                    int away_count = card.BestAway;
++                                    //Log.log( "Card away is " + away_count );
++                                    pack.card_away_count[game_index][card.pack_card_index].away = away_count;
++                                    if( away_count == 1 )
++                                    {
++                                        //if( pack.paper )
++                                        //    pack.card_away_count[game_index][card.pack_card_index].points = paper_one_away;
++                                        //else
++                                        //    pack.card_away_count[game_index][card.pack_card_index].points = electronic_one_away;
++                                    }
++                                    else
++                                        pack.card_away_count[game_index][card.pack_card_index].points = 0;
++
++#if old_scoring_system
++                                    DataRow[] value = points.Select( "away_count=" + away_count );
++                                    if( value.Length > 0 )
++                                        //best_packs[set - 1].points += Convert.ToInt32( value[0]["points"] );
++                                        pack.card_away_count[game_index][card.pack_card_index].points = Convert.ToInt32( value[0]["points"] );
++
++                                    pack.card_away_count[game_index][card.pack_card_index].away = away_count;
++                                    //if( away_count > 0 )
++                                    //player_totals[player.ID, pack_number, away_count]++;
++                                    totals[away_count]++;
++                                    //player_totals[player.ID, set, away_count]++;
++#endif
++#if using_absolute_best_cards
++                                    if( max_rated_cards == 0 ||
++                                            bests.Count < max_rated_cards )
++                                    {
++                                        //Log.log( "less than 84... adding " + away_count );
++                                        bests.Add( new PlayerBestCard( pack_number, card_id, player, away_count ) );
++                                    }
++                                    else
++                                    {
++                                        int worst_away = 0;
++                                        foreach( PlayerBestCard a in bests )
++                                        {
++                                            if( a.away_count > worst_away )
++                                                worst_away = a.away_count;
++                                        }
++                                        //Log.log( "worst is " + worst_away + " this is " + away_count );
++                                        if( worst_away > away_count )
++                                        {
++                                            // okay there is a card worse than this somewhere... get it and replace it.
++                                            int swapout = bests.FindIndex( delegate( PlayerBestCard a ) { return ( a.away_count == worst_away ); } );
++                                            if( swapout >= 0 )
++                                            {
++                                                //Log.log( "swapping " + swapout );
++                                                bests[swapout] = new PlayerBestCard( pack_number, card_id, player, away_count );
++                                            }
++                                        }
++                                    }
++#endif
++                                }
++                            }
++                            count += s.game.GetCardCount( pack.pack_info );
++                        }
++
++                    }
++                }
++                else
++                {
++#if asdfasdf
++                    for( int player = 0; player < ( s.Players ); player++ )
++                    {
++                        for( int _card = 0; _card < ( s.Cards ); _card++ )
++                        {
++                            int card = player * s.Cards + _card;
++                            //Console.WriteLine( card+"=="+ s.playing_card_away[card, s.bestwin] );
++                            totals[s.playing_card_away[card, s.bestwin - 1]]++;
++                            player_totals[player, _card / s.PackSize, s.playing_card_away[card, s.bestwin - 1]]++;
++                        }
++                    }
++#endif
++                }
++                //s.playing_card_away_totals = totals;
++                //s.playing_card_away_pack_player_totals = player_totals;
++                //s.playing_card_away_totals_limited = limited_totals;
++                //s.playing_card_away_pack_player_totals_limited = limited_player_totals;
++            }
++            return true;
++        }
++
++
++    }
++}
+

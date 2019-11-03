@@ -1,0 +1,160 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A7A40D2B-7CD5-4A9B-8B65-F24BAE8EA278}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RateRank</RootNamespace>
+    <AssemblyName>RateRank</AssemblyName>
+    <BaseIntermediateOutputPath>$(SolutionDir)/output/</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)//</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)//</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\System.ServiceModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConfigurePacks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurePacks.Designer.cs">
+      <DependentUpon>ConfigurePacks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurePoints.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurePoints.Designer.cs">
+      <DependentUpon>ConfigurePoints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Local.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ConfigurePacks.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ConfigurePacks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurePoints.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ConfigurePoints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectPacks.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SelectPacks.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="_blank_2003DataSet.xsc">
+      <DependentUpon>_blank_2003DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_blank_2003DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_blank_2003DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_blank_2003DataSet.xss">
+      <DependentUpon>_blank_2003DataSet.xsd</DependentUpon>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SelectPacks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectPacks.Designer.cs">
+      <DependentUpon>SelectPacks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_blank_2003DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_blank_2003DataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\clapps\Libs\GDAL\GDAL.BingoPackages\GDAL.BingoPackages.csproj">
+      <Project>{AE1DE6A9-5658-4E0B-B2E5-0A5B4F6EC60E}</Project>
+      <Name>GDAL.BingoPackages</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\clapps\Libs\GDAL\GDAL.BingoSessions\GDAL.BingoSessions.csproj">
+      <Project>{66EE6638-A4F4-4E08-886C-374C87D48935}</Project>
+      <Name>GDAL.BingoSessions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MonthCalendar\MonthCalendar.csproj">
+      <Project>{E25078AE-E3F3-4BA1-8E7B-FB0FAB0935C9}</Project>
+      <Name>MonthCalendar</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\xperdex.classes\xperdex.classes.csproj">
+      <Project>{041E5A37-8678-451E-9500-EE3D7864C092}</Project>
+      <Name>xperdex.classes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BingoGameCore\BingoGameCore.csproj">
+      <Project>{64CB49E6-965B-4A00-823B-4D5FF1702898}</Project>
+      <Name>BingoGameCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="blank.2003.mdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

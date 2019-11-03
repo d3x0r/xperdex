@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?><!DOCTYPE xperdex.configuration >
+<xperdex>
+<glareset name="default" mask="Images/colorLayer.png" pressed="Images/pressedlens.png" depressed="Images/defaultLens.png" glare="" shade="multi" />
+<glareset name="" mask="Images/colorLayer.png" pressed="Images/pressedlens.png" depressed="Images/defaultLens.png" glare="" shade="multi" />
+<glare_set_attributes name="default" text_color="-65794" primary="-4479200" secondary="-16777216" highlight_primary="-4479200" highlight_secondary="-11414447" />
+<glare_set_attributes name="Quit Button" text_color="-1" primary="-65536" secondary="-16777216" highlight_primary="0" highlight_secondary="0" />
+<glare_set_attributes name="Open-Close Button" text_color="-394759" primary="-16743424" secondary="-16777178" highlight_primary="-16743424" highlight_secondary="-1583872" />
+<Plugins Location="SessionManager.dll" />
+<Plugins Location="xperdex.tasks.dll" />
+<Font name="Default" face="Arial" size="25" style="Regular" units="Pixel" />
+<Font name="Default Fixed(Fixed)" face="Lucida Console" size="10" style="Regular" units="Pixel" />
+<Font name="Label Font" face="Times New Roman" size="14.25" style="Regular" units="Point" />
+<Font name="List Font" face="Times New Roman" size="18" style="Regular" units="Point" />
+<page background="sky.jpg" title="Start Page" color="-16777216">
+<control X="1" Y="3" width="15" height="24" assembly="SessionManager.dll" type="SessionManager.SessionSelectionList" font="Label Font" interface="SessionManager.SessionSelectionList">
+</control>
+<control X="29" Y="9" width="9" height="6" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro />
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button page="Open New session" text="Open/Close_Sessions" />
+</control>
+<control X="28" Y="31" width="8" height="6" assembly="xperdex.core.dll" type="xperdex.core.ButtonQuit+Quit" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>Quit Button</glareset_attributes><PSI_Button text="Quit" />
+</control>
+<control X="29" Y="2" width="9" height="6" assembly="SessionManager.dll" type="SessionManager.AddNewSession" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Add Session" />
+</control>
+<control X="19" Y="31" width="7" height="5" assembly="xperdex.tasks.dll" type="xperdex.tasks.Task" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Task program="ScheduleDesigner2.exe" path="..\scheduledesigner2" arguments="" name="" exclusive="False" runonce="False" remote="True" />
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Schedule_Editor" />
+</control>
+<control X="17" Y="3" width="11" height="12" assembly="SessionManager.dll" type="SessionManager.ListboxSelectPrices" font="Default" interface="SessionManager.ListboxSelectPrices">
+</control>
+<control X="17" Y="17" width="11" height="10" assembly="SessionManager.dll" type="SessionManager.ListboxSelectPrizes" font="Default" interface="SessionManager.ListboxSelectPrizes">
+</control>
+<control X="17" Y="16" width="11" height="1" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-1" Font="Label Font" Text="Select Prize Schedule..." Align="Left" />
+</control>
+<control X="17" Y="2" width="11" height="1" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-1" Font="Label Font" Text="Select Price Schedule..." Align="Left" />
+</control>
+<control X="1" Y="2" width="11" height="1" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-1" Font="Label Font" Text="Select Session to Open...." Align="Left" />
+</control>
+<control X="1" Y="28" width="15" height="11" assembly="SessionManager.dll" type="SessionManager.ActiveSessionList" font="Default" interface="SessionManager.ActiveSessionList">
+</control>
+<control X="29" Y="18" width="9" height="6" assembly="SessionManager.dll" type="SessionManager.SetActiveSession" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Activate_Session" />
+</control>
+</page>
+<page background="sky.jpg" title="Open New session" color="-16777216">
+<control X="3" Y="3" width="23" height="26" assembly="SessionManager.dll" type="SessionManager.ActiveSessionList" font="Default" interface="SessionManager.ActiveSessionList">
+</control>
+<control X="3" Y="32" width="9" height="6" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro />
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button page="Start Page" text="Back" />
+</control>
+<control X="28" Y="3" width="9" height="5" assembly="SessionManager.dll" type="SessionManager.OpenSessionForIssue" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>Open-Close Button</glareset_attributes><PSI_Button text="Open For_Issue" />
+</control>
+<control X="28" Y="9" width="9" height="5" assembly="SessionManager.dll" type="SessionManager.OpenSessionForSales" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>Open-Close Button</glareset_attributes><PSI_Button text="Open For_Sales" />
+</control>
+<control X="28" Y="15" width="9" height="5" assembly="SessionManager.dll" type="SessionManager.OpenSessionForPlay" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>Open-Close Button</glareset_attributes><PSI_Button text="Open For_Play" />
+</control>
+<control X="28" Y="21" width="9" height="6" assembly="SessionManager.dll" type="SessionManager.SetActiveSession" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Activate_Session" />
+</control>
+</page>
+<page background="sky.jpg" title="Page 2" color="16777215">
+</page>
+<page background="sky.jpg" title="Session Management" color="16777215">
+</page>
+<page background="sky.jpg" title="" color="16777215">
+</page>
+</xperdex>

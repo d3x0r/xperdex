@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9827B2D6-0A9F-4C6B-A58B-6CED90C3854C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ItemManager</RootNamespace>
+    <AssemblyName>ItemManager</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <BaseIntermediateOutputPath>$(SolutionDir)/output/</BaseIntermediateOutputPath>
+    <BaseOutputPath>$(SolutionDir)/</BaseOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\ItemManager.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\vs2010-rtm\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\vs2010-rtm\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\ItemManager.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\vs2010-rtm\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\vs2010-rtm\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>/output/Debug/AnyCPU/v4.0\ItemManager.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\vs2010-rtm\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\vs2010-rtm\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>/output/Release/AnyCPU/v4.0\ItemManager.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\vs2010-rtm\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\vs2010-rtm\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Buttons\ButtonAssignElectronicToItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Buttons\ButtonInvoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Buttons\ButtonRetireSerial.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Buttons\ButtonToggleRetired.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Buttons\ButtonToggleAssignedItems.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ConfigureItemList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PickInventoryType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PickInventoryType.Designer.cs">
+      <DependentUpon>PickInventoryType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemDataView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ListBoxes\ListboxElectronicPacks.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ListBoxes\ListboxInventoryTypes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ListBoxes\ListboxItems.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ListBoxes\ListboxScheduleSessions.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Variables.cs" />
+    <Compile Include="BarcodeReceiverInterface.cs" />
+    <Compile Include="BarcodeScanner.cs" />
+    <Compile Include="Buttons\ButtonAssignMacroToItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Buttons\ButtonCreateItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Buttons\ButtonDecrementSerial.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Buttons\ButtonForgetChanges.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Buttons\ButtonIncrementSerial.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Buttons\ButtonReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Buttons\ButtonAssignPaperToItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Buttons\ButtonAssignMiscToItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Buttons\ButtonSaveChanges.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GridMacroItemAssignment.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ItemDataSet.cs">
+      <DependentUpon>ItemDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ItemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ItemDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ItemManagmentState.cs" />
+    <Compile Include="ListBoxes\ListboxAssignedMacros.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ListBoxes\ListboxMacroItems.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ListBoxes\ListboxItemDescriptions.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ListBoxes\ListboxMiscItems.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ListBoxes\ListboxPaperNames.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ListBoxes\ListboxSessionSelect.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XperdexPlugin.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OpenSkieScheduler\CurrentScheduleDataSet2\CurrentScheduleDataSet2.4.0.vs11.csproj">
+      <Project>{BA3487F1-4E30-4FDD-A7E4-3B39DDDEA8B1}</Project>
+      <Name>CurrentScheduleDataSet2.4.0.vs11</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenSkieScheduler\OpenSkieScheduler3\OpenSkieScheduler3.vs11.4.0.csproj">
+      <Project>{7AA21CBF-336D-4815-A2A6-55AC5694A241}</Project>
+      <Name>OpenSkieScheduler3.vs11.4.0</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\xperdex\xperdex.classes.2\xperdex.classes.vs11.4.0.csproj">
+      <Project>{041E5A37-8678-451E-9500-EE3D7864C092}</Project>
+      <Name>xperdex.classes.vs11.4.0</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\xperdex\xperdex.core\xperdex.core.common\xperdex.core.common.4.0.vs11.csproj">
+      <Project>{865DB13A-FEC4-48E9-825A-449DD9D5A54C}</Project>
+      <Name>xperdex.core.common.4.0.vs11</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\xperdex\xperdex.core\xperdex.core.interfaces\xperdex.core.interfaces.4.0.vs11.csproj">
+      <Project>{E5CD1A7B-221E-4B68-A1EA-0A801B35C399}</Project>
+      <Name>xperdex.core.interfaces.4.0.vs11</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\xperdex\xperdex.gui\xperdex.gui.4.0.vs11.csproj">
+      <Project>{EF313F61-2DB4-461B-9F89-B6BC53C96BA4}</Project>
+      <Name>xperdex.gui.4.0.vs11</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebInterfaces\WebInterfaces.vs11.csproj">
+      <Project>{23dd573e-8ead-4e1f-b28b-3e990667632b}</Project>
+      <Name>WebInterfaces.vs11</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="clearshell.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="ItemDataSet.xsc">
+      <DependentUpon>ItemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ItemDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ItemDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ItemDataSet.xss">
+      <DependentUpon>ItemDataSet.xsd</DependentUpon>
+    </None>
+    <Content Include="shortcut.ps1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\ConfigureItemList.resx">
+      <DependentUpon>ConfigureItemList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListBoxes\ListboxSessionSelect.resx">
+      <DependentUpon>ListboxSessionSelect.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\xperdex.config\xperdex.item_manager.config.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if NOT “$(REAL_OUTDIR)”==”” XCOPY "$(TargetDir)*.exe" "$(REAL_OUTDIR)\ItemManager\" /Y
+if NOT “$(REAL_OUTDIR)”==”” XCOPY "$(TargetDir)*.dll" "$(REAL_OUTDIR)\ItemManager\" /Y
+if NOT “$(REAL_OUTDIR)”==”” XCOPY "$(TargetDir)*.xml" "$(REAL_OUTDIR)\ItemManager\" /Y
+if NOT “$(REAL_OUTDIR)”==”” XCOPY "$(TargetDir)Images" "$(REAL_OUTDIR)\ItemManager\Images" /Y /I
+if NOT “$(REAL_OUTDIR)”==”” DEL /q "$(REAL_OUTDIR)\ItemManager\*.vshost.exe"
+if NOT “$(REAL_OUTDIR)”==”” echo cd %25%25~dp0 &gt; $(REAL_OUTDIR)\ItemManager\xperdex.item_manager.bat
+if NOT “$(REAL_OUTDIR)”==”” echo start /wait xperdex.loader.exe xperdex.item_manager.config.xml &gt;&gt; $(REAL_OUTDIR)\ItemManager\xperdex.item_manager.bat
+</PostBuildEvent>
+    <BaseIntermediateOutputPath>$(SolutionDir)/output/</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

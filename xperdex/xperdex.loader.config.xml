@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?><!DOCTYPE xperdex.configuration >
+<xperdex>
+<glareset name="default" mask="Images/colorLayer.png" pressed="Images/pressedlens.png" depressed="Images/defaultLens.png" glare="" shade="multi" />
+<glare_set_attributes name="default" text_color="-1" primary="1822043136" secondary="-1460633472" highlight_primary="-6673408" highlight_secondary="-1509893550" />
+<glare_set_attributes name="Quit Button" text_color="-1" primary="-1863898368" secondary="-133386" highlight_primary="-16777031" highlight_secondary="-16720896" />
+<glare_set_attributes name="Test Button" text_color="-786440" primary="-1912369408" secondary="2101511819" highlight_primary="-2097152" highlight_secondary="1811973839" />
+<Font name="Default" face="Lucida Console" size="38" style="Regular" units="Pixel" />
+<Font name="Normal Button" face="Georgia" size="18" style="Regular" units="Point" />
+<Plugins Location="..\plugins\xperdex.audio-visual.dll" />
+<systemname />
+<Plugins Location="..\plugins\xperdex.internet_explorer.dll" />
+<systemname />
+<page background="Images\45229_2.jpg" color="16777215">
+</page>
+</xperdex>

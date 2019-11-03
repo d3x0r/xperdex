@@ -1,0 +1,278 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectGuid>{66868F66-ACD7-49DA-B5DA-A0863AA8FC8F}</ProjectGuid>
+    <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestsForFun</RootNamespace>
+    <AssemblyName>TestsForFun</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <XnaFrameworkVersion>v3.0</XnaFrameworkVersion>
+    <XnaPlatform>Windows</XnaPlatform>
+    <ApplicationIcon>Game.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>BAF99CA81E5B89253DCE283E326F944DDB12F2E7</ManifestCertificateThumbprint>
+    <ManifestKeyFile>3DXNAGameTemplate_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BaseIntermediateOutputPath>$(SolutionDir)/output/</BaseIntermediateOutputPath>
+    <BaseOutputPath>$(SolutionDir)/</BaseOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <XnaCompressContent>True</XnaCompressContent>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v3.5</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v3.5</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v3.5</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v3.5</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline, Version=3.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.AudioImporters, Version=3.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.EffectImporter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.FBXImporter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.TextureImporter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.XImporter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Game">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code\Audio\AudioManager.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>AudioManager</Name>
+    </Compile>
+    <Compile Include="Code\Audio\Sound.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>Sound</Name>
+    </Compile>
+    <Compile Include="Code\Components\Camera\Camera.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>Camera</Name>
+    </Compile>
+    <Compile Include="Code\Components\Camera\FixedCamera.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>FixedCamera</Name>
+    </Compile>
+    <Compile Include="Code\Components\Camera\FreeCamera.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>FreeCamera</Name>
+    </Compile>
+    <Compile Include="Code\Components\Component.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>Component</Name>
+    </Compile>
+    <Compile Include="Code\Components\Fog\Fog.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>Fog</Name>
+    </Compile>
+    <Compile Include="Code\Components\Light\PointLight.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>PointLight</Name>
+    </Compile>
+    <Compile Include="Code\Components\Light\SunLight.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>SunLight</Name>
+    </Compile>
+    <Compile Include="Code\Components\ParticleSystem\ParticleEmitter.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>ParticleEmitter</Name>
+    </Compile>
+    <Compile Include="Code\Components\ParticleSystem\ParticleSettings.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>ParticleSettings</Name>
+    </Compile>
+    <Compile Include="Code\Components\ParticleSystem\ParticleSystem3D.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>ParticleSystem3D</Name>
+    </Compile>
+    <Compile Include="Code\Components\ParticleSystem\ParticleVertex.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>ParticleVertex</Name>
+    </Compile>
+    <Compile Include="Code\Components\ParticleSystem\Systems\RainParticleSystem.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>RainParticleSystem</Name>
+    </Compile>
+    <Compile Include="Code\Components\ParticleSystem\Systems\SnowParticleSystem.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>SnowParticleSystem</Name>
+    </Compile>
+    <Compile Include="Code\Components\Skydome\Sky.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>Sky</Name>
+    </Compile>
+    <Compile Include="Code\Components\Skydome\SkyDome.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>SkyDome</Name>
+    </Compile>
+    <Compile Include="Code\Components\Terrain\Water\Water.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>Water</Name>
+    </Compile>
+    <Compile Include="Code\Components\Weather\Rain.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>Rain</Name>
+    </Compile>
+    <Compile Include="Code\Components\Weather\Snow.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>Snow</Name>
+    </Compile>
+    <Compile Include="Code\Components\Weather\Weather.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>Weather</Name>
+    </Compile>
+    <Compile Include="Code\Entities\BaseEntity.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>BaseEntity</Name>
+    </Compile>
+    <Compile Include="Code\Entities\DynamicEntity.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>DynamicEntity</Name>
+    </Compile>
+    <Compile Include="Code\Entities\Sphere.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>Sphere</Name>
+    </Compile>
+    <Compile Include="Code\Components\Input\Cursor.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>Cursor</Name>
+    </Compile>
+    <Compile Include="Code\Components\Input\Input.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>Input</Name>
+    </Compile>
+    <Compile Include="Code\Components\Light\Light.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>Light</Name>
+    </Compile>
+    <Compile Include="Code\Utilities\MathUtils.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>MathUtils</Name>
+    </Compile>
+    <Compile Include="Code\Utilities\Physics.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>Physics</Name>
+    </Compile>
+    <Compile Include="Code\Components\Terrain\QuadTree.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>QuadTree</Name>
+    </Compile>
+    <Compile Include="Code\Components\Terrain\Terrain.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>Terrain</Name>
+    </Compile>
+    <Compile Include="Code\Components\Timer\Timer.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>Timer</Name>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Code\Program.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>Program</Name>
+    </Compile>
+    <Compile Include="Code\GameMain.cs">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>GameMain</Name>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Game.ico" />
+    <Content Include="GameThumbnail.png">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>GameThumbnail</Name>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>ReadMe</Name>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Microsoft Permissive License.rtf">
+      <XNAUseContentPipeline>false</XNAUseContentPipeline>
+      <Name>Microsoft Permissive License</Name>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft.Net.Framework.2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <NestedContentProject Include="Resources\Resources.contentproj">
+      <Project>677a5415-e597-4bb0-8ea2-c2ead8b7c6bd</Project>
+      <Visible>false</Visible>
+    </NestedContentProject>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

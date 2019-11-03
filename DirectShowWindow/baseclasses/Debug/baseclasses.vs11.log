@@ -1,0 +1,37 @@
+﻿  wxutil.cpp
+  wxlist.cpp
+  wxdebug.cpp
+  winutil.cpp
+  winctrl.cpp
+  vtrans.cpp
+  videoctl.cpp
+  transip.cpp
+  transfrm.cpp
+  sysclock.cpp
+  strmctl.cpp
+  source.cpp
+  seekpt.cpp
+  schedule.cpp
+  renbase.cpp
+  refclock.cpp
+  pullpin.cpp
+  pstream.cpp
+  perflog.cpp
+  outputq.cpp
+  Generating Code...
+  Compiling...
+  mtype.cpp
+  dllsetup.cpp
+  dllentry.cpp
+  ddmm.cpp
+  ctlutil.cpp
+  cprop.cpp
+  combase.cpp
+  arithutil.cpp
+  amvideo.cpp
+  amfilter.cpp
+  amextra.cpp
+  Generating Code...
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppBuild.targets(1299,5): warning MSB8012: TargetPath(M:\xperdex\DirectShowWindow\baseclasses\Debug\baseclasses.vs11.lib) does not match the Library's OutputFile property value (M:\xperdex\DirectShowWindow\baseclasses\Debug\strmbasd.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppBuild.targets(1301,5): warning MSB8012: TargetName(baseclasses.vs11) does not match the Library's OutputFile property value (strmbasd). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+  baseclasses.vs11.vcxproj -> M:\xperdex\DirectShowWindow\baseclasses\Debug\baseclasses.vs11.lib

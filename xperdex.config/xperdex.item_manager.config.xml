@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?><!DOCTYPE xperdex.configuration >
+<xperdex>
+<glareset name="default" mask="Images/colorLayer.png" pressed="Images/pressedlens.png" depressed="Images/defaultLens.png" glare="" shade="multi" />
+<glare_set_attributes name="default" text_color="-16579837" primary="-198618" secondary="-16645887" highlight_primary="-527616" highlight_secondary="-16717299" />
+<glare_set_attributes name="Quit Button" text_color="-1" primary="-65536" secondary="-16777216" highlight_primary="0" highlight_secondary="0" />
+<glare_set_attributes name="Nav Button" text_color="-197380" primary="-16777101" secondary="-12763843" highlight_primary="0" highlight_secondary="0" />
+<Plugins Location="ItemManager.dll" />
+<Font name="Default" face="Microsoft Sans Serif" size="15.75" style="Regular" units="Point" />
+<Font name="Macro Item Font" face="Microsoft Sans Serif" size="8.25" style="Regular" units="Point" />
+<Font name="Default Fixed(Fixed)" face="Lucida Console" size="10" style="Regular" units="Pixel" />
+<Font name="Label Font" face="Lucida Console" size="12" style="Regular" units="Point" />
+<Font name="Bold Label Font" face="Microsoft Sans Serif" size="21.75" style="Regular" units="Point" />
+<page background="sky.jpg" title="Assign Macro Items" color="-16307413">
+<control X="0" Y="36" width="6" height="4" assembly="xperdex.core.dll" type="xperdex.core.ButtonQuit+Quit" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>Quit Button</glareset_attributes><PSI_Button text="Quit" />
+</control>
+<control X="0" Y="5" width="7" height="5" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro />
+<glareset>default</glareset><glareset_attributes>Nav Button</glareset_attributes><PSI_Button page="Assign Electronic Items" text="Assign_Electronic" />
+</control>
+<control X="7" Y="5" width="7" height="5" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro />
+<glareset>default</glareset><glareset_attributes>Nav Button</glareset_attributes><PSI_Button page="Assign Misc Items" text="Assign_Misc" />
+</control>
+<control X="0" Y="0" width="7" height="5" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro />
+<glareset>default</glareset><glareset_attributes>Nav Button</glareset_attributes><PSI_Button page="Assign Macro Items" text="Assign_Macro" />
+</control>
+<control X="7" Y="0" width="7" height="5" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro />
+<glareset>default</glareset><glareset_attributes>Nav Button</glareset_attributes><PSI_Button page="Assign Paper Items" text="Assign_Paper" />
+</control>
+<control X="22" Y="3" width="8" height="9" assembly="ItemManager.dll" type="ItemManager.ListboxSessionSelect" font="Macro Item Font" interface="ItemManager.ListboxSessionSelect">
+</control>
+<control X="1" Y="13" width="29" height="19" assembly="ItemManager.dll" type="ItemManager.ListboxCurrentMacroItems" font="Macro Item Font" interface="ItemManager.ListboxCurrentMacroItems">
+</control>
+<control X="31" Y="5" width="8" height="16" assembly="ItemManager.dll" type="ItemManager.ListboxItemDescriptions" font="Macro Item Font" interface="ItemManager.ListboxItemDescriptions">
+<listbox_filter>Macro</listbox_filter></control>
+<control X="31" Y="25" width="8" height="4" assembly="ItemManager.dll" type="ItemManager.ButtonAssignMacroToItem" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Assign_Item" />
+</control>
+<control X="9" Y="33" width="8" height="6" assembly="ItemManager.dll" type="ItemManager.ButtonSaveChanges" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Apply_Changes" />
+</control>
+<control X="19" Y="33" width="8" height="6" assembly="ItemManager.dll" type="ItemManager.ButtonForgetChanges" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Forget_Changes" />
+</control>
+<control X="1" Y="12" width="19" height="1" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-1" Font="Label Font" Text="Select macro item to assign" Align="Left" />
+</control>
+<control X="22" Y="2" width="13" height="1" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-1" Font="Label Font" Text="Select Session Filter..." Align="Left" />
+</control>
+<control X="31" Y="4" width="8" height="1" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-1" Font="Label Font" Text="Select Item..." Align="Left" />
+</control>
+<control X="31" Y="35" width="8" height="5" assembly="ItemManager.dll" type="ItemManager.ButtonCreateItem" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Create_Item" />
+</control>
+<control X="14" Y="0" width="7" height="5" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro />
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button page="Assign Barcodes" text="Barcode_Manager" />
+</control>
+<control X="31" Y="29" width="8" height="4" assembly="ItemManager.dll" type="ItemManager.ButtonUnAssignMacroToItem" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Unassign_Macro" />
+</control>
+<control X="31" Y="21" width="8" height="3" assembly="ItemManager.dll" type="ItemManager.ToggleAssignedItems" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Show Assigned_Items" />
+</control>
+</page>
+<page background="sky.jpg" title="Assign Electronic Items" color="-16575743">
+<control X="0" Y="5" width="7" height="5" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro />
+<glareset>default</glareset><glareset_attributes>Nav Button</glareset_attributes><PSI_Button page="Assign Electronic Items" text="Assign_Electronic" />
+</control>
+<control X="7" Y="5" width="7" height="5" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro />
+<glareset>default</glareset><glareset_attributes>Nav Button</glareset_attributes><PSI_Button page="Assign Misc Items" text="Assign_Misc" />
+</control>
+<control X="0" Y="0" width="7" height="5" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro />
+<glareset>default</glareset><glareset_attributes>Nav Button</glareset_attributes><PSI_Button page="Assign Macro Items" text="Assign_Macro" />
+</control>
+<control X="7" Y="0" width="7" height="5" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro />
+<glareset>default</glareset><glareset_attributes>Nav Button</glareset_attributes><PSI_Button page="Assign Paper Items" text="Assign_Paper" />
+</control>
+<control X="0" Y="11" width="14" height="23" assembly="ItemManager.dll" type="ItemManager.ListBoxes.ListboxElectronicPacks" font="Default" interface="ItemManager.ListBoxes.ListboxElectronicPacks">
+</control>
+<control X="15" Y="11" width="12" height="23" assembly="ItemManager.dll" type="ItemManager.ListboxAssignedElectronic" font="Default" interface="ItemManager.ListboxAssignedElectronic">
+</control>
+<control X="28" Y="11" width="12" height="23" assembly="ItemManager.dll" type="ItemManager.ListboxItemDescriptions" font="Default" interface="ItemManager.ListboxItemDescriptions">
+</control>
+<control X="6" Y="35" width="6" height="4" assembly="ItemManager.dll" type="ItemManager.ButtonSaveChanges" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Save_Changes" />
+</control>
+<control X="12" Y="35" width="6" height="4" assembly="ItemManager.dll" type="ItemManager.ButtonForgetChanges" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Forget_Changes" />
+</control>
+<control X="18" Y="35" width="6" height="4" assembly="ItemManager.dll" type="ItemManager.Buttons.ButtonAssignElectronicToItem" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Assign_Electronic" />
+</control>
+<control X="33" Y="35" width="6" height="3" assembly="ItemManager.dll" type="ItemManager.ToggleAssignedItems" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Show Assigned_Items" />
+</control>
+<control X="0" Y="36" width="5" height="4" assembly="xperdex.core.dll" type="xperdex.core.ButtonQuit+Quit" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>Quit Button</glareset_attributes><PSI_Button text="Quit" />
+</control>
+<control X="14" Y="0" width="7" height="5" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro />
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button page="Assign Barcodes" text="Barcode_Manager" />
+</control>
+<control X="24" Y="35" width="7" height="4" assembly="ItemManager.dll" type="ItemManager.Buttons.ButtonUnAssignElectronicToItem" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Unassign_Electronic" />
+</control>
+</page>
+<page background="sky.jpg" title="Assign Misc Items" color="-15073023">
+<control X="0" Y="5" width="7" height="5" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro />
+<glareset>default</glareset><glareset_attributes>Nav Button</glareset_attributes><PSI_Button page="Assign Electronic Items" text="Assign_Electronic" />
+</control>
+<control X="7" Y="5" width="7" height="5" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro />
+<glareset>default</glareset><glareset_attributes>Nav Button</glareset_attributes><PSI_Button page="Assign Misc Items" text="Assign_Misc" />
+</control>
+<control X="0" Y="0" width="7" height="5" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro />
+<glareset>default</glareset><glareset_attributes>Nav Button</glareset_attributes><PSI_Button page="Assign Macro Items" text="Assign_Macro" />
+</control>
+<control X="7" Y="0" width="7" height="5" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro />
+<glareset>default</glareset><glareset_attributes>Nav Button</glareset_attributes><PSI_Button page="Assign Paper Items" text="Assign_Paper" />
+</control>
+<control X="29" Y="13" width="11" height="17" assembly="ItemManager.dll" type="ItemManager.ListboxMiscItems" font="Macro Item Font" interface="ItemManager.ListboxMiscItems">
+</control>
+<control X="0" Y="36" width="6" height="4" assembly="xperdex.core.dll" type="xperdex.core.ButtonQuit+Quit" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>Quit Button</glareset_attributes><PSI_Button text="Quit" />
+</control>
+<control X="8" Y="34" width="8" height="5" assembly="ItemManager.dll" type="ItemManager.ButtonSaveChanges" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Save_Changes" />
+</control>
+<control X="17" Y="34" width="7" height="5" assembly="ItemManager.dll" type="ItemManager.ButtonForgetChanges" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Forget_Changes" />
+</control>
+<control X="1" Y="13" width="10" height="17" assembly="ItemManager.dll" type="ItemManager.ListboxItemDescriptions" font="Macro Item Font" interface="ItemManager.ListboxItemDescriptions">
+<listbox_filter>Tape</listbox_filter></control>
+<control X="29" Y="31" width="6" height="4" assembly="ItemManager.dll" type="ItemManager.ButtonAssignMiscToItem" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Assign_Misc" />
+</control>
+<control X="12" Y="13" width="16" height="17" assembly="ItemManager.dll" type="ItemManager.ListboxAssignedMisc" font="Macro Item Font" interface="ItemManager.ListboxAssignedMisc">
+</control>
+<control X="1" Y="12" width="10" height="1" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-1" Font="Label Font" Text="Select Inventory Item..." Align="Center" />
+</control>
+<control X="12" Y="12" width="16" height="1" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-1" Font="Label Font" Text="Items Assigned to Misc Items" Align="Center" />
+</control>
+<control X="29" Y="12" width="11" height="1" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-1" Font="Label Font" Text="Select Misc. Item..." Align="Center" />
+</control>
+<control X="2" Y="30" width="8" height="3" assembly="ItemManager.dll" type="ItemManager.ToggleAssignedItems" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Show Assigned_Items" />
+</control>
+<control X="14" Y="0" width="7" height="5" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro />
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button page="Assign Barcodes" text="Barcode_Manager" />
+</control>
+</page>
+<page background="sky.jpg" title="Assign Paper Items" color="-13750738">
+<control X="0" Y="5" width="7" height="5" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro />
+<glareset>default</glareset><glareset_attributes>Nav Button</glareset_attributes><PSI_Button page="Assign Electronic Items" text="Assign_Electronic" />
+</control>
+<control X="7" Y="5" width="7" height="5" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro />
+<glareset>default</glareset><glareset_attributes>Nav Button</glareset_attributes><PSI_Button page="Assign Misc Items" text="Assign_Misc" />
+</control>
+<control X="0" Y="0" width="7" height="5" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro />
+<glareset>default</glareset><glareset_attributes>Nav Button</glareset_attributes><PSI_Button page="Assign Macro Items" text="Assign_Macro" />
+</control>
+<control X="7" Y="0" width="7" height="5" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro />
+<glareset>default</glareset><glareset_attributes>Nav Button</glareset_attributes><PSI_Button page="Assign Paper Items" text="Assign_Paper" />
+</control>
+<control X="28" Y="13" width="12" height="17" assembly="ItemManager.dll" type="ItemManager.ListboxPaperNames" font="Macro Item Font" interface="ItemManager.ListboxPaperNames">
+</control>
+<control X="1" Y="13" width="11" height="17" assembly="ItemManager.dll" type="ItemManager.ListboxItemDescriptions" font="Macro Item Font" interface="ItemManager.ListboxItemDescriptions">
+<listbox_filter>Paper</listbox_filter></control>
+<control X="13" Y="13" width="13" height="17" assembly="ItemManager.dll" type="ItemManager.ListboxAssignedPaper" font="Macro Item Font" interface="ItemManager.ListboxAssignedPaper">
+</control>
+<control X="33" Y="30" width="6" height="4" assembly="ItemManager.dll" type="ItemManager.ButtonAssignPaperToItem" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Assign_Paper" />
+</control>
+<control X="0" Y="37" width="6" height="3" assembly="xperdex.core.dll" type="xperdex.core.ButtonQuit+Quit" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>Quit Button</glareset_attributes><PSI_Button text="Quit" />
+</control>
+<control X="9" Y="32" width="8" height="6" assembly="ItemManager.dll" type="ItemManager.ButtonSaveChanges" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Apply_Changes" />
+</control>
+<control X="17" Y="32" width="8" height="6" assembly="ItemManager.dll" type="ItemManager.ButtonForgetChanges" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Forget_Changes" />
+</control>
+<control X="33" Y="34" width="6" height="5" assembly="ItemManager.dll" type="ItemManager.ButtonCreateItem" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Create_Item" />
+</control>
+<control X="26" Y="34" width="7" height="5" assembly="ItemManager.dll" type="ItemManager.ButtonAutoAssignPaperToItem" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Auto-Assign_Paper" />
+</control>
+<control X="1" Y="12" width="11" height="1" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-1" Font="Label Font" Text="Select Inventory Item Name" Align="Center" />
+</control>
+<control X="28" Y="12" width="12" height="1" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-1" Font="Label Font" Text="Select Paper Item Name" Align="Center" />
+</control>
+<control X="14" Y="12" width="11" height="1" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-1" Font="Label Font" Text="Assigned Inventory To Paper" Align="Center" />
+</control>
+<control X="1" Y="31" width="8" height="3" assembly="ItemManager.dll" type="ItemManager.ToggleAssignedItems" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Show Assigned_Items" />
+</control>
+<control X="14" Y="0" width="7" height="5" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro />
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button page="Assign Barcodes" text="Barcode_Manager" />
+</control>
+</page>
+<page background="sky.jpg" title="Assign Barcodes" color="-15987711">
+<control X="0" Y="2" width="12" height="2" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-527616" Font="Bold Label Font" Text="Scanned Barcode" Align="Left" />
+</control>
+<control X="14" Y="2" width="17" height="2" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-1" Font="Bold Label Font" Text="%&lt;Barcode&gt;" Align="Left" />
+</control>
+<control X="0" Y="12" width="12" height="22" assembly="ItemManager.dll" type="ItemManager.ListboxItemDescriptions" font="Default" interface="ItemManager.ListboxItemDescriptions">
+</control>
+<control X="0" Y="4" width="12" height="2" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-1" Font="Default" Text="Serial" Align="Left" />
+</control>
+<control X="14" Y="4" width="17" height="2" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-1" Font="Default" Text="%&lt;Barcode Serial&gt;" Align="Left" />
+</control>
+<control X="33" Y="4" width="2" height="2" assembly="ItemManager.dll" type="ItemManager.ButtonDecrementSerial" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="-" />
+</control>
+<control X="20" Y="12" width="16" height="22" assembly="ItemManager.dll" type="ItemManager.ListboxItems" font="Default" interface="ItemManager.ListboxItems">
+</control>
+<control X="35" Y="4" width="2" height="2" assembly="ItemManager.dll" type="ItemManager.ButtonIncrementSerial" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="+" />
+</control>
+<control X="20" Y="34" width="6" height="3" assembly="ItemManager.dll" type="ItemManager.ButtonToggleRetired" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Show_Retired" />
+</control>
+<control X="0" Y="6" width="12" height="2" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-1" Font="Default" Text="Scanned Item" Align="Left" />
+</control>
+<control X="14" Y="6" width="12" height="2" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-1" Font="Default" Text="%&lt;Scanned Item Name&gt;" Align="Left" />
+</control>
+<control X="0" Y="8" width="12" height="2" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-1" Font="Default" Text="Scanned Serial" Align="Left" />
+</control>
+<control X="14" Y="8" width="12" height="2" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-1" Font="Default" Text="%&lt;Scanned Item Serial&gt;" Align="Left" />
+</control>
+<control X="12" Y="12" width="6" height="4" assembly="ItemManager.dll" type="ItemManager.ButtonInvoice" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Invoice_Item" />
+</control>
+<control X="33" Y="36" width="7" height="4" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro />
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button page="&lt;Previous&gt;" text="Return" />
+</control>
+<control X="26" Y="36" width="7" height="4" assembly="ItemManager.dll" type="ItemManager.ButtonSaveChanges" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Save_Changes" />
+</control>
+<control X="37" Y="4" width="2" height="2" assembly="ItemManager.dll" type="ItemManager.ButtonMaximizeSerial" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="All" />
+</control>
+<control X="0" Y="34" width="7" height="4" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro />
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button page="Create Item Page" text="Create_Items" />
+</control>
+</page>
+<page background="sky.jpg" title="Create Item Page" color="16777215">
+<control X="1" Y="7" width="17" height="22" assembly="ItemManager.dll" type="ItemManager.ListboxItemDescriptions" font="Default" interface="ItemManager.ListboxItemDescriptions">
+</control>
+<control X="19" Y="9" width="11" height="16" assembly="ItemManager.dll" type="ItemManager.ListBoxes.ListboxInventoryTypes" font="Default" interface="ItemManager.ListBoxes.ListboxInventoryTypes">
+</control>
+<control X="19" Y="25" width="11" height="4" assembly="ItemManager.dll" type="ItemManager.ButtonUpdateInventoryType" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Update Inventory_Type" />
+</control>
+<control X="30" Y="9" width="8" height="4" assembly="ItemManager.dll" type="ItemManager.ButtonCreateInventoryType" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Create Inventory_Type" />
+</control>
+<control X="1" Y="30" width="8" height="5" assembly="ItemManager.dll" type="ItemManager.ButtonCreateItem" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Create_Item" />
+</control>
+<control X="30" Y="33" width="8" height="5" assembly="xperdex.core.dll" type="xperdex.core.ButtonMacro" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<Macro />
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button page="&lt;Previous&gt;" text="Return To_Assignments" />
+</control>
+<control X="1" Y="2" width="30" height="2" assembly="xperdex.core.dll" type="xperdex.core.Label" font="Default" interface="xperdex.core.Label">
+<TextLabel Color="-2561536" Font="Default" Text="Assign Item Types and Create Items...." Align="Center" />
+</control>
+</page>
+</xperdex>

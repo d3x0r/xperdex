@@ -1,0 +1,498 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AD184E84-45AD-4DF6-BB3D-FB56EEDE2F31}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpenSkie.Scheduler.Controls</RootNamespace>
+    <AssemblyName>OpenSkie.Scheduler.Controls</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PlatformTarget>x86</PlatformTarget>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <BaseIntermediateOutputPath>$(SolutionDir)/output/</BaseIntermediateOutputPath>
+    <BaseOutputPath>$(SolutionDir)/</BaseOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>M:\xperdex\/output/Debug\OpenSkie.Scheduler.Controls.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisInputAssembly>M:\xperdex\/output/Debug\OpenSkie.Scheduler.Controls.dll</CodeAnalysisInputAssembly>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>M:\xperdex\/output/Release\OpenSkie.Scheduler.Controls.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisInputAssembly>M:\xperdex\/output/Release\OpenSkie.Scheduler.Controls.dll</CodeAnalysisInputAssembly>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>M:\xperdex\/output/Debug\OpenSkie.Scheduler.Controls.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisInputAssembly>M:\xperdex\/output/Debug\OpenSkie.Scheduler.Controls.dll</CodeAnalysisInputAssembly>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>M:\xperdex\/output/Release\OpenSkie.Scheduler.Controls.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisInputAssembly>M:\xperdex\/output/Release\OpenSkie.Scheduler.Controls.dll</CodeAnalysisInputAssembly>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\Buttons\AddItemButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Buttons\DeleteScheduleItems.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Buttons\EditScheduleItems.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Buttons\EnableEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Buttons\GameOrderMoveDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Buttons\GameOrderMoveUp.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Buttons\NewScheduleItems.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Buttons\SaveLoadButtons.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\CardsetEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\CardsetEditor.Designer.cs">
+      <DependentUpon>CardsetEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\CardsetRangeEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\CardsetRangeEditor.Designer.cs">
+      <DependentUpon>CardsetRangeEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\ColorEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\ColorEditor.Designer.cs">
+      <DependentUpon>ColorEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\PriceEditor2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\PriceEditor2.Designer.cs">
+      <DependentUpon>PriceEditor2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\GameBuilder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\GameBuilder.Designer.cs">
+      <DependentUpon>GameBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\GameDesigner\GameData.cs" />
+    <Compile Include="Controls\Forms\GameDesigner\GameTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\GameDesigner\GameTemplate.Designer.cs">
+      <DependentUpon>GameTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\GameDesigner\PackData.cs" />
+    <Compile Include="Controls\Forms\GameDesigner\SessionGameData.cs" />
+    <Compile Include="Controls\Forms\PayoutEditor2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\PayoutEditor2.Designer.cs">
+      <DependentUpon>PayoutEditor2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\DealerEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\DealerEditor.Designer.cs">
+      <DependentUpon>DealerEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\GameDesigner\GameEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\GameDesigner\GameEditor.Designer.cs">
+      <DependentUpon>GameEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\GameGroupEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\GameGroupEditor.Designer.cs">
+      <DependentUpon>GameGroupEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\PackEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\PackEditor.Designer.cs">
+      <DependentUpon>PackEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\PayoutDateSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\PayoutDateSelector.Designer.cs">
+      <DependentUpon>PayoutDateSelector.cs</DependentUpon>
+    </Compile>
+    <None Include="Controls\Grids\GamePackPageAssignment.cs">
+      <SubType>Component</SubType>
+    </None>
+    <Compile Include="Controls\Grids\SessionSchedulingGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\SessionTypeList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ScrollableMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScrollableMessageBox.Designer.cs">
+      <DependentUpon>ScrollableMessageBox.cs</DependentUpon>
+    </Compile>
+    <None Include="Controls\Forms\PayoutEditor.cs">
+      <SubType>Form</SubType>
+    </None>
+    <None Include="Controls\Forms\PayoutEditor.Designer.cs">
+      <DependentUpon>PayoutEditor.cs</DependentUpon>
+    </None>
+    <Compile Include="Controls\Forms\PriceEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\PriceEditor.Designer.cs">
+      <DependentUpon>PriceEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\SessionMacroScheduler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\SessionMacroScheduler.Designer.cs">
+      <DependentUpon>SessionMacroScheduler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\SessionManagerData\Colors.cs" />
+    <Compile Include="Controls\Grids\BundlePacks.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Grids\GameGroupAssignmentGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Grids\MyDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\CurrentGameGroupGameList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\CurrentGameGroupPrizeList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\CurrentGamePatternList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\CurrentSessionPackGroupList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\CurrentSessionGameOrderList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\CurrrentSessionMacroSessionList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\PackGroupList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\GameList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\PackList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\PatternList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\PrizeLevelList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\BundleList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\SessionMacroList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\PackFace.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PackFace.designer.cs">
+      <DependentUpon>PackFace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PackItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PackItem.designer.cs">
+      <DependentUpon>PackItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PackItemGen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PackItemGen.designer.cs">
+      <DependentUpon>PackItemGen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PackProperties.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PackProperties.designer.cs">
+      <DependentUpon>PackProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TextBoxes\NameFields.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\Forms\CardsetEditor.resx">
+      <DependentUpon>CardsetEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\CardsetRangeEditor.resx">
+      <DependentUpon>CardsetRangeEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\ColorEditor.resx">
+      <DependentUpon>ColorEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\PriceEditor2.resx">
+      <DependentUpon>PriceEditor2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\GameBuilder.resx">
+      <DependentUpon>GameBuilder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\GameDesigner\GameTemplate.resx">
+      <DependentUpon>GameTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\PayoutEditor2.resx">
+      <DependentUpon>PayoutEditor2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\DealerEditor.resx">
+      <DependentUpon>DealerEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\GameDesigner\GameEditor.resx">
+      <DependentUpon>GameEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\PackEditor.resx">
+      <DependentUpon>PackEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\PayoutDateSelector.resx">
+      <DependentUpon>PayoutDateSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\PayoutEditor.resx">
+      <DependentUpon>PayoutEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\PriceEditor.resx">
+      <DependentUpon>PriceEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\SessionMacroScheduler.resx">
+      <DependentUpon>SessionMacroScheduler.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PackFace.resx">
+      <DependentUpon>PackFace.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PackItem.resx">
+      <DependentUpon>PackItem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PackItemGen.resx">
+      <DependentUpon>PackItemGen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PackProperties.resx">
+      <DependentUpon>PackProperties.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScrollableMessageBox.resx">
+      <DependentUpon>ScrollableMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.VisualBasic.PowerPacks.10.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Visual Basic PowerPacks 10.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controls\Other\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\xperdex\xperdex.classes.2\xperdex.classes.vs14.4.0.vs14.csproj">
+      <Project>{041E5A37-8678-451E-9500-EE3D7864C092}</Project>
+      <Name>xperdex.classes.vs10.4.0</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\xperdex\xperdex.core\xperdex.core.interfaces\xperdex.core.interfaces.4.0.vs14.vs14.csproj">
+      <Project>{E5CD1A7B-221E-4B68-A1EA-0A801B35C399}</Project>
+      <Name>xperdex.core.interfaces.4.0</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\xperdex\xperdex.gui\xperdex.gui.4.0.vs14.vs14.csproj">
+      <Project>{EF313F61-2DB4-461B-9F89-B6BC53C96BA4}</Project>
+      <Name>xperdex.gui.4.0</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\MonthCalendar\MonthCalendar.vs14.4.0.vs14.csproj">
+      <Project>{898ecb12-d464-4514-ae2e-45fe430fe04e}</Project>
+      <Name>MonthCalendar.vs11.4.0</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Bingo\BingoCardsetCreator\BingoCardsetCreator.vs14.4.0.vs14.csproj">
+      <Project>{a512cbbd-f769-4f95-827d-739969d25b59}</Project>
+      <Name>BingoCardsetCreator.vs11.4.0</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CurrentScheduleDataSet2\CurrentScheduleDataSet2.4.0.vs14.vs14.csproj">
+      <Project>{BA3487F1-4E30-4FDD-A7E4-3B39DDDEA8B1}</Project>
+      <Name>CurrentScheduleDataSet2.4.0.vs10</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenSkie.Scheduler.Controls.Common\OpenSkie.Scheduler.Controls.Common.4.0.vs14.vs14.csproj">
+      <Project>{E2FC029A-F092-4D46-B83F-E175FBA2A80A}</Project>
+      <Name>OpenSkie.Scheduler.Controls.Common.4.0</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenSkieScheduler3.vs14.4.0.vs14.csproj">
+      <Project>{7aa21cbf-336d-4815-a2a6-55ac5694a241}</Project>
+      <Name>OpenSkieScheduler3.vs11.4.0</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PatternEditor\PatternEditor3.vs14.4.0.vs14.csproj">
+      <Project>{c2893772-cc74-4062-8b07-c986973d1df7}</Project>
+      <Name>PatternEditor3.vs11.4.0</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

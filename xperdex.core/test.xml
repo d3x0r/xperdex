@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?><!DOCTYPE xperdex.coniguration >
+<xperdex>
+<glareset name="default" mask="Images/colorLayer.png" pressed="Images/defaultLens.png" depressed="" glare="Images/pressedlens.png" />
+<Plugins Location="M:\trunk\work\xperdex.reflector\xperdex.core\bin\Release\xperdex.core.exe" />
+<page background="sky.jpg" color="-16777216">
+</page>
+</xperdex>

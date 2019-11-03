@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?><!DOCTYPE xperdex.configuration >
+<xperdex>
+<glareset name="default" mask="Images/colorLayer.png" pressed="Images/pressedlens.png" depressed="Images/defaultLens.png" glare="" shade="multi" />
+<glare_set_attributes name="default" text_color="-1" primary="1090453504" secondary="-1015680" highlight_primary="0" highlight_secondary="0" />
+<Plugins Location="M:\xperdex\xperdex.timer.plugin\bin\Debug\xperdex.timer.plugin.dll" />
+<Font name="Default" face="Lucida Console" size="38" style="Regular" units="Pixel" />
+<Font name="Default Fixed(Fixed)" face="Lucida Console" size="10" style="Regular" units="Pixel" />
+<Font name="Default[[FontFamily: Name=Microsoft Sans Serif]]" face="Arial" size="25" style="Regular" units="Pixel" />
+<TimerProperties>c:\windows\media\ding.wav</TimerProperties><page background="sky.jpg" color="-16777216">
+<control X="24" Y="3" width="15" height="3" assembly="M:\xperdex\output\Debug\x86\xperdex.core.dll" type="xperdex.core.Label" font="Default[[FontFamily: Name=Microsoft Sans Serif]]" interface="xperdex.core.Label">
+<TextLabel Color="-1" Font="Default" Text="%Time Remaining[0]%Selected Timer[0]" Align="Center" />
+</control>
+<control X="24" Y="6" width="15" height="3" assembly="M:\xperdex\output\Debug\x86\xperdex.core.dll" type="xperdex.core.Label" font="Default[[FontFamily: Name=Microsoft Sans Serif]]" interface="xperdex.core.Label">
+<TextLabel Color="-1" Font="Default" Text="%Time Remaining[1]%Selected Timer[1]" Align="Center" />
+</control>
+<control X="24" Y="9" width="15" height="3" assembly="M:\xperdex\output\Debug\x86\xperdex.core.dll" type="xperdex.core.Label" font="Default[[FontFamily: Name=Microsoft Sans Serif]]" interface="xperdex.core.Label">
+<TextLabel Color="-1" Font="Default" Text="%Time Remaining[2]%Selected Timer[2]" Align="Center" />
+</control>
+<control X="24" Y="12" width="15" height="3" assembly="M:\xperdex\output\Debug\x86\xperdex.core.dll" type="xperdex.core.Label" font="Default[[FontFamily: Name=Microsoft Sans Serif]]" interface="xperdex.core.Label">
+<TextLabel Color="-1" Font="Default" Text="%Time Remaining[3]%Selected Timer[3]" Align="Center" />
+</control>
+<control X="24" Y="15" width="15" height="3" assembly="M:\xperdex\output\Debug\x86\xperdex.core.dll" type="xperdex.core.Label" font="Default[[FontFamily: Name=Microsoft Sans Serif]]" interface="xperdex.core.Label">
+<TextLabel Color="-1" Font="Default" Text="%Time Remaining[4]%Selected Timer[4]" Align="Center" />
+</control>
+<control X="15" Y="3" width="9" height="3" assembly="M:\xperdex\output\Debug\x86\xperdex.core.dll" type="xperdex.core.Label" font="Default[[FontFamily: Name=Microsoft Sans Serif]]" interface="xperdex.core.Label">
+<TextLabel Color="-1" Font="Default" Text="%Initial Time" Align="Center" />
+</control>
+<control X="28" Y="20" width="7" height="4" assembly="M:\xperdex\xperdex.timer.plugin\bin\Debug\xperdex.timer.plugin.dll" type="xperdex.timer.plugin.TimerControlButton" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<timer add="1" hours="0" minutes="0" seconds="15" /><glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="00:15" font="Default" />
+</control>
+<control X="28" Y="24" width="7" height="4" assembly="M:\xperdex\xperdex.timer.plugin\bin\Debug\xperdex.timer.plugin.dll" type="xperdex.timer.plugin.TimerControlButton" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<timer add="1" hours="0" minutes="0" seconds="30" /><glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="00:30" font="Default" />
+</control>
+<control X="28" Y="28" width="7" height="4" assembly="M:\xperdex\xperdex.timer.plugin\bin\Debug\xperdex.timer.plugin.dll" type="xperdex.timer.plugin.TimerControlButton" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<timer add="1" hours="0" minutes="0" seconds="45" /><glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="00:45" font="Default" />
+</control>
+<control X="19" Y="20" width="7" height="4" assembly="M:\xperdex\xperdex.timer.plugin\bin\Debug\xperdex.timer.plugin.dll" type="xperdex.timer.plugin.TimerControlButton" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<timer add="1" hours="0" minutes="1" seconds="0" /><glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="1:00" font="Default" />
+</control>
+<control X="19" Y="24" width="7" height="4" assembly="M:\xperdex\xperdex.timer.plugin\bin\Debug\xperdex.timer.plugin.dll" type="xperdex.timer.plugin.TimerControlButton" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<timer add="1" hours="0" minutes="2" seconds="0" /><glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="2:00" font="Default" />
+</control>
+<control X="19" Y="28" width="7" height="4" assembly="M:\xperdex\xperdex.timer.plugin\bin\Debug\xperdex.timer.plugin.dll" type="xperdex.timer.plugin.TimerControlButton" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<timer add="1" hours="0" minutes="5" seconds="0" /><glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="5:00" font="Default" />
+</control>
+<control X="19" Y="32" width="7" height="4" assembly="M:\xperdex\xperdex.timer.plugin\bin\Debug\xperdex.timer.plugin.dll" type="xperdex.timer.plugin.TimerControlButton" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<timer add="1" hours="0" minutes="10" seconds="0" /><glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="10:00" font="Default" />
+</control>
+<control X="19" Y="36" width="7" height="4" assembly="M:\xperdex\xperdex.timer.plugin\bin\Debug\xperdex.timer.plugin.dll" type="xperdex.timer.plugin.TimerControlButton" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<timer add="1" hours="0" minutes="15" seconds="0" /><glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="15:00" font="Default" />
+</control>
+<control X="10" Y="20" width="7" height="4" assembly="M:\xperdex\xperdex.timer.plugin\bin\Debug\xperdex.timer.plugin.dll" type="xperdex.timer.plugin.TimerControlButton" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<timer add="1" hours="1" minutes="0" seconds="0" /><glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="1 hour" font="Default" />
+</control>
+<control X="10" Y="24" width="7" height="4" assembly="M:\xperdex\xperdex.timer.plugin\bin\Debug\xperdex.timer.plugin.dll" type="xperdex.timer.plugin.TimerControlButton" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<timer add="1" hours="5" minutes="0" seconds="0" /><glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="5 hours" font="Default" />
+</control>
+<control X="2" Y="23" width="7" height="5" assembly="M:\xperdex\xperdex.timer.plugin\bin\Debug\xperdex.timer.plugin.dll" type="xperdex.timer.plugin.TimerControlButton" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<timer add="0" hours="0" minutes="0" seconds="0" /><glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Reset" font="Default" />
+</control>
+<control X="4" Y="8" width="10" height="5" assembly="M:\xperdex\xperdex.timer.plugin\bin\Debug\xperdex.timer.plugin.dll" type="xperdex.timer.plugin.StartTimer" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Add_Timer" font="Default" />
+</control>
+<control X="17" Y="15" width="6" height="3" assembly="M:\xperdex\xperdex.timer.plugin\bin\Debug\xperdex.timer.plugin.dll" type="xperdex.timer.plugin.NextTimer" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Next" font="Default" />
+</control>
+<control X="17" Y="12" width="6" height="3" assembly="M:\xperdex\xperdex.timer.plugin\bin\Debug\xperdex.timer.plugin.dll" type="xperdex.timer.plugin.PriorTimer" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Prior" font="Default" />
+</control>
+<control X="7" Y="13" width="7" height="5" assembly="M:\xperdex\xperdex.timer.plugin\bin\Debug\xperdex.timer.plugin.dll" type="xperdex.timer.plugin.DeleteTimer" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Remove_Timer" font="Default" />
+</control>
+<control X="29" Y="34" width="10" height="5" assembly="M:\xperdex\xperdex.timer.plugin\bin\Debug\xperdex.timer.plugin.dll" type="xperdex.timer.plugin.StartTimer" font="Default" interface="xperdex.core.interfaces.IReflectorButton">
+<glareset>default</glareset><glareset_attributes>default</glareset_attributes><PSI_Button text="Add_Timer" font="Default" />
+</control>
+</page>
+</xperdex>

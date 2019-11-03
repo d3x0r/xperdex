@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopPlayers", "TopPlayers.csproj", "{90F7BC68-D3AD-417D-B781-ACD8BA3EC2DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CUIC.ThermPrints", "..\CUIC.ThermPrints\CUIC.ThermPrints.csproj", "{46A01927-6398-4396-A74A-787292B9EB31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CUIC.ReceiptBrowser", "..\CUIC.ReceiptBrowser\CUIC.ReceiptBrowser.csproj", "{DE058A72-2CD3-4C12-999E-BAF530C04B43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CORE.SwipeCards", "..\CORE.SwipeCards\CORE.SwipeCards.csproj", "{3EA7C8ED-B265-4FD0-8D05-5D8F1F2339B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90F7BC68-D3AD-417D-B781-ACD8BA3EC2DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90F7BC68-D3AD-417D-B781-ACD8BA3EC2DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90F7BC68-D3AD-417D-B781-ACD8BA3EC2DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90F7BC68-D3AD-417D-B781-ACD8BA3EC2DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46A01927-6398-4396-A74A-787292B9EB31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46A01927-6398-4396-A74A-787292B9EB31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46A01927-6398-4396-A74A-787292B9EB31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46A01927-6398-4396-A74A-787292B9EB31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE058A72-2CD3-4C12-999E-BAF530C04B43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE058A72-2CD3-4C12-999E-BAF530C04B43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE058A72-2CD3-4C12-999E-BAF530C04B43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE058A72-2CD3-4C12-999E-BAF530C04B43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EA7C8ED-B265-4FD0-8D05-5D8F1F2339B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EA7C8ED-B265-4FD0-8D05-5D8F1F2339B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EA7C8ED-B265-4FD0-8D05-5D8F1F2339B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EA7C8ED-B265-4FD0-8D05-5D8F1F2339B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

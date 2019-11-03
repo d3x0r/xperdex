@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F2D7DB70-C64F-4BDB-A7DE-865752A3E388}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ScheduleBuilder</RootNamespace>
+    <AssemblyName>ScheduleBuilder</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <BaseIntermediateOutputPath>$(SolutionDir)/output/</BaseIntermediateOutputPath>
+    <BaseOutputPath>$(SolutionDir)/</BaseOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameDesigner\EditGamePatterns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameDesigner\EditGamePatterns.Designer.cs">
+      <DependentUpon>EditGamePatterns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameDesigner\GameBuilder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameDesigner\GameBuilder.Designer.cs">
+      <DependentUpon>GameBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameDesigner\GameChooser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameDesigner\GameChooser.Designer.cs">
+      <DependentUpon>GameChooser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameDesigner\GameData.cs" />
+    <Compile Include="GameDesigner\GameEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameDesigner\GameEditor.Designer.cs">
+      <DependentUpon>GameEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameDesigner\GameTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameDesigner\GameTemplate.Designer.cs">
+      <DependentUpon>GameTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameDesigner\PackData.cs" />
+    <Compile Include="GameDesigner\SessionGameData.cs" />
+    <Compile Include="Local.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameDesigner\EditGamePatterns.resx">
+      <DependentUpon>EditGamePatterns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameDesigner\GameBuilder.resx">
+      <DependentUpon>GameBuilder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameDesigner\GameChooser.resx">
+      <DependentUpon>GameChooser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameDesigner\GameEditor.resx">
+      <DependentUpon>GameEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameDesigner\GameTemplate.resx">
+      <DependentUpon>GameTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\OpenSkiePOS\OpenSkieScheduler3\OpenSkie.Scheduler.Controls.Common\OpenSkie.Scheduler.Controls.Common.4.0.csproj">
+      <Project>{E2FC029A-F092-4D46-B83F-E175FBA2A80A}</Project>
+      <Name>OpenSkie.Scheduler.Controls.Common.4.0</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OpenSkiePOS\OpenSkieScheduler\OpenSkie.Scheduler.Controls\OpenSkie.Scheduler.Controls.vc10.csproj">
+      <Project>{AD184E84-45AD-4DF6-BB3D-FB56EEDE2F31}</Project>
+      <Name>OpenSkie.Scheduler.Controls.vc10</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OpenSkiePOS\OpenSkieScheduler\OpenSkieScheduler.vc10.csproj">
+      <Project>{7AA21CBF-336D-4815-A2A6-55AC5694A241}</Project>
+      <Name>OpenSkieScheduler.vc10</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\xperdex.classes\xperdex.classes.vc10.csproj">
+      <Project>{041E5A37-8678-451E-9500-EE3D7864C092}</Project>
+      <Name>xperdex.classes.vc10</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PatternEditor\PatternEditor.vs10.4.0.csproj">
+      <Project>{A97174E2-6499-49B1-859F-393D36512594}</Project>
+      <Name>PatternEditor.vs10.4.0</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

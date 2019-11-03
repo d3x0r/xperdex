@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?><!DOCTYPE xperdex.configuration >
+<xperdex>
+<glareset name="default" mask="Images/colorLayer.png" pressed="Images/defaultLens.png" depressed="" glare="Images/pressedlens.png" />
+<Plugins Location="M:\trunk\work\xperdex.reflector\xperdex.core\bin\Debug\xperdex.core.exe" />
+<Plugins Location="M:\trunk\work\xperdex.reflector\xperd3x.virtuality\bin\Debug\xperd3x.virtuality.dll" />
+<page background="sky.jpg" color="16777215">
+<control X="4" Y="2" width="30" height="28" assembly="M:\trunk\work\xperdex.reflector\xperd3x.virtuality\bin\Debug\xperd3x.virtuality.dll" type="xperd3x.virtuality.hexland" interface="xperd3x.virtuality.hexland">
+</control>
+</page>
+</xperdex>

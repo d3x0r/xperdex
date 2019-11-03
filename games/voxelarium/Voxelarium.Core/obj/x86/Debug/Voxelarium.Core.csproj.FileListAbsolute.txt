@@ -1,0 +1,12 @@
+M:\xperdex\games\voxelarium\Voxelarium.Core\Voxelarium.Core\bin\x86\Debug\Voxelarium.Core.dll
+M:\xperdex\games\voxelarium\Voxelarium.Core\Voxelarium.Core\bin\x86\Debug\Voxelarium.Core.pdb
+M:\xperdex\games\voxelarium\Voxelarium.Core\Voxelarium.Core\bin\x86\Debug\BulletSharp.dll
+M:\xperdex\games\voxelarium\Voxelarium.Core\Voxelarium.Core\bin\x86\Debug\OpenTK.dll
+M:\xperdex\games\voxelarium\Voxelarium.Core\Voxelarium.Core\bin\x86\Debug\OpenTK.GLControl.dll
+M:\xperdex\games\voxelarium\Voxelarium.Core\Voxelarium.Core\bin\x86\Debug\BulletSharp.pdb
+M:\xperdex\games\voxelarium\Voxelarium.Core\Voxelarium.Core\bin\x86\Debug\OpenTK.pdb
+M:\xperdex\games\voxelarium\Voxelarium.Core\Voxelarium.Core\bin\x86\Debug\OpenTK.xml
+M:\xperdex\games\voxelarium\Voxelarium.Core\Voxelarium.Core\bin\x86\Debug\OpenTK.GLControl.xml
+M:\xperdex\games\voxelarium\Voxelarium.Core\Voxelarium.Core\obj\x86\Debug\Voxelarium.Core.csprojResolveAssemblyReference.cache
+M:\xperdex\games\voxelarium\Voxelarium.Core\Voxelarium.Core\obj\x86\Debug\Voxelarium.Core.dll
+M:\xperdex\games\voxelarium\Voxelarium.Core\Voxelarium.Core\obj\x86\Debug\Voxelarium.Core.pdb

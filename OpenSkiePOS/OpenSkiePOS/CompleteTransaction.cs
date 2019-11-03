@@ -1,0 +1,7 @@
+﻿
+namespace OpenSkiePOS
+{
+	class CompleteTransaction
+	{
+	}
+}

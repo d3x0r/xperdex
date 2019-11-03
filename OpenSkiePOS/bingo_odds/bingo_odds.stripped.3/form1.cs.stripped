@@ -1,0 +1,650 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+using System.Globalization;
+using BingoGameCore;
+using BingoGameCore.CardMaster;
+using BingoGameCore.Pattern_Editor;
+using xperdex.classes;
+namespace bingo_odds
+{
+	public partial class Form1 : Form
+	{
+		OddsRunInfo ori;
+		DataTable patterns;
+		//static List<Pattern> patterns;
+		DataTable GamePatternTable;
+		DataTable GameGroups;
+		//Pattern[] array;
+
+		DsnConnection dsn;
+		MySQLDataTable pattern_table;
+		DataTable Cardsets;
+		MySQLDataTable pattern_data;
+
+		public Form1()
+		{
+
+			ori = new OddsRunInfo();
+
+			InitializeComponent();
+
+
+			Cardsets = new DataTable();
+			Cardsets.TableName = "Cardset";
+			Cardsets.Columns.Add( "Name", typeof( String ) );
+			Cardsets.Columns.Add( "filename", typeof( string ) );
+			DataRow drx = Cardsets.NewRow();
+			drx[0] = "<NONE>";
+			drx[1] = null;
+			Cardsets.Rows.Add( drx );
+			{
+				int sets = sack.sql.Options.Option.GetInt( "cards", "Max ranges", 0, "bingo.ini" );
+				for( int set = 0; set < sets; set++ )
+				{
+					DataRow dr = Cardsets.NewRow();
+					String value = sack.sql.Options.Option.GetString( "CARDS", "SET" + set, "", "bingo.ini" );
+					if( value.Length == 0 ||
+						String.Compare( value, "NONAME,NOPATHNAME,STARTNUM,ENDNUM,PACKTYPE,PO_INDEX" ) == 0 )
+						break;
+					String[] values = value.Split( new Char[] { ',' } );
+					dr[0] = values[0]; 
+					// skip the ',' string
+					dr[1] = values[1];
+					Cardsets.Rows.Add( dr );
+				}
+			}
+			Cardsets.AcceptChanges();
+
+			{
+				GamePatternTable = new DataTable();
+				GamePatternTable.TableName = "Whatever";
+				DataColumn dc;
+				dc = GamePatternTable.Columns.Add( "Pattern 1", BingoGameCore.BingoData.pattern_table.Columns["pattern_id"].DataType );
+				dc = GamePatternTable.Columns.Add( "Pattern 2", BingoGameCore.BingoData.pattern_table.Columns["pattern_id"].DataType );
+				dc = GamePatternTable.Columns.Add( "Pattern 3", BingoGameCore.BingoData.pattern_table.Columns["pattern_id"].DataType );
+				dc = GamePatternTable.Columns.Add( "Pattern 4", BingoGameCore.BingoData.pattern_table.Columns["pattern_id"].DataType );
+				dc = GamePatternTable.Columns.Add( "Pattern 5", BingoGameCore.BingoData.pattern_table.Columns["pattern_id"].DataType );
+
+				GamePatternTable.Columns.Add( "Progressive", typeof( bool ) );
+				GamePatternTable.Columns.Add( "Double Action", typeof( bool ) );
+				GamePatternTable.Columns.Add( "Starburst", typeof( bool ) );
+				GamePatternTable.Columns.Add( "Hotball", typeof( bool ) );
+				GamePatternTable.Columns.Add( "5 Cash Ball", typeof( bool ) );
+				GamePatternTable.Columns.Add( "Extension", typeof( bool ) );
+				GamePatternTable.Columns.Add( "Overlapped", typeof( bool ) );
+				GamePatternTable.Columns.Add( "Game Group", typeof( int ) );
+				GamePatternTable.Columns.Add( "Level 1 Prize", typeof( int ) );
+				GamePatternTable.Columns.Add( "Level 2 Prize", typeof( int ) );
+				GamePatternTable.Columns.Add( "Level 3 Prize", typeof( int ) );
+				GamePatternTable.Columns.Add( "Level 4 Prize", typeof( int ) );
+				//GamePatternTable.Columns.Add( "Level 1 Prize", typeof( int ) );
+
+			}
+
+			if( System.IO.File.Exists( "GamePatternSet.XML" ) )
+			{
+				GamePatternTable.ReadXml( "GamePatternSet.XML" );
+			}
+
+
+			GameGroups = new DataTable();
+			{
+				GameGroups.TableName = "Game Groups";
+				DataColumn dc = GameGroups.Columns.Add( "ID", typeof( int ) );
+				dc.AutoIncrement = true;
+				dc.Unique = true;
+				GameGroups.Columns.Add( "Name", typeof( String ) );
+				DataRow dr;
+				dr = GameGroups.NewRow();
+				dr[1] = "Jumbo";
+				GameGroups.Rows.Add( dr );
+				dr = GameGroups.NewRow();
+				dr[1] = "Early Bird";
+				GameGroups.Rows.Add( dr );
+				dr = GameGroups.NewRow();
+				dr[1] = "Matinee";
+				GameGroups.Rows.Add( dr );
+				dr = GameGroups.NewRow();
+				dr[1] = "Late Nights";
+				GameGroups.Rows.Add( dr );
+				dr = GameGroups.NewRow();
+				dr[1] = "Countdown Coverall";
+				GameGroups.Rows.Add( dr );
+				dr = GameGroups.NewRow();
+				dr[1] = "Group Name...1";
+				GameGroups.Rows.Add( dr );
+				dr = GameGroups.NewRow();
+				dr[1] = "Group Name...2";
+				GameGroups.Rows.Add( dr );
+
+				GameGroups.AcceptChanges();
+			}
+			//dr = GamePatternTable.Rows[0];
+		}
+
+		void a_RowUpdating( object sender, System.Data.Common.RowUpdatingEventArgs e )
+		{
+			for( int i = 0; i < e.Row.ItemArray.Length; i++ )
+				Console.WriteLine( i + " " + e.Row[i] as string );
+			throw new Exception( "The method or operation is not implemented." );
+		}
+
+		bool BuildRunInfo( bool one_session )
+		{
+			if( listBoxPattern.SelectedItem == null )
+			{
+				MessageBox.Show( "You need to select a game type..." );
+				return false;
+			}
+			if( ori == null )
+			{
+				ori = new OddsRunInfo();
+			}
+
+
+			ori.flags.database_run = checkBoxDatabase.Checked;
+			ori.flags.save_winning_cards = checkBoxSaveWinningCards.Checked;
+
+			if( comboBox1.SelectedValue != null )
+			{
+				ori.cardreader = new CardReader( comboBox1.SelectedValue as String );
+				if( ori.cardreader.Length != 0 )
+					ori.flags.cardfile = true;
+			}
+
+			ori.mode = (OddsRunInfo.OddsModes)listBoxPattern.SelectedItem;
+			if( one_session )
+			{
+				ori.Years = 1;
+				ori.Days = 1;
+				ori.Sessions = 1;
+				ori.Halls = 1;
+				ori.Players = Convert.ToInt32( textBoxPlayers.Text );
+				ori.Cards = Convert.ToInt32( textBoxCards.Text );
+				// this will be overridden later, if external game grid is used.
+				ori.Games = Convert.ToInt32( textBoxGames.Text );
+			}
+			else
+			{
+				ori.Years = Convert.ToInt32( textBoxYears.Text );
+				ori.Days = Convert.ToInt32( textBoxDays.Text );
+				ori.Sessions = Convert.ToInt32( textBoxSessions.Text );
+				ori.Halls = Convert.ToInt32( textBoxHalls.Text );
+				ori.Players = Convert.ToInt32( textBoxPlayers.Text );
+				ori.Cards = Convert.ToInt32( textBoxCards.Text );
+				// this will be overridden later, if external game grid is used.
+				ori.Games = Convert.ToInt32( textBoxGames.Text );
+			}
+			ori.PackSize = Convert.ToInt32( textBoxPackSize.Text );
+			if( ( ori.Cards / ori.PackSize ) * ori.PackSize != ori.Cards )
+			{
+
+				ori = null;
+				MessageBox.Show( "Cards does not divide by Pack Size evenly..." );
+				return false;
+			}
+			ori.mode = (OddsRunInfo.OddsModes)listBoxPattern.SelectedItem;
+			ori.flags.starburst = checkBoxStarburst.Checked;
+			ori.flags.simulate = checkBoxSimulate.Checked;
+			ori.flags.only_simulate = true;
+			// this will be overridden later, if external game grid is used.
+			ori.flags.hotball = checkBoxHotball.Checked;
+			// this will be overridden later, if external game grid is used.
+			ori.flags._5cashball = checkBox5Hotball.Checked;
+			if( ori.mode == OddsRunInfo.OddsModes.External_Game_Grid )
+			{
+				int maxid = 0;
+				OddsRunInfo.GameInfo prior_game = null;
+				ori.GameList = new List<OddsRunInfo.GameInfo>();
+				foreach( DataRow row in GamePatternTable.Rows )
+				{
+					OddsRunInfo.GameInfo game = new OddsRunInfo.GameInfo();
+					game.patterns = new List<Pattern>();
+					int pattern_col = GamePatternTable.Columns.IndexOf( "Pattern 1" );
+					game.starburst = row["Starburst"].Equals( DBNull.Value ) ? false : Convert.ToBoolean( row["Starburst"] );
+					if( game.starburst )
+						ori.flags.starburst = true;
+					game.hotball = row["Hotball"].Equals( DBNull.Value ) ? false : Convert.ToBoolean( row["Hotball"] );
+					game._5cashball = row["5 Cash Ball"].Equals( DBNull.Value ) ? false : Convert.ToBoolean( row["5 Cash Ball"] );
+					game.progressive = row["Progressive"].Equals( DBNull.Value ) ? false : Convert.ToBoolean( row["Progressive"] );
+					game.double_action = row["Double Action"].Equals( DBNull.Value ) ? false : Convert.ToBoolean( row["Double Action"] );
+					game.overlapped = row["Overlapped"].Equals( DBNull.Value ) ? false : Convert.ToBoolean( row["Overlapped"] );
+					game.extension = row["Extension"].Equals( DBNull.Value ) ? false : Convert.ToBoolean( row["Extension"] );
+
+					// extended games have a prior_game.
+					if( game.extension )
+					{
+						if( prior_game == null )
+							game.extension = false;
+						game.prior_game = prior_game;
+					}
+					// if there is a prior game, then check that game to see if it was progressive or overlapped... if it is, then this has a prior.
+					else if( prior_game != null && ( prior_game.progressive || prior_game.overlapped ) )
+					{
+						game.prior_game = prior_game;
+						game.into = true; // set that we are the inot part of a progressive...
+					}
+					else
+						game.prior_game = null;
+
+					prior_game = game;
+
+					// game group is 5... 
+					// okay pattern is found by name and added offset... good.
+					if( game.hotball )
+						ori.flags.hotball = true;
+					if( game._5cashball )
+						ori.flags._5cashball = true;
+					for( int i = 0; i < 5; i++ )
+					{
+						int pattern_id = row[pattern_col + i].Equals( DBNull.Value )
+							? -1
+							: Convert.ToInt32( row[pattern_col + i] );
+						if( pattern_id > 0 )
+						{
+							game.patterns.Add(
+								new Pattern(
+								pattern_table.Select( "pattern_id=" + pattern_id )
+								, pattern_data ) );
+						}
+					}
+
+					bool found_match = false;
+					// this shouldn't have to be initialized to zero here.
+					// there won't be any in the list
+					// so it will end up being assigned before the
+					// location that the compiler throws a stupid warning
+
+					game.game_ID = 0;
+					game.hotballs = game._5cashball ? 5 : game.hotball ? 1 : 0;
+					int game_pattern_count = game.patterns.Count;
+					// gamelist as null is okay, and just bails the loop.
+					foreach( bingo_odds.OddsRunInfo.GameInfo checkgame in ori.GameList )
+					{
+						int i = 0;
+						if( checkgame.patterns.Count == game_pattern_count )
+							for( ; i < game_pattern_count; i++ )
+							{
+
+								if( checkgame.patterns[i].ID != game.patterns[i].ID )
+								{
+									break;
+								}
+							}
+						if( i == game_pattern_count )
+						{
+							found_match = true;
+							game.game_ID = checkgame.game_ID;
+							game.pattern_list = checkgame.pattern_list;
+							game.stats = checkgame.stats;
+							lock( game.stats )
+							{
+								game.stats.games++;
+							}
+							break;
+						}
+					}
+					if( !found_match )
+					// if it's still zero, didn't find one, so set one.
+					{
+						OddsRunInfo.GameTypeInfo stats = new OddsRunInfo.GameTypeInfo();
+						///if( !ori.GameTypeList )
+						if( ori.GameTypeList == null )
+							ori.GameTypeList = new List<OddsRunInfo.GameTypeInfo>();
+						stats.best_wins = new int[ori.bestwins.Length];
+						stats.games = 1; // one same game.
+						stats.name = game.patterns[0].Name;
+						ori.GameTypeList.Add( stats );
+						game.stats = stats;
+						game.game_ID = maxid++;
+					}
+
+					if( game.patterns.Count > 0 &&
+						 game.patterns[0] >= 0 )
+					{
+						ori.GameList.Add( game );
+					}
+					else
+						game = null; // just make sure we auto destruct this...
+				}
+				ori.maxgameid = maxid;
+				ori.Games = ori.GameList.Count;
+			}
+			ori.total_hotballs = 6; // one hall ball, and 5 hardway?
+
+			System.Windows.Forms.ListBox.SelectedObjectCollection selection
+				= listBoxPatterns.SelectedItems;
+
+			if( ori.mode != OddsRunInfo.OddsModes.External_Game_Grid &&
+				ori.mode != OddsRunInfo.OddsModes.Keno )
+			{
+				ori.patterns = new List<System.Collections.Specialized.BitVector32>();
+				DataRow[] rows = pattern_data.Select( "pattern_id=" + listBoxPatterns.SelectedValue );
+				for( int n = 0; n < rows.Length; n++ )
+				{
+					ori.patterns.Add( new System.Collections.Specialized.BitVector32( Convert.ToInt32( rows[n]["bits_int"] ) ) );
+				}
+			}
+			
+			return true;
+		}
+
+		void Go( bool one_session )
+		{
+			if( !BuildRunInfo( one_session ) )
+				return;
+
+			ori.BeginRun();
+
+			RunDetails rd = new RunDetails( ori, Convert.ToInt32( this.textBoxThreadCount.Text ) );
+
+			rd.ShowDialog();
+			rd.Dispose();
+			ori = null;
+		}
+
+		private void buttonGo_Click( object sender, EventArgs e )
+		{
+			Go( false );
+		}
+
+
+		DataGridViewComboBoxColumn[] cols;
+
+		void UpdateFormFromRunInfo()
+		{
+			textBoxYears.Text = ori.Years.ToString();
+			textBoxDays.Text = ori.Days.ToString();
+			textBoxSessions.Text = ori.Sessions.ToString();
+			textBoxPlayers.Text = ori.Players.ToString();
+			textBoxHalls.Text = ori.Halls.ToString();
+			textBoxCards.Text = ori.Cards.ToString();
+			textBoxGames.Text = ori.Games.ToString();
+			checkBoxStarburst.Checked = ori.flags.starburst;
+			checkBoxSimulate.Checked = ori.flags.simulate;
+			checkBoxHotball.Checked = ori.flags.hotball;
+			checkBox5Hotball.Checked = ori.flags._5cashball;
+			textBoxPackSize.Text = ori.PackSize.ToString();
+
+			checkBoxDatabase.Checked = ori.flags.database_run;
+			checkBoxSaveWinningCards.Checked = ori.flags.save_winning_cards;
+		}
+
+		private void Form1_Load( object sender, EventArgs e )
+		{
+			comboBox1.DataSource = Cardsets;
+			comboBox1.ValueMember = "filename";
+			comboBox1.DisplayMember = "Name";
+			comboBox1.SelectedIndex = 0;
+
+			UpdateFormFromRunInfo();
+
+			// doing this... the 'select' event on the table
+			// causes both this and other lists to update.
+			//listBoxPatterns.DataSource = ori.pattern_table;
+			listBoxPatterns.DisplayMember = "name";
+			listBoxPatterns.ValueMember = "pattern_id";
+			//listBoxPatterns.DisplayMember = "Name";
+	
+			listBoxPattern.Items.Add( OddsRunInfo.OddsModes.Coverall );
+			listBoxPattern.Items.Add( OddsRunInfo.OddsModes.DA_Coverall );
+			listBoxPattern.Items.Add( OddsRunInfo.OddsModes.Hardway );
+			//listBoxPattern.Items.Add( OddsRunInfo.OddsModes.DA_Hardway );
+			listBoxPattern.Items.Add( OddsRunInfo.OddsModes.Five_Spot_Hotball );
+			listBoxPattern.Items.Add( OddsRunInfo.OddsModes.External_Pattern );
+			listBoxPattern.Items.Add( OddsRunInfo.OddsModes.External_Game_Grid );
+			listBoxPattern.Items.Add( OddsRunInfo.OddsModes.Keno );
+			listBoxPattern.SelectedItem = OddsRunInfo.OddsModes.External_Game_Grid;
+
+			dataGridViewGameSet.AutoGenerateColumns = false;
+			dataGridViewGameSet.DataSource = GamePatternTable;
+
+			DataGridViewComboBoxColumn dgvcbc;
+			cols = new DataGridViewComboBoxColumn[6];
+
+			//Pattern p = (Pattern)GamePatternTable.Rows[0].ItemArray[3];
+			cols[0] = dgvcbc = new DataGridViewComboBoxColumn();
+			dgvcbc.HeaderText = "Pattern 1";
+			dgvcbc.DataSource = BingoGameCore.BingoData.pattern_table;// array;// patterns.ToArray();
+			dgvcbc.AutoComplete = true;
+			dgvcbc.DataPropertyName = dgvcbc.HeaderText;
+			dgvcbc.DisplayMember = "name";
+			dgvcbc.ValueMember = "pattern_id";
+			dgvcbc.DisplayStyle = DataGridViewComboBoxDisplayStyle.ComboBox;
+
+			//dataGridViewGameSet.Columns.Remove( "Pattern_1" );
+			dataGridViewGameSet.Columns.Add( dgvcbc );
+
+			cols[1] = dgvcbc = new DataGridViewComboBoxColumn();
+			dgvcbc.HeaderText = "Pattern 2";
+			dgvcbc.DataSource = BingoGameCore.BingoData.pattern_table;// array;// patterns.ToArray();
+			dgvcbc.ValueType = typeof( Pattern );
+			dgvcbc.AutoComplete = true;
+			dgvcbc.DataPropertyName = dgvcbc.HeaderText;
+			dgvcbc.DisplayMember = "Name";
+			dgvcbc.ValueMember = "pattern_id";
+			dgvcbc.DisplayStyle = DataGridViewComboBoxDisplayStyle.ComboBox;
+			//dgvcbc.ValueType = typeof( Pattern );
+			//dgvcbc.FlatStyle = FlatStyle.Flat;
+
+			//dataGridViewGameSet.Columns.Remove( "Pattern_2" );
+			dataGridViewGameSet.Columns.Add( dgvcbc );
+
+			cols[2] = dgvcbc = new DataGridViewComboBoxColumn();
+			dgvcbc.HeaderText = "Pattern 3";
+			dgvcbc.DataSource = BingoGameCore.BingoData.pattern_table;// array;//patterns;
+			dgvcbc.ValueType = typeof( Pattern );
+			dgvcbc.AutoComplete = true;
+			dgvcbc.DataPropertyName = dgvcbc.HeaderText;
+			//dgvcbc.DisplayMember = dgvcbc.HeaderText;
+			dgvcbc.DisplayMember = "Name";
+			dgvcbc.ValueMember = "pattern_id";
+			dgvcbc.DisplayStyle = DataGridViewComboBoxDisplayStyle.ComboBox;
+			//dgvcbc.ValueType = typeof( Pattern );
+
+			//dataGridViewGameSet.Columns.Remove( "Pattern_3" );
+			dataGridViewGameSet.Columns.Add( dgvcbc );
+
+			dgvcbc = new DataGridViewComboBoxColumn();
+			dgvcbc.HeaderText = "Pattern 4";
+			dgvcbc.DataSource = BingoGameCore.BingoData.pattern_table;// array;//patterns;
+			dgvcbc.ValueType = typeof( Pattern );
+			dgvcbc.AutoComplete = true;
+			dgvcbc.DataPropertyName = dgvcbc.HeaderText;
+			//dgvcbc.DisplayMember = dgvcbc.HeaderText;
+			dgvcbc.DisplayMember = "Name";
+			dgvcbc.ValueMember = "pattern_id";
+			dgvcbc.DisplayStyle = DataGridViewComboBoxDisplayStyle.ComboBox;
+			//dgvcbc.ValueType = typeof( Pattern );
+
+			//dataGridViewGameSet.Columns.Remove( "Pattern_4" );
+			dataGridViewGameSet.Columns.Add( dgvcbc );
+
+			dgvcbc = new DataGridViewComboBoxColumn();
+			dgvcbc.HeaderText = "Pattern 5";
+			dgvcbc.DataSource = BingoGameCore.BingoData.pattern_table;// array;//patterns;
+			dgvcbc.ValueType = typeof( Pattern );
+			dgvcbc.AutoComplete = true;
+			dgvcbc.DataPropertyName = dgvcbc.HeaderText;
+			//dgvcbc.DisplayMember = dgvcbc.HeaderText;
+			dgvcbc.DisplayMember = "Name";
+			dgvcbc.ValueMember = "pattern_id";
+			dgvcbc.DisplayStyle = DataGridViewComboBoxDisplayStyle.ComboBox;
+			//dgvcbc.ValueType = typeof( Pattern );
+
+			//dataGridViewGameSet.Columns.Remove( "Pattern_5" );
+			dataGridViewGameSet.Columns.Add( dgvcbc );
+
+			DataGridViewCheckBoxColumn check_col;
+			check_col = new DataGridViewCheckBoxColumn();
+			
+			check_col.HeaderText = "Starburst";
+			check_col.Name = "Starburst";
+			check_col.DataPropertyName = check_col.Name;
+			dataGridViewGameSet.Columns.Add( check_col );
+
+			check_col = new DataGridViewCheckBoxColumn();
+			check_col.HeaderText = "Hotball";
+			check_col.Name = "Hotball";
+			check_col.DataPropertyName = check_col.Name;
+			dataGridViewGameSet.Columns.Add( check_col );
+
+			check_col = new DataGridViewCheckBoxColumn();
+			check_col.HeaderText = "Progressive";
+			check_col.Name = "Progressive";
+			check_col.DataPropertyName = check_col.Name;
+			dataGridViewGameSet.Columns.Add( check_col );
+
+			check_col = new DataGridViewCheckBoxColumn();
+			check_col.HeaderText = "Extension";
+			check_col.Name = "Extension";
+			check_col.DataPropertyName = check_col.Name;
+			dataGridViewGameSet.Columns.Add( check_col );
+
+			check_col = new DataGridViewCheckBoxColumn();
+			check_col.HeaderText = "Double Action";
+			check_col.Name = "Double Action";
+			check_col.DataPropertyName = check_col.Name;
+			dataGridViewGameSet.Columns.Add( check_col );
+
+			check_col = new DataGridViewCheckBoxColumn();
+			check_col.HeaderText = "Overlapped";
+			check_col.Name = "Overlapped";
+			check_col.DataPropertyName = check_col.Name;
+			dataGridViewGameSet.Columns.Add( check_col );
+
+			check_col = new DataGridViewCheckBoxColumn();
+			check_col.HeaderText = "5 Cash Ball";
+			check_col.Name = "5 Cash Ball";
+			check_col.DataPropertyName = check_col.Name;
+			dataGridViewGameSet.Columns.Add( check_col );
+
+			DataGridViewTextBoxColumn dgvc;
+		    //dataGridViewGameSet.Columns.Add( 
+			dgvc = new DataGridViewTextBoxColumn();
+			dgvc.HeaderText = "Level 1 Prize";
+			dgvc.DataPropertyName = "Level 1 Prize";
+			dgvc.ValueType = typeof( int );
+			dataGridViewGameSet.Columns.Add( dgvc );
+			/*
+			dgvc = new DataGridViewTextBoxColumn();
+			dgvc.HeaderText = "Level 3 Prize";
+			dgvc.DataPropertyName = "Level 2 Prize";
+			dgvc.ValueType = typeof( int );
+			dataGridViewGameSet.Columns.Add( dgvc );
+
+			dgvc = new DataGridViewTextBoxColumn();
+			dgvc.HeaderText = "Level 4 Prize";
+			dgvc.DataPropertyName = "Level 3 Prize";
+			dgvc.ValueType = typeof( int );
+			dataGridViewGameSet.Columns.Add( dgvc );
+
+			dgvc = new DataGridViewTextBoxColumn();
+			dgvc.HeaderText = "Level 4 Prize";
+			dgvc.DataPropertyName = "Level 4 Prize";
+			dgvc.ValueType = typeof( int );
+			dataGridViewGameSet.Columns.Add( dgvc );
+			*/
+
+			cols[0] = dgvcbc = new DataGridViewComboBoxColumn();
+			dgvcbc.HeaderText = "Game Group";
+			dgvcbc.DataSource = GameGroups;
+			dgvcbc.AutoComplete = true;
+			dgvcbc.DataPropertyName = dgvcbc.HeaderText;
+			dgvcbc.DisplayMember = "Name";
+			dgvcbc.ValueMember = "ID";
+			dgvcbc.DisplayStyle = DataGridViewComboBoxDisplayStyle.ComboBox;
+			dataGridViewGameSet.Columns.Add( dgvcbc );
+			
+
+			
+			//dataGridViewGameSet.Columns["Pattern_1"].
+			//dataGridViewGameSet.RowsAdded += new DataGridViewRowsAddedEventHandler( dataGridViewGameSet_RowsAdded );
+			dataGridViewGameSet.DataError += new DataGridViewDataErrorEventHandler( dataGridViewGameSet_DataError );
+		}
+
+		void dataGridViewGameSet_DataError( object sender, DataGridViewDataErrorEventArgs e )
+		{
+			
+			//throw new Exception( "The method or operation is not implemented." );
+		}
+
+		void dataGridViewGameSet_RowsAdded( object sender, DataGridViewRowsAddedEventArgs e )
+		{
+			//dataGridViewGameSet.Rows[e.RowIndex].Cells["Pattern_1"].EditType
+			//throw new Exception( "The method or operation is not implemented." );
+		}
+
+		private void buttonLoadConfig_Click( object sender, EventArgs e )
+		{
+			OpenFileDialog openFileDialog1 = new OpenFileDialog();
+			openFileDialog1.Filter = "XML files (*.xml)|*.xml|All files (*.*)|*.*";
+			openFileDialog1.FilterIndex = 1;
+			//openFileDialog1.RestoreDirectory = true;
+
+
+			if( openFileDialog1.ShowDialog() == DialogResult.OK )
+			{
+				GamePatternTable.Clear();
+				GamePatternTable.ReadXml( openFileDialog1.FileName );
+				if( ori != null )
+				{
+					ori.ReadXml( openFileDialog1.FileName + ".Form" );
+					UpdateFormFromRunInfo();
+				}
+				else
+					MessageBox.Show( "Somehow we're loading without a OddsRunInfo instance?!" );
+
+			}
+			openFileDialog1.Dispose();
+		}
+
+		private void buttonSaveGames_Click( object sender, EventArgs e )
+		{
+			SaveFileDialog openFileDialog1 = new SaveFileDialog();
+			openFileDialog1.Filter = "XML files (*.xml)|*.xml|All files (*.*)|*.*";
+			openFileDialog1.FilterIndex = 1;
+			//openFileDialog1.RestoreDirectory = true;
+
+
+			if( openFileDialog1.ShowDialog() == DialogResult.OK )
+			{
+				GamePatternTable.WriteXml( openFileDialog1.FileName, XmlWriteMode.IgnoreSchema, true );
+				if( BuildRunInfo( false ) )
+					ori.WriteXml( openFileDialog1.FileName + ".Form" );
+			}
+			openFileDialog1.Dispose();
+
+		}
+
+		private void buttonEditPatterns_Click( object sender, EventArgs e )
+		{
+			List<Pattern> list = new List<Pattern>();
+			foreach( DataRow row in pattern_table.Rows )
+				list.Add( new Pattern( row, pattern_data ) );
+			PatternEditor pe = new PatternEditor( list );
+			pe.ShowDialog();
+			foreach( Pattern p in pe.changed_list )
+			{
+				if( p.UpdateRow() )
+					pattern_table.AcceptChanges();
+
+				// update/add patterns created/modified...
+			}
+		}
+
+		private void button2_Click( object sender, EventArgs e )
+		{
+			Go( true );
+		}
+
+		
+		
+	}
+
+}

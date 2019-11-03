@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetWeekPlayers" targetNamespace="http://tempuri.org/DataSetWeekPlayers.xsd" xmlns:mstns="http://tempuri.org/DataSetWeekPlayers.xsd" xmlns="http://tempuri.org/DataSetWeekPlayers.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetWeekPlayers" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSetWeekPlayers" msprop:Generator_DataSetName="DataSetWeekPlayers">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTableWeekPlayers" msprop:Generator_UserTableName="DataTableWeekPlayers" msprop:Generator_RowDeletedName="DataTableWeekPlayersRowDeleted" msprop:Generator_RowChangedName="DataTableWeekPlayersRowChanged" msprop:Generator_RowClassName="DataTableWeekPlayersRow" msprop:Generator_RowChangingName="DataTableWeekPlayersRowChanging" msprop:Generator_RowEvArgName="DataTableWeekPlayersRowChangeEvent" msprop:Generator_RowEvHandlerName="DataTableWeekPlayersRowChangeEventHandler" msprop:Generator_TableClassName="DataTableWeekPlayersDataTable" msprop:Generator_TableVarName="tableDataTableWeekPlayers" msprop:Generator_RowDeletingName="DataTableWeekPlayersRowDeleting" msprop:Generator_TablePropName="DataTableWeekPlayers">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Player_Card" msprop:Generator_UserColumnName="Player_Card" msprop:Generator_ColumnVarNameInTable="columnPlayer_Card" msprop:Generator_ColumnPropNameInRow="Player_Card" msprop:Generator_ColumnPropNameInTable="Player_CardColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Player_Name" msprop:Generator_UserColumnName="Player_Name" msprop:Generator_ColumnVarNameInTable="columnPlayer_Name" msprop:Generator_ColumnPropNameInRow="Player_Name" msprop:Generator_ColumnPropNameInTable="Player_NameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Session" msprop:Generator_UserColumnName="Session" msprop:Generator_ColumnVarNameInTable="columnSession" msprop:Generator_ColumnPropNameInRow="Session" msprop:Generator_ColumnPropNameInTable="SessionColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="Points" msprop:Generator_UserColumnName="Points" msprop:Generator_ColumnVarNameInTable="columnPoints" msprop:Generator_ColumnPropNameInRow="Points" msprop:Generator_ColumnPropNameInTable="PointsColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="bingoday" msprop:Generator_UserColumnName="bingoday" msprop:Generator_ColumnPropNameInRow="bingoday" msprop:Generator_ColumnVarNameInTable="columnbingoday" msprop:Generator_ColumnPropNameInTable="bingodayColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DataTablePrizes" msprop:Generator_UserTableName="DataTablePrizes" msprop:Generator_RowDeletedName="DataTablePrizesRowDeleted" msprop:Generator_RowChangedName="DataTablePrizesRowChanged" msprop:Generator_RowClassName="DataTablePrizesRow" msprop:Generator_RowChangingName="DataTablePrizesRowChanging" msprop:Generator_RowEvArgName="DataTablePrizesRowChangeEvent" msprop:Generator_RowEvHandlerName="DataTablePrizesRowChangeEventHandler" msprop:Generator_TableClassName="DataTablePrizesDataTable" msprop:Generator_TableVarName="tableDataTablePrizes" msprop:Generator_RowDeletingName="DataTablePrizesRowDeleting" msprop:Generator_TablePropName="DataTablePrizes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="bingoday" msprop:Generator_UserColumnName="bingoday" msprop:Generator_ColumnVarNameInTable="columnbingoday" msprop:Generator_ColumnPropNameInRow="bingoday" msprop:Generator_ColumnPropNameInTable="bingodayColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="position" msprop:Generator_UserColumnName="position" msprop:Generator_ColumnVarNameInTable="columnposition" msprop:Generator_ColumnPropNameInRow="position" msprop:Generator_ColumnPropNameInTable="positionColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="Player_Card" msprop:Generator_UserColumnName="Player_Card" msprop:Generator_ColumnVarNameInTable="columnPlayer_Card" msprop:Generator_ColumnPropNameInRow="Player_Card" msprop:Generator_ColumnPropNameInTable="Player_CardColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Player_Name" msprop:Generator_UserColumnName="Player_Name" msprop:Generator_ColumnVarNameInTable="columnPlayer_Name" msprop:Generator_ColumnPropNameInRow="Player_Name" msprop:Generator_ColumnPropNameInTable="Player_NameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="score" msprop:Generator_UserColumnName="score" msprop:Generator_ColumnVarNameInTable="columnscore" msprop:Generator_ColumnPropNameInRow="score" msprop:Generator_ColumnPropNameInTable="scoreColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="Cash_Prize" msprop:Generator_UserColumnName="Cash_Prize" msprop:Generator_ColumnVarNameInTable="columnCash_Prize" msprop:Generator_ColumnPropNameInRow="Cash_Prize" msprop:Generator_ColumnPropNameInTable="Cash_PrizeColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Point_Prize" msprop:Generator_UserColumnName="Point_Prize" msprop:Generator_ColumnVarNameInTable="columnPoint_Prize" msprop:Generator_ColumnPropNameInRow="Point_Prize" msprop:Generator_ColumnPropNameInTable="Point_PrizeColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="paid" msprop:Generator_UserColumnName="paid" msprop:Generator_ColumnVarNameInTable="columnpaid" msprop:Generator_ColumnPropNameInRow="paid" msprop:Generator_ColumnPropNameInTable="paidColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DataTableParticipation" msprop:Generator_UserTableName="DataTableParticipation" msprop:Generator_RowDeletedName="DataTableParticipationRowDeleted" msprop:Generator_TableClassName="DataTableParticipationDataTable" msprop:Generator_RowChangedName="DataTableParticipationRowChanged" msprop:Generator_RowClassName="DataTableParticipationRow" msprop:Generator_RowChangingName="DataTableParticipationRowChanging" msprop:Generator_RowEvArgName="DataTableParticipationRowChangeEvent" msprop:Generator_RowEvHandlerName="DataTableParticipationRowChangeEventHandler" msprop:Generator_TablePropName="DataTableParticipation" msprop:Generator_TableVarName="tableDataTableParticipation" msprop:Generator_RowDeletingName="DataTableParticipationRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="rank_type" msprop:Generator_UserColumnName="rank_type" msprop:Generator_ColumnPropNameInRow="rank_type" msprop:Generator_ColumnVarNameInTable="columnrank_type" msprop:Generator_ColumnPropNameInTable="rank_typeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Player_Card" msprop:Generator_UserColumnName="Player_Card" msprop:Generator_ColumnPropNameInRow="Player_Card" msprop:Generator_ColumnVarNameInTable="columnPlayer_Card" msprop:Generator_ColumnPropNameInTable="Player_CardColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Player_Name" msprop:Generator_UserColumnName="Player_Name" msprop:Generator_ColumnPropNameInRow="Player_Name" msprop:Generator_ColumnVarNameInTable="columnPlayer_Name" msprop:Generator_ColumnPropNameInTable="Player_NameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Score" msprop:Generator_UserColumnName="Score" msprop:Generator_ColumnPropNameInRow="Score" msprop:Generator_ColumnVarNameInTable="columnScore" msprop:Generator_ColumnPropNameInTable="ScoreColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="Total_Participations" msprop:Generator_UserColumnName="Total_Participations" msprop:Generator_ColumnPropNameInRow="Total_Participations" msprop:Generator_ColumnVarNameInTable="columnTotal_Participations" msprop:Generator_ColumnPropNameInTable="Total_ParticipationsColumn" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

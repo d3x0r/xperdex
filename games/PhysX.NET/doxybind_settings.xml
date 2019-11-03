@@ -1,0 +1,63 @@
+<doxybind>
+  <name>PhysX.NET</name>
+  <typemap>void* = System.IntPtr
+void = System.Void
+long = System.Int32
+unsigned long = System.UInt32
+long long = System.Int64
+int = System.Int32
+unsigned int = System.UInt32
+short = System.Int16
+unsigned short = System.UInt16
+char* = System.String
+char = System.Char
+unsigned char = System.Byte
+unsigned char* = System.String
+float = System.Single
+bool = System.Boolean
+double = System.Double
+short int = System.Int16
+size_t = System.IntPtr
+NxI64 = System.Int64
+NxI32 = System.Int32
+NxI16 = System.Int16
+NxI8 = System.SByte
+NxU64 = System.UInt64
+NxU32 = System.UInt32
+NxU16 = System.UInt16
+NxU8 = System.Byte
+NxF32 = System.Single
+NxF64 = System.Double
+NxActorGroup = System.UInt16
+NxReal = System.Single
+IntType = System.UInt32
+Flag = System.UInt32
+Mask = System.UInt32
+Shift = System.UInt32
+Field = System.UInt32
+NxCollisionGroup = System.UInt16
+Extended = System.Double
+NX_BOOL = System.Int32
+NxMaterialIndex = System.UInt16
+NxSubmeshIndex = System.UInt32
+NxTriangleID = System.UInt32
+unsigned = System.UInt32
+NxDominanceGroup = System.UInt16
+NxVec3 = NxVec3
+NxMat33 = NxMat33
+NxMat34 = NxMat34
+NxExtendedVec3 = NxExtendedVec3
+NxQuat = NxQuat
+NxConstContactStream = System.UInt32
+NxForceFieldMaterial = System.UInt16
+NxForceFieldVariety = System.UInt16
+NxTriggerFlag = NxShapeFlag
+Mat33DataType = System.Single</typemap>
+  <replacement>NX_INLINE =
+NxBitField32=NxBitField</replacement>
+  <skip>NxVec3,NxMat33,NxMat34,NxExtendedVec3,NxQuat,ControllerArray,NxHwParser,NxArray,SweptBox,SweptCapsule,SweptVolume,CCTAllocator,CCTDebugData</skip>
+  <header>Copyright (c) 2007-2008
+Available under the terms of the
+Eclipse Public License with GPL exception
+See enclosed license file for more information</header>
+</doxybind>

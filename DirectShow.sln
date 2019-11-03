@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayCap-2005.vc10", "DirectShowLibV2\Samples\Capture\PlayCap\PlayCap-2005.vc10.csproj", "{156F9A0F-C89B-42D5-9636-0047FE0923CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectShowLib-2005.vc10", "DirectShowLibV2\src\DirectShowLib-2005.vc10.csproj", "{CE009BFA-5EF6-4153-B2A1-2FA79698A9AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xperdex.classes.vc10", "xperdex.classes\xperdex.classes.vc10.csproj", "{041E5A37-8678-451E-9500-EE3D7864C092}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{156F9A0F-C89B-42D5-9636-0047FE0923CE}.Debug|x86.ActiveCfg = Debug|x86
+		{156F9A0F-C89B-42D5-9636-0047FE0923CE}.Debug|x86.Build.0 = Debug|x86
+		{156F9A0F-C89B-42D5-9636-0047FE0923CE}.Release|x86.ActiveCfg = Release|x86
+		{156F9A0F-C89B-42D5-9636-0047FE0923CE}.Release|x86.Build.0 = Release|x86
+		{CE009BFA-5EF6-4153-B2A1-2FA79698A9AE}.Debug|x86.ActiveCfg = Debug|x86
+		{CE009BFA-5EF6-4153-B2A1-2FA79698A9AE}.Debug|x86.Build.0 = Debug|x86
+		{CE009BFA-5EF6-4153-B2A1-2FA79698A9AE}.Release|x86.ActiveCfg = Release|x86
+		{CE009BFA-5EF6-4153-B2A1-2FA79698A9AE}.Release|x86.Build.0 = Release|x86
+		{041E5A37-8678-451E-9500-EE3D7864C092}.Debug|x86.ActiveCfg = Debug|x86
+		{041E5A37-8678-451E-9500-EE3D7864C092}.Debug|x86.Build.0 = Debug|x86
+		{041E5A37-8678-451E-9500-EE3D7864C092}.Release|x86.ActiveCfg = Release|x86
+		{041E5A37-8678-451E-9500-EE3D7864C092}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

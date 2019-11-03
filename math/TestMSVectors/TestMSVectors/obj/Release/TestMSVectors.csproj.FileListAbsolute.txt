@@ -1,0 +1,6 @@
+M:\xperdex\math\TestMSVectors\TestMSVectors\bin\Release\TestMSVectors.exe.config
+M:\xperdex\math\TestMSVectors\TestMSVectors\bin\Release\TestMSVectors.exe
+M:\xperdex\math\TestMSVectors\TestMSVectors\bin\Release\TestMSVectors.pdb
+M:\xperdex\math\TestMSVectors\TestMSVectors\obj\Release\TestMSVectors.csprojResolveAssemblyReference.cache
+M:\xperdex\math\TestMSVectors\TestMSVectors\obj\Release\TestMSVectors.exe
+M:\xperdex\math\TestMSVectors\TestMSVectors\obj\Release\TestMSVectors.pdb

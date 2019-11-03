@@ -1,0 +1,177 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{746917A2-1C86-46E6-8A0C-7705CDEAF725}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BingoGameCore3</RootNamespace>
+    <AssemblyName>BingoGameCore3</AssemblyName>
+    <BaseIntermediateOutputPath>$(SolutionDir)/output/</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)//</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)//</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BingoGameCore3, Version=3.0.0.1, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BallData\BallData1.cs" />
+    <Compile Include="BallData\BallDataBlower.cs" />
+    <Compile Include="BallData\BallDataInterface.cs" />
+    <Compile Include="BallData\BallDataQuickshot.cs" />
+    <Compile Include="BingoCardState.cs" />
+    <Compile Include="BingoDealer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BingoGame.cs" />
+    <Compile Include="BingoGameEvent.cs">
+    </Compile>
+    <Compile Include="BingoMatchEngine.cs" />
+    <Compile Include="BingoSession.cs" />
+    <Compile Include="BingoGameList.cs" />
+    <Compile Include="BingoGameState.cs" />
+    <Compile Include="BingoPack.cs" />
+    <Compile Include="BingoPlayer.cs" />
+    <Compile Include="BingoSessionEvent.cs" />
+    <Compile Include="CardMaster\CardFactory.cs" />
+    <Compile Include="CardMaster\CardReader.cs" />
+    <Compile Include="Controls\BingoCard1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BingoCardGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\BingoCardStateControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Database\RankPointsExtended.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\BonusPointConfigurator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BonusPointConfigurator.Designer.cs">
+      <DependentUpon>BonusPointConfigurator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CardBrowsingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CardBrowsingForm.Designer.cs">
+      <DependentUpon>CardBrowsingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ConfigureGamePackPoints.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ConfigureGamePackPoints.Designer.cs">
+      <DependentUpon>ConfigureGamePackPoints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PackConfigurator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PackConfigurator.Designer.cs">
+      <DependentUpon>PackConfigurator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RatedGameConfigurator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RatedGameConfigurator.Designer.cs">
+      <DependentUpon>RatedGameConfigurator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SessionBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SessionBrowser.Designer.cs">
+      <DependentUpon>SessionBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Local.cs" />
+    <Compile Include="Networking\EltaninReceiver.cs" />
+    <Compile Include="Networking\FNetBlower.cs" />
+    <Compile Include="Networking\Protocols\Blower.cs" />
+    <Compile Include="Networking\Protocols\SlaveCaller.cs" />
+    <Compile Include="Networking\SlaveCallerReceiver.cs" />
+    <Compile Include="PackDNA.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RateRank.cs" />
+    <Compile Include="StateReader.cs" />
+    <Compile Include="StateWriter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\OpenSkiePOS\OpenSkieScheduler\OpenSkieScheduler.csproj">
+      <Project>{7AA21CBF-336D-4815-A2A6-55AC5694A241}</Project>
+      <Name>OpenSkieScheduler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\xperdex.classes\xperdex.classes.csproj">
+      <Project>{041E5A37-8678-451E-9500-EE3D7864C092}</Project>
+      <Name>xperdex.classes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\xperdex.eltanin\xperdex.eltanin.csproj">
+      <Project>{7E95DBA8-8DC1-4477-91F0-BA2E2F7BACC3}</Project>
+      <Name>xperdex.eltanin</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\BingoCard1.resx">
+      <DependentUpon>BingoCard1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BonusPointConfigurator.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BonusPointConfigurator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CardBrowsingForm.resx">
+      <DependentUpon>CardBrowsingForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ConfigureGamePackPoints.resx">
+      <DependentUpon>ConfigureGamePackPoints.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PackConfigurator.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PackConfigurator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RatedGameConfigurator.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RatedGameConfigurator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SessionBrowser.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SessionBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

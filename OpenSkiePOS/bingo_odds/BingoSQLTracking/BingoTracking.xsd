@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BingoTracking" targetNamespace="http://tempuri.org/BingoTracking.xsd" xmlns:mstns="http://tempuri.org/BingoTracking.xsd" xmlns="http://tempuri.org/BingoTracking.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BingoTracking" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:Prefix="bingo_events_" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="BingoTracking" msprop:Generator_UserDSName="BingoTracking">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="session_tracking" msprop:Generator_TableClassName="session_trackingDataTable" msprop:Generator_TableVarName="tablesession_tracking" msprop:Generator_RowChangedName="session_trackingRowChanged" msprop:Generator_TablePropName="session_tracking" msprop:Generator_RowDeletingName="session_trackingRowDeleting" msprop:Generator_RowChangingName="session_trackingRowChanging" msprop:Generator_RowEvHandlerName="session_trackingRowChangeEventHandler" msprop:Generator_RowDeletedName="session_trackingRowDeleted" msprop:Generator_RowClassName="session_trackingRow" msprop:Generator_UserTableName="session_tracking" msprop:Generator_RowEvArgName="session_trackingRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="session_tracking_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnsession_tracking_id" msprop:Generator_ColumnPropNameInRow="session_tracking_id" msprop:Generator_ColumnPropNameInTable="session_tracking_idColumn" msprop:Generator_UserColumnName="session_tracking_id" type="xs:string" minOccurs="0" />
+              <xs:element name="session_created" msprop:Generator_ColumnVarNameInTable="columnsession_created" msprop:Generator_ColumnPropNameInRow="session_created" msprop:Generator_ColumnPropNameInTable="session_createdColumn" msprop:Generator_UserColumnName="session_created" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="session_name" msprop:Generator_ColumnVarNameInTable="columnsession_name" msprop:Generator_ColumnPropNameInRow="session_name" msprop:Generator_ColumnPropNameInTable="session_nameColumn" msprop:Generator_UserColumnName="session_name" type="xs:string" minOccurs="0" />
+              <xs:element name="session_number" msprop:Generator_ColumnVarNameInTable="columnsession_number" msprop:Generator_ColumnPropNameInRow="session_number" msprop:Generator_ColumnPropNameInTable="session_numberColumn" msprop:Generator_UserColumnName="session_number" type="xs:int" minOccurs="0" />
+              <xs:element name="bingoday" msprop:Generator_ColumnVarNameInTable="columnbingoday" msprop:Generator_ColumnPropNameInRow="bingoday" msprop:Generator_ColumnPropNameInTable="bingodayColumn" msprop:Generator_UserColumnName="bingoday" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="game_tracking" msprop:Generator_TableClassName="game_trackingDataTable" msprop:Generator_TableVarName="tablegame_tracking" msprop:Generator_RowChangedName="game_trackingRowChanged" msprop:Generator_TablePropName="game_tracking" msprop:Generator_RowDeletingName="game_trackingRowDeleting" msprop:Generator_RowChangingName="game_trackingRowChanging" msprop:Generator_RowEvHandlerName="game_trackingRowChangeEventHandler" msprop:Generator_RowDeletedName="game_trackingRowDeleted" msprop:Generator_RowClassName="game_trackingRow" msprop:Generator_UserTableName="game_tracking" msprop:Generator_RowEvArgName="game_trackingRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="game_tracking_order" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columngame_tracking_order" msprop:Generator_ColumnPropNameInRow="game_tracking_order" msprop:Generator_ColumnPropNameInTable="game_tracking_orderColumn" msprop:Generator_UserColumnName="game_tracking_order" type="xs:int" />
+              <xs:element name="game_tracking_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columngame_tracking_id" msprop:Generator_ColumnPropNameInRow="game_tracking_id" msprop:Generator_ColumnPropNameInTable="game_tracking_idColumn" msprop:Generator_UserColumnName="game_tracking_id" type="xs:string" minOccurs="0" />
+              <xs:element name="game_created" msprop:Generator_ColumnVarNameInTable="columngame_created" msprop:Generator_ColumnPropNameInRow="game_created" msprop:Generator_ColumnPropNameInTable="game_createdColumn" msprop:Generator_UserColumnName="game_created" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="game_name" msprop:Generator_ColumnVarNameInTable="columngame_name" msprop:Generator_ColumnPropNameInRow="game_name" msprop:Generator_ColumnPropNameInTable="game_nameColumn" msprop:Generator_UserColumnName="game_name" type="xs:string" minOccurs="0" />
+              <xs:element name="game_number" msprop:Generator_ColumnVarNameInTable="columngame_number" msprop:Generator_ColumnPropNameInRow="game_number" msprop:Generator_ColumnPropNameInTable="game_numberColumn" msprop:Generator_UserColumnName="game_number" type="xs:int" minOccurs="0" />
+              <xs:element name="ballset" msprop:Generator_ColumnVarNameInTable="columnballset" msprop:Generator_ColumnPropNameInRow="ballset" msprop:Generator_ColumnPropNameInTable="ballsetColumn" msprop:Generator_UserColumnName="ballset" type="xs:int" minOccurs="0" />
+              <xs:element name="session_tracking_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnsession_tracking_id" msprop:Generator_ColumnPropNameInRow="session_tracking_id" msprop:Generator_ColumnPropNameInTable="session_tracking_idColumn" msprop:Generator_UserColumnName="session_tracking_id" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="session_events" msprop:Generator_TableClassName="session_eventsDataTable" msprop:Generator_TableVarName="tablesession_events" msprop:Generator_RowChangedName="session_eventsRowChanged" msprop:Generator_TablePropName="session_events" msprop:Generator_RowDeletingName="session_eventsRowDeleting" msprop:Generator_RowChangingName="session_eventsRowChanging" msprop:Generator_RowEvHandlerName="session_eventsRowChangeEventHandler" msprop:Generator_RowDeletedName="session_eventsRowDeleted" msprop:Generator_RowClassName="session_eventsRow" msprop:Generator_UserTableName="session_events" msprop:Generator_RowEvArgName="session_eventsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="session_event_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnsession_event_id" msprop:Generator_ColumnPropNameInRow="session_event_id" msprop:Generator_ColumnPropNameInTable="session_event_idColumn" msprop:Generator_UserColumnName="session_event_id" type="xs:string" minOccurs="0" />
+              <xs:element name="event_name" msprop:Generator_ColumnVarNameInTable="columnevent_name" msprop:Generator_ColumnPropNameInRow="event_name" msprop:Generator_ColumnPropNameInTable="event_nameColumn" msprop:Generator_UserColumnName="event_name" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="session_event_log" msprop:Generator_TableClassName="session_event_logDataTable" msprop:Generator_TableVarName="tablesession_event_log" msprop:Generator_RowChangedName="session_event_logRowChanged" msprop:Generator_TablePropName="session_event_log" msprop:Generator_RowDeletingName="session_event_logRowDeleting" msprop:Generator_RowChangingName="session_event_logRowChanging" msprop:Generator_RowEvHandlerName="session_event_logRowChangeEventHandler" msprop:Generator_RowDeletedName="session_event_logRowDeleted" msprop:Generator_RowClassName="session_event_logRow" msprop:Generator_UserTableName="session_event_log" msprop:Generator_RowEvArgName="session_event_logRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="session_event_order" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnsession_event_order" msprop:Generator_ColumnPropNameInRow="session_event_order" msprop:Generator_ColumnPropNameInTable="session_event_orderColumn" msprop:Generator_UserColumnName="session_event_order" type="xs:int" />
+              <xs:element name="session_event_log_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnsession_event_log_id" msprop:Generator_ColumnPropNameInRow="session_event_log_id" msprop:Generator_ColumnPropNameInTable="session_event_log_idColumn" msprop:Generator_UserColumnName="session_event_log_id" type="xs:string" minOccurs="0" />
+              <xs:element name="session_event_time" msdata:Caption="System.DateTime" msprop:Generator_ColumnVarNameInTable="columnsession_event_time" msprop:Generator_ColumnPropNameInRow="session_event_time" msprop:Generator_ColumnPropNameInTable="session_event_timeColumn" msprop:Generator_UserColumnName="session_event_time" type="xs:string" minOccurs="0" />
+              <xs:element name="session_event_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnsession_event_id" msprop:Generator_ColumnPropNameInRow="session_event_id" msprop:Generator_ColumnPropNameInTable="session_event_idColumn" msprop:Generator_UserColumnName="session_event_id" type="xs:string" minOccurs="0" />
+              <xs:element name="session_tracking_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnsession_tracking_id" msprop:Generator_ColumnPropNameInRow="session_tracking_id" msprop:Generator_ColumnPropNameInTable="session_tracking_idColumn" msprop:Generator_UserColumnName="session_tracking_id" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="game_events" msprop:Generator_TableClassName="game_eventsDataTable" msprop:Generator_TableVarName="tablegame_events" msprop:Generator_RowChangedName="game_eventsRowChanged" msprop:Generator_TablePropName="game_events" msprop:Generator_RowDeletingName="game_eventsRowDeleting" msprop:Generator_RowChangingName="game_eventsRowChanging" msprop:Generator_RowEvHandlerName="game_eventsRowChangeEventHandler" msprop:Generator_RowDeletedName="game_eventsRowDeleted" msprop:Generator_RowClassName="game_eventsRow" msprop:Generator_UserTableName="game_events" msprop:Generator_RowEvArgName="game_eventsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="game_event_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msdata:Caption="session_event_id" msprop:Generator_ColumnVarNameInTable="columngame_event_id" msprop:Generator_ColumnPropNameInRow="game_event_id" msprop:Generator_ColumnPropNameInTable="game_event_idColumn" msprop:Generator_UserColumnName="game_event_id" type="xs:string" minOccurs="0" />
+              <xs:element name="event_name" msprop:Generator_ColumnVarNameInTable="columnevent_name" msprop:Generator_ColumnPropNameInRow="event_name" msprop:Generator_ColumnPropNameInTable="event_nameColumn" msprop:Generator_UserColumnName="event_name" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="game_event_log" msprop:Generator_TableClassName="game_event_logDataTable" msprop:Generator_TableVarName="tablegame_event_log" msprop:Generator_RowChangedName="game_event_logRowChanged" msprop:Generator_TablePropName="game_event_log" msprop:Generator_RowDeletingName="game_event_logRowDeleting" msprop:Generator_RowChangingName="game_event_logRowChanging" msprop:Generator_RowEvHandlerName="game_event_logRowChangeEventHandler" msprop:Generator_RowDeletedName="game_event_logRowDeleted" msprop:Generator_RowClassName="game_event_logRow" msprop:Generator_UserTableName="game_event_log" msprop:Generator_RowEvArgName="game_event_logRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="game_event_order" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msprop:Generator_ColumnVarNameInTable="columngame_event_order" msprop:Generator_ColumnPropNameInRow="game_event_order" msprop:Generator_ColumnPropNameInTable="game_event_orderColumn" msprop:Generator_UserColumnName="game_event_order" type="xs:int" />
+              <xs:element name="game_event_log_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columngame_event_log_id" msprop:Generator_ColumnPropNameInRow="game_event_log_id" msprop:Generator_ColumnPropNameInTable="game_event_log_idColumn" msprop:Generator_UserColumnName="game_event_log_id" type="xs:string" minOccurs="0" />
+              <xs:element name="ball" msdata:Caption="data" msprop:Generator_ColumnVarNameInTable="columnball" msprop:Generator_ColumnPropNameInRow="ball" msprop:Generator_ColumnPropNameInTable="ballColumn" msprop:Generator_UserColumnName="ball" type="xs:int" minOccurs="0" />
+              <xs:element name="game_event_time" msdata:Caption="event_time" msprop:Generator_ColumnVarNameInTable="columngame_event_time" msprop:Generator_ColumnPropNameInRow="game_event_time" msprop:Generator_ColumnPropNameInTable="game_event_timeColumn" msprop:Generator_UserColumnName="game_event_time" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="game_event_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columngame_event_id" msprop:Generator_ColumnPropNameInRow="game_event_id" msprop:Generator_ColumnPropNameInTable="game_event_idColumn" msprop:Generator_UserColumnName="game_event_id" type="xs:string" />
+              <xs:element name="game_tracking_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columngame_tracking_id" msprop:Generator_ColumnPropNameInRow="game_tracking_id" msprop:Generator_ColumnPropNameInTable="game_tracking_idColumn" msprop:Generator_UserColumnName="game_tracking_id" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="stream_state_cache" msprop:Generator_TableClassName="stream_state_cacheDataTable" msprop:Generator_TableVarName="tablestream_state_cache" msprop:Generator_RowChangedName="stream_state_cacheRowChanged" msprop:Generator_TablePropName="stream_state_cache" msprop:Generator_RowDeletingName="stream_state_cacheRowDeleting" msprop:Generator_RowChangingName="stream_state_cacheRowChanging" msprop:Generator_RowEvHandlerName="stream_state_cacheRowChangeEventHandler" msprop:Generator_RowDeletedName="stream_state_cacheRowDeleted" msprop:Generator_RowClassName="stream_state_cacheRow" msprop:Generator_UserTableName="stream_state_cache" msprop:Generator_RowEvArgName="stream_state_cacheRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="session_tracking_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnsession_tracking_id" msprop:Generator_ColumnPropNameInRow="session_tracking_id" msprop:Generator_ColumnPropNameInTable="session_tracking_idColumn" msprop:Generator_UserColumnName="session_tracking_id" type="xs:string" minOccurs="0" />
+              <xs:element name="game_tracking_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columngame_tracking_id" msprop:Generator_ColumnPropNameInRow="game_tracking_id" msprop:Generator_ColumnPropNameInTable="game_tracking_idColumn" msprop:Generator_UserColumnName="game_tracking_id" type="xs:string" minOccurs="0" />
+              <xs:element name="stream_name" msprop:Generator_ColumnVarNameInTable="columnstream_name" msprop:Generator_ColumnPropNameInRow="stream_name" msprop:Generator_ColumnPropNameInTable="stream_nameColumn" msprop:Generator_UserColumnName="stream_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="64" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="session_hotball" msprop:Generator_TableClassName="session_hotballDataTable" msprop:Generator_TableVarName="tablesession_hotball" msprop:Generator_RowChangedName="session_hotballRowChanged" msprop:Generator_TablePropName="session_hotball" msprop:Generator_RowDeletingName="session_hotballRowDeleting" msprop:Generator_RowChangingName="session_hotballRowChanging" msprop:Generator_RowEvHandlerName="session_hotballRowChangeEventHandler" msprop:Generator_RowDeletedName="session_hotballRowDeleted" msprop:Generator_RowClassName="session_hotballRow" msprop:Generator_UserTableName="session_hotball" msprop:Generator_RowEvArgName="session_hotballRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="session_event_log_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnsession_event_log_id" msprop:Generator_ColumnPropNameInRow="session_event_log_id" msprop:Generator_ColumnPropNameInTable="session_event_log_idColumn" msprop:Generator_UserColumnName="session_event_log_id" type="xs:string" minOccurs="0" />
+              <xs:element name="ball" msprop:Generator_ColumnVarNameInTable="columnball" msprop:Generator_ColumnPropNameInRow="ball" msprop:Generator_ColumnPropNameInTable="ballColumn" msprop:Generator_UserColumnName="ball" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="blower_info" msprop:Generator_TableClassName="blower_infoDataTable" msprop:Generator_TableVarName="tableblower_info" msprop:Generator_RowChangedName="blower_infoRowChanged" msprop:Generator_TablePropName="blower_info" msprop:Generator_RowDeletingName="blower_infoRowDeleting" msprop:Generator_RowChangingName="blower_infoRowChanging" msprop:Generator_RowEvHandlerName="blower_infoRowChangeEventHandler" msprop:Generator_RowDeletedName="blower_infoRowDeleted" msprop:Generator_RowClassName="blower_infoRow" msprop:Generator_UserTableName="blower_info" msprop:Generator_RowEvArgName="blower_infoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="blower_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnblower_id" msprop:Generator_ColumnPropNameInRow="blower_id" msprop:Generator_ColumnPropNameInTable="blower_idColumn" msprop:Generator_UserColumnName="blower_id" type="xs:string" minOccurs="0" />
+              <xs:element name="stream_name" msprop:Generator_ColumnVarNameInTable="columnstream_name" msprop:Generator_ColumnPropNameInRow="stream_name" msprop:Generator_ColumnPropNameInTable="stream_nameColumn" msprop:Generator_UserColumnName="stream_name" type="xs:string" minOccurs="0" />
+              <xs:element name="address" msprop:Generator_ColumnVarNameInTable="columnaddress" msprop:Generator_ColumnPropNameInRow="address" msprop:Generator_ColumnPropNameInTable="addressColumn" msprop:Generator_UserColumnName="address" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="draw_blower" msprop:Generator_TableClassName="draw_blowerDataTable" msprop:Generator_TableVarName="tabledraw_blower" msprop:Generator_RowChangedName="draw_blowerRowChanged" msprop:Generator_TablePropName="draw_blower" msprop:Generator_RowDeletingName="draw_blowerRowDeleting" msprop:Generator_RowChangingName="draw_blowerRowChanging" msprop:Generator_RowEvHandlerName="draw_blowerRowChangeEventHandler" msprop:Generator_RowDeletedName="draw_blowerRowDeleted" msprop:Generator_RowClassName="draw_blowerRow" msprop:Generator_UserTableName="draw_blower" msprop:Generator_RowEvArgName="draw_blowerRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="game_event_log_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columngame_event_log_id" msprop:Generator_ColumnPropNameInRow="game_event_log_id" msprop:Generator_ColumnPropNameInTable="game_event_log_idColumn" msprop:Generator_UserColumnName="game_event_log_id" type="xs:string" minOccurs="0" />
+              <xs:element name="blower_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnblower_id" msprop:Generator_ColumnPropNameInRow="blower_id" msprop:Generator_ColumnPropNameInTable="blower_idColumn" msprop:Generator_UserColumnName="blower_id" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="winner_info" msprop:Generator_TableClassName="winner_infoDataTable" msprop:Generator_TableVarName="tablewinner_info" msprop:Generator_RowChangedName="winner_infoRowChanged" msprop:Generator_TablePropName="winner_info" msprop:Generator_RowDeletingName="winner_infoRowDeleting" msprop:Generator_RowChangingName="winner_infoRowChanging" msprop:Generator_RowEvHandlerName="winner_infoRowChangeEventHandler" msprop:Generator_RowDeletedName="winner_infoRowDeleted" msprop:Generator_RowClassName="winner_infoRow" msprop:Generator_UserTableName="winner_info" msprop:Generator_RowEvArgName="winner_infoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="winner_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnwinner_id" msprop:Generator_ColumnPropNameInRow="winner_id" msprop:Generator_ColumnPropNameInTable="winner_idColumn" msprop:Generator_UserColumnName="winner_id" type="xs:string" minOccurs="0" />
+              <xs:element name="session_tracking_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnsession_tracking_id" msprop:Generator_ColumnPropNameInRow="session_tracking_id" msprop:Generator_ColumnPropNameInTable="session_tracking_idColumn" msprop:Generator_UserColumnName="session_tracking_id" type="xs:string" minOccurs="0" />
+              <xs:element name="game_tracking_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columngame_tracking_id" msprop:Generator_ColumnPropNameInRow="game_tracking_id" msprop:Generator_ColumnPropNameInTable="game_tracking_idColumn" msprop:Generator_UserColumnName="game_tracking_id" type="xs:string" minOccurs="0" />
+              <xs:element name="winning_mask" msprop:Generator_ColumnVarNameInTable="columnwinning_mask" msprop:Generator_ColumnPropNameInRow="winning_mask" msprop:Generator_ColumnPropNameInTable="winning_maskColumn" msprop:Generator_UserColumnName="winning_mask" type="xs:int" minOccurs="0" />
+              <xs:element name="card_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columncard_id" msprop:Generator_ColumnPropNameInRow="card_id" msprop:Generator_ColumnPropNameInTable="card_idColumn" msprop:Generator_UserColumnName="card_id" type="xs:string" minOccurs="0" />
+              <xs:element name="amount" msprop:Generator_ColumnVarNameInTable="columnamount" msprop:Generator_ColumnPropNameInRow="amount" msprop:Generator_ColumnPropNameInTable="amountColumn" msprop:Generator_UserColumnName="amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="marked_mask" msprop:Generator_ColumnVarNameInTable="columnmarked_mask" msprop:Generator_ColumnPropNameInRow="marked_mask" msprop:Generator_ColumnPropNameInTable="marked_maskColumn" msprop:Generator_UserColumnName="marked_mask" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="player" msprop:Generator_TableClassName="playerDataTable" msprop:Generator_TableVarName="tableplayer" msprop:Generator_RowChangedName="playerRowChanged" msprop:Generator_TablePropName="player" msprop:Generator_RowDeletingName="playerRowDeleting" msprop:Generator_RowChangingName="playerRowChanging" msprop:Generator_RowEvHandlerName="playerRowChangeEventHandler" msprop:Generator_RowDeletedName="playerRowDeleted" msprop:Generator_RowClassName="playerRow" msprop:Generator_UserTableName="player" msprop:Generator_RowEvArgName="playerRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="player_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnplayer_id" msprop:Generator_ColumnPropNameInRow="player_id" msprop:Generator_ColumnPropNameInTable="player_idColumn" msprop:Generator_UserColumnName="player_id" type="xs:string" minOccurs="0" />
+              <xs:element name="card" msprop:Generator_ColumnVarNameInTable="columncard" msprop:Generator_ColumnPropNameInRow="card" msprop:Generator_ColumnPropNameInTable="cardColumn" msprop:Generator_UserColumnName="card" type="xs:string" minOccurs="0" />
+              <xs:element name="session_tracking_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnsession_tracking_id" msprop:Generator_ColumnPropNameInRow="session_tracking_id" msprop:Generator_ColumnPropNameInTable="session_tracking_idColumn" msprop:Generator_UserColumnName="session_tracking_id" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="pack" msprop:Generator_TableClassName="packDataTable" msprop:Generator_TableVarName="tablepack" msprop:Generator_RowChangedName="packRowChanged" msprop:Generator_TablePropName="pack" msprop:Generator_RowDeletingName="packRowDeleting" msprop:Generator_RowChangingName="packRowChanging" msprop:Generator_RowEvHandlerName="packRowChangeEventHandler" msprop:Generator_RowDeletedName="packRowDeleted" msprop:Generator_RowClassName="packRow" msprop:Generator_UserTableName="pack" msprop:Generator_RowEvArgName="packRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="pack_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnpack_id" msprop:Generator_ColumnPropNameInRow="pack_id" msprop:Generator_ColumnPropNameInTable="pack_idColumn" msprop:Generator_UserColumnName="pack_id" type="xs:string" minOccurs="0" />
+              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name" type="xs:string" minOccurs="0" />
+              <xs:element name="pack_set_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnpack_set_id" msprop:Generator_ColumnPropNameInRow="pack_set_id" msprop:Generator_ColumnPropNameInTable="pack_set_idColumn" msprop:Generator_UserColumnName="pack_set_id" type="xs:string" minOccurs="0" />
+              <xs:element name="transaction_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columntransaction_id" msprop:Generator_ColumnPropNameInRow="transaction_id" msprop:Generator_ColumnPropNameInTable="transaction_idColumn" msprop:Generator_UserColumnName="transaction_id" type="xs:string" minOccurs="0" />
+              <xs:element name="pack_type_id" msprop:Generator_ColumnVarNameInTable="columnpack_type_id" msprop:Generator_ColumnPropNameInRow="pack_type_id" msprop:Generator_ColumnPropNameInTable="pack_type_idColumn" msprop:Generator_UserColumnName="pack_type_id" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="card" msprop:Generator_TableClassName="cardDataTable" msprop:Generator_TableVarName="tablecard" msprop:Generator_RowChangedName="cardRowChanged" msprop:Generator_TablePropName="card" msprop:Generator_RowDeletingName="cardRowDeleting" msprop:Generator_RowChangingName="cardRowChanging" msprop:Generator_RowEvHandlerName="cardRowChangeEventHandler" msprop:Generator_RowDeletedName="cardRowDeleted" msprop:Generator_RowClassName="cardRow" msprop:Generator_UserTableName="card" msprop:Generator_RowEvArgName="cardRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="pack_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnpack_id" msprop:Generator_ColumnPropNameInRow="pack_id" msprop:Generator_ColumnPropNameInTable="pack_idColumn" msprop:Generator_UserColumnName="pack_id" type="xs:string" minOccurs="0" />
+              <xs:element name="card_data" msprop:Generator_ColumnVarNameInTable="columncard_data" msprop:Generator_ColumnPropNameInRow="card_data" msprop:Generator_ColumnPropNameInTable="card_dataColumn" msprop:Generator_UserColumnName="card_data" type="xs:string" minOccurs="0" />
+              <xs:element name="card_number" msprop:Generator_ColumnVarNameInTable="columncard_number" msprop:Generator_ColumnPropNameInRow="card_number" msprop:Generator_ColumnPropNameInTable="card_numberColumn" msprop:Generator_UserColumnName="card_number" type="xs:string" minOccurs="0" />
+              <xs:element name="card_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columncard_id" msprop:Generator_ColumnPropNameInRow="card_id" msprop:Generator_ColumnPropNameInTable="card_idColumn" msprop:Generator_UserColumnName="card_id" type="xs:string" minOccurs="0" />
+              <xs:element name="ballset" msprop:Generator_ColumnVarNameInTable="columnballset" msprop:Generator_ColumnPropNameInRow="ballset" msprop:Generator_ColumnPropNameInTable="ballsetColumn" msprop:Generator_UserColumnName="ballset" type="xs:int" minOccurs="0" />
+              <xs:element name="game_prize_id" msprop:Generator_ColumnVarNameInTable="columngame_prize_id" msprop:Generator_ColumnPropNameInRow="game_prize_id" msprop:Generator_ColumnPropNameInTable="game_prize_idColumn" msprop:Generator_UserColumnName="game_prize_id" type="xs:string" minOccurs="0" />
+              <xs:element name="prize_level" msprop:Generator_ColumnVarNameInTable="columnprize_level" msprop:Generator_ColumnPropNameInRow="prize_level" msprop:Generator_ColumnPropNameInTable="prize_levelColumn" msprop:Generator_UserColumnName="prize_level" type="xs:int" minOccurs="0" />
+              <xs:element name="game_pack_set_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columngame_pack_set_id" msprop:Generator_ColumnPropNameInRow="game_pack_set_id" msprop:Generator_ColumnPropNameInTable="game_pack_set_idColumn" msprop:Generator_UserColumnName="game_pack_set_id" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="pack_set" msprop:Generator_TableClassName="pack_setDataTable" msprop:Generator_TableVarName="tablepack_set" msprop:Generator_RowChangedName="pack_setRowChanged" msprop:Generator_TablePropName="pack_set" msprop:Generator_RowDeletingName="pack_setRowDeleting" msprop:Generator_RowChangingName="pack_setRowChanging" msprop:Generator_RowEvHandlerName="pack_setRowChangeEventHandler" msprop:Generator_RowDeletedName="pack_setRowDeleted" msprop:Generator_RowClassName="pack_setRow" msprop:Generator_UserTableName="pack_set" msprop:Generator_RowEvArgName="pack_setRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="pack_set_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnpack_set_id" msprop:Generator_ColumnPropNameInRow="pack_set_id" msprop:Generator_ColumnPropNameInTable="pack_set_idColumn" msprop:Generator_UserColumnName="pack_set_id" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="game_packs" msprop:Generator_TableClassName="game_packsDataTable" msprop:Generator_TableVarName="tablegame_packs" msprop:Generator_RowChangedName="game_packsRowChanged" msprop:Generator_TablePropName="game_packs" msprop:Generator_RowDeletingName="game_packsRowDeleting" msprop:Generator_RowChangingName="game_packsRowChanging" msprop:Generator_RowEvHandlerName="game_packsRowChangeEventHandler" msprop:Generator_RowDeletedName="game_packsRowDeleted" msprop:Generator_RowClassName="game_packsRow" msprop:Generator_UserTableName="game_packs" msprop:Generator_RowEvArgName="game_packsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="game_tracking_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columngame_tracking_id" msprop:Generator_ColumnPropNameInRow="game_tracking_id" msprop:Generator_ColumnPropNameInTable="game_tracking_idColumn" msprop:Generator_UserColumnName="game_tracking_id" type="xs:string" minOccurs="0" />
+              <xs:element name="pack_set_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnpack_set_id" msprop:Generator_ColumnPropNameInRow="pack_set_id" msprop:Generator_ColumnPropNameInTable="pack_set_idColumn" msprop:Generator_UserColumnName="pack_set_id" type="xs:string" minOccurs="0" />
+              <xs:element name="game_pack_set_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columngame_pack_set_id" msprop:Generator_ColumnPropNameInRow="game_pack_set_id" msprop:Generator_ColumnPropNameInTable="game_pack_set_idColumn" msprop:Generator_UserColumnName="game_pack_set_id" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="player_pack_transaction" msprop:Generator_TableClassName="player_pack_transactionDataTable" msprop:Generator_TableVarName="tableplayer_pack_transaction" msprop:Generator_RowChangedName="player_pack_transactionRowChanged" msprop:Generator_TablePropName="player_pack_transaction" msprop:Generator_RowDeletingName="player_pack_transactionRowDeleting" msprop:Generator_RowChangingName="player_pack_transactionRowChanging" msprop:Generator_RowEvHandlerName="player_pack_transactionRowChangeEventHandler" msprop:Generator_RowDeletedName="player_pack_transactionRowDeleted" msprop:Generator_RowClassName="player_pack_transactionRow" msprop:Generator_UserTableName="player_pack_transaction" msprop:Generator_RowEvArgName="player_pack_transactionRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="player_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnplayer_id" msprop:Generator_ColumnPropNameInRow="player_id" msprop:Generator_ColumnPropNameInTable="player_idColumn" msprop:Generator_UserColumnName="player_id" type="xs:string" minOccurs="0" />
+              <xs:element name="transaction_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columntransaction_id" msprop:Generator_ColumnPropNameInRow="transaction_id" msprop:Generator_ColumnPropNameInTable="transaction_idColumn" msprop:Generator_UserColumnName="transaction_id" type="xs:string" minOccurs="0" />
+              <xs:element name="transnum" msprop:Generator_ColumnVarNameInTable="columntransnum" msprop:Generator_ColumnPropNameInRow="transnum" msprop:Generator_ColumnPropNameInTable="transnumColumn" msprop:Generator_UserColumnName="transnum" type="xs:string" minOccurs="0" />
+              <xs:element name="session_tracking_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnsession_tracking_id" msprop:Generator_ColumnPropNameInRow="session_tracking_id" msprop:Generator_ColumnPropNameInTable="session_tracking_idColumn" msprop:Generator_UserColumnName="session_tracking_id" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="session_packs" msprop:Generator_TableClassName="session_packsDataTable" msprop:Generator_TableVarName="tablesession_packs" msprop:Generator_RowChangedName="session_packsRowChanged" msprop:Generator_TablePropName="session_packs" msprop:Generator_RowDeletingName="session_packsRowDeleting" msprop:Generator_RowChangingName="session_packsRowChanging" msprop:Generator_RowEvHandlerName="session_packsRowChangeEventHandler" msprop:Generator_RowDeletedName="session_packsRowDeleted" msprop:Generator_RowClassName="session_packsRow" msprop:Generator_UserTableName="session_packs" msprop:Generator_RowEvArgName="session_packsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="session_tracking_id" msprop:Generator_ColumnVarNameInTable="columnsession_tracking_id" msprop:Generator_ColumnPropNameInRow="session_tracking_id" msprop:Generator_ColumnPropNameInTable="session_tracking_idColumn" msprop:Generator_UserColumnName="session_tracking_id" type="xs:string" minOccurs="0" />
+              <xs:element name="pack_id" msprop:Generator_ColumnVarNameInTable="columnpack_id" msprop:Generator_ColumnPropNameInRow="pack_id" msprop:Generator_ColumnPropNameInTable="pack_idColumn" msprop:Generator_UserColumnName="pack_id" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="pack_type" msprop:Generator_TableClassName="pack_typeDataTable" msprop:Generator_TableVarName="tablepack_type" msprop:Generator_RowChangedName="pack_typeRowChanged" msprop:Generator_TablePropName="pack_type" msprop:Generator_RowDeletingName="pack_typeRowDeleting" msprop:Generator_RowChangingName="pack_typeRowChanging" msprop:Generator_RowEvHandlerName="pack_typeRowChangeEventHandler" msprop:Generator_RowDeletedName="pack_typeRowDeleted" msprop:Generator_RowClassName="pack_typeRow" msprop:Generator_UserTableName="pack_type" msprop:Generator_RowEvArgName="pack_typeRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="price" msprop:Generator_ColumnVarNameInTable="columnprice" msprop:Generator_ColumnPropNameInRow="price" msprop:Generator_ColumnPropNameInTable="priceColumn" msprop:Generator_UserColumnName="price" type="xs:decimal" minOccurs="0" />
+              <xs:element name="pack_type_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnpack_type_id" msprop:Generator_ColumnPropNameInRow="pack_type_id" msprop:Generator_ColumnPropNameInTable="pack_type_idColumn" msprop:Generator_UserColumnName="pack_type_id" type="xs:string" minOccurs="0" />
+              <xs:element name="pack_type_name" msprop:Generator_ColumnVarNameInTable="columnpack_type_name" msprop:Generator_ColumnPropNameInRow="pack_type_name" msprop:Generator_ColumnPropNameInTable="pack_type_nameColumn" msprop:Generator_UserColumnName="pack_type_name" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="game_prizes" msprop:Generator_TableClassName="game_prizesDataTable" msprop:Generator_TableVarName="tablegame_prizes" msprop:Generator_RowChangedName="game_prizesRowChanged" msprop:Generator_TablePropName="game_prizes" msprop:Generator_RowDeletingName="game_prizesRowDeleting" msprop:Generator_RowChangingName="game_prizesRowChanging" msprop:Generator_RowEvHandlerName="game_prizesRowChangeEventHandler" msprop:Generator_RowDeletedName="game_prizesRowDeleted" msprop:Generator_RowClassName="game_prizesRow" msprop:Generator_UserTableName="game_prizes" msprop:Generator_RowEvArgName="game_prizesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="game_tracking_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columngame_tracking_id" msprop:Generator_ColumnPropNameInRow="game_tracking_id" msprop:Generator_ColumnPropNameInTable="game_tracking_idColumn" msprop:Generator_UserColumnName="game_tracking_id" type="xs:string" minOccurs="0" />
+              <xs:element name="prize_amount" msprop:Generator_ColumnVarNameInTable="columnprize_amount" msprop:Generator_ColumnPropNameInRow="prize_amount" msprop:Generator_ColumnPropNameInTable="prize_amountColumn" msprop:Generator_UserColumnName="prize_amount" type="xs:decimal" minOccurs="0" />
+              <xs:element name="prize_level" msprop:Generator_ColumnVarNameInTable="columnprize_level" msprop:Generator_ColumnPropNameInRow="prize_level" msprop:Generator_ColumnPropNameInTable="prize_levelColumn" msprop:Generator_UserColumnName="prize_level" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="session_pack_sellable" msprop:Generator_TableClassName="session_pack_sellableDataTable" msprop:Generator_TableVarName="tablesession_pack_sellable" msprop:Generator_RowChangedName="session_pack_sellableRowChanged" msprop:Generator_TablePropName="session_pack_sellable" msprop:Generator_RowDeletingName="session_pack_sellableRowDeleting" msprop:Generator_RowChangingName="session_pack_sellableRowChanging" msprop:Generator_RowEvHandlerName="session_pack_sellableRowChangeEventHandler" msprop:Generator_RowDeletedName="session_pack_sellableRowDeleted" msprop:Generator_RowClassName="session_pack_sellableRow" msprop:Generator_UserTableName="session_pack_sellable" msprop:Generator_RowEvArgName="session_pack_sellableRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="session_event_log_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnsession_event_log_id" msprop:Generator_ColumnPropNameInRow="session_event_log_id" msprop:Generator_ColumnPropNameInTable="session_event_log_idColumn" msprop:Generator_UserColumnName="session_event_log_id" type="xs:string" minOccurs="0" />
+              <xs:element name="pack_type_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnpack_type_id" msprop:Generator_ColumnPropNameInRow="pack_type_id" msprop:Generator_ColumnPropNameInTable="pack_type_idColumn" msprop:Generator_UserColumnName="pack_type_id" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="winner_extra_info" msprop:Generator_TableClassName="winner_extra_infoDataTable" msprop:Generator_TableVarName="tablewinner_extra_info" msprop:Generator_RowChangedName="winner_extra_infoRowChanged" msprop:Generator_TablePropName="winner_extra_info" msprop:Generator_RowDeletingName="winner_extra_infoRowDeleting" msprop:Generator_RowChangingName="winner_extra_infoRowChanging" msprop:Generator_RowEvHandlerName="winner_extra_infoRowChangeEventHandler" msprop:Generator_RowDeletedName="winner_extra_infoRowDeleted" msprop:Generator_RowClassName="winner_extra_infoRow" msprop:Generator_UserTableName="winner_extra_info" msprop:Generator_RowEvArgName="winner_extra_infoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="winner_extra_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnwinner_extra_id" msprop:Generator_ColumnPropNameInRow="winner_extra_id" msprop:Generator_ColumnPropNameInTable="winner_extra_idColumn" msprop:Generator_UserColumnName="winner_extra_id" type="xs:string" minOccurs="0" />
+              <xs:element name="winner_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnwinner_id" msprop:Generator_ColumnPropNameInRow="winner_id" msprop:Generator_ColumnPropNameInTable="winner_idColumn" msprop:Generator_UserColumnName="winner_id" type="xs:string" minOccurs="0" />
+              <xs:element name="ball_count" msprop:Generator_ColumnVarNameInTable="columnball_count" msprop:Generator_ColumnPropNameInRow="ball_count" msprop:Generator_ColumnPropNameInTable="ball_countColumn" msprop:Generator_UserColumnName="ball_count" type="xs:int" minOccurs="0" />
+              <xs:element name="last_ball" msprop:Generator_ColumnVarNameInTable="columnlast_ball" msprop:Generator_ColumnPropNameInRow="last_ball" msprop:Generator_ColumnPropNameInTable="last_ballColumn" msprop:Generator_UserColumnName="last_ball" type="xs:int" minOccurs="0" />
+              <xs:element name="evens_marked" msprop:Generator_ColumnVarNameInTable="columnevens_marked" msprop:Generator_ColumnPropNameInRow="evens_marked" msprop:Generator_ColumnPropNameInTable="evens_markedColumn" msprop:Generator_UserColumnName="evens_marked" type="xs:int" minOccurs="0" />
+              <xs:element name="odds_marked" msprop:Generator_ColumnVarNameInTable="columnodds_marked" msprop:Generator_ColumnPropNameInRow="odds_marked" msprop:Generator_ColumnPropNameInTable="odds_markedColumn" msprop:Generator_UserColumnName="odds_marked" type="xs:int" minOccurs="0" />
+              <xs:element name="jumping_level" msprop:Generator_ColumnVarNameInTable="columnjumping_level" msprop:Generator_ColumnPropNameInRow="jumping_level" msprop:Generator_ColumnPropNameInTable="jumping_levelColumn" msprop:Generator_UserColumnName="jumping_level" type="xs:int" minOccurs="0" />
+              <xs:element name="prize_level_name" msprop:Generator_ColumnVarNameInTable="columnprize_level_name" msprop:Generator_ColumnPropNameInRow="prize_level_name" msprop:Generator_ColumnPropNameInTable="prize_level_nameColumn" msprop:Generator_UserColumnName="prize_level_name" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:session_tracking" />
+      <xs:field xpath="mstns:session_tracking_id" />
+    </xs:unique>
+    <xs:unique name="game_tracking_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:game_tracking" />
+      <xs:field xpath="mstns:game_tracking_id" />
+    </xs:unique>
+    <xs:unique name="Constraint2">
+      <xs:selector xpath=".//mstns:game_tracking" />
+      <xs:field xpath="mstns:game_tracking_order" />
+    </xs:unique>
+    <xs:unique name="session_events_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:session_events" />
+      <xs:field xpath="mstns:session_event_id" />
+    </xs:unique>
+    <xs:unique name="session_event_log_Constraint2" msdata:ConstraintName="Constraint2">
+      <xs:selector xpath=".//mstns:session_event_log" />
+      <xs:field xpath="mstns:session_event_log_id" />
+    </xs:unique>
+    <xs:unique name="session_event_log_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:session_event_log" />
+      <xs:field xpath="mstns:session_event_order" />
+    </xs:unique>
+    <xs:unique name="game_event_log_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:game_event_log" />
+      <xs:field xpath="mstns:game_event_log_id" />
+    </xs:unique>
+    <xs:unique name="game_event_log_Constraint2" msdata:ConstraintName="Constraint2">
+      <xs:selector xpath=".//mstns:game_event_log" />
+      <xs:field xpath="mstns:game_event_order" />
+    </xs:unique>
+    <xs:unique name="session_hotball_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:session_hotball" />
+      <xs:field xpath="mstns:session_event_log_id" />
+    </xs:unique>
+    <xs:unique name="blower_info_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:blower_info" />
+      <xs:field xpath="mstns:blower_id" />
+    </xs:unique>
+    <xs:unique name="winner_info_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:winner_info" />
+      <xs:field xpath="mstns:winner_id" />
+    </xs:unique>
+    <xs:unique name="player_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:player" />
+      <xs:field xpath="mstns:player_id" />
+    </xs:unique>
+    <xs:unique name="pack_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:pack" />
+      <xs:field xpath="mstns:pack_id" />
+    </xs:unique>
+    <xs:unique name="card_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:card" />
+      <xs:field xpath="mstns:card_id" />
+    </xs:unique>
+    <xs:unique name="pack_set_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:pack_set" />
+      <xs:field xpath="mstns:pack_set_id" />
+    </xs:unique>
+    <xs:unique name="game_packs_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:game_packs" />
+      <xs:field xpath="mstns:game_pack_set_id" />
+    </xs:unique>
+    <xs:unique name="session_pack_sellable_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:session_pack_sellable" />
+      <xs:field xpath="mstns:pack_type_id" />
+    </xs:unique>
+    <xs:unique name="session_pack_sellable_Constraint2" msdata:ConstraintName="Constraint2">
+      <xs:selector xpath=".//mstns:session_pack_sellable" />
+      <xs:field xpath="mstns:session_event_log_id" />
+    </xs:unique>
+    <xs:keyref name="FK_winner_info_winner_extra_info" refer="winner_info_Constraint1" msprop:rel_Generator_UserChildTable="winner_extra_info" msprop:rel_Generator_ChildPropName="Getwinner_extra_infoRows" msprop:rel_Generator_UserRelationName="FK_winner_info_winner_extra_info" msprop:rel_Generator_RelationVarName="relationFK_winner_info_winner_extra_info" msprop:rel_Generator_UserParentTable="winner_info" msprop:rel_Generator_ParentPropName="winner_infoRow">
+      <xs:selector xpath=".//mstns:winner_extra_info" />
+      <xs:field xpath="mstns:winner_id" />
+    </xs:keyref>
+    <xs:keyref name="FK_session_pack_sellable_session_event_log" refer="session_event_log_Constraint2" msprop:rel_Generator_UserChildTable="session_pack_sellable" msprop:rel_Generator_ChildPropName="Getsession_pack_sellableRows" msprop:rel_Generator_UserRelationName="FK_session_pack_sellable_session_event_log" msprop:rel_Generator_ParentPropName="session_event_logRow" msprop:rel_Generator_RelationVarName="relationFK_session_pack_sellable_session_event_log" msprop:rel_Generator_UserParentTable="session_event_log">
+      <xs:selector xpath=".//mstns:session_pack_sellable" />
+      <xs:field xpath="mstns:session_event_log_id" />
+    </xs:keyref>
+    <xs:keyref name="FK_session_pack_sellable_pack_type" refer="session_pack_sellable_Constraint1" msprop:rel_Generator_UserChildTable="pack_type" msprop:rel_Generator_ChildPropName="Getpack_typeRows" msprop:rel_Generator_UserRelationName="FK_session_pack_sellable_pack_type" msprop:rel_Generator_RelationVarName="relationFK_session_pack_sellable_pack_type" msprop:rel_Generator_UserParentTable="session_pack_sellable" msprop:rel_Generator_ParentPropName="session_pack_sellableRow">
+      <xs:selector xpath=".//mstns:pack_type" />
+      <xs:field xpath="mstns:pack_type_id" />
+    </xs:keyref>
+    <xs:keyref name="FK_game_tracking_game_packs" refer="game_tracking_Constraint1" msprop:rel_Generator_UserChildTable="game_packs" msprop:rel_Generator_ChildPropName="Getgame_packsRows" msprop:rel_Generator_UserRelationName="FK_game_tracking_game_packs" msprop:rel_Generator_RelationVarName="relationFK_game_tracking_game_packs" msprop:rel_Generator_UserParentTable="game_tracking" msprop:rel_Generator_ParentPropName="game_trackingRow">
+      <xs:selector xpath=".//mstns:game_packs" />
+      <xs:field xpath="mstns:game_tracking_id" />
+    </xs:keyref>
+    <xs:keyref name="pack_set_game_packs" refer="pack_set_Constraint1" msprop:rel_Generator_UserChildTable="game_packs" msprop:rel_Generator_ChildPropName="Getgame_packsRows" msprop:rel_Generator_UserRelationName="pack_set_game_packs" msprop:rel_Generator_RelationVarName="relationpack_set_game_packs" msprop:rel_Generator_UserParentTable="pack_set" msprop:rel_Generator_ParentPropName="pack_setRow">
+      <xs:selector xpath=".//mstns:game_packs" />
+      <xs:field xpath="mstns:pack_set_id" />
+    </xs:keyref>
+    <xs:keyref name="FK_pack_Card" refer="pack_Constraint1" msprop:rel_Generator_UserChildTable="card" msprop:rel_Generator_ChildPropName="GetcardRows" msprop:rel_Generator_UserRelationName="FK_pack_Card" msprop:rel_Generator_ParentPropName="packRow" msprop:rel_Generator_RelationVarName="relationFK_pack_Card" msprop:rel_Generator_UserParentTable="pack">
+      <xs:selector xpath=".//mstns:card" />
+      <xs:field xpath="mstns:pack_id" />
+    </xs:keyref>
+    <xs:keyref name="FK_game_packs_card" refer="game_packs_Constraint1" msprop:rel_Generator_UserChildTable="card" msprop:rel_Generator_ChildPropName="GetcardRows" msprop:rel_Generator_UserRelationName="FK_game_packs_card" msprop:rel_Generator_RelationVarName="relationFK_game_packs_card" msprop:rel_Generator_UserParentTable="game_packs" msprop:rel_Generator_ParentPropName="game_packsRow">
+      <xs:selector xpath=".//mstns:card" />
+      <xs:field xpath="mstns:game_pack_set_id" />
+    </xs:keyref>
+    <xs:keyref name="FK_pack_set_pack" refer="pack_set_Constraint1" msprop:rel_Generator_UserChildTable="pack" msprop:rel_Generator_ChildPropName="GetpackRows" msprop:rel_Generator_UserRelationName="FK_pack_set_pack" msprop:rel_Generator_ParentPropName="pack_setRow" msprop:rel_Generator_RelationVarName="relationFK_pack_set_pack" msprop:rel_Generator_UserParentTable="pack_set">
+      <xs:selector xpath=".//mstns:pack" />
+      <xs:field xpath="mstns:pack_set_id" />
+    </xs:keyref>
+    <xs:keyref name="game_tracking_winner_info" refer="game_tracking_Constraint1" msprop:rel_Generator_UserChildTable="winner_info" msprop:rel_Generator_ChildPropName="Getwinner_infoRows" msprop:rel_Generator_UserRelationName="game_tracking_winner_info" msprop:rel_Generator_ParentPropName="game_trackingRow" msprop:rel_Generator_RelationVarName="relationgame_tracking_winner_info" msprop:rel_Generator_UserParentTable="game_tracking">
+      <xs:selector xpath=".//mstns:winner_info" />
+      <xs:field xpath="mstns:game_tracking_id" />
+    </xs:keyref>
+    <xs:keyref name="winner_info_card" refer="card_Constraint1" msprop:rel_Generator_UserChildTable="winner_info" msprop:rel_Generator_ChildPropName="Getwinner_infoRows" msprop:rel_Generator_UserRelationName="winner_info_card" msprop:rel_Generator_RelationVarName="relationwinner_info_card" msprop:rel_Generator_UserParentTable="card" msprop:rel_Generator_ParentPropName="cardRow">
+      <xs:selector xpath=".//mstns:winner_info" />
+      <xs:field xpath="mstns:card_id" />
+    </xs:keyref>
+    <xs:keyref name="bingo_game_tracking_bingo_game_event_log" refer="game_tracking_Constraint1" msprop:rel_Generator_UserChildTable="game_event_log" msprop:rel_Generator_ChildPropName="Getgame_event_logRows" msprop:rel_Generator_UserRelationName="bingo_game_tracking_bingo_game_event_log" msprop:rel_Generator_RelationVarName="relationbingo_game_tracking_bingo_game_event_log" msprop:rel_Generator_UserParentTable="game_tracking" msprop:rel_Generator_ParentPropName="game_trackingRow">
+      <xs:selector xpath=".//mstns:game_event_log" />
+      <xs:field xpath="mstns:game_tracking_id" />
+    </xs:keyref>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="bingo_session_tracking_bingo_session_event_log" msdata:parent="session_tracking" msdata:child="session_event_log" msdata:parentkey="session_tracking_id" msdata:childkey="session_tracking_id" msprop:Generator_UserChildTable="session_event_log" msprop:Generator_ChildPropName="Getsession_event_logRows" msprop:Generator_UserRelationName="bingo_session_tracking_bingo_session_event_log" msprop:Generator_RelationVarName="relationbingo_session_tracking_bingo_session_event_log" msprop:Generator_UserParentTable="session_tracking" msprop:Generator_ParentPropName="bingo_session_trackingRow" />
+      <msdata:Relationship name="bingo_session_tracking_bingo_stream_state_cache" msdata:parent="session_tracking" msdata:child="stream_state_cache" msdata:parentkey="session_tracking_id" msdata:childkey="session_tracking_id" msprop:Generator_UserChildTable="stream_state_cache" msprop:Generator_ChildPropName="Getstream_state_cacheRows" msprop:Generator_UserRelationName="bingo_session_tracking_bingo_stream_state_cache" msprop:Generator_RelationVarName="relationbingo_session_tracking_bingo_stream_state_cache" msprop:Generator_UserParentTable="session_tracking" msprop:Generator_ParentPropName="bingo_session_trackingRow" />
+      <msdata:Relationship name="bingo_game_events_bingo_game_event_log" msdata:parent="game_events" msdata:child="game_event_log" msdata:parentkey="game_event_id" msdata:childkey="game_event_id" msprop:Generator_UserChildTable="game_event_log" msprop:Generator_ChildPropName="Getgame_event_logRows" msprop:Generator_UserRelationName="bingo_game_events_bingo_game_event_log" msprop:Generator_RelationVarName="relationbingo_game_events_bingo_game_event_log" msprop:Generator_UserParentTable="game_events" msprop:Generator_ParentPropName="bingo_game_eventsRow" />
+      <msdata:Relationship name="bingo_session_event_log_bingo_session_hotball" msdata:parent="session_event_log" msdata:child="session_hotball" msdata:parentkey="session_event_log_id" msdata:childkey="session_event_log_id" msprop:Generator_UserChildTable="session_hotball" msprop:Generator_ChildPropName="Getsession_hotballRows" msprop:Generator_UserRelationName="bingo_session_event_log_bingo_session_hotball" msprop:Generator_RelationVarName="relationbingo_session_event_log_bingo_session_hotball" msprop:Generator_UserParentTable="session_event_log" msprop:Generator_ParentPropName="bingo_session_event_logRow" />
+      <msdata:Relationship name="bingo_session_events_bingo_session_event_log" msdata:parent="session_events" msdata:child="session_event_log" msdata:parentkey="session_event_id" msdata:childkey="session_event_id" msprop:Generator_UserChildTable="session_event_log" msprop:Generator_ChildPropName="Getsession_event_logRows" msprop:Generator_UserRelationName="bingo_session_events_bingo_session_event_log" msprop:Generator_RelationVarName="relationbingo_session_events_bingo_session_event_log" msprop:Generator_UserParentTable="session_events" msprop:Generator_ParentPropName="bingo_session_eventsRow" />
+      <msdata:Relationship name="bingo_game_event_log_bingo_game_draw_blower" msdata:parent="game_event_log" msdata:child="draw_blower" msdata:parentkey="game_event_log_id" msdata:childkey="game_event_log_id" msprop:Generator_UserChildTable="draw_blower" msprop:Generator_ChildPropName="Getdraw_blowerRows" msprop:Generator_UserRelationName="bingo_game_event_log_bingo_game_draw_blower" msprop:Generator_RelationVarName="relationbingo_game_event_log_bingo_game_draw_blower" msprop:Generator_UserParentTable="game_event_log" msprop:Generator_ParentPropName="bingo_game_event_logRow" />
+      <msdata:Relationship name="bingo_blower_info_bingo_game_draw_blower" msdata:parent="blower_info" msdata:child="draw_blower" msdata:parentkey="blower_id" msdata:childkey="blower_id" msprop:Generator_UserChildTable="draw_blower" msprop:Generator_ChildPropName="Getdraw_blowerRows" msprop:Generator_UserRelationName="bingo_blower_info_bingo_game_draw_blower" msprop:Generator_RelationVarName="relationbingo_blower_info_bingo_game_draw_blower" msprop:Generator_UserParentTable="blower_info" msprop:Generator_ParentPropName="bingo_blower_infoRow" />
+      <msdata:Relationship name="session_tracking_winner_info" msdata:parent="session_tracking" msdata:child="winner_info" msdata:parentkey="session_tracking_id" msdata:childkey="session_tracking_id" msprop:Generator_UserChildTable="winner_info" msprop:Generator_ChildPropName="Getwinner_infoRows" msprop:Generator_UserRelationName="session_tracking_winner_info" msprop:Generator_ParentPropName="session_trackingRow" msprop:Generator_RelationVarName="relationsession_tracking_winner_info" msprop:Generator_UserParentTable="session_tracking" />
+      <msdata:Relationship name="player_player_pack_transaction" msdata:parent="player" msdata:child="player_pack_transaction" msdata:parentkey="player_id" msdata:childkey="player_id" msprop:Generator_UserChildTable="player_pack_transaction" msprop:Generator_ChildPropName="Getplayer_pack_transactionRows" msprop:Generator_UserRelationName="player_player_pack_transaction" msprop:Generator_ParentPropName="playerRow" msprop:Generator_RelationVarName="relationplayer_player_pack_transaction" msprop:Generator_UserParentTable="player" />
+      <msdata:Relationship name="session_tracking_player" msdata:parent="session_tracking" msdata:child="player" msdata:parentkey="session_tracking_id" msdata:childkey="session_tracking_id" msprop:Generator_UserChildTable="player" msprop:Generator_ChildPropName="GetplayerRows" msprop:Generator_UserRelationName="session_tracking_player" msprop:Generator_RelationVarName="relationsession_tracking_player" msprop:Generator_UserParentTable="session_tracking" msprop:Generator_ParentPropName="session_trackingRow" />
+      <msdata:Relationship name="player_pack_transaction_pack" msdata:parent="player_pack_transaction" msdata:child="pack" msdata:parentkey="transaction_id" msdata:childkey="transaction_id" msprop:Generator_UserChildTable="pack" msprop:Generator_ChildPropName="GetpackRows" msprop:Generator_UserRelationName="player_pack_transaction_pack" msprop:Generator_ParentPropName="player_pack_transactionRow" msprop:Generator_RelationVarName="relationplayer_pack_transaction_pack" msprop:Generator_UserParentTable="player_pack_transaction" />
+      <msdata:Relationship name="game_tracking_game_prizes" msdata:parent="game_tracking" msdata:child="game_prizes" msdata:parentkey="game_tracking_id" msdata:childkey="game_tracking_id" msprop:Generator_UserChildTable="game_prizes" msprop:Generator_ChildPropName="Getgame_prizesRows" msprop:Generator_UserRelationName="game_tracking_game_prizes" msprop:Generator_ParentPropName="game_trackingRow" msprop:Generator_RelationVarName="relationgame_tracking_game_prizes" msprop:Generator_UserParentTable="game_tracking" />
+      <msdata:Relationship name="bingo_game_tracking_bingo_stream_state_cache" msdata:parent="game_tracking" msdata:child="stream_state_cache" msdata:parentkey="game_tracking_id" msdata:childkey="game_tracking_id" msprop:Generator_UserChildTable="stream_state_cache" msprop:Generator_ChildPropName="Getstream_state_cacheRows" msprop:Generator_UserRelationName="bingo_game_tracking_bingo_stream_state_cache" msprop:Generator_RelationVarName="relationbingo_game_tracking_bingo_stream_state_cache" msprop:Generator_UserParentTable="game_tracking" msprop:Generator_ParentPropName="game_trackingRow" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

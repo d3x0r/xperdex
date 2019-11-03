@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual C# Express 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "inputhandlers", "inputhandlers\inputhandlers.csproj", "{69A83999-10E2-4847-AF22-CA403C4C8C69}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69A83999-10E2-4847-AF22-CA403C4C8C69}.Debug|x86.ActiveCfg = Debug|x86
+		{69A83999-10E2-4847-AF22-CA403C4C8C69}.Debug|x86.Build.0 = Debug|x86
+		{69A83999-10E2-4847-AF22-CA403C4C8C69}.Release|x86.ActiveCfg = Release|x86
+		{69A83999-10E2-4847-AF22-CA403C4C8C69}.Release|x86.Build.0 = Release|x86
+		{B0671EC1-493B-431B-9409-4102714A8EF0}.Debug|x86.ActiveCfg = Debug|x86
+		{B0671EC1-493B-431B-9409-4102714A8EF0}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

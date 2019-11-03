@@ -1,0 +1,150 @@
+using System;
+using System.Data;
+using System.Reflection;
+using System.Threading;
+using System.Windows.Forms;
+using BingoGameInterfaces;
+using xperdex.classes;
+
+namespace BingoGameCore4
+{
+	static internal class Local
+	{
+        internal static String output_dsn = Options.File( "RateRank.ini" )[Options.ProgramName + "/config"]["Output Database DSN", "MySQL"];
+		static DsnConnection _dsn;
+		internal static DsnConnection dsn
+		{
+			get
+			{
+				if (_dsn == null)
+				{
+					try
+					{
+						_dsn = new DsnConnection(Local.output_dsn);
+					}
+					catch
+					{
+						MessageBox.Show("( \"RateRank.ini\" )[\"config\"][\"Output Database DSN\"]=" + Local.output_dsn + " is invalid");
+						OptionEditor oe = new OptionEditor();
+						oe.ShowDialog();
+						_dsn = new DsnConnection(Local.output_dsn);
+					}
+				}
+				return _dsn;
+			}
+		}
+		static MySQLDataTable _points;
+		[MySQLPersistantTable]
+		internal static MySQLDataTable points
+		{
+			get
+			{
+				if (_points == null)
+				{
+					_points = new MySQLDataTable(dsn);
+					_points.TableName = "rate_rank_points2";
+					DataColumn dc = _points.Columns.Add("rate_rank_point_id", typeof(int));
+					dc.AutoIncrement = true;
+					_points.Columns.Add("away_count", typeof(int));
+					_points.Columns.Add("points", typeof(int));
+				}
+				return _points;
+			}
+		}
+
+		internal static bool ball_data_serialized;
+		internal static bool use_blower_for_balls;
+		static int ball_data_usage;
+		static Type ball_data_type;
+		static ConstructorInfo ball_data_constructor;
+		static BallDataInterface _ball_data;
+		
+		static internal BallDataInterface ball_data
+		{
+			get
+			{
+				if( ball_data_serialized )
+				{
+					if( _ball_data != null )
+					{
+						while( ball_data_usage > 1 )
+							Thread.Sleep( 500 );
+					}
+					else
+					{
+						//_ball_data = ball_data_constructor.Invoke( new object[]{blower} ) as BallDataInterface;
+					}
+					ball_data_usage++;
+					return _ball_data;
+				}
+				else
+				{
+					if( _ball_data == null )
+					{
+						_ball_data = ball_data_constructor.Invoke( null ) as BallDataInterface;
+					}
+					return _ball_data;
+				}
+			}
+			set
+			{
+				ball_data_usage--;
+			}
+		}
+
+		static internal BingoSQLTracking.BingoTracking bingo_tracking;
+
+		static bool store_to_database;
+		internal static bool StoreToDatabase
+		{
+			get
+			{
+				return store_to_database;
+			}
+			set
+			{
+				if( value && !store_to_database )
+				{
+					bingo_tracking = new BingoSQLTracking.BingoTracking();
+					try
+					{
+						bingo_tracking.ConnnectBingoTrackingToDatabase( "game_database4.db" );
+					}
+					catch( Exception e )
+					{
+						MessageBox.Show( "Failed to open database 'game_database4.db'\n" + e.Message );
+						throw ( e );
+					}
+					bingo_tracking.Create();
+
+					bingo_tracking.LoadCurrent();
+				}
+			}
+		}
+
+		static Local()
+		{
+
+			use_blower_for_balls = Options.Default["blower"]["config"]["Use Blower for balls?", "false"].Bool;
+			if( use_blower_for_balls )
+			{
+				ball_data_serialized = true;
+				//blower = new BingoGameCore4.Networking.FNetBlower();
+				//blower.enable_sql = true;
+				//blower.Start();
+				//blower.BallCalled += new BingoEvents.SimpleIntEvent( blower_BallCalled );
+				//ball_data_type = typeof( BallData.BallDataBlower );
+				//ball_data_constructor = ball_data_type.GetConstructor( new Type[]{ typeof( BingoGameCore4.Networking.FNetBlower ) } );
+			}
+			else
+			{
+				ball_data_type = typeof( BallData_Random75 );
+				ball_data_constructor = ball_data_type.GetConstructor( System.Type.EmptyTypes );
+			}
+		}
+
+		static void blower_BallCalled( object sender, BingoEvents.BingoSimpleIntEventArgs ball )
+		{
+		}
+	}
+}

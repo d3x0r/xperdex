@@ -1,0 +1,70 @@
+#!/bin/bash
+
+MORELIBS="System.Data.dll System.Windows.Forms.dll System.Drawing.dll"
+
+
+files()
+{
+ 	find . -name \*.resx| sed 's/ /\\ /' | sed 's/\.\\\ //'
+}
+
+RSRCS=$(files)
+RSRCS_OUT=$(find . -name \*.resx | sed 's/\.resx/\.resources/g; s/ /\\ /')
+
+
+convert_resources()
+{
+IFS=$'\n';
+for i in $RSRCS; do resgen2 -usesourcepath $(echo $i|sed 's/\\\ / /'); done
+}
+
+#convert_resources
+
+SRCS=" \
+DsnConnection.cs \
+Log.cs           \
+$(find Text_Layout/ -exec echo '{}' ';' | \
+sed 's/Text_Layout\/$//' |\
+sed 's/.*\.resx$//' )  \
+Fraction.cs \
+xperdex.cs \
+MySQLDataTable.cs                         \
+MySQLNameTable.cs                         \
+MySQLRelationTable.cs                     \
+PSI_Control.Designer.cs                   \
+PSI_Control.cs                            \
+PSI_Frame.Designer.cs                     \
+PSI_Frame.cs                              \
+PSI_Palette/ColorMatrix.Designer.cs       \
+PSI_Palette/ColorMatrix.cs                \
+PSI_Palette/ColorWell.Designer.cs         \
+PSI_Palette/ColorWell.cs                  \
+PSI_Palette/Gradient.Designer.cs          \
+PSI_Palette/Gradient.cs                   \
+PSI_Palette/Palette.Designer.cs           \
+PSI_Palette/Palette.cs                    \
+PSI_Palette/PalettePreset.Designer.cs     \
+PSI_Palette/PalettePreset.cs              \
+ReflectorButton.cs                        \
+ReflectorCanvas.cs                        \
+ReflectorCopyPaste.cs                     \
+ReflectorCreate.cs                        \
+ReflectorDropTarget.cs                    \
+ReflectorPersistance.cs                   \
+ReflectorPlugin.cs                        \
+ReflectorSecurity.cs                      \
+ReflectorVariable.cs                      \
+ReflectorWidget.cs                        \
+ReflectorEdit.cs                          \
+QueryNewName.cs                           \
+QueryNewName.Designer.cs                  \
+StaticDsnConnection.cs                    \
+Money.cs                                  \
+network_client.cs"
+
+IFS=$'\n '
+
+gmcs -out:../out/xperdex.classes.dll -target:library\
+ $SRCS \
+$(for i in $MORELIBS; do echo -r:$i; done ) \
+$(for i in $RSRCS_OUT; do echo -resource:$i; done )

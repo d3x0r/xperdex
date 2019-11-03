@@ -1,0 +1,43 @@
+
+M:\xperdex\games\voxelarium\PassByRefTest>mcs -debug+ -reference:../Voxelarium.Bullet/Types/Mono.Simd/My.Mono.Simd.dll Program.cs  
+Program.cs(87,11): error CS0170: Use of possibly unassigned field `xy'
+Program.cs(87,28): error CS0170: Use of possibly unassigned field `xy'
+Program.cs(87,45): error CS0170: Use of possibly unassigned field `xy'
+Program.cs(87,62): error CS0170: Use of possibly unassigned field `xy'
+Program.cs(88,5): error CS0170: Use of possibly unassigned field `m_el0'
+Program.cs(88,19): error CS0170: Use of possibly unassigned field `m_el1'
+Program.cs(88,33): error CS0170: Use of possibly unassigned field `m_el2'
+Program.cs(88,47): error CS0170: Use of possibly unassigned field `m_el3'
+Program.cs(89,5): error CS0170: Use of possibly unassigned field `m_el0'
+Program.cs(89,19): error CS0170: Use of possibly unassigned field `m_el1'
+Program.cs(89,33): error CS0170: Use of possibly unassigned field `m_el2'
+Program.cs(89,47): error CS0170: Use of possibly unassigned field `m_el3'
+Program.cs(90,5): error CS0170: Use of possibly unassigned field `m_el0'
+Program.cs(90,18): error CS0170: Use of possibly unassigned field `m_el1'
+Program.cs(90,31): error CS0170: Use of possibly unassigned field `m_el2'
+Program.cs(90,44): error CS0170: Use of possibly unassigned field `m_el3'
+Program.cs(86,4): error CS0171: Field `PassByRefTest.Program.Matrix.m_el0' must be fully assigned before control leaves the constructor
+Program.cs(86,4): error CS0171: Field `PassByRefTest.Program.Matrix.m_el1' must be fully assigned before control leaves the constructor
+Program.cs(86,4): error CS0171: Field `PassByRefTest.Program.Matrix.m_el2' must be fully assigned before control leaves the constructor
+Program.cs(86,4): error CS0171: Field `PassByRefTest.Program.Matrix.m_el3' must be fully assigned before control leaves the constructor
+Program.cs(174,10): error CS0103: The name `n' does not exist in the current context
+Program.cs(174,17): error CS0103: The name `n' does not exist in the current context
+Program.cs(174,30): error CS0103: The name `n' does not exist in the current context
+Program.cs(177,5): error CS0103: The name `val1' does not exist in the current context
+Program.cs(181,10): error CS0103: The name `n' does not exist in the current context
+Program.cs(181,17): error CS0103: The name `n' does not exist in the current context
+Program.cs(181,30): error CS0103: The name `n' does not exist in the current context
+Program.cs(184,5): error CS0103: The name `val2' does not exist in the current context
+Program.cs(186,39): error CS0103: The name `val2' does not exist in the current context
+Program.cs(195,10): error CS0103: The name `n' does not exist in the current context
+Program.cs(195,17): error CS0103: The name `n' does not exist in the current context
+Program.cs(195,30): error CS0103: The name `n' does not exist in the current context
+Program.cs(198,5): error CS0103: The name `val1' does not exist in the current context
+Program.cs(202,10): error CS0103: The name `n' does not exist in the current context
+Program.cs(202,17): error CS0103: The name `n' does not exist in the current context
+Program.cs(203,43): error CS1502: The best overloaded method match for `Mono.Simd.Vector4f.Set(out Mono.Simd.Vector4f, float, float, float, float)' has some invalid arguments
+M:\xperdex\games\voxelarium\PassByRefTest\../Voxelarium.Bullet/Types/Mono.Simd/My.Mono.Simd.dll (Location of the symbol related to previous error)
+Program.cs(203,52): error CS1503: Argument `#1' cannot convert `out PassByRefTest.Program.Vector' expression to type `out Mono.Simd.Vector4f'
+Program.cs(205,5): error CS0103: The name `val2' does not exist in the current context
+Program.cs(207,39): error CS0103: The name `val2' does not exist in the current context
+Compilation failed: 39 error(s), 0 warnings

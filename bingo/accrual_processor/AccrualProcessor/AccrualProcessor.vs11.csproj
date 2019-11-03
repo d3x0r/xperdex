@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{03AAE0B9-8632-4C8A-B2E1-BB4AC51DBE7F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ECube.AccrualProcessor</RootNamespace>
+    <AssemblyName>AccrualProcessor</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <BaseOutputPath>$(SolutionDir)/</BaseOutputPath>
+    <BaseIntermediateOutputPath>$(SolutionDir)/output/</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccrualGroup.cs" />
+    <Compile Include="AccrualProcessorDataSet.cs">
+      <DependentUpon>AccrualProcessorDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AccrualProcessorDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccrualProcessorDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AccrualSourceConfigurationEntry.cs" />
+    <Compile Include="bingoDataSourceTableSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bingoDataSourceTableSelector.designer.cs">
+      <DependentUpon>bingoDataSourceTableSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigurationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigurationForm.Designer.cs">
+      <DependentUpon>ConfigurationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConfigureAccrualForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigureAccrualForm.Designer.cs">
+      <DependentUpon>ConfigureAccrualForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditAccrualForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditAccrualForm.Designer.cs">
+      <DependentUpon>EditAccrualForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\bingoDataSourceTableSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\bingoDataSourceTableSelector.Designer.cs">
+      <DependentUpon>bingoDataSourceTableSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PayoutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayoutForm.Designer.cs">
+      <DependentUpon>PayoutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SessionSelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SessionSelectionForm.Designer.cs">
+      <DependentUpon>SessionSelectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SimpleCheckRelationGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XperdexInterface.Variables.cs" />
+    <Compile Include="XperdexPayButtonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XperdexPayButtonForm.Designer.cs">
+      <DependentUpon>XperdexPayButtonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XperdexPostButtonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XperdexPostButtonForm.Designer.cs">
+      <DependentUpon>XperdexPostButtonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XperdexSessionBrowserGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DatasetExploreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatasetExploreForm.Designer.cs">
+      <DependentUpon>DatasetExploreForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Local.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Session.cs" />
+    <Compile Include="XperdexDataBrowserLists.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XperdexInterface.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AccrualProcessorDataSet.xsc">
+      <DependentUpon>AccrualProcessorDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AccrualProcessorDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AccrualProcessorDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AccrualProcessorDataSet.xss">
+      <DependentUpon>AccrualProcessorDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="bingoDataSourceTableSelector.resx">
+      <DependentUpon>bingoDataSourceTableSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigurationForm.resx">
+      <DependentUpon>ConfigurationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfigureAccrualForm.resx">
+      <DependentUpon>ConfigureAccrualForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatasetExploreForm.resx">
+      <DependentUpon>DatasetExploreForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditAccrualForm.resx">
+      <DependentUpon>EditAccrualForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\bingoDataSourceTableSelector.resx">
+      <DependentUpon>bingoDataSourceTableSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayoutForm.resx">
+      <DependentUpon>PayoutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SessionSelectionForm.resx">
+      <DependentUpon>SessionSelectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XperdexPayButtonForm.resx">
+      <DependentUpon>XperdexPayButtonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XperdexPostButtonForm.resx">
+      <DependentUpon>XperdexPostButtonForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\xperdex.classes.2\xperdex.classes.vs11.4.0.csproj">
+      <Project>{041e5a37-8678-451e-9500-ee3d7864c092}</Project>
+      <Name>xperdex.classes.vs10.4.0</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\xperdex.core\xperdex.core.common\xperdex.core.common.4.0.vs11.csproj">
+      <Project>{865db13a-fec4-48e9-825a-449dd9d5a54c}</Project>
+      <Name>xperdex.core.common.4.0.vs10</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\xperdex.core\xperdex.core.interfaces\xperdex.core.interfaces.4.0.vs11.csproj">
+      <Project>{e5cd1a7b-221e-4b68-a1ea-0a801b35c399}</Project>
+      <Name>xperdex.core.interfaces.4.0.vs10</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\xperdex.gui\xperdex.gui.4.0.vs11.csproj">
+      <Project>{ef313f61-2db4-461b-9f89-b6bc53c96ba4}</Project>
+      <Name>xperdex.gui.4.0.vs10</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\bingoDataSet\bingoDataSet.vs11.csproj">
+      <Project>{e3611ab0-083d-4fae-ba38-b21cb590122c}</Project>
+      <Name>bingoDataSet.vs10</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

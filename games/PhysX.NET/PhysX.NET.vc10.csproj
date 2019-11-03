@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3D2DF1F1-4A8F-4A42-A05A-139D4DFE0269}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PhysX.NET</RootNamespace>
+    <AssemblyName>PhysX.NET</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <BaseIntermediateOutputPath>$(SolutionDir)/output/</BaseIntermediateOutputPath>
+    <BaseOutputPath>$(SolutionDir)/</BaseOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\PhysX.NET.XML</DocumentationFile>
+    <NoWarn>1591</NoWarn>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v2.0</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v2.0</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\PhysX.NET.XML</DocumentationFile>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v2.0</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v2.0</IntermediateOutputPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <Compile Include="ControllerManager.cs" />
+    <Compile Include="ControllerManagerAllocator.cs" />
+    <Compile Include="DoxyBindArray.cs" />
+    <Compile Include="DoxyBindObject.cs" />
+    <Compile Include="Manual.cs" />
+    <Compile Include="NxActiveTransform.cs" />
+    <Compile Include="NxActor.cs" />
+    <Compile Include="NxActorDesc.cs" />
+    <Compile Include="NxActorDescBase.cs" />
+    <Compile Include="NxActorDescType.cs" />
+    <Compile Include="NxActorDesc_Template.cs" />
+    <Compile Include="NxActorFlag.cs" />
+    <Compile Include="NxActorGroupPair.cs" />
+    <Compile Include="NxActorPairFilter.cs" />
+    <Compile Include="NxAllocateable.cs" />
+    <Compile Include="NxAllocatorDefault.cs" />
+    <Compile Include="NxAssertResponse.cs" />
+    <Compile Include="NxAxisType.cs" />
+    <Compile Include="NxBitField.cs" />
+    <Compile Include="NxBodyDesc.cs" />
+    <Compile Include="NxBodyFlag.cs" />
+    <Compile Include="NxBounds3.cs" />
+    <Compile Include="NxBox.cs" />
+    <Compile Include="NxBoxController.cs" />
+    <Compile Include="NxBoxControllerDesc.cs" />
+    <Compile Include="NxBoxForceFieldShape.cs" />
+    <Compile Include="NxBoxForceFieldShapeDesc.cs" />
+    <Compile Include="NxBoxShape.cs" />
+    <Compile Include="NxBoxShapeDesc.cs" />
+    <Compile Include="NxBroadPhaseType.cs" />
+    <Compile Include="NxBSphereMethod.cs" />
+    <Compile Include="NxCapsule.cs" />
+    <Compile Include="NxCapsuleClimbingMode.cs" />
+    <Compile Include="NxCapsuleController.cs" />
+    <Compile Include="NxCapsuleControllerDesc.cs" />
+    <Compile Include="NxCapsuleForceFieldShape.cs" />
+    <Compile Include="NxCapsuleForceFieldShapeDesc.cs" />
+    <Compile Include="NxCapsuleShape.cs" />
+    <Compile Include="NxCapsuleShapeDesc.cs" />
+    <Compile Include="NxCapsuleShapeFlag.cs" />
+    <Compile Include="NxCCDSkeleton.cs" />
+    <Compile Include="NxCCTInteractionFlag.cs" />
+    <Compile Include="NxCloth.cs" />
+    <Compile Include="NxClothAttachmentFlag.cs" />
+    <Compile Include="NxClothDesc.cs" />
+    <Compile Include="NxClothFlag.cs" />
+    <Compile Include="NxClothMesh.cs" />
+    <Compile Include="NxClothMeshDesc.cs" />
+    <Compile Include="NxClothMeshFlags.cs" />
+    <Compile Include="NxClothUserNotify.cs" />
+    <Compile Include="NxClothVertexAttachmentStatus.cs" />
+    <Compile Include="NxClothVertexFlags.cs" />
+    <Compile Include="NxCombineMode.cs" />
+    <Compile Include="NxCompartment.cs" />
+    <Compile Include="NxCompartmentDesc.cs" />
+    <Compile Include="NxCompartmentFlag.cs" />
+    <Compile Include="NxCompartmentType.cs" />
+    <Compile Include="NxConstraintDominance.cs" />
+    <Compile Include="NxContactPair.cs" />
+    <Compile Include="NxContactPairFlag.cs" />
+    <Compile Include="NxContactStreamIterator.cs" />
+    <Compile Include="NxController.cs" />
+    <Compile Include="NxControllerAction.cs" />
+    <Compile Include="NxControllerDesc.cs" />
+    <Compile Include="NxControllerFlag.cs" />
+    <Compile Include="NxControllerManager.cs" />
+    <Compile Include="NxControllerShapeHit.cs" />
+    <Compile Include="NxControllersHit.cs" />
+    <Compile Include="NxControllerType.cs" />
+    <Compile Include="NxConvexFlags.cs" />
+    <Compile Include="NxConvexForceFieldShape.cs" />
+    <Compile Include="NxConvexForceFieldShapeDesc.cs" />
+    <Compile Include="NxConvexMesh.cs" />
+    <Compile Include="NxConvexMeshDesc.cs" />
+    <Compile Include="NxConvexShape.cs" />
+    <Compile Include="NxConvexShapeDesc.cs" />
+    <Compile Include="NxCookingInterface.cs" />
+    <Compile Include="NxCookingParams.cs" />
+    <Compile Include="NxCookingValue.cs" />
+    <Compile Include="NxCylindricalJoint.cs" />
+    <Compile Include="NxCylindricalJointDesc.cs" />
+    <Compile Include="NxD6Joint.cs" />
+    <Compile Include="NxD6JointDesc.cs" />
+    <Compile Include="NxD6JointDriveType.cs" />
+    <Compile Include="NxD6JointFlag.cs" />
+    <Compile Include="NxD6JointMotion.cs" />
+    <Compile Include="NxDebugColor.cs" />
+    <Compile Include="NxDebugLine.cs" />
+    <Compile Include="NxDebugPoint.cs" />
+    <Compile Include="NxDebugRenderable.cs" />
+    <Compile Include="NxDebugTriangle.cs" />
+    <Compile Include="NxDeviceCode.cs" />
+    <Compile Include="NxDistanceJoint.cs" />
+    <Compile Include="NxDistanceJointDesc.cs" />
+    <Compile Include="NxDistanceJointFlag.cs" />
+    <Compile Include="NxEffector.cs" />
+    <Compile Include="NxEffectorDesc.cs" />
+    <Compile Include="NxEffectorType.cs" />
+    <Compile Include="NxEmitterShape.cs" />
+    <Compile Include="NxEmitterType.cs" />
+    <Compile Include="NxErrorCode.cs" />
+    <Compile Include="NxException.cs" />
+    <Compile Include="NxExtendedBounds3.cs" />
+    <Compile Include="NxExtendedBox.cs" />
+    <Compile Include="NxExtendedCapsule.cs" />
+    <Compile Include="NxExtendedMat34.cs" />
+    <Compile Include="NxExtendedPlane.cs" />
+    <Compile Include="NxExtendedRay.cs" />
+    <Compile Include="NxExtendedSegment.cs" />
+    <Compile Include="NxExtendedSphere.cs" />
+    <Compile Include="NxFilterOp.cs" />
+    <Compile Include="NxFixedJoint.cs" />
+    <Compile Include="NxFixedJointDesc.cs" />
+    <Compile Include="NxFluid.cs" />
+    <Compile Include="NxFluidCollisionMethod.cs" />
+    <Compile Include="NxFluidDesc.cs" />
+    <Compile Include="NxFluidDescBase.cs" />
+    <Compile Include="NxFluidDescType.cs" />
+    <Compile Include="NxFluidDesc_Template.cs" />
+    <Compile Include="NxFluidEmitter.cs" />
+    <Compile Include="NxFluidEmitterDesc.cs" />
+    <Compile Include="NxFluidEmitterEventType.cs" />
+    <Compile Include="NxFluidEmitterFlag.cs" />
+    <Compile Include="NxFluidEventType.cs" />
+    <Compile Include="NxFluidFlag.cs" />
+    <Compile Include="NxFluidPacket.cs" />
+    <Compile Include="NxFluidPacketData.cs" />
+    <Compile Include="NxFluidSimulationMethod.cs" />
+    <Compile Include="NxFluidUserNotify.cs" />
+    <Compile Include="NxForceField.cs" />
+    <Compile Include="NxForceFieldCoordinates.cs" />
+    <Compile Include="NxForceFieldDesc.cs" />
+    <Compile Include="NxForceFieldFlags.cs" />
+    <Compile Include="NxForceFieldKernel.cs" />
+    <Compile Include="NxForceFieldLinearKernel.cs" />
+    <Compile Include="NxForceFieldLinearKernelDesc.cs" />
+    <Compile Include="NxForceFieldShape.cs" />
+    <Compile Include="NxForceFieldShapeDesc.cs" />
+    <Compile Include="NxForceFieldShapeGroup.cs" />
+    <Compile Include="NxForceFieldShapeGroupDesc.cs" />
+    <Compile Include="NxForceFieldShapeGroupFlags.cs" />
+    <Compile Include="NxForceFieldType.cs" />
+    <Compile Include="NxForceMode.cs" />
+    <Compile Include="NxForcFieldKernelType.cs" />
+    <Compile Include="NxFoundationSDK.cs" />
+    <Compile Include="NxGroupsMask.cs" />
+    <Compile Include="NxHeightField.cs" />
+    <Compile Include="NxHeightFieldAxis.cs" />
+    <Compile Include="NxHeightFieldDesc.cs" />
+    <Compile Include="NxHeightFieldFlags.cs" />
+    <Compile Include="NxHeightFieldFormat.cs" />
+    <Compile Include="NxHeightFieldSample.cs" />
+    <Compile Include="NxHeightFieldShape.cs" />
+    <Compile Include="NxHeightFieldShapeDesc.cs" />
+    <Compile Include="NxHeightFieldTessFlag.cs" />
+    <Compile Include="NxHWVersion.cs" />
+    <Compile Include="NxIntegrals.cs" />
+    <Compile Include="NxInterface.cs" />
+    <Compile Include="NxInterfaceStats.cs" />
+    <Compile Include="NxInterfaceType.cs" />
+    <Compile Include="NxInternalArray.cs" />
+    <Compile Include="NxInternalFormat.cs" />
+    <Compile Include="NxJoint.cs" />
+    <Compile Include="NxJointDesc.cs" />
+    <Compile Include="NxJointDriveDesc.cs" />
+    <Compile Include="NxJointFlag.cs" />
+    <Compile Include="NxJointLimitDesc.cs" />
+    <Compile Include="NxJointLimitPairDesc.cs" />
+    <Compile Include="NxJointLimitSoftDesc.cs" />
+    <Compile Include="NxJointLimitSoftPairDesc.cs" />
+    <Compile Include="NxJointProjectionMode.cs" />
+    <Compile Include="NxJointState.cs" />
+    <Compile Include="NxJointType.cs" />
+    <Compile Include="NxMat33Shadow.cs" />
+    <Compile Include="NxMaterial.cs" />
+    <Compile Include="NxMaterialDesc.cs" />
+    <Compile Include="NxMaterialFlag.cs" />
+    <Compile Include="NxMath.cs" />
+    <Compile Include="NxMatrixType.cs" />
+    <Compile Include="NxMemoryType.cs" />
+    <Compile Include="NxMeshData.cs" />
+    <Compile Include="NxMeshDataDirtyBufferFlags.cs" />
+    <Compile Include="NxMeshDataFlags.cs" />
+    <Compile Include="NxMeshFlags.cs" />
+    <Compile Include="NxMeshPagingMode.cs" />
+    <Compile Include="NxMeshShapeFlag.cs" />
+    <Compile Include="NxMotorDesc.cs" />
+    <Compile Include="NxPairFlag.cs" />
+    <Compile Include="NxParameter.cs" />
+    <Compile Include="NxParticleData.cs" />
+    <Compile Include="NxParticleDataFlag.cs" />
+    <Compile Include="NxParticleFlag.cs" />
+    <Compile Include="NxParticleIdData.cs" />
+    <Compile Include="NxParticleUpdateData.cs" />
+    <Compile Include="NxPhysicsSDK.cs" />
+    <Compile Include="NxPhysicsSDKDesc.cs" />
+    <Compile Include="NxPlane.cs" />
+    <Compile Include="NxPlaneShape.cs" />
+    <Compile Include="NxPlaneShapeDesc.cs" />
+    <Compile Include="NxPlatform.cs" />
+    <Compile Include="NxPMap.cs" />
+    <Compile Include="NxPointInPlaneJoint.cs" />
+    <Compile Include="NxPointInPlaneJointDesc.cs" />
+    <Compile Include="NxPointOnLineJoint.cs" />
+    <Compile Include="NxPointOnLineJointDesc.cs" />
+    <Compile Include="NxPool.cs" />
+    <Compile Include="NxPrismaticJoint.cs" />
+    <Compile Include="NxPrismaticJointDesc.cs" />
+    <Compile Include="NxProfileData.cs" />
+    <Compile Include="NxProfilerData.cs" />
+    <Compile Include="NxProfileZone.cs" />
+    <Compile Include="NxProfileZoneName.cs" />
+    <Compile Include="NxPruningStructure.cs" />
+    <Compile Include="NxPulleyJoint.cs" />
+    <Compile Include="NxPulleyJointDesc.cs" />
+    <Compile Include="NxPulleyJointFlag.cs" />
+    <Compile Include="NxQueryFlags.cs" />
+    <Compile Include="NxQueryReportResult.cs" />
+    <Compile Include="NxRay.cs" />
+    <Compile Include="NxRaycastBit.cs" />
+    <Compile Include="NxRaycastHit.cs" />
+    <Compile Include="NxRemoteDebugger.cs" />
+    <Compile Include="NxRemoteDebuggerEventListener.cs" />
+    <Compile Include="NxRemoteDebuggerObjectType.cs" />
+    <Compile Include="NxRevoluteJoint.cs" />
+    <Compile Include="NxRevoluteJointDesc.cs" />
+    <Compile Include="NxRevoluteJointFlag.cs" />
+    <Compile Include="NxScene.cs" />
+    <Compile Include="NxSceneDesc.cs" />
+    <Compile Include="NxSceneFlags.cs" />
+    <Compile Include="NxSceneLimits.cs" />
+    <Compile Include="NxSceneQuery.cs" />
+    <Compile Include="NxSceneQueryDesc.cs" />
+    <Compile Include="NxSceneQueryExecuteMode.cs" />
+    <Compile Include="NxSceneQueryReport.cs" />
+    <Compile Include="NxSceneStatistic.cs" />
+    <Compile Include="NxSceneStats.cs" />
+    <Compile Include="NxSceneStats2.cs" />
+    <Compile Include="NxSDKCreateError.cs" />
+    <Compile Include="NxSDKCreationFlag.cs" />
+    <Compile Include="NxSegment.cs" />
+    <Compile Include="NxSepAxis.cs" />
+    <Compile Include="NxShape.cs" />
+    <Compile Include="NxShapeCompartmentType.cs" />
+    <Compile Include="NxShapeDesc.cs" />
+    <Compile Include="NxShapeFlag.cs" />
+    <Compile Include="NxShapePairStreamFlags.cs" />
+    <Compile Include="NxShapesType.cs" />
+    <Compile Include="NxShapeType.cs" />
+    <Compile Include="NxSimpleTriangleMesh.cs" />
+    <Compile Include="NxSimulationStatus.cs" />
+    <Compile Include="NxSimulationType.cs" />
+    <Compile Include="NxSoftBody.cs" />
+    <Compile Include="NxSoftBodyAttachmentFlag.cs" />
+    <Compile Include="NxSoftBodyDesc.cs" />
+    <Compile Include="NxSoftBodyFlag.cs" />
+    <Compile Include="NxSoftBodyMesh.cs" />
+    <Compile Include="NxSoftBodyMeshDesc.cs" />
+    <Compile Include="NxSoftBodyMeshFlags.cs" />
+    <Compile Include="NxSoftBodySplitPair.cs" />
+    <Compile Include="NxSoftBodySplitPairData.cs" />
+    <Compile Include="NxSoftBodyUserNotify.cs" />
+    <Compile Include="NxSoftBodyVertexFlags.cs" />
+    <Compile Include="NxSphere.cs" />
+    <Compile Include="NxSphereForceFieldShape.cs" />
+    <Compile Include="NxSphereForceFieldShapeDesc.cs" />
+    <Compile Include="NxSphereShape.cs" />
+    <Compile Include="NxSphereShapeDesc.cs" />
+    <Compile Include="NxSphericalJoint.cs" />
+    <Compile Include="NxSphericalJointDesc.cs" />
+    <Compile Include="NxSphericalJointFlag.cs" />
+    <Compile Include="NxSpringAndDamperEffector.cs" />
+    <Compile Include="NxSpringAndDamperEffectorDesc.cs" />
+    <Compile Include="NxSpringDesc.cs" />
+    <Compile Include="NxStandardFences.cs" />
+    <Compile Include="NxStream.cs" />
+    <Compile Include="NxSweepCache.cs" />
+    <Compile Include="NxSweepFlags.cs" />
+    <Compile Include="NxSweepQueryHit.cs" />
+    <Compile Include="NxTask.cs" />
+    <Compile Include="NxThreadPollResult.cs" />
+    <Compile Include="NxThreadPriority.cs" />
+    <Compile Include="NxThreadWait.cs" />
+    <Compile Include="NxTimeStepMethod.cs" />
+    <Compile Include="NxTireFunctionDesc.cs" />
+    <Compile Include="NxTriangle.cs" />
+    <Compile Include="NxTriangle32.cs" />
+    <Compile Include="NxTriangleCollisionFlag.cs" />
+    <Compile Include="NxTriangleFlags.cs" />
+    <Compile Include="NxTriangleMesh.cs" />
+    <Compile Include="NxTriangleMeshDesc.cs" />
+    <Compile Include="NxTriangleMeshShape.cs" />
+    <Compile Include="NxTriangleMeshShapeDesc.cs" />
+    <Compile Include="NxUserActorPairFiltering.cs" />
+    <Compile Include="NxUserAllocator.cs" />
+    <Compile Include="NxUserAllocatorDefault.cs" />
+    <Compile Include="NxUserContactModify.cs" />
+    <Compile Include="NxUserContactReport.cs" />
+    <Compile Include="NxUserControllerHitReport.cs" />
+    <Compile Include="NxUserEntityReport.cs" />
+    <Compile Include="NxUserNotify.cs" />
+    <Compile Include="NxUserOutputStream.cs" />
+    <Compile Include="NxUserRaycastReport.cs" />
+    <Compile Include="NxUserScheduler.cs" />
+    <Compile Include="NxUserTriggerReport.cs" />
+    <Compile Include="NxUserWheelContactModify.cs" />
+    <Compile Include="NxUtilLib.cs" />
+    <Compile Include="NxWheelContactData.cs" />
+    <Compile Include="NxWheelShape.cs" />
+    <Compile Include="NxWheelShapeDesc.cs" />
+    <Compile Include="NxWheelShapeFlags.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SweptVolumeType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+</Project>

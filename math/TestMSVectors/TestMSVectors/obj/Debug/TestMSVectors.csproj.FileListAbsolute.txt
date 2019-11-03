@@ -1,0 +1,5 @@
+M:\xperdex\math\TestMSVectors\TestMSVectors\bin\Debug\TestMSVectors.exe.config
+M:\xperdex\math\TestMSVectors\TestMSVectors\bin\Debug\TestMSVectors.exe
+M:\xperdex\math\TestMSVectors\TestMSVectors\bin\Debug\TestMSVectors.pdb
+M:\xperdex\math\TestMSVectors\TestMSVectors\obj\Debug\TestMSVectors.exe
+M:\xperdex\math\TestMSVectors\TestMSVectors\obj\Debug\TestMSVectors.pdb

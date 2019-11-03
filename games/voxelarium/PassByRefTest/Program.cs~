@@ -1,0 +1,696 @@
+//#define USE_MY_SIMD
+//#define USE_SCALAR
+#define SCALAR_IS_DOUBLE
+#define BASE_IS_DOUBLE
+//#define USE_SIMD
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Text;
+using System.Threading;
+using System.Runtime.CompilerServices;
+using Mono.Simd;
+
+namespace PassByRefTest
+{
+	class Program
+	{
+		static Stopwatch sw;
+		struct Scalar
+		{
+#if SCALAR_IS_DOUBLE
+			public double v;
+			public static implicit operator Scalar( double i ) { return new Scalar { v = i }; }
+			public static implicit operator double( Scalar p ) { return p.v; }
+			public static implicit operator Scalar( float i ) { return new Scalar { v = i }; }
+			public static implicit operator float( Scalar p ) { return (float)p.v; }
+
+#else
+			public float v;
+			public static implicit operator Scalar( double i ) { return new Scalar { v = (float)i }; }
+			public static implicit operator double( Scalar p ) { return p.v; }
+			public static implicit operator Scalar( float i ) { return new Scalar { v = i }; }
+			public static implicit operator float( Scalar p ) { return p.v; }
+#endif
+		}
+
+		struct Vector
+		{
+#if USE_SCALAR
+			public Scalar x, y, z, w;
+			//public Scalar x { get { return x; } set{ x = value; } }
+			//public Scalar y { get { return y; } set{ y = value; } }
+			//public Scalar z { get { return z; } set{ z = value; } }
+			//public Scalar w { get { return w; } set{ w = value; } }
+
+			[MethodImpl( MethodImplOptions.AggressiveInlining )]
+			public Vector( Scalar a, Scalar b, Scalar c )
+			{
+				x = a; y = b; z = c; w = 0;
+			}
+			[MethodImpl( MethodImplOptions.AggressiveInlining )]
+			public Vector( Scalar a, Scalar b, Scalar c, Scalar d )
+			{
+				x = a; y = b; z = c; w = d;
+			}
+			[MethodImpl( MethodImplOptions.AggressiveInlining )]
+			public static void Set( out Vector result, Scalar a, Scalar b, Scalar c )
+			{
+				result.x = a; result.y = b; result.z = c; result.w = 0;
+			}
+			[MethodImpl( MethodImplOptions.AggressiveInlining )]
+			public static void Set( out Vector result, Scalar a, Scalar b, Scalar c, Scalar d )
+			{
+				result.x = a; result.y = b; result.z = c; result.w = d;
+			}
+
+			[MethodImpl( MethodImplOptions.AggressiveInlining )]
+			public static Vector operator /( Vector value1, double divider )
+			{
+				double num = 1f / divider;
+
+				return new Vector(
+				 value1.x * num,
+				value1.y * num,
+				 value1.z * num,
+				 value1.w * num );
+			}
+
+			[MethodImpl( MethodImplOptions.AggressiveInlining )]
+			public static void Div( ref Vector value1, double divider, out Vector result )
+			{
+				double num = 1f / divider;
+				result.x = value1.x * num;
+				result.y = value1.y * num;
+				result.z = value1.z * num;
+				result.w = value1.w * num;
+			}
+#else
+#  if USE_SIMD
+			public Vector2d xy, zw;
+			public double x { get { return xy.X; } set { xy.X = value; } }
+			public double y { get { return xy.Y; } set { xy.Y = value; } }
+			public double z { get { return zw.X; } set { xy.X = value; } }
+			public double w { get { return zw.Y; } set { xy.Y = value; } }
+			[MethodImpl( MethodImplOptions.AggressiveInlining )]
+			public Vector( double a, double b, double c )
+			{
+#      if USE_MY_SIMD
+				Vector2d.Set( out xy, a, b );
+				Vector2d.Set( out zw, c, 0 );
+#    else
+				xy = new Vector2d( a, b );
+				zw = new Vector2d( c, 0 );
+#    endif
+			}
+			[MethodImpl( MethodImplOptions.AggressiveInlining )]
+			public Vector( double a, double b, double c, double d )
+			{
+#    if USE_MY_SIMD
+				Vector2d.Set( out xy, a, b );
+				Vector2d.Set( out zw, c, d );
+#    else
+				xy = new Vector2d( a, b );
+				zw = new Vector2d( c, d );
+#    endif
+			}
+			[MethodImpl( MethodImplOptions.AggressiveInlining )]
+			public static void Set( out Vector result, double a, double b, double c )
+			{
+#    if USE_MY_SIMD
+				Vector2d.Set( out result.xy, a, b );
+				Vector2d.Set( out result.zw, c, 0 );
+#    else
+				result.xy = new Vector2d( a, b );
+				result.zw = new Vector2d( c, 0 );
+#    endif
+			}
+			[MethodImpl( MethodImplOptions.AggressiveInlining )]
+			public static void Set( out Vector result, double a, double b, double c, double d )
+			{
+#    if USE_MY_SIMD
+				Vector2d.Set( out result.xy, a, b );
+				Vector2d.Set( out result.zw, c, d );
+#    else
+				result.xy = new Vector2d( a, b );
+				result.zw = new Vector2d( c, d );
+#    endif
+			}
+
+#  if asdfsadf
+                        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static Vector operator /(Vector value1, float divider)
+        {
+            double num = 1 / divider;
+            Vector vector4;
+            vector4.xy.X = value1.x * num;
+            vector4.xy.Y = value1.y * num;
+            vector4.zw.X = value1.z * num;
+            vector4.zw.Y = value1.w * num;
+            return vector4;
+        }
+#  endif
+			[MethodImpl( MethodImplOptions.AggressiveInlining )]
+			public static Vector operator /( Vector value1, double divider )
+			{
+				double num = 1f / divider;
+
+				return new Vector(
+				 value1.x * num,
+				value1.y * num,
+				 value1.z * num,
+				 value1.w * num );
+			}
+
+			[MethodImpl( MethodImplOptions.AggressiveInlining )]
+			public static void Div( ref Vector value1, double divider, out Vector result )
+			{
+				double num = 1f / divider;
+#    if USE_MY_SIMD
+				Vector2d.Set( out result.xy, value1.x * num, value1.y * num );
+				Vector2d.Set( out result.zw, value1.z * num, value1.w * num );
+#    else
+				result.xy = new Vector2d( value1.x * num, value1.y * num );
+				result.zw = new Vector2d( value1.z * num, value1.w * num );
+#    endif
+			}
+#  else
+#    if BASE_IS_DOUBLE
+			public double x, y, z, w;
+			//public double x { get { return x; } set{ x = value; } }
+			//public double y { get { return y; } set{ y = value; } }
+			//public double z { get { return z; } set{ z = value; } }
+			//public double w { get { return w; } set{ w = value; } }
+
+			[MethodImpl( MethodImplOptions.AggressiveInlining )]
+			public Vector( double a, double b, double c )
+			{
+				x = a; y = b; z = c; w = 0;
+			}
+			[MethodImpl( MethodImplOptions.AggressiveInlining )]
+			public Vector( double a, double b, double c, double d )
+			{
+				x = a; y = b; z = c; w = d;
+			}
+			[MethodImpl( MethodImplOptions.AggressiveInlining )]
+			public static void Set( out Vector result, double a, double b, double c )
+			{
+				result.x = a; result.y = b; result.z = c; result.w = 0;
+			}
+			[MethodImpl( MethodImplOptions.AggressiveInlining )]
+			public static void Set( out Vector result, double a, double b, double c, double d )
+			{
+				result.x = a; result.y = b; result.z = c; result.w = d;
+			}
+
+			[MethodImpl( MethodImplOptions.AggressiveInlining )]
+			public static Vector operator /( Vector value1, double divider )
+			{
+				double num = 1f / divider;
+
+				return new Vector(
+				 value1.x * num,
+				value1.y * num,
+				 value1.z * num,
+				 value1.w * num );
+			}
+
+			[MethodImpl( MethodImplOptions.AggressiveInlining )]
+			public static void DivOut( ref Vector value1, double divider, out Vector result )
+			{
+				double num = 1f / divider;
+				result.x = value1.x * num;
+				result.y = value1.y * num;
+				result.z = value1.z * num;
+				result.w = value1.w * num;
+			}
+			public static void DivRef( ref Vector value1, double divider, ref Vector result )
+			{
+				double num = 1f / divider;
+				result.x = value1.x * num;
+				result.y = value1.y * num;
+				result.z = value1.z * num;
+				result.w = value1.w * num;
+			}
+#    else
+			public float x, y, z, w;
+			//public float x { get { return x; } set{ x = value; } }
+			//public float y { get { return y; } set{ y = value; } }
+			//public float z { get { return z; } set{ z = value; } }
+			//public float w { get { return w; } set{ w = value; } }
+
+			[MethodImpl( MethodImplOptions.AggressiveInlining )]
+			public Vector( float a, float b, float c )
+			{
+				x = a; y = b; z = c; w = 0;
+			}
+			[MethodImpl( MethodImplOptions.AggressiveInlining )]
+			public Vector( float a, float b, float c, float d )
+			{
+				x = a; y = b; z = c; w = d;
+			}
+			[MethodImpl( MethodImplOptions.AggressiveInlining )]
+			public static void Set( out Vector result, float a, float b, float c )
+			{
+				result.x = a; result.y = b; result.z = c; result.w = 0;
+			}
+			[MethodImpl( MethodImplOptions.AggressiveInlining )]
+			public static void Set( out Vector result, float a, float b, float c, float d )
+			{
+				result.x = a; result.y = b; result.z = c; result.w = d;
+			}
+
+			[MethodImpl( MethodImplOptions.AggressiveInlining )]
+			public static Vector operator /( Vector value1, float divider )
+			{
+				float num = 1f / divider;
+
+				return new Vector(
+				 value1.x * num,
+				value1.y * num,
+				 value1.z * num,
+				 value1.w * num );
+			}
+
+			[MethodImpl( MethodImplOptions.AggressiveInlining )]
+			public static void Div( ref Vector value1, float divider, out Vector result )
+			{
+				float num = 1f / divider;
+				result.x = value1.x * num;
+				result.y = value1.y * num;
+				result.z = value1.z * num;
+				result.w = value1.w * num;
+			}
+#    endif
+#  endif
+#endif
+		}
+
+#if asdfasdf
+		struct Matrix
+		{
+			//Scalar a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p;
+			Vector m_el0;
+			Vector m_el1;
+			Vector m_el2;
+			Vector m_el3;
+			public Matrix( Scalar xx, Scalar xy, Scalar xz,
+				Scalar yx, Scalar yy, Scalar yz,
+				Scalar zx, Scalar zy, Scalar zz )
+			{
+				m_el0.xy.x = xx; m_el1.xy.x = xy; m_el2.xy.x = xz; m_el3.xy.x = 0;
+				m_el0.xy.y = yx; m_el1.xy.y = yy; m_el2.xy.y = yz; m_el3.xy.y = 0;
+				m_el0.zw.x = zx; m_el1.zw.x = zy; m_el2.zw.x = zz; m_el3.zw.x = 0;
+				m_el0.zw.y = 0; m_el1.zw.y = 0; m_el2.zw.y = 0; m_el3.zw.y = 1;
+			}
+
+			public void setValue( Scalar xx, Scalar xy, Scalar xz,
+				Scalar yx, Scalar yy, Scalar yz,
+				Scalar zx, Scalar zy, Scalar zz )
+			{
+				m_el0.x = xx; m_el1.x = xy; m_el2.x = xz;
+				m_el0.y = yx; m_el1.y = yy; m_el2.y = yz;
+				m_el0.z = zx; m_el1.z = zy; m_el2.z = zz;
+			}
+			public void setIdentity()
+			{
+				setValue( 1.0, 0, 0,
+					0, 1.0, 0,
+					0, 0, 1.0 );
+			}
+			public void setIdentity2()
+			{
+				this = Identity;
+			}
+
+			public static Matrix Identity = new Matrix(
+				1.0, 0, 0,
+				0, 1.0, 0,
+				0, 0, 1.0 );
+
+			public Vector getNewVector()
+			{
+				return new Vector(1,2,0);
+			}
+
+			public Vector getVector()
+			{
+				return m_el0;
+			}
+			public void getVector( out Vector result )
+			{
+				result = m_el0;
+			}
+
+		}
+#endif
+		static void r1( ref Vector v )
+		{
+			//v.x = 10;
+		}
+
+		static void r2( Vector v )
+		{
+		}
+
+#if asdfasdf
+		static void r3( ref Matrix m )
+		{
+		}
+
+		static void r4( Matrix m )
+		{
+		}
+#endif
+		static Scalar r5( ref Scalar d )
+		{
+			return Math.Acos( d.v );
+		}
+
+		static Scalar r6( Scalar d )
+		{
+			return Math.Acos( d.v );
+		}
+		static Scalar r7( ref Scalar d )
+		{
+			return Math.Acos( d );
+		}
+
+		static Scalar r8( Scalar d )
+		{
+			return Math.Acos( d );
+		}
+
+		static void DoSomething( ref Vector4f d )
+		{
+			d.Y = d.X;
+		}
+
+		static void Test1()
+		{
+			Vector4f v;
+			Vector4f v2;
+			int n;
+			long val1;
+			long val2;
+			//Debugger.Break();
+			sw.Reset();
+			sw.Start();
+			for( n = 0; n < 1000000; n++ )
+			{
+				v = new Vector4f( 1.0f, 2.0f, 3.0f, 4.0f );
+				//v2 = v * 4.0f;
+				//DoSomething( ref v2 );              
+			}
+			sw.Stop();
+			val1 = sw.ElapsedTicks;
+			Console.WriteLine( "new vec4f = " + sw.ElapsedTicks );
+			sw.Reset();
+			sw.Start();
+			for( n = 0; n < 1000000; n++ )
+				Vector4f.Set( out v, 1.0f, 2.0f, 3.0f, 4.0f );
+			sw.Stop();
+			val2 = sw.ElapsedTicks;
+			Console.WriteLine( "set vec4f = " + sw.ElapsedTicks );
+			Console.WriteLine( "del = " + ( ( val2 * 1000 ) / val1 ) + "/1000" );
+
+		}
+		static void Test2()
+		{
+			Vector v;
+			int n;
+			long val1;
+			long val2;
+
+			//Debugger.Break();
+			sw.Reset();
+			sw.Start();
+			for( n = 0; n < 1000000; n++ )
+#if USE_SCALAR
+#  if SCALAR_IS_DOUBLE
+				v = new Vector( 1.0, 2.0, 3.0, 4.0 );
+#  else
+				v = new Vector( 1.0f, 2.0f, 3.0f, 4.0f );
+#  endif
+#else
+#  if BASE_IS_DOUBLE
+				v = new Vector( 1.0, 2.0, 3.0, 4.0 );
+#  else
+				v = new Vector( 1.0f, 2.0f, 3.0f, 4.0f );
+#  endif
+#endif
+			sw.Stop();
+			val1 = sw.ElapsedTicks;
+			Console.WriteLine( "new Vec = " + sw.ElapsedTicks );
+			sw.Reset();
+			sw.Start();
+			for( n = 0; n < 1000000; n++ )
+#if USE_SCALAR
+#  if SCALAR_IS_DOUBLE
+				Vector.Set( out v, 1.0, 2.0, 3.0, 4.0 );
+#  else
+				Vector.Set( out v, 1.0f, 2.0f, 3.0f, 4.0f );
+#  endif
+#else
+#  if BASE_IS_DOUBLE
+				Vector.Set( out v, 1.0, 2.0, 3.0, 4.0 );
+#  else
+				Vector.Set( out v, 1.0f, 2.0f, 3.0f, 4.0f );
+#  endif
+#endif
+			sw.Stop();
+			val2 = sw.ElapsedTicks;
+			Console.WriteLine( "set Vec = " + sw.ElapsedTicks );
+			Console.WriteLine( "del = " + ( ( val2 * 1000 ) / val1 ) + "/1000" );
+
+		}
+		static void Test3()
+		{
+			Vector4f v = new Vector4f();
+			int n;
+			long val1;
+			long val2;
+
+			//Debugger.Break();
+			sw.Reset();
+			sw.Start();
+			for( n = 0; n < 1000000; n++ )
+				v = v * ( 1.0f / 3.0f );
+			sw.Stop();
+			val1 = sw.ElapsedTicks;
+			Console.WriteLine( "mult2 = " + sw.ElapsedTicks );
+			sw.Reset();
+			sw.Start();
+			for( n = 0; n < 1000000; n++ )
+				//v.Mult( 3.0f, out v );
+				Vector4f.Mult( ref v, 3.0f, out v );
+			sw.Stop();
+			val2 = sw.ElapsedTicks;
+			Console.WriteLine( "out mult2 = " + sw.ElapsedTicks );
+			Console.WriteLine( "del = " + ( ( val2 * 1000 ) / val1 ) + "/1000" );
+
+		}
+		static void Test4()
+		{
+			Vector4f v = new Vector4f();
+			int n;
+			long val1;
+			long val2;
+
+			sw.Reset();
+			sw.Start();
+			//Debugger.Break();
+			for( n = 0; n < 1000000; n++ )
+				v = v * ( 1.0f / 3.0f );
+			sw.Stop();
+			val1 = sw.ElapsedTicks;
+			Console.WriteLine( "mult1 = " + sw.ElapsedTicks );
+			sw.Reset();
+			sw.Start();
+			for( n = 0; n < 1000000; n++ )
+				v.Mult( 3.0f, ref v );
+			//Vector4f.Mult( ref v, 3.0f, ref v );
+			sw.Stop();
+			val2 = sw.ElapsedTicks;
+			Console.WriteLine( "out mult1 = " + sw.ElapsedTicks );
+			Console.WriteLine( "del = " + ( ( val2 * 1000 ) / val1 ) + "/1000" );
+
+		}
+
+
+		static void Main( string[] args )
+		{
+			Vector4f v4;
+			Vector v = new Vector();
+			Vector v2 = new Vector();
+			//Matrix m = new Matrix();
+			//Debugger.Break();
+			Scalar d = 1.0;
+			long val1;
+			long val2;
+			long val3;
+			sw = new Stopwatch();
+			int n;
+			for( int c = 0; c < 10000; c++ )
+			{
+
+				Console.Clear();
+
+				Test1();
+				Test2();
+				Test3();
+				Test4();
+				sw.Reset();
+				sw.Start();
+				for( n = 0; n < 1000000; n++ )
+					v2 = v / 1.0f;
+				sw.Stop();
+				val1 = sw.ElapsedTicks;
+				Console.WriteLine( "div op = " + sw.ElapsedTicks );
+				sw.Reset();
+				sw.Start();
+#if BASE_IS_DOUBLE
+				for( n = 0; n < 1000000; n++ )
+					v2 = v / 1.0d;
+#else
+				for( n = 0; n < 1000000; n++ )
+					v2 = v / 1.0f;
+#endif
+				sw.Stop();
+				val2 = sw.ElapsedTicks;
+				Console.WriteLine( "div op2= " + sw.ElapsedTicks );
+				Console.WriteLine( "del = " + ( ( val2 * 1000 ) / val1 ) + "/1000" );
+
+				sw.Reset();
+				sw.Start();
+				for( n = 0; n < 1000000; n++ )
+                                {
+					Vector.DivOut( ref v, 5.0f, out v2 );
+                                        }
+				sw.Stop();
+				val3 = sw.ElapsedTicks;
+				Console.WriteLine( "div f -out  = " + sw.ElapsedTicks );
+                                
+				sw.Reset();
+				sw.Start();
+				for( n = 0; n < 1000000; n++ )
+                                {
+					Vector.DivRef( ref v, 5.0f, ref v2 );
+                                }
+				sw.Stop();
+				val3 = sw.ElapsedTicks;
+				Console.WriteLine( "div f -ref = " + sw.ElapsedTicks );
+				Console.WriteLine( "del = " + ( ( val3 * 1000 ) / val1 ) + "/1000" );
+				Console.WriteLine( "del = " + ( ( val3 * 1000 ) / val2 ) + "/1000" );
+#if asdfasdf
+				sw.Reset();
+				sw.Start();
+				for( n = 0; n < 100000; n++ )
+					v = m.getNewVector();
+				sw.Stop();
+				val1 = sw.ElapsedTicks;
+				Console.WriteLine( "getnew = " + sw.ElapsedTicks );
+
+				sw.Reset();
+				sw.Start();
+				for( n = 0; n < 100000; n++ )
+					v = m.getVector();
+				sw.Stop();
+				val1 = sw.ElapsedTicks;
+				Console.WriteLine( "getval = " + sw.ElapsedTicks );
+                                           
+				sw.Reset();
+				sw.Start();
+				for( n = 0; n < 100000; n++ )
+					m.getVector( out v );
+				sw.Stop();
+				val2 = sw.ElapsedTicks;
+				Console.WriteLine( "getout = " + sw.ElapsedTicks );
+				Console.WriteLine( "del = " + ( (val2 * 1000) / val1 ) + "/1000" );
+				Console.WriteLine( "del = " + ( ( val1 * 1000 ) / val2 ) + "/1000" );
+#endif
+				sw.Reset();
+				sw.Start();
+				for( n = 0; n < 100000; n++ )
+					r1( ref v );
+				sw.Stop();
+				val1 = sw.ElapsedTicks;
+				Console.WriteLine( "r1 = " + sw.ElapsedTicks );
+
+				sw.Reset();
+				sw.Start();
+				for( n = 0; n < 100000; n++ )
+					r2( v );
+				sw.Stop();
+				val2 = sw.ElapsedTicks;
+				Console.WriteLine( "r2 = " + sw.ElapsedTicks );
+				Console.WriteLine( "del = " + ( ( val1 * 1000 ) / val2 ) + "/1000" );
+				Console.WriteLine( "del = " + ( ( val2 * 1000 ) / val2 ) + "/1000" );
+
+#if asefasdf
+				sw.Reset();
+				sw.Start();
+				for( n = 0; n < 100000; n++ )
+					r3( ref m );
+				sw.Stop();
+				val1 = sw.ElapsedTicks;
+				Console.WriteLine( "r3 = " + sw.ElapsedTicks );
+
+				sw.Reset();
+				sw.Start();
+				for( n = 0; n < 100000; n++ )
+					r4( m );
+				sw.Stop();
+				val2 = sw.ElapsedTicks;
+				Console.WriteLine( "r4 = " + sw.ElapsedTicks );
+				Console.WriteLine( "del = " + ( ( val1 * 1000 ) / val2 ) + "/1000" );
+				Console.WriteLine( "del = " + ( ( val2 * 1000 ) / val1 ) + "/1000" );
+#endif
+				sw.Reset();
+				sw.Start();
+				for( n = 0; n < 100000; n++ )
+					r5( ref d );
+				sw.Stop();
+				Console.WriteLine( "r5 = " + sw.ElapsedTicks );
+
+				sw.Reset();
+				sw.Start();
+				for( n = 0; n < 100000; n++ )
+					r6( d );
+				sw.Stop();
+				Console.WriteLine( "r6 = " + sw.ElapsedTicks );
+
+				sw.Reset();
+				sw.Start();
+				for( n = 0; n < 100000; n++ )
+					r7( ref d );
+				sw.Stop();
+				Console.WriteLine( "r7 = " + sw.ElapsedTicks );
+
+				sw.Reset();
+				sw.Start();
+				for( n = 0; n < 100000; n++ )
+					r8( d );
+				sw.Stop();
+				Console.WriteLine( "r8 = " + sw.ElapsedTicks );
+#if asdasdf
+				sw.Reset();
+				sw.Start();
+				for( n = 0; n < 100000; n++ )
+					m.setIdentity();
+				sw.Stop();
+				Console.WriteLine( "Ident1 = " + sw.ElapsedTicks );
+
+				sw.Reset();
+				sw.Start();
+				for( n = 0; n < 100000; n++ )
+					m.setIdentity2( );
+				sw.Stop();
+				Console.WriteLine( "Ident2 = " + sw.ElapsedTicks );
+#endif
+				Thread.Sleep( 100 );
+			}
+			Console.Read();
+		}
+	}
+}

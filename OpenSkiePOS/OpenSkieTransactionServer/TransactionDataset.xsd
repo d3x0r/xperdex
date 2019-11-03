@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="TransactionDataset" targetNamespace="http://tempuri.org/TransactionDataset.xsd" xmlns:mstns="http://tempuri.org/TransactionDataset.xsd" xmlns="http://tempuri.org/TransactionDataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="TransactionDataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="TransactionDataset" msprop:Generator_UserDSName="TransactionDataset">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="osts_global_transaction_numbers" msprop:Generator_TableClassName="osts_global_transaction_numbersDataTable" msprop:Generator_TableVarName="tableosts_global_transaction_numbers" msprop:Generator_TablePropName="osts_global_transaction_numbers" msprop:Generator_RowDeletingName="osts_global_transaction_numbersRowDeleting" msprop:Generator_RowChangingName="osts_global_transaction_numbersRowChanging" msprop:Generator_RowEvHandlerName="osts_global_transaction_numbersRowChangeEventHandler" msprop:Generator_RowDeletedName="osts_global_transaction_numbersRowDeleted" msprop:Generator_UserTableName="osts_global_transaction_numbers" msprop:Generator_RowChangedName="osts_global_transaction_numbersRowChanged" msprop:Generator_RowEvArgName="osts_global_transaction_numbersRowChangeEvent" msprop:Generator_RowClassName="osts_global_transaction_numbersRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="global_transaction_number_id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnglobal_transaction_number_id" msprop:Generator_ColumnPropNameInRow="global_transaction_number_id" msprop:Generator_ColumnPropNameInTable="global_transaction_number_idColumn" msprop:Generator_UserColumnName="global_transaction_number_id" type="xs:int" minOccurs="0" />
+              <xs:element name="bingoday" msprop:Generator_ColumnVarNameInTable="columnbingoday" msprop:Generator_ColumnPropNameInRow="bingoday" msprop:Generator_ColumnPropNameInTable="bingodayColumn" msprop:Generator_UserColumnName="bingoday" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="global_transnum" msprop:Generator_ColumnVarNameInTable="columnglobal_transnum" msprop:Generator_ColumnPropNameInRow="global_transnum" msprop:Generator_ColumnPropNameInTable="global_transnumColumn" msprop:Generator_UserColumnName="global_transnum" type="xs:int" minOccurs="0" />
+              <xs:element name="created" msprop:Generator_ColumnVarNameInTable="columncreated" msprop:Generator_ColumnPropNameInRow="created" msprop:Generator_ColumnPropNameInTable="createdColumn" msprop:Generator_UserColumnName="created" type="xs:string" minOccurs="0" />
+              <xs:element name="closed" msprop:Generator_ColumnVarNameInTable="columnclosed" msprop:Generator_ColumnPropNameInRow="closed" msprop:Generator_ColumnPropNameInTable="closedColumn" msprop:Generator_UserColumnName="closed" type="xs:string" minOccurs="0" />
+              <xs:element name="incomplete" msprop:Generator_ColumnVarNameInTable="columnincomplete" msprop:Generator_ColumnPropNameInRow="incomplete" msprop:Generator_ColumnPropNameInTable="incompleteColumn" msprop:Generator_UserColumnName="incomplete" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="osts_global_transaction_sequence" msprop:Generator_TableClassName="osts_global_transaction_sequenceDataTable" msprop:Generator_TableVarName="tableosts_global_transaction_sequence" msprop:Generator_TablePropName="osts_global_transaction_sequence" msprop:Generator_RowDeletingName="osts_global_transaction_sequenceRowDeleting" msprop:Generator_RowChangingName="osts_global_transaction_sequenceRowChanging" msprop:Generator_RowEvHandlerName="osts_global_transaction_sequenceRowChangeEventHandler" msprop:Generator_RowDeletedName="osts_global_transaction_sequenceRowDeleted" msprop:Generator_UserTableName="osts_global_transaction_sequence" msprop:Generator_RowChangedName="osts_global_transaction_sequenceRowChanged" msprop:Generator_RowEvArgName="osts_global_transaction_sequenceRowChangeEvent" msprop:Generator_RowClassName="osts_global_transaction_sequenceRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sequence" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnsequence" msprop:Generator_ColumnPropNameInRow="sequence" msprop:Generator_ColumnPropNameInTable="sequenceColumn" msprop:Generator_UserColumnName="sequence" type="xs:int" />
+              <xs:element name="global_transaction_number_id" msprop:Generator_ColumnVarNameInTable="columnglobal_transaction_number_id" msprop:Generator_ColumnPropNameInRow="global_transaction_number_id" msprop:Generator_ColumnPropNameInTable="global_transaction_number_idColumn" msprop:Generator_UserColumnName="global_transaction_number_id" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="osts_local_transaction_numbers" msprop:Generator_TableClassName="osts_local_transaction_numbersDataTable" msprop:Generator_TableVarName="tableosts_local_transaction_numbers" msprop:Generator_TablePropName="osts_local_transaction_numbers" msprop:Generator_RowDeletingName="osts_local_transaction_numbersRowDeleting" msprop:Generator_RowChangingName="osts_local_transaction_numbersRowChanging" msprop:Generator_RowEvHandlerName="osts_local_transaction_numbersRowChangeEventHandler" msprop:Generator_RowDeletedName="osts_local_transaction_numbersRowDeleted" msprop:Generator_UserTableName="osts_local_transaction_numbers" msprop:Generator_RowChangedName="osts_local_transaction_numbersRowChanged" msprop:Generator_RowEvArgName="osts_local_transaction_numbersRowChangeEvent" msprop:Generator_RowClassName="osts_local_transaction_numbersRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="local_transaction_number_id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnlocal_transaction_number_id" msprop:Generator_ColumnPropNameInRow="local_transaction_number_id" msprop:Generator_ColumnPropNameInTable="local_transaction_number_idColumn" msprop:Generator_UserColumnName="local_transaction_number_id" type="xs:int" minOccurs="0" />
+              <xs:element name="client_id" msprop:Generator_ColumnVarNameInTable="columnclient_id" msprop:Generator_ColumnPropNameInRow="client_id" msprop:Generator_ColumnPropNameInTable="client_idColumn" msprop:Generator_UserColumnName="client_id" type="xs:int" minOccurs="0" />
+              <xs:element name="bingoday" msprop:Generator_ColumnVarNameInTable="columnbingoday" msprop:Generator_ColumnPropNameInRow="bingoday" msprop:Generator_ColumnPropNameInTable="bingodayColumn" msprop:Generator_UserColumnName="bingoday" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="local_transnum" msprop:Generator_ColumnVarNameInTable="columnlocal_transnum" msprop:Generator_ColumnPropNameInRow="local_transnum" msprop:Generator_ColumnPropNameInTable="local_transnumColumn" msprop:Generator_UserColumnName="local_transnum" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="osts_local_transaction_sequence" msprop:Generator_TableClassName="osts_local_transaction_sequenceDataTable" msprop:Generator_TableVarName="tableosts_local_transaction_sequence" msprop:Generator_TablePropName="osts_local_transaction_sequence" msprop:Generator_RowDeletingName="osts_local_transaction_sequenceRowDeleting" msprop:Generator_RowChangingName="osts_local_transaction_sequenceRowChanging" msprop:Generator_RowEvHandlerName="osts_local_transaction_sequenceRowChangeEventHandler" msprop:Generator_RowDeletedName="osts_local_transaction_sequenceRowDeleted" msprop:Generator_UserTableName="osts_local_transaction_sequence" msprop:Generator_RowChangedName="osts_local_transaction_sequenceRowChanged" msprop:Generator_RowEvArgName="osts_local_transaction_sequenceRowChangeEvent" msprop:Generator_RowClassName="osts_local_transaction_sequenceRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="client_id" msprop:Generator_ColumnVarNameInTable="columnclient_id" msprop:Generator_ColumnPropNameInRow="client_id" msprop:Generator_ColumnPropNameInTable="client_idColumn" msprop:Generator_UserColumnName="client_id" type="xs:int" minOccurs="0" />
+              <xs:element name="sequence" msprop:Generator_ColumnVarNameInTable="columnsequence" msprop:Generator_ColumnPropNameInRow="sequence" msprop:Generator_ColumnPropNameInTable="sequenceColumn" msprop:Generator_UserColumnName="sequence" type="xs:int" />
+              <xs:element name="local_transaction_number_id" msprop:Generator_ColumnVarNameInTable="columnlocal_transaction_number_id" msprop:Generator_ColumnPropNameInRow="local_transaction_number_id" msprop:Generator_ColumnPropNameInTable="local_transaction_number_idColumn" msprop:Generator_UserColumnName="local_transaction_number_id" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="osts_pending_transactions" msprop:Generator_TableClassName="osts_pending_transactionsDataTable" msprop:Generator_TableVarName="tableosts_pending_transactions" msprop:Generator_TablePropName="osts_pending_transactions" msprop:Generator_RowDeletingName="osts_pending_transactionsRowDeleting" msprop:Generator_RowChangingName="osts_pending_transactionsRowChanging" msprop:Generator_RowEvHandlerName="osts_pending_transactionsRowChangeEventHandler" msprop:Generator_RowDeletedName="osts_pending_transactionsRowDeleted" msprop:Generator_UserTableName="osts_pending_transactions" msprop:Generator_RowChangedName="osts_pending_transactionsRowChanged" msprop:Generator_RowEvArgName="osts_pending_transactionsRowChangeEvent" msprop:Generator_RowClassName="osts_pending_transactionsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="pending_transaction_id" msprop:Generator_ColumnVarNameInTable="columnpending_transaction_id" msprop:Generator_ColumnPropNameInRow="pending_transaction_id" msprop:Generator_ColumnPropNameInTable="pending_transaction_idColumn" msprop:Generator_UserColumnName="pending_transaction_id" type="xs:string" minOccurs="0" />
+              <xs:element name="global_transaction_number_id" msprop:Generator_ColumnVarNameInTable="columnglobal_transaction_number_id" msprop:Generator_ColumnPropNameInRow="global_transaction_number_id" msprop:Generator_ColumnPropNameInTable="global_transaction_number_idColumn" msprop:Generator_UserColumnName="global_transaction_number_id" type="xs:int" minOccurs="0" />
+              <xs:element name="local_transaction_number_id" msprop:Generator_ColumnVarNameInTable="columnlocal_transaction_number_id" msprop:Generator_ColumnPropNameInRow="local_transaction_number_id" msprop:Generator_ColumnPropNameInTable="local_transaction_number_idColumn" msprop:Generator_UserColumnName="local_transaction_number_id" type="xs:int" minOccurs="0" />
+              <xs:element name="client_id" msprop:Generator_ColumnVarNameInTable="columnclient_id" msprop:Generator_ColumnPropNameInRow="client_id" msprop:Generator_ColumnPropNameInTable="client_idColumn" msprop:Generator_UserColumnName="client_id" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="osts_clients" msprop:Generator_TableClassName="osts_clientsDataTable" msprop:Generator_TableVarName="tableosts_clients" msprop:Generator_TablePropName="osts_clients" msprop:Generator_RowDeletingName="osts_clientsRowDeleting" msprop:Generator_RowChangingName="osts_clientsRowChanging" msprop:Generator_RowEvHandlerName="osts_clientsRowChangeEventHandler" msprop:Generator_RowDeletedName="osts_clientsRowDeleted" msprop:Generator_UserTableName="osts_clients" msprop:Generator_RowChangedName="osts_clientsRowChanged" msprop:Generator_RowEvArgName="osts_clientsRowChangeEvent" msprop:Generator_RowClassName="osts_clientsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="client_id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnclient_id" msprop:Generator_ColumnPropNameInRow="client_id" msprop:Generator_ColumnPropNameInTable="client_idColumn" msprop:Generator_UserColumnName="client_id" type="xs:int" minOccurs="0" />
+              <xs:element name="client_address" msprop:Generator_ColumnVarNameInTable="columnclient_address" msprop:Generator_ColumnPropNameInRow="client_address" msprop:Generator_ColumnPropNameInTable="client_addressColumn" msprop:Generator_UserColumnName="client_address" type="xs:string" minOccurs="0" />
+              <xs:element name="client_port" msprop:Generator_ColumnVarNameInTable="columnclient_port" msprop:Generator_ColumnPropNameInRow="client_port" msprop:Generator_ColumnPropNameInTable="client_portColumn" msprop:Generator_UserColumnName="client_port" type="xs:int" minOccurs="0" />
+              <xs:element name="client_bingoday" msprop:Generator_ColumnVarNameInTable="columnclient_bingoday" msprop:Generator_ColumnPropNameInRow="client_bingoday" msprop:Generator_ColumnPropNameInTable="client_bingodayColumn" msprop:Generator_UserColumnName="client_bingoday" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:osts_global_transaction_numbers" />
+      <xs:field xpath="mstns:global_transaction_number_id" />
+    </xs:unique>
+    <xs:unique name="osts_global_transaction_sequence_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:osts_global_transaction_sequence" />
+      <xs:field xpath="mstns:sequence" />
+    </xs:unique>
+    <xs:unique name="osts_local_transaction_numbers_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:osts_local_transaction_numbers" />
+      <xs:field xpath="mstns:local_transaction_number_id" />
+    </xs:unique>
+    <xs:unique name="osts_clients_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:osts_clients" />
+      <xs:field xpath="mstns:client_id" />
+    </xs:unique>
+    <xs:keyref name="local_transaction_number_is_pending" refer="osts_local_transaction_numbers_Constraint1" msprop:rel_Generator_UserChildTable="osts_pending_transactions" msprop:rel_Generator_ChildPropName="Getosts_pending_transactionsRows" msprop:rel_Generator_UserRelationName="local_transaction_number_is_pending" msprop:rel_Generator_ParentPropName="osts_local_transactionNumbersRow" msprop:rel_Generator_RelationVarName="relationlocal_transaction_number_is_pending" msprop:rel_Generator_UserParentTable="osts_local_transaction_numbers">
+      <xs:selector xpath=".//mstns:osts_pending_transactions" />
+      <xs:field xpath="mstns:local_transaction_number_id" />
+    </xs:keyref>
+    <xs:keyref name="global_transaction_number_is_pending" refer="Constraint1" msprop:rel_Generator_UserChildTable="osts_pending_transactions" msprop:rel_Generator_ChildPropName="Getosts_pending_transactionsRows" msprop:rel_Generator_UserRelationName="global_transaction_number_is_pending" msprop:rel_Generator_ParentPropName="osts_global_transaction_numbersRow" msprop:rel_Generator_RelationVarName="relationglobal_transaction_number_is_pending" msprop:rel_Generator_UserParentTable="osts_global_transaction_numbers">
+      <xs:selector xpath=".//mstns:osts_pending_transactions" />
+      <xs:field xpath="mstns:global_transaction_number_id" />
+    </xs:keyref>
+    <xs:keyref name="clients_has_pending_transaction" refer="osts_clients_Constraint1" msprop:rel_Generator_UserChildTable="osts_pending_transactions" msprop:rel_Generator_ChildPropName="Getosts_pending_transactionsRows" msprop:rel_Generator_UserRelationName="clients_has_pending_transaction" msprop:rel_Generator_RelationVarName="relationclients_has_pending_transaction" msprop:rel_Generator_UserParentTable="osts_clients" msprop:rel_Generator_ParentPropName="osts_clientsRow">
+      <xs:selector xpath=".//mstns:osts_pending_transactions" />
+      <xs:field xpath="mstns:client_id" />
+    </xs:keyref>
+    <xs:keyref name="local_transaction_numbers_is_local_transaction_sequence" refer="osts_local_transaction_numbers_Constraint1" msprop:rel_Generator_UserChildTable="osts_local_transaction_sequence" msprop:rel_Generator_ChildPropName="Getosts_local_transaction_sequenceRows" msprop:rel_Generator_UserRelationName="local_transaction_numbers_is_local_transaction_sequence" msprop:rel_Generator_ParentPropName="osts_local_transaction_numbersRow" msprop:rel_Generator_RelationVarName="relationlocal_transaction_numbers_is_local_transaction_sequence" msprop:rel_Generator_UserParentTable="osts_local_transaction_numbers">
+      <xs:selector xpath=".//mstns:osts_local_transaction_sequence" />
+      <xs:field xpath="mstns:local_transaction_number_id" />
+    </xs:keyref>
+    <xs:keyref name="osts_client_has_local_transaction_sequence" refer="osts_clients_Constraint1" msprop:rel_Generator_UserChildTable="osts_local_transaction_sequence" msprop:rel_Generator_ChildPropName="Getosts_local_transaction_sequenceRows" msprop:rel_Generator_UserRelationName="osts_client_has_local_transaction_sequence" msprop:rel_Generator_RelationVarName="relationosts_client_has_local_transaction_sequence" msprop:rel_Generator_UserParentTable="osts_clients" msprop:rel_Generator_ParentPropName="osts_clientsRow">
+      <xs:selector xpath=".//mstns:osts_local_transaction_sequence" />
+      <xs:field xpath="mstns:client_id" />
+    </xs:keyref>
+    <xs:keyref name="global_transaction_numbers_is_global_transaction_sequence" refer="Constraint1" msprop:rel_Generator_UserChildTable="osts_global_transaction_sequence" msprop:rel_Generator_ChildPropName="Getosts_global_transaction_sequenceRows" msprop:rel_Generator_UserRelationName="global_transaction_numbers_is_global_transaction_sequence" msprop:rel_Generator_ParentPropName="osts_global_transaction_numbersRow" msprop:rel_Generator_RelationVarName="relationglobal_transaction_numbers_is_global_transaction_sequence" msprop:rel_Generator_UserParentTable="osts_global_transaction_numbers">
+      <xs:selector xpath=".//mstns:osts_global_transaction_sequence" />
+      <xs:field xpath="mstns:global_transaction_number_id" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

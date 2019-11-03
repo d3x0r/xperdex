@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ProjectDataSet" targetNamespace="http://tempuri.org/ProjectDataSet.xsd" xmlns:mstns="http://tempuri.org/ProjectDataSet.xsd" xmlns="http://tempuri.org/ProjectDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ProjectDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ProjectDataSet" msprop:Generator_UserDSName="ProjectDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Projects" msprop:Generator_TableClassName="ProjectsDataTable" msprop:Generator_TableVarName="tableProjects" msprop:Generator_TablePropName="Projects" msprop:Generator_RowDeletingName="ProjectsRowDeleting" msprop:Generator_UserTableName="Projects" msprop:Generator_RowChangingName="ProjectsRowChanging" msprop:Generator_RowEvHandlerName="ProjectsRowChangeEventHandler" msprop:Generator_RowDeletedName="ProjectsRowDeleted" msprop:Generator_RowEvArgName="ProjectsRowChangeEvent" msprop:Generator_RowChangedName="ProjectsRowChanged" msprop:Generator_RowClassName="ProjectsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="project_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnproject_id" msprop:Generator_ColumnPropNameInRow="project_id" msprop:Generator_ColumnPropNameInTable="project_idColumn" msprop:Generator_UserColumnName="project_id" type="xs:string" minOccurs="0" />
+              <xs:element name="project_group_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnproject_group_id" msprop:Generator_ColumnPropNameInRow="project_group_id" msprop:Generator_ColumnPropNameInTable="project_group_idColumn" msprop:Generator_UserColumnName="project_group_id" type="xs:string" minOccurs="0" />
+              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name" type="xs:string" minOccurs="0" />
+              <xs:element name="project_type" msprop:Generator_ColumnVarNameInTable="columnproject_type" msprop:Generator_ColumnPropNameInRow="project_type" msprop:Generator_ColumnPropNameInTable="project_typeColumn" msprop:Generator_UserColumnName="project_type" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ProjectGroup" msprop:Generator_TableClassName="ProjectGroupDataTable" msprop:Generator_TableVarName="tableProjectGroup" msprop:Generator_TablePropName="ProjectGroup" msprop:Generator_RowDeletingName="ProjectGroupRowDeleting" msprop:Generator_UserTableName="ProjectGroup" msprop:Generator_RowChangingName="ProjectGroupRowChanging" msprop:Generator_RowEvHandlerName="ProjectGroupRowChangeEventHandler" msprop:Generator_RowDeletedName="ProjectGroupRowDeleted" msprop:Generator_RowEvArgName="ProjectGroupRowChangeEvent" msprop:Generator_RowChangedName="ProjectGroupRowChanged" msprop:Generator_RowClassName="ProjectGroupRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="project_group_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msdata:AutoIncrementSeed="1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnproject_group_id" msprop:Generator_ColumnPropNameInRow="project_group_id" msprop:Generator_ColumnPropNameInTable="project_group_idColumn" msprop:Generator_UserColumnName="project_group_id" type="xs:string" />
+              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Target" msprop:Generator_TableClassName="TargetDataTable" msprop:Generator_TableVarName="tableTarget" msprop:Generator_TablePropName="Target" msprop:Generator_RowDeletingName="TargetRowDeleting" msprop:Generator_UserTableName="Target" msprop:Generator_RowChangingName="TargetRowChanging" msprop:Generator_RowEvHandlerName="TargetRowChangeEventHandler" msprop:Generator_RowDeletedName="TargetRowDeleted" msprop:Generator_RowEvArgName="TargetRowChangeEvent" msprop:Generator_RowChangedName="TargetRowChanged" msprop:Generator_RowClassName="TargetRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="target_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columntarget_id" msprop:Generator_ColumnPropNameInRow="target_id" msprop:Generator_ColumnPropNameInTable="target_idColumn" msprop:Generator_UserColumnName="target_id" type="xs:string" minOccurs="0" />
+              <xs:element name="project_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnproject_id" msprop:Generator_ColumnPropNameInRow="project_id" msprop:Generator_ColumnPropNameInTable="project_idColumn" msprop:Generator_UserColumnName="project_id" type="xs:string" minOccurs="0" />
+              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name" type="xs:string" minOccurs="0" />
+              <xs:element name="target_type" msprop:Generator_ColumnVarNameInTable="columntarget_type" msprop:Generator_ColumnPropNameInRow="target_type" msprop:Generator_ColumnPropNameInTable="target_typeColumn" msprop:Generator_UserColumnName="target_type" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ProjectVariables" msprop:Generator_TableClassName="ProjectVariablesDataTable" msprop:Generator_TableVarName="tableProjectVariables" msprop:Generator_TablePropName="ProjectVariables" msprop:Generator_RowDeletingName="ProjectVariablesRowDeleting" msprop:Generator_UserTableName="ProjectVariables" msprop:Generator_RowChangingName="ProjectVariablesRowChanging" msprop:Generator_RowEvHandlerName="ProjectVariablesRowChangeEventHandler" msprop:Generator_RowDeletedName="ProjectVariablesRowDeleted" msprop:Generator_RowEvArgName="ProjectVariablesRowChangeEvent" msprop:Generator_RowChangedName="ProjectVariablesRowChanged" msprop:Generator_RowClassName="ProjectVariablesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="project_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnproject_id" msprop:Generator_ColumnPropNameInRow="project_id" msprop:Generator_ColumnPropNameInTable="project_idColumn" msprop:Generator_UserColumnName="project_id" type="xs:string" minOccurs="0" />
+              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name" type="xs:string" minOccurs="0" />
+              <xs:element name="value" msprop:Generator_ColumnVarNameInTable="columnvalue" msprop:Generator_ColumnPropNameInRow="value" msprop:Generator_ColumnPropNameInTable="valueColumn" msprop:Generator_UserColumnName="value" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ProjectIncludes" msprop:Generator_TableClassName="ProjectIncludesDataTable" msprop:Generator_TableVarName="tableProjectIncludes" msprop:Generator_TablePropName="ProjectIncludes" msprop:Generator_RowDeletingName="ProjectIncludesRowDeleting" msprop:Generator_UserTableName="ProjectIncludes" msprop:Generator_RowChangingName="ProjectIncludesRowChanging" msprop:Generator_RowEvHandlerName="ProjectIncludesRowChangeEventHandler" msprop:Generator_RowDeletedName="ProjectIncludesRowDeleted" msprop:Generator_RowEvArgName="ProjectIncludesRowChangeEvent" msprop:Generator_RowChangedName="ProjectIncludesRowChanged" msprop:Generator_RowClassName="ProjectIncludesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="project_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnproject_id" msprop:Generator_ColumnPropNameInRow="project_id" msprop:Generator_ColumnPropNameInTable="project_idColumn" msprop:Generator_UserColumnName="project_id" type="xs:string" minOccurs="0" />
+              <xs:element name="sub_project_group_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnsub_project_group_id" msprop:Generator_ColumnPropNameInRow="sub_project_group_id" msprop:Generator_ColumnPropNameInTable="sub_project_group_idColumn" msprop:Generator_UserColumnName="sub_project_group_id" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CurrentProjectsIncludes" msprop:Generator_TableClassName="CurrentProjectsIncludesDataTable" msprop:Generator_TableVarName="tableCurrentProjectsIncludes" msprop:Generator_TablePropName="CurrentProjectsIncludes" msprop:Generator_RowDeletingName="CurrentProjectsIncludesRowDeleting" msprop:Generator_UserTableName="CurrentProjectsIncludes" msprop:Generator_RowChangingName="CurrentProjectsIncludesRowChanging" msprop:Generator_RowEvHandlerName="CurrentProjectsIncludesRowChangeEventHandler" msprop:Generator_RowDeletedName="CurrentProjectsIncludesRowDeleted" msprop:Generator_RowEvArgName="CurrentProjectsIncludesRowChangeEvent" msprop:Generator_RowChangedName="CurrentProjectsIncludesRowChanged" msprop:Generator_RowClassName="CurrentProjectsIncludesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name" type="xs:string" minOccurs="0" />
+              <xs:element name="project_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnproject_id" msprop:Generator_ColumnPropNameInRow="project_id" msprop:Generator_ColumnPropNameInTable="project_idColumn" msprop:Generator_UserColumnName="project_id" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CurrentProjects" msprop:Generator_TableClassName="CurrentProjectsDataTable" msprop:Generator_TableVarName="tableCurrentProjects" msprop:Generator_TablePropName="CurrentProjects" msprop:Generator_RowDeletingName="CurrentProjectsRowDeleting" msprop:Generator_UserTableName="CurrentProjects" msprop:Generator_RowChangingName="CurrentProjectsRowChanging" msprop:Generator_RowEvHandlerName="CurrentProjectsRowChangeEventHandler" msprop:Generator_RowDeletedName="CurrentProjectsRowDeleted" msprop:Generator_RowEvArgName="CurrentProjectsRowChangeEvent" msprop:Generator_RowChangedName="CurrentProjectsRowChanged" msprop:Generator_RowClassName="CurrentProjectsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name" type="xs:string" minOccurs="0" />
+              <xs:element name="project_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnproject_id" msprop:Generator_ColumnPropNameInRow="project_id" msprop:Generator_ColumnPropNameInTable="project_idColumn" msprop:Generator_UserColumnName="project_id" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TargetSources" msprop:Generator_TableClassName="TargetSourcesDataTable" msprop:Generator_TableVarName="tableTargetSources" msprop:Generator_TablePropName="TargetSources" msprop:Generator_RowDeletingName="TargetSourcesRowDeleting" msprop:Generator_UserTableName="TargetSources" msprop:Generator_RowChangingName="TargetSourcesRowChanging" msprop:Generator_RowEvHandlerName="TargetSourcesRowChangeEventHandler" msprop:Generator_RowDeletedName="TargetSourcesRowDeleted" msprop:Generator_RowEvArgName="TargetSourcesRowChangeEvent" msprop:Generator_RowChangedName="TargetSourcesRowChanged" msprop:Generator_RowClassName="TargetSourcesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="target_id" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columntarget_id" msprop:Generator_ColumnPropNameInRow="target_id" msprop:Generator_ColumnPropNameInTable="target_idColumn" msprop:Generator_UserColumnName="target_id" type="xs:string" minOccurs="0" />
+              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:Projects" />
+      <xs:field xpath="mstns:project_id" />
+    </xs:unique>
+    <xs:unique name="ProjectGroup_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:ProjectGroup" />
+      <xs:field xpath="mstns:project_group_id" />
+    </xs:unique>
+    <xs:unique name="ProjectIncludes_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:ProjectIncludes" />
+      <xs:field xpath="mstns:sub_project_group_id" />
+    </xs:unique>
+    <xs:keyref name="ProjectsProjectIncludes" refer="Constraint1" msprop:rel_Generator_UserChildTable="ProjectIncludes" msprop:rel_Generator_ChildPropName="GetProjectIncludesRows" msprop:rel_Generator_UserParentTable="Projects" msprop:rel_Generator_UserRelationName="ProjectsProjectIncludes" msprop:rel_Generator_RelationVarName="relationProjectsProjectIncludes" msprop:rel_Generator_ParentPropName="ProjectsRow">
+      <xs:selector xpath=".//mstns:ProjectIncludes" />
+      <xs:field xpath="mstns:project_id" />
+    </xs:keyref>
+    <xs:keyref name="ProjectIncludesProject" refer="ProjectGroup_Constraint1" msprop:rel_Generator_UserChildTable="ProjectIncludes" msprop:rel_Generator_ChildPropName="GetProjectIncludesRows" msprop:rel_Generator_UserParentTable="ProjectGroup" msprop:rel_Generator_UserRelationName="ProjectIncludesProject" msprop:rel_Generator_RelationVarName="relationProjectIncludesProject" msprop:rel_Generator_ParentPropName="ProjectGroupRow" msdata:UpdateRule="None" msdata:DeleteRule="None">
+      <xs:selector xpath=".//mstns:ProjectIncludes" />
+      <xs:field xpath="mstns:sub_project_group_id" />
+    </xs:keyref>
+    <xs:keyref name="ProjectGroupProject" refer="ProjectGroup_Constraint1" msprop:rel_Generator_UserChildTable="Projects" msprop:rel_Generator_ChildPropName="GetProjectsRows" msprop:rel_Generator_UserParentTable="ProjectGroup" msprop:rel_Generator_UserRelationName="ProjectGroupProject" msprop:rel_Generator_RelationVarName="relationProjectGroupProject" msprop:rel_Generator_ParentPropName="ProjectGroupRow">
+      <xs:selector xpath=".//mstns:Projects" />
+      <xs:field xpath="mstns:project_group_id" />
+    </xs:keyref>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="Projects_Target" msdata:parent="Projects" msdata:child="Target" msdata:parentkey="project_id" msdata:childkey="project_id" msprop:Generator_UserChildTable="Target" msprop:Generator_ChildPropName="GetTargetRows" msprop:Generator_UserParentTable="Projects" msprop:Generator_UserRelationName="Projects_Target" msprop:Generator_RelationVarName="relationProjects_Target" msprop:Generator_ParentPropName="ProjectsRow" />
+      <msdata:Relationship name="Projects_ProjectVariables" msdata:parent="Projects" msdata:child="ProjectVariables" msdata:parentkey="project_id" msdata:childkey="project_id" msprop:Generator_UserChildTable="ProjectVariables" msprop:Generator_ChildPropName="GetProjectVariablesRows" msprop:Generator_UserParentTable="Projects" msprop:Generator_UserRelationName="Projects_ProjectVariables" msprop:Generator_RelationVarName="relationProjects_ProjectVariables" msprop:Generator_ParentPropName="ProjectsRow" />
+      <msdata:Relationship name="Target_TargetSources" msdata:parent="Target" msdata:child="TargetSources" msdata:parentkey="target_id" msdata:childkey="target_id" msprop:Generator_UserChildTable="TargetSources" msprop:Generator_ChildPropName="GetTargetSourcesRows" msprop:Generator_UserParentTable="Target" msprop:Generator_UserRelationName="Target_TargetSources" msprop:Generator_RelationVarName="relationTarget_TargetSources" msprop:Generator_ParentPropName="TargetRow" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

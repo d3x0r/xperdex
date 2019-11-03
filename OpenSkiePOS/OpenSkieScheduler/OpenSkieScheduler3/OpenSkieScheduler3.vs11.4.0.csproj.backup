@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7AA21CBF-336D-4815-A2A6-55AC5694A241}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpenSkieScheduler3</RootNamespace>
+    <AssemblyName>OpenSkieSchedule3</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BaseIntermediateOutputPath>$(SolutionDir)/output/</BaseIntermediateOutputPath>
+    <BaseOutputPath>$(SolutionDir)/</BaseOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0/</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0/</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>default</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0/</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>default</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0/</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>M:\xperdex\/output/Debug\OpenSkieSchedule.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisInputAssembly>M:\xperdex\/output/Debug\OpenSkieSchedule.dll</CodeAnalysisInputAssembly>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0/</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>M:\xperdex\/output/Release\OpenSkieSchedule.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisInputAssembly>M:\xperdex\/output/Release\OpenSkieSchedule.dll</CodeAnalysisInputAssembly>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0/</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Base Classes\RelatedTableEditor.cs">
+      <SubType>Form</SubType>
+    </None>
+    <None Include="Base Classes\RelatedTableEditor.Designer.cs">
+      <DependentUpon>RelatedTableEditor.cs</DependentUpon>
+    </None>
+    <Compile Include="Base Tables\BundleTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base Tables\CardswipeCalibrateTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base Tables\ColorInfoTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base Tables\ItemDescription.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base Tables\ItemInstance.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base Tables\PackGroupTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base Tables\SessionMacroSchedule.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BingoGameDefs\CardsetCards.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BingoGameDefs\CardsetInfo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BingoGameDefs\CardsetRange.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BingoGameDefs\CardsetRangePayoutLevel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BingoGameDefs\Dealer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base Tables\CharityTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BingoGameDefs\SessionPriceData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BingoGameDefs\SessionPrizeData.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BingoGameDefs\SessionTypeTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\PackGroupGameRelation.cs" />
+    <Compile Include="Relations\PackGroupPackRelation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\PackGroupPrizePacks.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\PackGroupPrizeRelation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\PriceExceptionSet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\PrizeExceptionSet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\SessionGame.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\ItemPackMap.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\PackCardsetRange.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\PackFacePrizeLevel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\SessionBundle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\SessionGameSessionPackGroup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\SessionPackGroupTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EventCalendarTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\GamePatternTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base Tables\GameTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base Classes\HallCharityOrgTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base Tables\HallTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Local.cs" />
+    <Compile Include="Names.cs" />
+    <Compile Include="Base Tables\PackTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BingoGameDefs\PaperCardverCheckfirst.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BingoGameDefs\Patterns\PatternDescriptionTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base Tables\PrizeLevelNames.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Relations\SessionGameSessionPack.cs" />
+    <Compile Include="Relations\SessionPack.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\SessionPackOrder.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SellableItem.cs" />
+    <Compile Include="SellableItemType.cs" />
+    <None Include="Base Classes\RelatedTableEditor.resx">
+      <DependentUpon>RelatedTableEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Relations\SessionGamePrize.cs" />
+    <Compile Include="ScheduleDataSet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\SessionDayMacroSessionTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base Tables\SessionDayMacroTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base Tables\SesssionTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.VisualBasic.PowerPacks.10.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Visual Basic PowerPacks 10.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\xperdex.classes.2\xperdex.classes.vs11.4.0.csproj">
+      <Project>{041E5A37-8678-451E-9500-EE3D7864C092}</Project>
+      <Name>xperdex.classes.vs10.4.0</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OpenSkieSessionState\OpenSkieSessionState.vs11.csproj">
+      <Project>{b1bf9d93-4ce5-4f0b-9f27-2582924f1fae}</Project>
+      <Name>OpenSkieSessionState.vs11</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

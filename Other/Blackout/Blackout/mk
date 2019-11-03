@@ -1,0 +1,1 @@
+gmcs -out:Blackout.exe Floater.cs Form1.cs Program.cs local.cs Form1.Designer.cs Floater.Designer.cs -r:System.Windows.Forms.dll -r:System.Drawing.dll -r:System.Data

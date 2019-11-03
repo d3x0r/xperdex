@@ -1,0 +1,15 @@
+
+
+//   Format string specification
+//       # collect any number of numbers (0-9)
+//       @ collact any alpha character (a-z, A-Z)
+//       * collect any alpha-numeric (0-9, a-z, or A-Z)
+//       0-9 numbers specify to collect this many characters
+//       - starts skipping characters
+//       +...+ inserts whatever characters are between pluses into the returned stream
+//       \ escapes on of the above characters to count as a literal match character
+//       ' ' a space is nothing unless it is escaped with a \, in which case it must match
+//       any other character specifies to match that character.
+//       Any failed match starts the scanning again from the next buffer character and next stream
+//       this routine also collects data until a ETX or CR character if enabled.
+//

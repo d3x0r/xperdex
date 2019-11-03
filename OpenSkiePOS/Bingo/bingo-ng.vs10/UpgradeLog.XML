@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="bingo-ng.vs10.4.0">
+</Property><Property Name="Solution File" Value="M:\clapps\xperdex\Bingo\bingo-ng.vs10\bingo-ng.vs10.4.0.sln">
+</Property><Property Name="Date" Value="Monday, July 02, 2012">
+</Property><Property Name="Time" Value="13:42:31 PM">
+</Property></Properties><Event ErrorLevel="0" Project="WebSocketServer" Source="..\..\..\..\xperdex\websockets\websocketserver\WebSocketServer\WebSocketServer.csproj" Description="Project file successfully backed up as M:\clapps\xperdex\Bingo\bingo-ng.vs10\Backup\WebSocketServer.csproj">
+</Event><Event ErrorLevel="0" Project="WebSocketServer" Source="..\..\..\..\xperdex\websockets\websocketserver\WebSocketServer\Properties\AssemblyInfo.cs" Description="File successfully backed up as M:\clapps\xperdex\Bingo\bingo-ng.vs10\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="WebSocketServer" Source="..\..\..\..\xperdex\websockets\websocketserver\WebSocketServer\WebSocketConnection.cs" Description="File successfully backed up as M:\clapps\xperdex\Bingo\bingo-ng.vs10\Backup\WebSocketConnection.cs">
+</Event><Event ErrorLevel="0" Project="WebSocketServer" Source="..\..\..\..\xperdex\websockets\websocketserver\WebSocketServer\WebSocketServer.cs" Description="File successfully backed up as M:\clapps\xperdex\Bingo\bingo-ng.vs10\Backup\WebSocketServer.cs">
+</Event><Event ErrorLevel="0" Project="WebSocketServer" Source="..\..\..\..\xperdex\websockets\websocketserver\WebSocketServer\WebSocketServer.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="WebSocketServer" Source="..\..\..\..\xperdex\websockets\websocketserver\WebSocketServer\WebSocketServer.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="WebSocketServer" Source="..\..\..\..\xperdex\websockets\websocketserver\WebSocketServer\WebSocketServer.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?><!DOCTYPE xperdex.coniguration >
+<xperdex>
+<glareset name="default" mask="Images/colorLayer.png" pressed="" depressed="Images/pressedlens.png" glare="Images/defaultLens.png" />
+<Plugins Location="D:\xperdex\xperdex.loader\xperdex.core2.exe" />
+<Plugins Location="D:\xperdex\xperdex.loader\xperdex.tasks.dll" />
+<Plugins Location="D:\xperdex\xperdex.GameContainer\bin\Debug\xperdex.GameContainer.dll" />
+<Plugins Location="D:\xperdex\xperdex.loader\xperdex.plugin.BingoCore.Tester.dll" />
+<page background="" color="-1359020032">
+<control X="7" Y="4" width="15" height="19" assembly="" type="xperdex.core.Macro" interface="xperdex.classes.IReflectorButton">
+<glareset>default</glareset><attributes text_color="-16777216" primary="1090453504" secondary="-1015680" highlight_primary="0" highlight_secondary="0" />
+<PSI_Button text="A Macro Button" />
+</control>
+<control X="24" Y="12" width="11" height="16" assembly="" type="xperdex.core.PSI_Button" interface="xperdex.classes.IReflectorButton">
+<glareset>default</glareset><attributes text_color="-723724" primary="-13484937" secondary="-16284824" highlight_primary="0" highlight_secondary="0" />
+<PSI_Button text="Put_Some_Text_Here_And please keep color" />
+</control>
+<control X="9" Y="22" width="8" height="15" assembly="D:\xperdex\xperdex.GameContainer\bin\Debug\xperdex.GameContainer.dll" type="xperdex.GameContainer.Game" interface="xperdex.classes.IReflectorCanvas">
+<page background="sky.jpg" color="-16777216">
+<control X="10" Y="8" width="23" height="24" assembly="D:\xperdex\xperdex.loader\xperdex.tasks.dll" type="xperdex.tasks.Task" interface="xperdex.classes.IReflectorButton">
+<Task program="sky.jpg" path="." arguments="" name="" exclusive="False" runonce="False" />
+<glareset>default</glareset><attributes text_color="-16777216" primary="1090453504" secondary="-1015680" highlight_primary="0" highlight_secondary="0" />
+<PSI_Button text="TasK_ButtoN" />
+</control>
+</page>
+</control>
+<control X="17" Y="25" width="5" height="7" assembly="D:\xperdex\xperdex.loader\xperdex.plugin.BingoCore.Tester.dll" type="xperdex.plugin.BingoCore.Tester.bingocore_tester" interface="xperdex.classes.IReflectorButton">
+<glareset>default</glareset><attributes text_color="-16777216" primary="1090453504" secondary="-1015680" highlight_primary="0" highlight_secondary="0" />
+<PSI_Button text="Test_Bingocore" />
+</control>
+<control X="18" Y="32" width="7" height="7" assembly="D:\xperdex\xperdex.loader\xperdex.plugin.BingoCore.Tester.dll" type="xperdex.plugin.BingoCore.Tester.bingocore_restart" interface="xperdex.classes.IReflectorButton">
+<glareset>default</glareset><attributes text_color="-16777216" primary="1090453504" secondary="-1015680" highlight_primary="0" highlight_secondary="0" />
+<PSI_Button text="Reset_Bingocore" />
+</control>
+</page>
+</xperdex>

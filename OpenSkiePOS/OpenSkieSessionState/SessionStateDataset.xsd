@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SessionStateDataset" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SessionStateDataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="SessionStateDataset" msprop:Generator_UserDSName="SessionStateDataset">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="session_day_sessions" msprop:Generator_TableClassName="session_day_sessionsDataTable" msprop:Generator_TableVarName="tablesession_day_sessions" msprop:Generator_TablePropName="session_day_sessions" msprop:Generator_RowDeletingName="session_day_sessionsRowDeleting" msprop:Generator_RowChangingName="session_day_sessionsRowChanging" msprop:Generator_RowEvHandlerName="session_day_sessionsRowChangeEventHandler" msprop:Generator_RowDeletedName="session_day_sessionsRowDeleted" msprop:Generator_UserTableName="session_day_sessions" msprop:Generator_RowChangedName="session_day_sessionsRowChanged" msprop:Generator_RowEvArgName="session_day_sessionsRowChangeEvent" msprop:Generator_RowClassName="session_day_sessionsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="session_name" msprop:Generator_ColumnVarNameInTable="columnsession_name" msprop:Generator_ColumnPropNameInRow="session_name" msprop:Generator_ColumnPropNameInTable="session_nameColumn" msprop:Generator_UserColumnName="session_name" type="xs:string" minOccurs="0" />
+              <xs:element name="session_number" msprop:Generator_ColumnVarNameInTable="columnsession_number" msprop:Generator_ColumnPropNameInRow="session_number" msprop:Generator_ColumnPropNameInTable="session_numberColumn" msprop:Generator_UserColumnName="session_number" type="xs:int" minOccurs="0" />
+              <xs:element name="session_id" msprop:Generator_ColumnVarNameInTable="columnsession_id" msprop:Generator_ColumnPropNameInRow="session_id" msprop:Generator_ColumnPropNameInTable="session_idColumn" msprop:Generator_UserColumnName="session_id" type="xs:int" minOccurs="0" />
+              <xs:element name="session_order" msprop:Generator_ColumnVarNameInTable="columnsession_order" msprop:Generator_ColumnPropNameInRow="session_order" msprop:Generator_ColumnPropNameInTable="session_orderColumn" msprop:Generator_UserColumnName="session_order" type="xs:int" minOccurs="0" />
+              <xs:element name="open_for_sales_flag" msprop:Generator_ColumnVarNameInTable="columnopen_for_sales_flag" msprop:Generator_ColumnPropNameInRow="open_for_sales_flag" msprop:Generator_ColumnPropNameInTable="open_for_sales_flagColumn" msprop:Generator_UserColumnName="open_for_sales_flag" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="open_for_issue_flag" msprop:Generator_ColumnVarNameInTable="columnopen_for_issue_flag" msprop:Generator_ColumnPropNameInRow="open_for_issue_flag" msprop:Generator_ColumnPropNameInTable="open_for_issue_flagColumn" msprop:Generator_UserColumnName="open_for_issue_flag" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="open_for_play_flag" msprop:Generator_ColumnVarNameInTable="columnopen_for_play_flag" msprop:Generator_ColumnPropNameInRow="open_for_play_flag" msprop:Generator_ColumnPropNameInTable="open_for_play_flagColumn" msprop:Generator_UserColumnName="open_for_play_flag" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="accruals_flag" msprop:Generator_ColumnVarNameInTable="columnaccruals_flag" msprop:Generator_ColumnPropNameInRow="accruals_flag" msprop:Generator_ColumnPropNameInTable="accruals_flagColumn" msprop:Generator_UserColumnName="accruals_flag" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="bingoday" msprop:Generator_ColumnVarNameInTable="columnbingoday" msprop:Generator_ColumnPropNameInRow="bingoday" msprop:Generator_ColumnPropNameInTable="bingodayColumn" msprop:Generator_UserColumnName="bingoday" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="dummy_timestamp" msprop:Generator_ColumnVarNameInTable="columndummy_timestamp" msprop:Generator_ColumnPropNameInRow="dummy_timestamp" msprop:Generator_ColumnPropNameInTable="dummy_timestampColumn" msprop:Generator_UserColumnName="dummy_timestamp" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="session_day_macro_id" msprop:Generator_ColumnVarNameInTable="columnsession_day_macro_id" msprop:Generator_ColumnPropNameInRow="session_day_macro_id" msprop:Generator_ColumnPropNameInTable="session_day_macro_idColumn" msprop:Generator_UserColumnName="session_day_macro_id" type="xs:int" minOccurs="0" />
+              <xs:element name="price_exception_set_id" msprop:Generator_ColumnVarNameInTable="columnprice_exception_set_id" msprop:Generator_ColumnPropNameInRow="price_exception_set_id" msprop:Generator_ColumnPropNameInTable="price_exception_set_idColumn" msprop:Generator_UserColumnName="price_exception_set_id" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="prize_exception_set_id" msprop:Generator_ColumnVarNameInTable="columnprize_exception_set_id" msprop:Generator_ColumnPropNameInRow="prize_exception_set_id" msprop:Generator_ColumnPropNameInTable="prize_exception_set_idColumn" msprop:Generator_UserColumnName="prize_exception_set_id" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="active_flag" msprop:Generator_ColumnVarNameInTable="columnactive_flag" msprop:Generator_ColumnPropNameInRow="active_flag" msprop:Generator_ColumnPropNameInTable="active_flagColumn" msprop:Generator_UserColumnName="active_flag" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="opened_for_issue" msprop:Generator_ColumnVarNameInTable="columnopened_for_issue" msprop:Generator_ColumnPropNameInRow="opened_for_issue" msprop:Generator_ColumnPropNameInTable="opened_for_issueColumn" msprop:Generator_UserColumnName="opened_for_issue" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="opened_for_sales" msprop:Generator_ColumnVarNameInTable="columnopened_for_sales" msprop:Generator_ColumnPropNameInRow="opened_for_sales" msprop:Generator_ColumnPropNameInTable="opened_for_salesColumn" msprop:Generator_UserColumnName="opened_for_sales" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="opened_for_play" msprop:Generator_ColumnVarNameInTable="columnopened_for_play" msprop:Generator_ColumnPropNameInRow="opened_for_play" msprop:Generator_ColumnPropNameInTable="opened_for_playColumn" msprop:Generator_UserColumnName="opened_for_play" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="snapshot_session_id" msprop:Generator_ColumnVarNameInTable="columnsnapshot_session_id" msprop:Generator_ColumnPropNameInRow="snapshot_session_id" msprop:Generator_ColumnPropNameInTable="snapshot_session_idColumn" msprop:Generator_UserColumnName="snapshot_session_id" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="operational_configuration" msprop:Generator_TableClassName="operational_configurationDataTable" msprop:Generator_TableVarName="tableoperational_configuration" msprop:Generator_TablePropName="operational_configuration" msprop:Generator_RowDeletingName="operational_configurationRowDeleting" msprop:Generator_RowChangingName="operational_configurationRowChanging" msprop:Generator_RowEvHandlerName="operational_configurationRowChangeEventHandler" msprop:Generator_RowDeletedName="operational_configurationRowDeleted" msprop:Generator_UserTableName="operational_configuration" msprop:Generator_RowChangedName="operational_configurationRowChanged" msprop:Generator_RowEvArgName="operational_configurationRowChangeEvent" msprop:Generator_RowClassName="operational_configurationRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="current_session_id" msprop:Generator_ColumnVarNameInTable="columncurrent_session_id" msprop:Generator_ColumnPropNameInRow="current_session_id" msprop:Generator_ColumnPropNameInTable="current_session_idColumn" msprop:Generator_UserColumnName="current_session_id" type="xs:int" minOccurs="0" />
+              <xs:element name="current_bingoday" msprop:Generator_ColumnVarNameInTable="columncurrent_bingoday" msprop:Generator_ColumnPropNameInRow="current_bingoday" msprop:Generator_ColumnPropNameInTable="current_bingodayColumn" msprop:Generator_UserColumnName="current_bingoday" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="current_session_day_sessions_id" msprop:Generator_ColumnVarNameInTable="columncurrent_session_day_sessions_id" msprop:Generator_ColumnPropNameInRow="current_session_day_sessions_id" msprop:Generator_ColumnPropNameInTable="current_session_day_sessions_idColumn" msprop:Generator_UserColumnName="current_session_day_sessions_id" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

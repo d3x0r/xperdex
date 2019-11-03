@@ -1,0 +1,3 @@
+namespace xperdex.core
+{
+}

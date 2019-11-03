@@ -1,0 +1,229 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7AA21CBF-336D-4815-A2A6-55AC5694A241}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpenSkieScheduler</RootNamespace>
+    <AssemblyName>OpenSkieScheduler</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <BaseIntermediateOutputPath>$(SolutionDir)/output/</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)//</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)//</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=5.0.8.1, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\MySQL\MySQL Connector Net 5.0.8.1\Binaries\.NET 2.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base Tables\BundleTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base Tables\ColorInfoTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base Tables\GameGroupTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base Tables\ItemDescription.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base Tables\ItemInstance.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base Tables\SessionMacroSchedule.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BingoGameDefs\CardsetInfo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BingoGameDefs\CardsetRange.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BingoGameDefs\CardsetRangePayoutLevel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BingoGameDefs\PriceSchedule.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BingoGameDefs\Dealer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BingoGameDefs\Patterns\PatternDescriptionTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base Tables\CharityTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BingoGameDefs\PrizeSchedule.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BingoGameDefs\PrizeSchedule2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EventCalendarTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base Tables\CardswipeCalibrateTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\GameGroupPrizePacks.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\ItemPackMap.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\PackFacePrizeLevel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\GameGroupGameRelation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\GameGroupPackRelation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\GameGroupPrizeRelation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\Meta\MetaMySQLRelation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\Meta\MetaRelation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\Meta\SessionGameMetaRelation.cs">
+    </Compile>
+    <Compile Include="Relations\Meta\TwoAxisTableGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\PackCardsetRange.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\SessionBundle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\SessionGame.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\SessionGameGameGroup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\SessionGameGroupGameOrder.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\SessionGameGroupTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\GamePatternTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base Tables\GameTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base Classes\HallCharityOrgTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base Tables\HallTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Local.cs" />
+    <Compile Include="Names.cs" />
+    <Compile Include="Base Tables\PackTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BingoGameDefs\PaperCardverCheckfirst.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base Tables\PrizeLevelNames.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\DataSources\ScheduleDataSet.datasource" />
+    <None Include="Properties\DataSources\ScheduleDataSet1.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Relations\SessionGamePrize.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\SessionGameTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\SessionPackOrder.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ScheduleDataSet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\SessionCalendarTable.cs">
+    </Compile>
+    <Compile Include="Relations\SessionDayMacroSessionTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base Tables\SessionDayMacroTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base Tables\SesssionTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\xperdex.classes\xperdex.classes.csproj">
+      <Project>{041E5A37-8678-451E-9500-EE3D7864C092}</Project>
+      <Name>xperdex.classes</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.        Other similar extension points exist, see Microsoft.Common.targets.  <Target Name="BeforeBuild">  </Target>  <Target Name="AfterBuild">  </Target>  -->
+</Project>

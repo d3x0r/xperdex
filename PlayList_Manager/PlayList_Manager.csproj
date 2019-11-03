@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9E6C35D5-0BFF-4C88-839D-C1EB43FD311D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PlayList_Manager</RootNamespace>
+    <AssemblyName>PlayList_Manager</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <BaseIntermediateOutputPath>$(SolutionDir)/output/</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/</IntermediateOutputPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="ConfigureHallSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigureHallSelector.Designer.cs">
+      <DependentUpon>ConfigureHallSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CurrentList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EditHallSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditHallSelector.Designer.cs">
+      <DependentUpon>EditHallSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileAcceptor.cs">
+    </Compile>
+    <Compile Include="HallSelector.cs" />
+    <Compile Include="Local.cs" />
+    <Compile Include="SavePlaylist.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ConfigureHallSelector.resx">
+      <DependentUpon>ConfigureHallSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditHallSelector.resx">
+      <DependentUpon>EditHallSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\xperdex.classes\xperdex.classes.csproj">
+      <Project>{041E5A37-8678-451E-9500-EE3D7864C092}</Project>
+      <Name>xperdex.classes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\xperdex.core\xperdex.core.csproj">
+      <Project>{A4BA39E1-E388-4622-94F5-885C5883EA46}</Project>
+      <Name>xperdex.core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\xperdex.tasks\xperdex.tasks.csproj">
+      <Project>{0E46BCF5-C07C-4CB2-8626-41F5040F11D9}</Project>
+      <Name>xperdex.tasks</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

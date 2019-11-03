@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xperdex.classes.vs10.4.0", "xperdex.classes.vs10.4.0.csproj", "{041E5A37-8678-451E-9500-EE3D7864C092}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.Data.SQLite.2010", "..\SQLite\1.0.80.0\System.Data.SQLite\System.Data.SQLite.2010.csproj", "{AC139952-261A-4463-B6FA-AEBC25283A66}"
+	ProjectSection(ProjectDependencies) = postProject
+		{490CBC51-A3B2-4397-89F9-16E858DCB4F8} = {490CBC51-A3B2-4397-89F9-16E858DCB4F8}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.Data.SQLite.Module.2010.4.0", "..\SQLite\1.0.80.0\System.Data.SQLite\System.Data.SQLite.Module.2010.4.0.csproj", "{AC139952-261A-4463-B6FA-AEBC25284A66}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SQLite.Interop.Static.2010", "..\SQLite\1.0.80.0\SQLite.Interop\SQLite.Interop.Static.2010.4.0.vcxproj", "{490CBC51-A3B2-4397-89F9-16E858DCB4F8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AC139952-261A-4463-B6FA-AEBC25284A66} = {AC139952-261A-4463-B6FA-AEBC25284A66}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{041E5A37-8678-451E-9500-EE3D7864C092}.Debug|x64.ActiveCfg = Debug|x64
+		{041E5A37-8678-451E-9500-EE3D7864C092}.Debug|x64.Build.0 = Debug|x64
+		{041E5A37-8678-451E-9500-EE3D7864C092}.Debug|x86.ActiveCfg = Debug|x86
+		{041E5A37-8678-451E-9500-EE3D7864C092}.Debug|x86.Build.0 = Debug|x86
+		{041E5A37-8678-451E-9500-EE3D7864C092}.Release|x64.ActiveCfg = Release|x64
+		{041E5A37-8678-451E-9500-EE3D7864C092}.Release|x64.Build.0 = Release|x64
+		{041E5A37-8678-451E-9500-EE3D7864C092}.Release|x86.ActiveCfg = Release|x86
+		{041E5A37-8678-451E-9500-EE3D7864C092}.Release|x86.Build.0 = Release|x86
+		{AC139952-261A-4463-B6FA-AEBC25283A66}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{AC139952-261A-4463-B6FA-AEBC25283A66}.Debug|x64.Build.0 = Debug|Any CPU
+		{AC139952-261A-4463-B6FA-AEBC25283A66}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AC139952-261A-4463-B6FA-AEBC25283A66}.Debug|x86.Build.0 = Debug|Any CPU
+		{AC139952-261A-4463-B6FA-AEBC25283A66}.Release|x64.ActiveCfg = Release|Any CPU
+		{AC139952-261A-4463-B6FA-AEBC25283A66}.Release|x64.Build.0 = Release|Any CPU
+		{AC139952-261A-4463-B6FA-AEBC25283A66}.Release|x86.ActiveCfg = Release|Any CPU
+		{AC139952-261A-4463-B6FA-AEBC25283A66}.Release|x86.Build.0 = Release|Any CPU
+		{AC139952-261A-4463-B6FA-AEBC25284A66}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{AC139952-261A-4463-B6FA-AEBC25284A66}.Debug|x64.Build.0 = Debug|Any CPU
+		{AC139952-261A-4463-B6FA-AEBC25284A66}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AC139952-261A-4463-B6FA-AEBC25284A66}.Debug|x86.Build.0 = Debug|Any CPU
+		{AC139952-261A-4463-B6FA-AEBC25284A66}.Release|x64.ActiveCfg = Release|Any CPU
+		{AC139952-261A-4463-B6FA-AEBC25284A66}.Release|x64.Build.0 = Release|Any CPU
+		{AC139952-261A-4463-B6FA-AEBC25284A66}.Release|x86.ActiveCfg = Release|Any CPU
+		{AC139952-261A-4463-B6FA-AEBC25284A66}.Release|x86.Build.0 = Release|Any CPU
+		{490CBC51-A3B2-4397-89F9-16E858DCB4F8}.Debug|x64.ActiveCfg = Debug|x64
+		{490CBC51-A3B2-4397-89F9-16E858DCB4F8}.Debug|x64.Build.0 = Debug|x64
+		{490CBC51-A3B2-4397-89F9-16E858DCB4F8}.Debug|x86.ActiveCfg = Debug|Win32
+		{490CBC51-A3B2-4397-89F9-16E858DCB4F8}.Debug|x86.Build.0 = Debug|Win32
+		{490CBC51-A3B2-4397-89F9-16E858DCB4F8}.Release|x64.ActiveCfg = Release|x64
+		{490CBC51-A3B2-4397-89F9-16E858DCB4F8}.Release|x64.Build.0 = Release|x64
+		{490CBC51-A3B2-4397-89F9-16E858DCB4F8}.Release|x86.ActiveCfg = Release|Win32
+		{490CBC51-A3B2-4397-89F9-16E858DCB4F8}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

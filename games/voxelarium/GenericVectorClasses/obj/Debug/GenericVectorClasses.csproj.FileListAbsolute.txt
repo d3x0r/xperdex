@@ -1,0 +1,6 @@
+M:\xperdex\games\voxelarium\GenericVectorClasses\obj\Debug\GenericVectorClasses.csprojResolveAssemblyReference.cache
+M:\xperdex\games\voxelarium\GenericVectorClasses\bin\Debug\GenericVectorClasses.exe.config
+M:\xperdex\games\voxelarium\GenericVectorClasses\bin\Debug\GenericVectorClasses.exe
+M:\xperdex\games\voxelarium\GenericVectorClasses\bin\Debug\GenericVectorClasses.pdb
+M:\xperdex\games\voxelarium\GenericVectorClasses\obj\Debug\GenericVectorClasses.exe
+M:\xperdex\games\voxelarium\GenericVectorClasses\obj\Debug\GenericVectorClasses.pdb

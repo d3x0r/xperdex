@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?><!DOCTYPE xperdex.configuration >
+<xperdex>
+<Font name="Default" face="Lucida Console" size="37" style="Regular" units="Point" /><Font name="Default" face="Lucida Console" size="12" style="Regular" units="Point" /><Font name="Default" face="Lucida Console" size="12" style="Regular" units="Point" /><Font name="Default" face="Lucida Console" size="12" style="Regular" units="Point" /><Font name="Default" face="Lucida Console" size="12" style="Regular" units="Point" /><Font name="Default" face="Lucida Console" size="12" style="Regular" units="Point" /><Font name="Default" face="Lucida Console" size="12" style="Regular" units="Point" /><Font name="Default" face="Lucida Console" size="12" style="Regular" units="Point" /><Font name="Default" face="Lucida Console" size="12" style="Regular" units="Point" /><Font name="Default" face="Lucida Console" size="12" style="Regular" units="Point" /><Font name="Default" face="Lucida Console" size="12" style="Regular" units="Point" /><Font name="Default" face="Lucida Console" size="12" style="Regular" units="Point" /><Font name="Default" face="Lucida Console" size="12" style="Regular" units="Point" /><Font name="Default" face="Lucida Console" size="12" style="Regular" units="Point" /><Font name="Default" face="Lucida Console" size="12" style="Regular" units="Point" /><Font name="Default" face="Lucida Console" size="12" style="Regular" units="Point" /><Font name="Default" face="Lucida Console" size="12" style="Regular" units="Point" /><Font name="Default" face="Lucida Console" size="37" style="Regular" units="Point" /><Font name="Default" face="Lucida Console" size="37" style="Regular" units="Point" /><Font name="Default" face="Lucida Console" size="37" style="Regular" units="Point" /><Font name="Default" face="Lucida Console" size="37" style="Regular" units="Point" /><Font name="Default" face="Lucida Console" size="37" style="Regular" units="Point" /><Font name="Default" face="Lucida Console" size="37" style="Regular" units="Point" /><Font name="Default" face="Lucida Console" size="37" style="Regular" units="Point" /><Font name="Default" face="Lucida Console" size="37" style="Regular" units="Point" /><Font name="sadf" face="Arial" size="25" style="Regular" units="Pixel" /><Font name="Smaller Lucida" face="Lucida Console" size="14.25" style="Regular" units="Point" /><glareset name="default" mask="Images/colorLayer.png" pressed="Images/pressedlens.png" depressed="Images/defaultLens.png" glare="" shade="multi" />
+<glareset name="tesatasd" mask="Images/colorLayer.png" pressed="Images/pressedlens.png" depressed="Images/defaultLens.png" glare="" shade="none" />
+<glareset name="Round" mask="C:\ftn3000\etc\images\round_mask.png" pressed="C:\ftn3000\etc\images\round_ridge_down.png" depressed="C:\ftn3000\etc\images\round_ridge_up.png" glare="" shade="mono" />
+<glareset name="Square" mask="C:\ftn3000\etc\images\square_mask.png" pressed="C:\ftn3000\etc\images\ridge_down.png" depressed="C:\ftn3000\etc\images\ridge_up.png" glare="" shade="mono" />
+<glareset name="Howard 1" mask="" pressed="images/buttons/jimbutton_ovalpressed.png" depressed="Images/buttons/jimbuttonoval.png" glare="" shade="multi" />
+<glareset name="Howard 2" mask="" pressed="Images/buttons/jimbuttonsquarepressed.png" depressed="Images/buttons/jimbuttonsquare.png" glare="" shade="multi" />
+<Plugins Location="E:\work\xperdex\xperdex.loader\bin\Debug\xperdex.core.dll" />
+<Plugins Location="E:\work\xperdex\xperdex.tasks\bin\Debug\xperdex.tasks.dll" />
+<page background="C:\ftn3000\etc\images\misc\sky.jpg" color="16777215">
+<control X="13" Y="22" width="7" height="7" assembly="" type="xperdex.core.Macro" interface="xperdex.classes.IReflectorButton">
+<Macro Text="" />
+<glareset>Round</glareset><attributes text_color="-16777216" primary="-2064512743" secondary="-14205956" highlight_primary="0" highlight_secondary="0" decal="" />
+<PSI_Button text="A Control" font="Default" />
+</control>
+<control X="24" Y="30" width="7" height="10" assembly="" type="xperdex.core.Macro" interface="xperdex.classes.IReflectorButton">
+<Macro Text="" />
+<glareset>Square</glareset><attributes text_color="-16777216" primary="6690643" secondary="-13009025" highlight_primary="0" highlight_secondary="0" decal="" />
+<PSI_Button text="A_Control_Multi_Line" font="Smaller Lucida" />
+</control>
+<control X="15" Y="15" width="7" height="7" assembly="" type="xperdex.core.Macro" interface="xperdex.classes.IReflectorButton">
+<Macro Text="" />
+<glareset>default</glareset><attributes text_color="-16777216" primary="-13107396" secondary="-14998532" highlight_primary="-262400" highlight_secondary="-12357888" decal="" />
+<PSI_Button text="A Control" font="Default" />
+</control>
+<control X="25" Y="1" width="6" height="7" assembly="" type="xperdex.core.Macro" interface="xperdex.classes.IReflectorButton">
+<Macro Text="" />
+<glareset>default</glareset><attributes text_color="-16777216" primary="1090453504" secondary="-1015680" highlight_primary="0" highlight_secondary="0" decal="" />
+<PSI_Button text="A Control" font="Default" />
+</control>
+<control X="32" Y="1" width="7" height="7" assembly="" type="xperdex.core.Macro" interface="xperdex.classes.IReflectorButton">
+<Macro Text="" />
+<glareset>default</glareset><attributes text_color="-16777216" primary="1090453504" secondary="-1015680" highlight_primary="0" highlight_secondary="0" decal="" />
+<PSI_Button text="A Control" font="Default" />
+</control>
+<control X="20" Y="22" width="7" height="7" assembly="" type="xperdex.core.Macro" interface="xperdex.classes.IReflectorButton">
+<Macro Text="" />
+<glareset>Round</glareset><attributes text_color="-16777216" primary="16711680" secondary="-1015680" highlight_primary="0" highlight_secondary="0" decal="" />
+<PSI_Button text="A Control" font="Default" />
+</control>
+<control X="6" Y="22" width="7" height="7" assembly="" type="xperdex.core.Macro" interface="xperdex.classes.IReflectorButton">
+<Macro Text="" />
+<glareset>Round</glareset><attributes text_color="-16777216" primary="-65536" secondary="-1015680" highlight_primary="0" highlight_secondary="0" decal="" />
+<PSI_Button text="A Control" font="Default" />
+</control>
+<control X="22" Y="15" width="7" height="7" assembly="" type="xperdex.core.Macro" interface="xperdex.classes.IReflectorButton">
+<Macro Text=""><Element Assembly="E:\work\xperdex\xperdex.tasks\bin\Debug\xperdex.tasks.dll" Type="xperdex.tasks.Task"><Task program="sky.jpg" path="." arguments="" name="" exclusive="False" runonce="False" remote="False" />
+</Element>
+<Element Assembly="E:\work\xperdex\xperdex.loader\bin\Debug\xperdex.core.dll" Type="xperdex.core.Macro"><Macro Text="ashqy16234" />
+</Element>
+<Element Assembly="E:\work\xperdex\xperdex.tasks\bin\Debug\xperdex.tasks.dll" Type="xperdex.tasks.Task"><Task program="sky.jpg" path="." arguments="" name="" exclusive="False" runonce="False" remote="False" />
+</Element>
+</Macro>
+<glareset>default</glareset><attributes text_color="-16777216" primary="1933049660" secondary="-2078596100" highlight_primary="-262400" highlight_secondary="-12357888" decal="" />
+<PSI_Button text="A Control" font="Default" />
+</control>
+<control X="29" Y="15" width="7" height="7" assembly="" type="xperdex.core.Macro" interface="xperdex.classes.IReflectorButton">
+<Macro Text="" />
+<glareset>default</glareset><attributes text_color="-16777216" primary="574095164" secondary="1058743292" highlight_primary="-262400" highlight_secondary="-12357888" decal="" />
+<PSI_Button text="A Control" font="Default" />
+</control>
+<control X="17" Y="30" width="7" height="10" assembly="" type="xperdex.core.Macro" interface="xperdex.classes.IReflectorButton">
+<Macro Text="" />
+<glareset>Square</glareset><attributes text_color="-16777216" primary="1936070483" secondary="-13009025" highlight_primary="0" highlight_secondary="0" decal="" />
+<PSI_Button text="A_Control_Multi_Line" font="Smaller Lucida" />
+</control>
+<control X="10" Y="30" width="7" height="10" assembly="" type="xperdex.core.Macro" interface="xperdex.classes.IReflectorButton">
+<Macro Text="" />
+<glareset>Square</glareset><attributes text_color="-16777216" primary="-10086573" secondary="-13009025" highlight_primary="0" highlight_secondary="0" decal="" />
+<PSI_Button text="A_Control_Multi_Line" font="Smaller Lucida" />
+</control>
+<control X="1" Y="1" width="7" height="7" assembly="" type="xperdex.core.Macro" interface="xperdex.classes.IReflectorButton">
+<Macro Text="" />
+<glareset>Howard 1</glareset><attributes text_color="-16777216" primary="-13107396" secondary="-14998532" highlight_primary="-262400" highlight_secondary="-12357888" decal="" />
+<PSI_Button text="A Control" font="Default" />
+</control>
+<control X="8" Y="1" width="7" height="7" assembly="" type="xperdex.core.Macro" interface="xperdex.classes.IReflectorButton">
+<Macro Text="" />
+<glareset>Howard 1</glareset><attributes text_color="-16777216" primary="-13107396" secondary="-14998532" highlight_primary="-262400" highlight_secondary="-12357888" decal="" />
+<PSI_Button text="A Control" font="Default" />
+</control>
+<control X="15" Y="1" width="7" height="7" assembly="" type="xperdex.core.Macro" interface="xperdex.classes.IReflectorButton">
+<Macro Text="" />
+<glareset>Howard 1</glareset><attributes text_color="-16777216" primary="-13107396" secondary="-14998532" highlight_primary="-262400" highlight_secondary="-12357888" decal="" />
+<PSI_Button text="A Control" font="Default" />
+</control>
+<control X="1" Y="9" width="7" height="6" assembly="" type="xperdex.core.Macro" interface="xperdex.classes.IReflectorButton">
+<Macro Text="" />
+<glareset>Howard 2</glareset><attributes text_color="-16777216" primary="-13107396" secondary="-14998532" highlight_primary="-262400" highlight_secondary="-12357888" decal="" />
+<PSI_Button text="A Control" font="Default" />
+</control>
+<control X="8" Y="9" width="7" height="6" assembly="" type="xperdex.core.Macro" interface="xperdex.classes.IReflectorButton">
+<Macro Text="" />
+<glareset>Howard 1</glareset><attributes text_color="-16777216" primary="-13107396" secondary="-14998532" highlight_primary="-262400" highlight_secondary="-12357888" decal="" />
+<PSI_Button text="A Control" font="Default" />
+</control>
+<control X="15" Y="9" width="7" height="6" assembly="" type="xperdex.core.Macro" interface="xperdex.classes.IReflectorButton">
+<Macro Text="" />
+<glareset>Howard 1</glareset><attributes text_color="-16777216" primary="-13107396" secondary="-14998532" highlight_primary="-262400" highlight_secondary="-12357888" decal="" />
+<PSI_Button text="A Control" font="Default" />
+</control>
+</page>
+</xperdex>

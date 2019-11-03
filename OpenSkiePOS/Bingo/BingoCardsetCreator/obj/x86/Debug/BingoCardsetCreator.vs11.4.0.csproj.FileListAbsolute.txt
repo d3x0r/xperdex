@@ -1,0 +1,12 @@
+M:\xperdex\OpenSkiePOS\Bingo\BingoCardsetCreator\bin\x86\Debug\BingoCardsetCreator.dll
+M:\xperdex\OpenSkiePOS\Bingo\BingoCardsetCreator\bin\x86\Debug\BingoCardsetCreator.pdb
+M:\xperdex\OpenSkiePOS\Bingo\BingoCardsetCreator\bin\x86\Debug\OpenSkieSchedule3.dll
+M:\xperdex\OpenSkiePOS\Bingo\BingoCardsetCreator\bin\x86\Debug\xperdex.classes.dll
+M:\xperdex\OpenSkiePOS\Bingo\BingoCardsetCreator\bin\x86\Debug\System.Data.SQLite.dll
+M:\xperdex\OpenSkiePOS\Bingo\BingoCardsetCreator\bin\x86\Debug\OpenSkieSessionState.dll
+M:\xperdex\OpenSkiePOS\Bingo\BingoCardsetCreator\bin\x86\Debug\xperdex.classes.pdb
+M:\xperdex\OpenSkiePOS\Bingo\BingoCardsetCreator\bin\x86\Debug\OpenSkieSchedule3.pdb
+M:\xperdex\OpenSkiePOS\Bingo\BingoCardsetCreator\bin\x86\Debug\System.Data.SQLite.pdb
+M:\xperdex\OpenSkiePOS\Bingo\BingoCardsetCreator\bin\x86\Debug\OpenSkieSessionState.pdb
+M:\xperdex\OpenSkiePOS\Bingo\BingoCardsetCreator\obj\x86\Debug\BingoCardsetCreator.dll
+M:\xperdex\OpenSkiePOS\Bingo\BingoCardsetCreator\obj\x86\Debug\BingoCardsetCreator.pdb

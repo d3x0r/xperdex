@@ -1,0 +1,581 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7AA21CBF-336D-4815-A2A6-55AC5694A241}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OpenSkieScheduler</RootNamespace>
+    <AssemblyName>OpenSkieSchedule</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BaseIntermediateOutputPath>$(SolutionDir)/output/</BaseIntermediateOutputPath>
+    <BaseOutputPath>$(SolutionDir)/</BaseOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v3.0</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v3.0/</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v3.0</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v3.0/</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=5.0.8.1, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\MySQL\MySQL Connector Net 5.0.8.1\Binaries\.NET 2.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\Framework64\v3.0\Windows Communication Foundation\System.ServiceModel.dll</HintPath>
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base Classes\RelatedTableEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base Classes\RelatedTableEditor.Designer.cs">
+      <DependentUpon>RelatedTableEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base Tables\BundleTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base Tables\ColorInfoTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base Tables\GameGroupTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base Tables\SessionMacroSchedule.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BingoGameDefs\CardsetInfo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BingoGameDefs\CardsetRange.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BingoGameDefs\CardsetRangePayoutLevel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BingoGameDefs\CurrentCardsetRanges.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BingoGameDefs\Dealer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BingoGameDefs\Patterns\BigPatternBlock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BingoGameDefs\Patterns\BigPatternBlock.designer.cs">
+      <DependentUpon>BigPatternBlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BingoGameDefs\Patterns\Pattern.cs" />
+    <Compile Include="BingoGameDefs\Patterns\PatternBlock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BingoGameDefs\Patterns\PatternBlock.designer.cs">
+      <DependentUpon>PatternBlock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BingoGameDefs\Patterns\PatternBlockGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BingoGameDefs\Patterns\PatternEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BingoGameDefs\Patterns\PatternEditor.designer.cs">
+      <DependentUpon>PatternEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base Tables\CharityTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BingoGameDefs\Patterns\ScollingPattern.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BingoGameDefs\PrizeSchedule.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Buttons\DeleteScheduleItems.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Buttons\EditScheduleItems.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <None Include="Controls\Buttons\EltaninButton.cs">
+      <SubType>Component</SubType>
+    </None>
+    <Compile Include="Controls\Buttons\EnableEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Buttons\GameOrderMoveDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Buttons\GameOrderMoveUp.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Buttons\MyButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Buttons\NewScheduleItems.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Buttons\SaveLoadButtons.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ControlList.cs" />
+    <Compile Include="Controls\Forms\CardsetEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\CardsetEditor.Designer.cs">
+      <DependentUpon>CardsetEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\CardsetRangeEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\CardsetRangeEditor.Designer.cs">
+      <DependentUpon>CardsetRangeEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\ColorEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\ColorEditor.designer.cs">
+      <DependentUpon>ColorEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\DealerEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\DealerEditor.Designer.cs">
+      <DependentUpon>DealerEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\GameEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\GameEditor.Designer.cs">
+      <DependentUpon>GameEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\GameGroupEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\GameGroupEditor.Designer.cs">
+      <DependentUpon>GameGroupEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\PackEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\PackEditor.designer.cs">
+      <DependentUpon>PackEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\PayoutDateSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\PayoutDateSelector.Designer.cs">
+      <DependentUpon>PayoutDateSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\PayoutEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\PayoutEditor.Designer.cs">
+      <DependentUpon>PayoutEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\SessionMacroScheduler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\SessionMacroScheduler.Designer.cs">
+      <DependentUpon>SessionMacroScheduler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Forms\SessionManagerData\Colors.cs" />
+    <Compile Include="Controls\Grids\BundlePacks.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Grids\MyDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\CurrentGameGroupGameList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\CurrentGameGroupPackList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\CurrentGameGroupPrizeList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\CurrentGameList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\CurrentGamePatternList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\CurrentSessionGameGroupList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\CurrentSessionGameOrderList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\CurrrentSessionMacroSessionList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\GameGroupList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\GameList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\MyListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\PackList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\PatternList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\PrizeLevelList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\SessionAndBundleList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Lists\SessionMacroList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Other\CurrentPatternScroller.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PackFace.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PackFace.designer.cs">
+      <DependentUpon>PackFace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PackItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PackItem.designer.cs">
+      <DependentUpon>PackItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PackItemGen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PackItemGen.designer.cs">
+      <DependentUpon>PackItemGen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PackProperties.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PackProperties.designer.cs">
+      <DependentUpon>PackProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TextBoxes\NameFields.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\GameGroupGameEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\Forms\GameGroupGameEditor.designer.cs">
+      <DependentUpon>GameGroupGameEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Relations\CurentGameGroupPacks.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\CurrentGameGroupGames.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\CurrentGameGroupPrizes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\CurrentGamePatterns.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\CurrentObject.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\CurrentPackCardsetRanges.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\CurrentPackFacePrizeLevel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\CurrentSessionBundles.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\CurrentSessionGameGroupGameOrder.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\CurrentSessionGameGroups.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\CurrentSessionGamePrize.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\CurrentSessionMacroSessions.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\GameGroupGameRelation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\GameGroupPackRelation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\GameGroupPrizeRelation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\Meta\MetaMySQLRelation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\Meta\MetaRelation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\Meta\SessionGameMetaRelation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\Meta\TwoAxisTableGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\PackCardsetRange.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\PackFacePrizeLevel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\SessionBundle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\SessionGameGroupGameOrder.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\SessionGameGroupTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EventCalendarSpanTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EventCalendarTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EventPeriodicTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\GamePatternTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base Tables\GameTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base Classes\HallCharityOrgTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base Tables\HallTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Local.cs" />
+    <Compile Include="Names.cs" />
+    <Compile Include="Base Tables\PackTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BingoGameDefs\PaperCardverCheckfirst.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BingoGameDefs\Patterns\PatternDescriptionTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PrizeObject.cs" />
+    <Compile Include="Base Tables\PrizeLevelNames.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Base Classes\RelatedTableEditor.resx">
+      <DependentUpon>RelatedTableEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BingoGameDefs\Patterns\BigPatternBlock.resx">
+      <DependentUpon>BigPatternBlock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BingoGameDefs\Patterns\PatternBlock.resx">
+      <DependentUpon>PatternBlock.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BingoGameDefs\Patterns\PatternBlockGroup.resx">
+      <DependentUpon>PatternBlockGroup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BingoGameDefs\Patterns\PatternEditor.resx">
+      <DependentUpon>PatternEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\CardsetEditor.resx">
+      <DependentUpon>CardsetEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\CardsetRangeEditor.resx">
+      <DependentUpon>CardsetRangeEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\ColorEditor.resx">
+      <DependentUpon>ColorEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\DealerEditor.resx">
+      <DependentUpon>DealerEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\GameEditor.resx">
+      <DependentUpon>GameEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\PackEditor.resx">
+      <DependentUpon>PackEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\PayoutDateSelector.resx">
+      <DependentUpon>PayoutDateSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\PayoutEditor.resx">
+      <DependentUpon>PayoutEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\SessionMacroScheduler.resx">
+      <DependentUpon>SessionMacroScheduler.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PackFace.resx">
+      <DependentUpon>PackFace.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PackItem.resx">
+      <DependentUpon>PackItem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PackItemGen.resx">
+      <DependentUpon>PackItemGen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PackProperties.resx">
+      <DependentUpon>PackProperties.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Forms\GameGroupGameEditor.resx">
+      <DependentUpon>GameGroupGameEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\DataSources\ScheduleDataSet.datasource" />
+    <None Include="Properties\DataSources\ScheduleDataSet1.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Relations\SessionGamePrize.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ScheduleDataSet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\SessionCalendarTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relations\SessionDayMacroSessionTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base Tables\SessionDayMacroTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Base Tables\SessionInfo.cs" />
+    <Compile Include="Base Tables\SesssionTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\MonthCalendar\MonthCalendar.vc9.csproj">
+      <Project>{898ECB12-D464-4514-AE2E-45FE430FE04E}</Project>
+      <Name>MonthCalendar.vc9</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\xperdex.classes\xperdex.classes.vc9.csproj">
+      <Project>{041E5A37-8678-451E-9500-EE3D7864C092}</Project>
+      <Name>xperdex.classes.vc9</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
