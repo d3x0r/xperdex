@@ -144,7 +144,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="ReflectorWindow.cs" />
     <Compile Include="SQL_Utilities.cs" />
     <Compile Include="StaticStringConnection.cs" />
     <Compile Include="DataConnection.cs" />
@@ -166,19 +165,6 @@
     <Compile Include="QueryNewName.Designer.cs">
       <DependentUpon>QueryNewName.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReflectorButton.cs" />
-    <Compile Include="ReflectorCanvas.cs" />
-    <Compile Include="ReflectorCopyPaste.cs" />
-    <Compile Include="ReflectorCreate.cs" />
-    <Compile Include="ReflectorDirectionShow.cs" />
-    <Compile Include="ReflectorDropTarget.cs" />
-    <Compile Include="ReflectorEdit.cs" />
-    <Compile Include="ReflectorName.cs" />
-    <Compile Include="ReflectorPersistance.cs" />
-    <Compile Include="ReflectorPlugin.cs" />
-    <Compile Include="ReflectorSecurity.cs" />
-    <Compile Include="ReflectorVariable.cs" />
-    <Compile Include="ReflectorWidget.cs" />
     <Compile Include="RegSQLDataTable.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -202,9 +188,6 @@
     <Compile Include="Types\XString.cs" />
     <Compile Include="RegNames.cs" />
     <Compile Include="Vector.cs" />
-    <Compile Include="XDataSet.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="XDataTable.cs">
       <SubType>Component</SubType>
     </Compile>

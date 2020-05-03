@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!--
  *
  * testce.2012.csproj -
@@ -26,10 +26,13 @@
     <NetFx35Settings>false</NetFx35Settings>
     <ConfigurationYear>2012</ConfigurationYear>
     <ConfigurationSuffix>Compact</ConfigurationSuffix>
+    <BaseOutputPath>$(SolutionDir)/</BaseOutputPath>
+    <BaseIntermediateOutputPath>$(SolutionDir)/output/</BaseIntermediateOutputPath>
   </PropertyGroup>
   <Import Project="$(SQLiteNetDir)\Targets\SQLite.NET.Settings.targets" />
   <PropertyGroup Condition="'$(BinaryOutputPath)' != ''">
-    <OutputPath>$(BinaryOutputPath)</OutputPath>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v3.9</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v3.9</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,6 +43,8 @@
     <NoConfig>true</NoConfig>
     <ErrorReport>prompt</ErrorReport>
     <GenerateSerializationAssemblies>off</GenerateSerializationAssemblies>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v3.9</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v3.9</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -49,6 +54,8 @@
     <NoConfig>true</NoConfig>
     <ErrorReport>prompt</ErrorReport>
     <GenerateSerializationAssemblies>off</GenerateSerializationAssemblies>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v3.9</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v3.9</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />

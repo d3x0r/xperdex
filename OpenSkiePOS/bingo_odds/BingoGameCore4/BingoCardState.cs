@@ -14,8 +14,8 @@ namespace BingoGameCore4
 			internal byte[] real_ball_index = new byte[24];
 			internal byte[] ball_index = new byte[24];
 			internal byte[] balls = new byte[24];
-			internal int best_away = 25; // per marked ball location...
-			internal int best_away_pattern_mask; // which pattern the count matched
+			public int best_away = 25; // per marked ball location...
+			public int best_away_pattern_mask; // which pattern the count matched
 			public int mark_index = 0; // ends at the highest used card_mask/ball_idnex
 
 

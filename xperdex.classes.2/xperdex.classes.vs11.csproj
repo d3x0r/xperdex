@@ -310,12 +310,6 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SQLite\1.0.87.0\System.Data.SQLite\System.Data.SQLite.2012.csproj">
-      <Project>{ac139952-261a-4463-b6fa-aebc25283a66}</Project>
-      <Name>System.Data.SQLite.2012</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

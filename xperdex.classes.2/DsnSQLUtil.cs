@@ -1058,7 +1058,7 @@ namespace xperdex.classes
 						output.Append( ")" );
 
 						connection.KindExecuteNonQuery( output.ToString() );
-						output.Clear();
+						output.Length = 0;
 
 					}
 				}

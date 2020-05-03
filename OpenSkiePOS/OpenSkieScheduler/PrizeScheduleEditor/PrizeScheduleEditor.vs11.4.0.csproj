@@ -311,9 +311,17 @@
       <Project>{EF313F61-2DB4-461B-9F89-B6BC53C96BA4}</Project>
       <Name>xperdex.gui.4.0</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\bingo_odds\BingoGameCore4\BingoGameCore4.vs11.4.0.csproj">
+      <Project>{e65bd921-6931-48ff-beac-d89b5b37c741}</Project>
+      <Name>BingoGameCore4.vs11.4.0</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CurrentScheduleDataSet2\CurrentScheduleDataSet2.4.0.vs11.csproj">
       <Project>{BA3487F1-4E30-4FDD-A7E4-3B39DDDEA8B1}</Project>
       <Name>CurrentScheduleDataSet.4.0</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenSkieScheduler3\OpenSkie.Scheduler.Controls.Common\OpenSkie.Scheduler.Controls.Common.4.0.vs11.csproj">
+      <Project>{e2fc029a-f092-4d46-b83f-e175fba2a80a}</Project>
+      <Name>OpenSkie.Scheduler.Controls.Common.4.0.vs11</Name>
     </ProjectReference>
     <ProjectReference Include="..\OpenSkieScheduler3\OpenSkie.Scheduler.Controls\OpenSkie.Scheduler3.Controls.vs11.4.0.csproj">
       <Project>{AD184E84-45AD-4DF6-BB3D-FB56EEDE2F31}</Project>
@@ -322,6 +330,10 @@
     <ProjectReference Include="..\OpenSkieScheduler3\OpenSkieScheduler3.vs11.4.0.csproj">
       <Project>{7AA21CBF-336D-4815-A2A6-55AC5694A241}</Project>
       <Name>OpenSkieScheduler.vc10.4.0</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OpenSkieScheduler3\PatternEditor\PatternEditor3.vs11.4.0.csproj">
+      <Project>{c2893772-cc74-4062-8b07-c986973d1df7}</Project>
+      <Name>PatternEditor3.vs11.4.0</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

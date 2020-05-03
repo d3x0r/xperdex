@@ -216,6 +216,7 @@ namespace BingoGameCore4
 					//foreach( BingoGameGroup gamegroup in g.game_groups )
 					{
 						//foreach( BingoGameGroup this_group in this.game_groups )
+						if( g.game_group != null && this.game_group != null ) // this isn't set during loading... 
 						{
 							if( g.game_group.ID.Equals( this.game_group.ID ) )
 							{

@@ -177,7 +177,7 @@ namespace xperdex.classes
 					break;
 				case DsnConnection.ConnectionMode.Sqlite:
 					dsn.ExecuteNonQuery( "delete from " + Prefix + XTableName );
-					dsn.ExecuteNonQuery( "update sqlite_sequence set seq = 1 where name='"+ Prefix + XTableName + "'" );
+					dsn.KindExecuteNonQuery( "update sqlite_sequence set seq = 1 where name='"+ Prefix + XTableName + "'" );
 					break;
 				default:
 					dsn.ExecuteNonQuery( "delete from " + Prefix + XTableName );

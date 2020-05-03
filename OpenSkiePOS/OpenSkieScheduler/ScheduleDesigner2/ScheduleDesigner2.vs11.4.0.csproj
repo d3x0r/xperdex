@@ -200,9 +200,9 @@
       <Project>{EF313F61-2DB4-461B-9F89-B6BC53C96BA4}</Project>
       <Name>xperdex.gui.4.0.vs11</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Bingo\BingoCardsetCreator\BingoCardsetCreator.csproj">
+    <ProjectReference Include="..\..\Bingo\BingoCardsetCreator\BingoCardsetCreator.vs11.4.0.csproj">
       <Project>{a512cbbd-f769-4f95-827d-739969d25b59}</Project>
-      <Name>BingoCardsetCreator</Name>
+      <Name>BingoCardsetCreator.vs11.4.0</Name>
     </ProjectReference>
     <ProjectReference Include="..\CurrentScheduleDataSet2\CurrentScheduleDataSet2.4.0.vs11.csproj">
       <Project>{BA3487F1-4E30-4FDD-A7E4-3B39DDDEA8B1}</Project>

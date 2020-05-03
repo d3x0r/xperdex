@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!--
  *
  * System.Data.SQLite.EF6.2010.csproj -
@@ -11,6 +11,7 @@
   <PropertyGroup>
     <UseEntityFramework6>true</UseEntityFramework6>
     <ProjectGuid>{F1B93C04-C4AE-4D6D-B353-417AEFDCEE7B}</ProjectGuid>
+    <BaseIntermediateOutputPath>$(SolutionDir)/output/</BaseIntermediateOutputPath>
   </PropertyGroup>
   <Import Project="$(MSBuildProjectDirectory)\System.Data.SQLite.Core.2010.csproj" />
 </Project>

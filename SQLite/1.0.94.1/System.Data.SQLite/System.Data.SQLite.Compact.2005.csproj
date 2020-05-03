@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!--
  *
  * System.Data.SQLite.Compact.2005.csproj -
@@ -24,7 +24,8 @@
     <OSVersion>5.0</OSVersion>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <NativePlatformName>Windows CE</NativePlatformName>
-    <FormFactorID></FormFactorID>
+    <FormFactorID>
+    </FormFactorID>
     <SQLiteNetDir>$(MSBuildProjectDirectory)\..</SQLiteNetDir>
     <NetFx20>true</NetFx20>
     <UseInteropDll>false</UseInteropDll>
@@ -32,12 +33,15 @@
     <IsCompactFramework>true</IsCompactFramework>
     <ConfigurationYear>2005</ConfigurationYear>
     <ConfigurationSuffix>Compact</ConfigurationSuffix>
+    <BaseOutputPath>$(SolutionDir)/</BaseOutputPath>
+    <BaseIntermediateOutputPath>$(SolutionDir)/output/</BaseIntermediateOutputPath>
   </PropertyGroup>
   <Import Project="$(SQLiteNetDir)\Targets\SQLite.NET.Settings.targets" />
   <Import Project="$(SQLiteNetDir)\Targets\SQLite.NET.targets" />
   <PropertyGroup Condition="'$(BinaryOutputPath)' != ''">
-    <OutputPath>$(BinaryOutputPath)</OutputPath>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v2.0</OutputPath>
     <DocumentationFile>$(BinaryOutputPath)System.Data.SQLite.xml</DocumentationFile>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v2.0</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -48,6 +52,8 @@
     <NoConfig>true</NoConfig>
     <ErrorReport>prompt</ErrorReport>
     <GenerateSerializationAssemblies>off</GenerateSerializationAssemblies>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v2.0</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v2.0</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -57,6 +63,8 @@
     <NoConfig>true</NoConfig>
     <ErrorReport>prompt</ErrorReport>
     <GenerateSerializationAssemblies>off</GenerateSerializationAssemblies>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v2.0</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v2.0</IntermediateOutputPath>
   </PropertyGroup>
   <Import Project="$(MSBuildProjectDirectory)\Targets\System.Data.SQLite.References.targets" />
   <Import Project="$(MSBuildProjectDirectory)\Targets\System.Data.SQLite.Properties.targets" />
@@ -73,6 +81,7 @@
       $(CleanDependsOn);
       CleanConfigurations;
     </CleanDependsOn>
+    <BaseIntermediateOutputPath>$(SolutionDir)/output/</BaseIntermediateOutputPath>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>

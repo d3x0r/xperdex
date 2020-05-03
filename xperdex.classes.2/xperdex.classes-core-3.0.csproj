@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>10.0.20506</ProductVersion>
+    <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{041E5A37-8678-451E-9500-EE3D7864C092}</ProjectGuid>
     <OutputType>Library</OutputType>
@@ -13,15 +13,12 @@
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>
     </AssemblyOriginatorKeyFile>
+    <ExpressionBlendVersion>3.0.1927.0</ExpressionBlendVersion>
+    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
-    <UpgradeBackupLocation>
-    </UpgradeBackupLocation>
-    <OldToolsVersion>3.5</OldToolsVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -34,25 +31,25 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <BaseOutputPath>$(SolutionDir)/</BaseOutputPath>
     <BaseIntermediateOutputPath>$(SolutionDir)/output/</BaseIntermediateOutputPath>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <DefineConstants>TRACE;DEBUG;use_sqlite_connector</DefineConstants>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <RegisterForComInterop>false</RegisterForComInterop>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
-    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0</IntermediateOutputPath>
-    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
-    <Prefer32Bit>false</Prefer32Bit>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v2.0</IntermediateOutputPath>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v2.0</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -61,60 +58,83 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
-    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v4.0</IntermediateOutputPath>
-    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v4.0</OutputPath>
-    <Prefer32Bit>false</Prefer32Bit>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v2.0</IntermediateOutputPath>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v2.0</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v2.0</IntermediateOutputPath>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v2.0</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/v2.0</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleAssemblies>
+    </CodeAnalysisRuleAssemblies>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>Migrated rules for xperdex.classes.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/v2.0</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\UpdateSolutionTarget\packages\EntityFramework.6.0.0\lib\net40\EntityFramework.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Accessibility" />
+    <Reference Include="MySql.Data, Version=5.0.8.1, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\MySQL\MySQL Connector Net 5.0.8.1\Binaries\.NET 2.0\MySql.Data.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\UpdateSolutionTarget\packages\EntityFramework.6.0.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Data.SQLite, Version=1.0.98.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
-      <HintPath>..\UpdateSolutionTarget\packages\System.Data.SQLite.Core.1.0.98.1\lib\net40\System.Data.SQLite.dll</HintPath>
+    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
       <Private>True</Private>
+      <HintPath>..\SQLite\bin\System.Data.SQLite.DLL</HintPath>
     </Reference>
     <Reference Include="System.Drawing" />
-    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\System.ServiceModel.dll</HintPath>
+    </Reference>
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.XML" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
-    <None Include="OptionMapDataset4.xsc">
-      <DependentUpon>OptionMapDataset4.xsd</DependentUpon>
-    </None>
-    <None Include="OptionMapDataset4.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>OptionMapDataset4.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="OptionMapDataset4.xss">
-      <DependentUpon>OptionMapDataset4.xsd</DependentUpon>
-    </None>
-    <None Include="OptionMapDataset.xsc">
-      <DependentUpon>OptionMapDataset.xsd</DependentUpon>
-    </None>
-    <None Include="OptionMapDataset.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>OptionMapDataset.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="OptionMapDataset.xss">
-      <DependentUpon>OptionMapDataset.xsd</DependentUpon>
-    </None>
-    <Compile Include="Attributes\Attribs.cs" />
-    <Compile Include="MetaMySQLRelation.cs">
+    <Compile Include="DataSetConnection.cs" />
+    <Compile Include="DsnSQLUtil.cs" />
+    <Compile Include="OptionEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OptionEditor.Designer.cs">
+      <DependentUpon>OptionEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OptionMap.cs" />
+    <Compile Include="IniFile.cs" />
+    <Compile Include="INIForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="INIForm.Designer.cs">
+      <DependentUpon>INIForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MySQLViewCache.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OptionMapDataset.cs">
+      <DependentUpon>OptionMapDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OptionMapDataset.Designer.cs">
+      <DependentUpon>OptionMapDataset.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="OptionMapDataset4.cs">
       <DependentUpon>OptionMapDataset4.xsd</DependentUpon>
@@ -123,33 +143,6 @@
       <DependentUpon>OptionMapDataset4.xsd</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="DsnSQLUtil.cs" />
-    <Compile Include="IniFile.cs" />
-    <Compile Include="INIForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="INIForm.Designer.cs">
-      <DependentUpon>INIForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="OptionEditor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OptionEditor.Designer.cs">
-      <DependentUpon>OptionEditor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="OptionMap.cs" />
-    <Compile Include="OptionMapDataset.cs">
-      <DependentUpon>OptionMapDataset.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="OptionMapDataset.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OptionMapDataset.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="RegNames.cs" />
-    <Compile Include="RegSQLDataTableExample.cs">
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="SQL_Utilities.cs" />
     <Compile Include="StaticStringConnection.cs" />
@@ -175,6 +168,9 @@
     <Compile Include="RegSQLDataTable.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="RegSQLDataTableExample.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="StaticDsnConnection.cs" />
     <Compile Include="MySQLDataTable.cs">
       <SubType>Component</SubType>
@@ -187,22 +183,17 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DsnConnection.cs" />
-    <Compile Include="StaticRegDsnConnection.cs" />
     <Compile Include="String_Utilities.cs" />
     <Compile Include="TypeMap.cs" />
     <Compile Include="Types\XColor.cs" />
     <Compile Include="Types\XGuid.cs" />
     <Compile Include="Types\XString.cs" />
-    <Compile Include="UpdateService\EventAnnouncer.cs" />
-    <Compile Include="UpdateService\EventListener.cs" />
+    <Compile Include="RegNames.cs" />
     <Compile Include="Vector.cs" />
-    <Compile Include="DataSetConnection.cs" />
-    <Compile Include="Win32API.cs" />
     <Compile Include="XDataTable.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="XSprite.cs" />
-    <None Include="packages.config" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
@@ -211,8 +202,8 @@
       <DependentUpon>INIForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OptionEditor.resx">
-      <DependentUpon>OptionEditor.cs</DependentUpon>
       <SubType>Designer</SubType>
+      <DependentUpon>OptionEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <SubType>Designer</SubType>
@@ -225,45 +216,48 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Migrated rules for xperdex.classes.ruleset" />
+    <None Include="OptionMapDataset.xsc">
+      <DependentUpon>OptionMapDataset.xsd</DependentUpon>
+    </None>
+    <None Include="OptionMapDataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OptionMapDataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="OptionMapDataset.xss">
+      <DependentUpon>OptionMapDataset.xsd</DependentUpon>
+    </None>
+    <None Include="OptionMapDataset4.xsc">
+      <DependentUpon>OptionMapDataset4.xsd</DependentUpon>
+    </None>
+    <None Include="OptionMapDataset4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OptionMapDataset4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OptionMapDataset4.xss">
+      <DependentUpon>OptionMapDataset4.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
+      <Install>true</Install>
     </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.VisualBasic.PowerPacks.10.0">
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
       <Visible>False</Visible>
-      <ProductName>Microsoft Visual Basic PowerPacks 10.0</ProductName>
+      <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <Import Project="..\UpdateSolutionTarget\packages\System.Data.SQLite.Core.1.0.98.1\build\net40\System.Data.SQLite.Core.targets" Condition="Exists('..\UpdateSolutionTarget\packages\System.Data.SQLite.Core.1.0.98.1\build\net40\System.Data.SQLite.Core.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\UpdateSolutionTarget\packages\System.Data.SQLite.Core.1.0.98.1\build\net40\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\UpdateSolutionTarget\packages\System.Data.SQLite.Core.1.0.98.1\build\net40\System.Data.SQLite.Core.targets'))" />
-  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

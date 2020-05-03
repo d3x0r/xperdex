@@ -18,6 +18,8 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile />
+    <BaseIntermediateOutputPath>$(SolutionDir)/output/</BaseIntermediateOutputPath>
+    <BaseOutputPath>$(SolutionDir)/</BaseOutputPath>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -32,8 +34,6 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <BaseIntermediateOutputPath>$(SolutionDir)/output/</BaseIntermediateOutputPath>
-    <BaseOutputPath>$(SolutionDir)/</BaseOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -97,7 +97,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <Optimize>true</Optimize>
+    <Optimize>false</Optimize>
     <DebugType>full</DebugType>
     <PlatformTarget>x86</PlatformTarget>
     <CodeAnalysisLogFile>M:\xperdex\/output/Debug/AnyCPU\bingo_odds.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
@@ -255,10 +255,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\SQLite\1.0.94.1\System.Data.SQLite\System.Data.SQLite.2012.csproj">
-      <Project>{30e1ebc6-79e2-4d9c-9372-b771a2c0df51}</Project>
-      <Name>System.Data.SQLite.2012</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Bingo\BingoGameInterfaces\BingoGameInterfaces.4.0.vs11.csproj">
       <Project>{5601A89E-8E2A-461F-98A3-15A7419AD2AF}</Project>
       <Name>BingoGameInterfaces.4.0.vs11</Name>

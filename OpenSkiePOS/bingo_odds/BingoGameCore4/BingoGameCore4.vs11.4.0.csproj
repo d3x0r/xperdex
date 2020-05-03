@@ -288,10 +288,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\SQLite\1.0.94.1\System.Data.SQLite\System.Data.SQLite.2012.csproj">
-      <Project>{30e1ebc6-79e2-4d9c-9372-b771a2c0df51}</Project>
-      <Name>System.Data.SQLite.2012</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\xperdex.classes.2\xperdex.classes.vs11.4.0.csproj">
       <Project>{041e5a37-8678-451e-9500-ee3d7864c092}</Project>
       <Name>xperdex.classes.vs11.4.0</Name>

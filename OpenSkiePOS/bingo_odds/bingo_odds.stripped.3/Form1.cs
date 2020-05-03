@@ -335,6 +335,7 @@ namespace BingoGameCore4
 						if( ori.GameTypeList == null )
 							ori.GameTypeList = new List<OddsRunInfo.GameTypeInfo>();
 						stats.best_wins = new int[ori.bestwins.Length];
+						stats.aways = new int[5];
 						stats.games = 1; // one same game.
 						stats.name = game.Name;
                         stats.lastBalls = new int[ 90 ];

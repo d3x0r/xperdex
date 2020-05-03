@@ -328,7 +328,31 @@ namespace BingoGameCore4
                 dataGridViewHotBallWins.Columns["Starburst(mark)"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             }
 
-            col_width = (int)(TextRenderer.MeasureText("WWWWWWWWWW", DataGridView.DefaultFont).Width / 1.75);
+			if (runinfo.flags.lastBall)
+			{
+				dataGridViewHotBallWins.Columns.Add("1 Away", "1 Away");
+				dataGridViewHotBallWins.Columns["1 Away"].Width = col_width;
+				dataGridViewHotBallWins.Columns["1 Away"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+				dataGridViewHotBallWins.Columns["1 Away"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+				dataGridViewHotBallWins.Columns.Add("2 Away", "2 Away");
+				dataGridViewHotBallWins.Columns["2 Away"].Width = col_width;
+				dataGridViewHotBallWins.Columns["2 Away"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+				dataGridViewHotBallWins.Columns["2 Away"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+				dataGridViewHotBallWins.Columns.Add("3 Away", "3 Away");
+				dataGridViewHotBallWins.Columns["3 Away"].Width = col_width;
+				dataGridViewHotBallWins.Columns["3 Away"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+				dataGridViewHotBallWins.Columns["3 Away"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+				dataGridViewHotBallWins.Columns.Add("4 Away", "4 Away");
+				dataGridViewHotBallWins.Columns["4 Away"].Width = col_width;
+				dataGridViewHotBallWins.Columns["4 Away"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+				dataGridViewHotBallWins.Columns["4 Away"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+				dataGridViewHotBallWins.Columns.Add("5 Away", "5 Away");
+				dataGridViewHotBallWins.Columns["5 Away"].Width = col_width;
+				dataGridViewHotBallWins.Columns["5 Away"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+				dataGridViewHotBallWins.Columns["5 Away"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+			}
+
+			col_width = (int)(TextRenderer.MeasureText("WWWWWWWWWW", DataGridView.DefaultFont).Width / 1.75);
             dataGridViewHotBallWins.Columns.Add("1 Hotball", "1 Hotball");
             dataGridViewHotBallWins.Columns["1 Hotball"].Width = col_width;
             dataGridViewHotBallWins.Columns["1 Hotball"].SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -569,17 +593,27 @@ namespace BingoGameCore4
                                 this.dataGridViewHotBallWins.Rows[game].Cells[idx + 1].Value = runinfo.GameTypeList[game].starburst_marks;
                             }
 
-                            //if( runinfo.game_event.playing_hotballs != null )
-                            //{
-                            //    int idx = this.dataGridViewHotBallWins.Columns["1 Hotball"].Index;
-                            //    for( int ball = 0; ball < runinfo.game_event.playing_hotballs.Length; ball++ )
-                            //        this.dataGridViewHotBallWins.Rows[game].Cells[idx + ball].Value = runinfo.hotball_wins[game, ball];
-                            //}
-                        }
+							if (runinfo.flags.lastBall)
+							{
+								int idx = this.dataGridViewHotBallWins.Columns["1 Away"].Index;
+								this.dataGridViewHotBallWins.Rows[game].Cells[idx + 0].Value = runinfo.GameTypeList[game].aways[0];
+								this.dataGridViewHotBallWins.Rows[game].Cells[idx + 1].Value = runinfo.GameTypeList[game].aways[1];
+								this.dataGridViewHotBallWins.Rows[game].Cells[idx + 2].Value = runinfo.GameTypeList[game].aways[2];
+								this.dataGridViewHotBallWins.Rows[game].Cells[idx + 3].Value = runinfo.GameTypeList[game].aways[3];
+								this.dataGridViewHotBallWins.Rows[game].Cells[idx + 4].Value = runinfo.GameTypeList[game].aways[4];
+							}
+
+							//if( runinfo.game_event.playing_hotballs != null )
+							//{
+							//    int idx = this.dataGridViewHotBallWins.Columns["1 Hotball"].Index;
+							//    for( int ball = 0; ball < runinfo.game_event.playing_hotballs.Length; ball++ )
+							//        this.dataGridViewHotBallWins.Rows[game].Cells[idx + ball].Value = runinfo.hotball_wins[game, ball];
+							//}
+						}
 
 
-                        //if( false ) // skip this factor... just logging database...
-                        for( int n = 0; n < 75; n++ )
+						//if( false ) // skip this factor... just logging database...
+						for ( int n = 0; n < 75; n++ )
                         {
                             int col = 1;
 

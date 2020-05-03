@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SetBuildOutput</RootNamespace>
     <AssemblyName>SetBuildOutput</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <UpgradeBackupLocation>
@@ -192,9 +192,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\xperdex.classes.2\xperdex.classes.vs11.4.0.csproj">
+    <ProjectReference Include="..\..\xperdex.classes.2\xperdex.classes-core-3.0.csproj">
       <Project>{041e5a37-8678-451e-9500-ee3d7864c092}</Project>
-      <Name>xperdex.classes.vs11.4.0</Name>
+      <Name>xperdex.classes-core-3.0</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

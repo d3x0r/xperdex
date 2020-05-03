@@ -64,6 +64,7 @@ namespace bingo_odds
 			public int wins;
 			public int games;
 			public int[] best_wins;
+			public int[] aways;
 			public int starburst_marks;
 			public int starburst_wins;
 			public string name;
@@ -135,6 +136,7 @@ namespace bingo_odds
 		public int ball_count;
 		// number of times per count of balls that a card won...
 		public int[] wins;
+		public int[] aways;
 		public int[] bestwins;
 		/// <summary>
 		/// indexed by game_number, ball_count
@@ -150,6 +152,7 @@ namespace bingo_odds
 		public OddsRunInfo( )
 //			: base( session, allow_game_groups )
 		{
+			aways = new int[5];
 			//game_group_list = allow_game_groups;
 			hotwins = 0;
 			ball_count = 75;
@@ -431,6 +434,16 @@ namespace bingo_odds
 		{
 			GameInfo game = s.game as GameInfo;
             int winners = s.winning_cards.Count;
+
+			for (int cn = 0; cn < s.playing_cards.Count; cn++) {
+				BingoCardState card = s.playing_cards[cn];
+				if (card.marks.Count != 0 ) {
+					BingoCardState.BingoCardPatternMarkInfo cs = card.marks[card.marks.Count - 1];
+					if (cs.best_away < 5 && cs.best_away > 0 ) {
+						game.stats.aways[cs.best_away-1]++;
+					}
+				}
+			}
 
             game.stats.wins += winners;
             game.stats.best_wins[ s.bestwin ] += winners;

@@ -96,12 +96,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\xperdex.classes\xperdex.classes.csproj">
-      <Project>{041E5A37-8678-451E-9500-EE3D7864C092}</Project>
-      <Name>xperdex.classes</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
@@ -117,6 +111,12 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\xperdex.classes.2\xperdex.classes-core-2.0.csproj">
+      <Project>{041e5a37-8678-451e-9500-ee3d7864c092}</Project>
+      <Name>xperdex.classes-core-2.0</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

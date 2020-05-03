@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!--
  *
  * SQLite.Designer.2005.csproj -
@@ -21,12 +21,14 @@
     <SQLiteNetDir>$(MSBuildProjectDirectory)\..</SQLiteNetDir>
     <NetFx20>true</NetFx20>
     <ConfigurationYear>2005</ConfigurationYear>
+    <BaseIntermediateOutputPath>$(SolutionDir)/output/</BaseIntermediateOutputPath>
   </PropertyGroup>
   <Import Project="$(SQLiteNetDir)\Targets\SQLite.NET.Settings.targets" />
   <Import Project="$(SQLiteNetDir)\Targets\SQLite.NET.targets" />
   <PropertyGroup Condition="'$(BinaryOutputPath)' != ''">
-    <OutputPath>$(BinaryOutputPath)</OutputPath>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/</OutputPath>
     <DocumentationFile>$(BinaryOutputPath)SQLite.Designer.xml</DocumentationFile>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,12 +36,16 @@
     <Optimize>false</Optimize>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/</IntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -200,14 +206,10 @@
   <PropertyGroup Condition="'$(VSSDK80Install)' == ''">
     <VSSDK80Install Condition="'$(ProgramFiles)' != '' And ('$(PROCESSOR_ARCHITECTURE)' == 'x86' And '$(PROCESSOR_ARCHITEW6432)' == '')">$(ProgramFiles)\Visual Studio 2005 SDK\2007.02\</VSSDK80Install>
     <VSSDK80Install Condition="'$(ProgramFiles%28x86%29)' != '' And ('$(PROCESSOR_ARCHITECTURE)' != 'x86' Or '$(PROCESSOR_ARCHITEW6432)' != '')">$(ProgramFiles%28x86%29)\Visual Studio 2005 SDK\2007.02\</VSSDK80Install>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/</IntermediateOutputPath>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(VSSDK80Install)' == '' Or
-                            !Exists('$(VSSDK80Install)VisualStudioIntegration\Common\Assemblies\Microsoft.Data.ConnectionUI.dll') Or
-                            !Exists('$(VSSDK80Install)VisualStudioIntegration\Common\Assemblies\Microsoft.VisualStudio.Data.dll') Or
-                            !Exists('$(VSSDK80Install)VisualStudioIntegration\Common\Assemblies\Microsoft.VisualStudio.OLE.Interop.dll') Or
-                            !Exists('$(VSSDK80Install)VisualStudioIntegration\Common\Assemblies\Microsoft.VisualStudio.Shell.dll') Or
-                            !Exists('$(VSSDK80Install)VisualStudioIntegration\Common\Assemblies\Microsoft.VisualStudio.Shell.Interop.dll') Or
-                            !Exists('$(VSSDK80Install)VisualStudioIntegration\Common\Assemblies\Microsoft.VisualStudio.Shell.Interop.8.0.dll')">
+  <PropertyGroup Condition="'$(VSSDK80Install)' == '' Or&#xD;&#xA;                            !Exists('$(VSSDK80Install)VisualStudioIntegration\Common\Assemblies\Microsoft.Data.ConnectionUI.dll') Or&#xD;&#xA;                            !Exists('$(VSSDK80Install)VisualStudioIntegration\Common\Assemblies\Microsoft.VisualStudio.Data.dll') Or&#xD;&#xA;                            !Exists('$(VSSDK80Install)VisualStudioIntegration\Common\Assemblies\Microsoft.VisualStudio.OLE.Interop.dll') Or&#xD;&#xA;                            !Exists('$(VSSDK80Install)VisualStudioIntegration\Common\Assemblies\Microsoft.VisualStudio.Shell.dll') Or&#xD;&#xA;                            !Exists('$(VSSDK80Install)VisualStudioIntegration\Common\Assemblies\Microsoft.VisualStudio.Shell.Interop.dll') Or&#xD;&#xA;                            !Exists('$(VSSDK80Install)VisualStudioIntegration\Common\Assemblies\Microsoft.VisualStudio.Shell.Interop.8.0.dll')">
     <!--
         NOTE: We cannot build this project without the necessary reference
               assemblies; therefore, skip building it altogether.
@@ -215,6 +217,8 @@
     <BuildDependsOn>
       MissingVsSdk
     </BuildDependsOn>
+    <OutputPath>$(BaseOutputPath)/output/$(Configuration)/$(Platform)/</OutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)obj/$(MSBuildProjectName)/$(Configuration)/$(Platform)/</IntermediateOutputPath>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
